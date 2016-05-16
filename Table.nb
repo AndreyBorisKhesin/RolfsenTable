@@ -10,17 +10,287 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     86846,       1546]
-NotebookOptionsPosition[     86524,       1530]
-NotebookOutlinePosition[     86870,       1545]
-CellTagsIndexPosition[     86827,       1542]
+NotebookDataLength[    108072,       1993]
+NotebookOptionsPosition[    107748,       1977]
+NotebookOutlinePosition[    108094,       1992]
+CellTagsIndexPosition[    108051,       1989]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[BoxData[
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Rebuild", "[", "permutation_", "]"}], ":=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"2", 
+       RowBox[{"Table", "[", 
+        RowBox[{"index", ",", 
+         RowBox[{"{", 
+          RowBox[{"index", ",", 
+           RowBox[{"Length", "@", "permutation"}]}], "}"}]}], "]"}]}], "-", 
+      "1"}], ",", 
+     RowBox[{"2", "permutation"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Minimal", "[", "permutation_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Union", "[", 
+       RowBox[{"(*", 
+        RowBox[{
+        "This", " ", "Union", " ", "sorts", " ", "the", " ", "permutations", 
+         " ", "in", " ", "the", " ", "Table", " ", "of", " ", "permutations", 
+         " ", "in", " ", "the", " ", "original", " ", "direction", " ", 
+         "with", " ", "the", " ", "Table", " ", "of", " ", "permutations", 
+         " ", "in", " ", "the", " ", "opposite", " ", 
+         RowBox[{"direction", "."}]}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Table", "[", 
+         RowBox[{"(*", 
+          RowBox[{
+          "This", " ", "Table", " ", "generates", " ", "all", " ", "2", 
+           RowBox[{"Length", "@", "permutation"}], " ", "permutations", " ", 
+           "that", " ", "are", " ", "obtained", " ", "by", " ", "fixing", " ",
+            "direction", " ", "and", " ", "changing", " ", "the", " ", 
+           "starting", " ", 
+           RowBox[{"point", "."}]}], "*)"}], "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"Sort", "[", 
+             RowBox[{"(*", 
+              RowBox[{
+              "This", " ", "Sort", " ", "arranges", " ", "the", " ", 
+               "crossing", " ", "pairs", " ", "so", " ", "that", " ", "the", 
+               " ", "odd", " ", "numbers", " ", "are", " ", 
+               RowBox[{"ascending", "."}]}], "*)"}], "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Mod", "[", 
+                RowBox[{"(*", 
+                 RowBox[{
+                 "This", " ", "Mod", " ", "is", " ", "used", " ", "to", " ", 
+                  "modify", " ", "the", " ", "elements", " ", "of", " ", 
+                  "the", " ", "crossing", " ", "pairs", " ", "as", " ", "the",
+                   " ", "indices", " ", "wrap", " ", "around", " ", "after", 
+                  " ", "reaching", " ", "2", 
+                  RowBox[{
+                   RowBox[{"Length", "@", "permutation"}], ".", " ", "An"}], 
+                  " ", "offset", " ", "of", " ", "1", " ", "is", " ", "used", 
+                  " ", "to", " ", "avoid", " ", "indexing", " ", "from", " ", 
+                  "0."}], "*)"}], "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Rebuild", "@", "permutation"}], 
+                  "\[IndentingNewLine]", "+", "shift"}], ",", 
+                 RowBox[{"2", 
+                  RowBox[{"Length", "@", "permutation"}]}], ",", "1"}], "]"}],
+                "\[LeftDoubleBracket]", 
+               RowBox[{"(*", 
+                RowBox[{
+                "This", " ", "shifts", " ", "all", " ", "the", " ", "values", 
+                 " ", "in", " ", "the", " ", "knot", " ", "by", " ", "an", 
+                 " ", "offset", " ", "of", " ", 
+                 RowBox[{"shift", ".", " ", "Mod"}], " ", "is", " ", 
+                 "applied", " ", "to", " ", "make", " ", "sure", " ", "all", 
+                 " ", "the", " ", "values", " ", "are", " ", "in", " ", "the",
+                  " ", "range", " ", "from", " ", "1", " ", "to", " ", "2", 
+                 RowBox[{"crossingNumber", "."}]}], "*)"}], 
+               "\[IndentingNewLine]", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{"EvenQ", "@", "shift"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", "2"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"2", ",", "1"}], "}"}]}], "]"}], 
+               "\[RightDoubleBracket]"}], "\[Transpose]"}], "]"}], 
+            "\[Transpose]"}], "\[LeftDoubleBracket]", 
+           RowBox[{"(*", 
+            RowBox[{
+             RowBox[{"If", " ", "shift", " ", "is", " ", "odd"}], ",", " ", 
+             RowBox[{
+             "the", " ", "order", " ", "of", " ", "the", " ", "two", " ", 
+              "lists", " ", "must", " ", "be", " ", "swapped", " ", "as", " ",
+               "the", " ", "odd", " ", "numbers", " ", "will", " ", "end", 
+              " ", "up", " ", "in", " ", "the", " ", "second", " ", "list", 
+              " ", "and", " ", "vice", " ", 
+              RowBox[{"versa", ".", " ", "The"}], " ", "matrix", " ", "is", 
+              " ", "then", " ", "transposed", " ", "so", " ", "all", " ", 
+              "the", " ", "crossings", " ", "are", " ", "in", " ", "pairs"}], 
+             ",", " ", 
+             RowBox[{
+             "then", " ", "sorted", " ", "with", " ", "respect", " ", "to", 
+              " ", "the", " ", "first", " ", "element"}], ",", " ", 
+             RowBox[{
+             "then", " ", "transposed", " ", "again", " ", "to", " ", "turn", 
+              " ", "it", " ", "back", " ", "into", " ", "two", " ", "lists"}],
+              ",", " ", 
+             RowBox[{
+             "one", " ", "of", " ", "ordered", " ", "odd", " ", "numbers", 
+              " ", "and", " ", "one", " ", "of", " ", "shuffled", " ", "even",
+               " ", 
+              RowBox[{"numbers", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
+           "2", "\[RightDoubleBracket]"}], ",", 
+          RowBox[{"(*", 
+           RowBox[{
+            RowBox[{
+            "This", " ", "only", " ", "considers", " ", "the", " ", "list", 
+             " ", "of", " ", "even", " ", "numbers", " ", "in", " ", "the", 
+             " ", "crossing", " ", "lists"}], ",", " ", 
+            RowBox[{"disregarding", " ", "the", " ", "odd", " ", 
+             RowBox[{"numbers", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"shift", ",", 
+            RowBox[{"2", 
+             RowBox[{"Length", "@", "permutation"}]}]}], "}"}]}], "]"}], ",", 
+        RowBox[{"(*", 
+         RowBox[{
+         "This", " ", "creates", " ", "a", " ", "Table", " ", "of", " ", 
+          "all", " ", "possible", " ", "offsets", " ", "of", " ", 
+          "permutation", " ", "in", " ", "the", " ", "forward", " ", 
+          "direction", " ", "with", " ", "shift", " ", "ranging", " ", "from",
+           " ", "1", " ", "to", " ", "2", 
+          RowBox[{"crossingNumber", "."}]}], "*)"}], "\[IndentingNewLine]", 
+        RowBox[{"Table", "[", 
+         RowBox[{"(*", 
+          RowBox[{
+          "This", " ", "Table", " ", "generates", " ", "all", " ", "2", 
+           RowBox[{"Length", "@", "permutation"}], " ", "permutations", " ", 
+           "that", " ", "are", " ", "obtained", " ", "by", " ", "reversing", 
+           " ", "direction", " ", "and", " ", "changing", " ", "the", " ", 
+           "starting", " ", 
+           RowBox[{"point", "."}]}], "*)"}], "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"Sort", "[", 
+             RowBox[{"(*", 
+              RowBox[{
+              "This", " ", "Sort", " ", "arranges", " ", "the", " ", 
+               "crossing", " ", "pairs", " ", "so", " ", "that", " ", "the", 
+               " ", "odd", " ", "numbers", " ", "are", " ", 
+               RowBox[{"ascending", "."}]}], "*)"}], "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Mod", "[", 
+                RowBox[{"(*", 
+                 RowBox[{
+                 "This", " ", "Mod", " ", "is", " ", "used", " ", "to", " ", 
+                  "modify", " ", "the", " ", "elements", " ", "of", " ", 
+                  "the", " ", "crossing", " ", "pairs", " ", "as", " ", "the",
+                   " ", "indices", " ", "wrap", " ", "around", " ", "after", 
+                  " ", "reaching", " ", "2", 
+                  RowBox[{"crossingNumber", ".", " ", "An"}], " ", "offset", 
+                  " ", "of", " ", "1", " ", "is", " ", "used", " ", "to", " ",
+                   "avoid", " ", "indexing", " ", "from", " ", "0."}], "*)"}],
+                 "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"shift", 
+                  RowBox[{"(*", 
+                   RowBox[{
+                   "This", " ", "shifts", " ", "all", " ", "the", " ", 
+                    "values", " ", "in", " ", "the", " ", "knot", " ", "by", 
+                    " ", "an", " ", "offset", " ", "of", " ", 
+                    RowBox[{"shift", "."}]}], "*)"}], "\[IndentingNewLine]", 
+                  "-", 
+                  RowBox[{"Rebuild", "@", "permutation"}]}], ",", 
+                 RowBox[{"(*", 
+                  RowBox[{
+                  "This", " ", "2", "permutation", " ", "is", " ", "the", " ",
+                    "value", " ", "of", " ", "the", " ", "list", " ", "of", 
+                   " ", "even", " ", "numbers", " ", "that", " ", "represent",
+                    " ", "the", " ", 
+                   RowBox[{"knot", ".", " ", "The"}], " ", "values", " ", 
+                   "are", " ", "negated", " ", "to", " ", "reverse", " ", 
+                   "the", " ", 
+                   RowBox[{"direction", "."}]}], "*)"}], 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"2", 
+                  RowBox[{"Length", "@", "permutation"}]}], ",", "1"}], "]"}],
+                "\[LeftDoubleBracket]", 
+               RowBox[{"(*", 
+                RowBox[{
+                "Mod", " ", "is", " ", "applied", " ", "to", " ", "make", " ",
+                  "sure", " ", "all", " ", "the", " ", "values", " ", "are", 
+                 " ", "in", " ", "the", " ", "range", " ", "from", " ", "1", 
+                 " ", "to", " ", "2", 
+                 RowBox[{"crossingNumber", "."}]}], "*)"}], 
+               "\[IndentingNewLine]", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{"EvenQ", "@", "shift"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", "2"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"2", ",", "1"}], "}"}]}], "]"}], 
+               "\[RightDoubleBracket]"}], "\[Transpose]"}], "]"}], 
+            "\[Transpose]"}], "\[LeftDoubleBracket]", 
+           RowBox[{"(*", 
+            RowBox[{
+             RowBox[{"If", " ", "shift", " ", "is", " ", "odd"}], ",", " ", 
+             RowBox[{
+             "the", " ", "order", " ", "of", " ", "the", " ", "two", " ", 
+              "lists", " ", "must", " ", "be", " ", "swapped", " ", "as", " ",
+               "the", " ", "odd", " ", "numbers", " ", "will", " ", "end", 
+              " ", "up", " ", "in", " ", "the", " ", "second", " ", "list", 
+              " ", "and", " ", "vice", " ", 
+              RowBox[{"versa", ".", " ", "The"}], " ", "matrix", " ", "is", 
+              " ", "then", " ", "transposed", " ", "so", " ", "all", " ", 
+              "the", " ", "crossings", " ", "are", " ", "in", " ", "pairs"}], 
+             ",", " ", 
+             RowBox[{
+             "then", " ", "sorted", " ", "with", " ", "respect", " ", "to", 
+              " ", "the", " ", "first", " ", "element"}], ",", " ", 
+             RowBox[{
+             "then", " ", "transposed", " ", "again", " ", "to", " ", "turn", 
+              " ", "it", " ", "back", " ", "into", " ", "two", " ", "lists"}],
+              ",", " ", 
+             RowBox[{
+             "one", " ", "of", " ", "ordered", " ", "odd", " ", "numbers", 
+              " ", "and", " ", "one", " ", "of", " ", "shuffled", " ", "even",
+               " ", 
+              RowBox[{"numbers", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
+           "2", "\[RightDoubleBracket]"}], ",", 
+          RowBox[{"(*", 
+           RowBox[{
+            RowBox[{
+            "This", " ", "only", " ", "considers", " ", "the", " ", "list", 
+             " ", "of", " ", "even", " ", "numbers", " ", "in", " ", "the", 
+             " ", "crossing", " ", "lists"}], ",", " ", 
+            RowBox[{"disregarding", " ", "the", " ", "odd", " ", 
+             RowBox[{"numbers", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"shift", ",", 
+            RowBox[{"2", 
+             RowBox[{"Length", "@", "permutation"}]}]}], "}"}]}], "]"}]}], 
+       "]"}], "\[LeftDoubleBracket]", 
+      RowBox[{"(*", 
+       RowBox[{
+       "This", " ", "creates", " ", "a", " ", "Table", " ", "of", " ", "all", 
+        " ", "possible", " ", "offsets", " ", "of", " ", "permutation", " ", 
+        "in", " ", "the", " ", "forward", " ", "direction", " ", "with", " ", 
+        "shift", " ", "ranging", " ", "from", " ", "1", " ", "to", " ", "2", 
+        RowBox[{"crossingNumber", "."}]}], "*)"}], "\[IndentingNewLine]", "1",
+       "\[RightDoubleBracket]"}], "/", "2"}]}], ";"}], 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "This", " ", "chooses", " ", "the", " ", "first", " ", "permutation", " ",
+      "from", " ", "a", " ", "sorted", " ", "list"}], ",", " ", 
+    RowBox[{
+    "making", " ", "it", " ", "the", " ", "smallest", " ", "such", " ", 
+     "permutation", " ", "lexicographically", " ", "and", " ", "dividing", 
+     " ", "it", " ", "by", " ", "2", " ", "to", " ", "obtain", " ", "a", " ", 
+     "permutation", " ", "of", " ", "the", " ", "values", " ", "from", " ", 
+     "1", " ", "to", " ", 
+     RowBox[{"crossingNumber", "."}]}]}], "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{"Timing", "@", 
   RowBox[{"Module", "[", 
    RowBox[{"(*", 
@@ -47,7 +317,7 @@ Cell[BoxData[
         RowBox[{"crossings", ".", " ", "crossingIndex"}], " ", "ranges", " ", 
         "from", " ", "1", " ", "to", " ", 
         RowBox[{"crossingNumber", "."}]}], "*)"}], "\[IndentingNewLine]", 
-      RowBox[{"crossingNumber", "=", "8"}], ",", 
+      RowBox[{"crossingNumber", "=", "7"}], ",", 
       RowBox[{"(*", 
        RowBox[{
        "FIXME", " ", "Make", " ", "the", " ", "value", " ", "of", " ", 
@@ -63,17 +333,45 @@ Cell[BoxData[
       "difference", ",", 
       RowBox[{"(*", 
        RowBox[{
-       "difference", " ", "is", " ", "numerical", " ", "distance", " ", 
-        "between", " ", "a", " ", "pair", " ", "of", " ", "even", " ", "and", 
-        " ", "odd", " ", "numbers", " ", "that", " ", "represent", " ", "a", 
-        " ", "crossing", " ", "in", " ", "a", " ", 
-        RowBox[{"knot", "."}]}], "*)"}], "\[IndentingNewLine]", "label", ",", 
+       "difference", " ", "is", " ", "the", " ", "numerical", " ", "distance",
+         " ", "between", " ", "a", " ", "pair", " ", "of", " ", "even", " ", 
+        "and", " ", "odd", " ", "numbers", " ", "that", " ", "represent", " ",
+         "a", " ", "crossing", " ", "in", " ", "a", " ", 
+        RowBox[{"knot", "."}]}], "*)"}], "\[IndentingNewLine]", 
+      "flypeEvenLength", ",", 
       RowBox[{"(*", 
        RowBox[{
-       "label", " ", "is", " ", "used", " ", "by", " ", "Goto", " ", 
-        "statements", " ", "to", " ", "simplify", " ", "searching", " ", 
-        "through", " ", 
-        RowBox[{"knots", "."}]}], "*)"}], "\[IndentingNewLine]", 
+       "flypeEvenLength", " ", "is", " ", "used", " ", "to", " ", "mark", " ",
+         "the", " ", "length", " ", "of", " ", "the", " ", "strand", " ", 
+        "in", " ", "a", " ", "flype", " ", "that", " ", "comes", " ", "from", 
+        " ", "the", " ", "even", " ", "strand", " ", "in", " ", "the", " ", 
+        RowBox[{"flype", "'"}], "s", " ", "primary", " ", 
+        RowBox[{"crossing", "."}]}], "*)"}], "\[IndentingNewLine]", 
+      "flypeLabel", ",", 
+      RowBox[{"(*", 
+       RowBox[{
+       "flypeLabel", " ", "is", " ", "used", " ", "by", " ", "Goto", " ", 
+        "statements", " ", "to", " ", "exit", " ", "multiple", " ", "loops", 
+        " ", 
+        RowBox[{"simultaneously", "."}]}], "*)"}], "\[IndentingNewLine]", 
+      "flypeOddLength", ",", 
+      RowBox[{"(*", 
+       RowBox[{
+       "flypeOddLength", " ", "is", " ", "used", " ", "to", " ", "mark", " ", 
+        "the", " ", "length", " ", "of", " ", "the", " ", "strand", " ", "in",
+         " ", "a", " ", "flype", " ", "that", " ", "comes", " ", "from", " ", 
+        "the", " ", "odd", " ", "strand", " ", "in", " ", "the", " ", 
+        RowBox[{"flype", "'"}], "s", " ", "primary", " ", 
+        RowBox[{"crossing", "."}]}], "*)"}], "\[IndentingNewLine]", 
+      "knotIndex", ",", 
+      RowBox[{"(*", 
+       RowBox[{
+       "knotIndex", " ", "is", " ", "used", " ", "to", " ", "go", " ", 
+        "through", " ", "all", " ", "the", " ", "knots", " ", "in", " ", 
+        "rolfsenTableAlternating", " ", "and", " ", "remove", " ", "those", 
+        " ", "that", " ", "are", " ", "not", " ", "lexicographically", " ", 
+        "minimal", " ", "with", " ", "respect", " ", "to", " ", 
+        RowBox[{"flyping", "."}]}], "*)"}], "\[IndentingNewLine]", 
       "permutation", ",", 
       RowBox[{"(*", 
        RowBox[{
@@ -119,21 +417,45 @@ Cell[BoxData[
          RowBox[{"factorial", ".", " ", "permutationIndex"}], " ", "ranges", 
          " ", "from", " ", "0", " ", "to", " ", 
          RowBox[{"crossingNumber", "!"}]}], "-", "1."}], "*)"}], 
-      "\[IndentingNewLine]", 
-      RowBox[{"rolfsenTable", "=", 
+      "\[IndentingNewLine]", "permutationLabel", ",", 
+      RowBox[{"(*", 
+       RowBox[{
+       "permutationLabel", " ", "is", " ", "used", " ", "by", " ", "Goto", 
+        " ", "statements", " ", "to", " ", "simplify", " ", "searching", " ", 
+        "through", " ", "knot", " ", 
+        RowBox[{"permutations", "."}]}], "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"rolfsenTableAlternating", "=", 
        RowBox[{"{", "}"}]}], ",", 
       RowBox[{"(*", 
        RowBox[{
-        RowBox[{"rolfsenTable", " ", "will"}], ",", " ", 
+        RowBox[{"rolfsenTableAlternating", " ", "will"}], ",", " ", 
+        RowBox[{"once", " ", "compiled"}], ",", " ", 
+        RowBox[{
+        "be", " ", "the", " ", "reduced", " ", "list", " ", "of", " ", 
+         "alternating", " ", "knots", " ", "with", " ", "crossingNumber", " ",
+          "crossings", " ", "from", " ", "which", " ", "rolfsenTableFull", 
+         " ", "will", " ", "be", " ", 
+         RowBox[{"constructed", ".", " ", "It"}], " ", "is", " ", "initiated",
+          " ", "as", " ", "an", " ", "empty", " ", 
+         RowBox[{"list", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"rolfsenTableFull", "=", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"rolfsenTableFull", " ", "will"}], ",", " ", 
         RowBox[{"once", " ", "compiled"}], ",", " ", 
         RowBox[{
         "be", " ", "the", " ", "reduced", " ", "list", " ", "of", " ", 
          "candidate", " ", "knots", " ", "with", " ", "crossingNumber", " ", 
-         "crossings", " ", "from", " ", "which", " ", "the", " ", "actual", 
-         " ", "Table", " ", "will", " ", "be", " ", 
-         RowBox[{"constructed", ".", " ", "It"}], " ", "is", " ", "initiated",
-          " ", "as", " ", "an", " ", "empty", " ", 
-         RowBox[{"list", "."}]}]}], "*)"}], "\[IndentingNewLine]", "subknot", 
+         RowBox[{"crossings", ".", " ", "It"}], " ", "is", " ", "initiated", 
+         " ", "as", " ", "an", " ", "empty", " ", 
+         RowBox[{"list", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
+      "strandSet", ",", 
+      RowBox[{"(*", 
+       RowBox[{
+       "strandSet", " ", "is", " ", "the", " ", "set", " ", "of", " ", 
+        "strands", " ", "that", " ", "make", " ", "up", " ", "a", " ", 
+        RowBox[{"flype", "."}]}], "*)"}], "\[IndentingNewLine]", "subknot", 
       ",", 
       RowBox[{"(*", 
        RowBox[{
@@ -496,7 +818,7 @@ Cell[BoxData[
                 "the", " ", "For", " ", "loop", " ", "will", " ", "later", 
                 " ", "increment", " ", "it", " ", "by", " ", "1."}], "*)"}], 
               "\[IndentingNewLine]", 
-              RowBox[{"Goto", "@", "label"}]}]}], "]"}], ";", 
+              RowBox[{"Goto", "@", "permutationLabel"}]}]}], "]"}], ";", 
            RowBox[{"(*", 
             RowBox[{
             "This", " ", "Goto", " ", "sends", " ", "the", " ", "program", 
@@ -545,8 +867,10 @@ Cell[BoxData[
              RowBox[{"subknotStartIndex", "=", 
               RowBox[{"If", "[", 
                RowBox[{
-                RowBox[{"crossingIndex", "\[Equal]", "crossingNumber"}], ",", 
-                "2", ",", "1"}], "]"}]}], ",", 
+                RowBox[{
+                 RowBox[{"crossingIndex", "\[Equal]", "crossingNumber"}], "&&", 
+                 RowBox[{"crossingNumber", ">", "1"}]}], ",", "2", ",", "1"}],
+                "]"}]}], ",", 
              RowBox[{"(*", 
               RowBox[{
                RowBox[{
@@ -565,7 +889,13 @@ Cell[BoxData[
                RowBox[{
                "thus", " ", "classifying", " ", "permutation", " ", "as", " ",
                  "not", " ", 
-                RowBox[{"prime", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
+                RowBox[{"prime", ".", " ", "This"}], " ", "is", " ", "not", 
+                " ", "done", " ", "when", " ", "crossingNumber", " ", "is", 
+                " ", "equal", " ", "to", " ", "1", " ", "as", " ", "the", " ",
+                 "only", " ", "knot", " ", "with", " ", "one", " ", 
+                "crossing", " ", "must", " ", "be", " ", "eliminated", " ", 
+                "this", " ", 
+                RowBox[{"way", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
              RowBox[{"subknotStartIndex", "\[LessEqual]", "crossingIndex"}], 
              ",", 
              RowBox[{"(*", 
@@ -763,8 +1093,8 @@ Cell[BoxData[
                    " ", "the", " ", "For", " ", "loop", " ", "will", " ", 
                    "later", " ", "increment", " ", "it", " ", "by", " ", 
                    "1."}], "*)"}], "\[IndentingNewLine]", 
-                 RowBox[{"Goto", "@", "label"}]}]}], "]"}]}]}], "]"}]}]}], 
-         "]"}], ";", 
+                 RowBox[{"Goto", "@", "permutationLabel"}]}]}], "]"}]}]}], 
+            "]"}]}]}], "]"}], ";", 
         RowBox[{"(*", 
          RowBox[{
          "This", " ", "Goto", " ", "sends", " ", "the", " ", "program", " ", 
@@ -782,13 +1112,13 @@ Cell[BoxData[
             " ", "if", " ", "the", " ", "knot", " ", "represented", " ", "by",
             " ", "permutation", " ", "can", " ", "be", " ", "added", " ", 
            "to", " ", "the", " ", "list", " ", "of", " ", "candidates", " ", 
-           "in", " ", "rolfsenTable", " ", "by", " ", "checking", " ", "If", 
-           " ", "the", " ", "graph", " ", "formed", " ", "by", " ", "the", 
-           " ", "knot", " ", "is", " ", "planar", " ", "And", " ", "If", " ", 
-           "the", " ", "permutation", " ", "is", " ", "minimal", " ", 
-           "across", " ", "all", " ", "starting", " ", "points", " ", "and", 
-           " ", "directions", " ", "of", " ", "travel", " ", "along", " ", 
-           "the", " ", 
+           "in", " ", "rolfsenTableAlternating", " ", "by", " ", "checking", 
+           " ", "If", " ", "the", " ", "graph", " ", "formed", " ", "by", " ",
+            "the", " ", "knot", " ", "is", " ", "planar", " ", "And", " ", 
+           "If", " ", "the", " ", "permutation", " ", "is", " ", "minimal", 
+           " ", "across", " ", "all", " ", "starting", " ", "points", " ", 
+           "and", " ", "directions", " ", "of", " ", "travel", " ", "along", 
+           " ", "the", " ", 
            RowBox[{"knot", "."}]}], "*)"}], "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{
@@ -814,7 +1144,7 @@ Cell[BoxData[
                  "that", " ", "does", " ", "not", " ", "represent", " ", "a", 
                  " ", "planar", " ", "curve", " ", "cannot", " ", "be", " ", 
                  "included", " ", "in", " ", 
-                 RowBox[{"rolfsenTable", "."}]}], "*)"}], 
+                 RowBox[{"rolfsenTableAlternating", "."}]}], "*)"}], 
                "\[IndentingNewLine]", 
                RowBox[{
                 RowBox[{"{", 
@@ -892,346 +1222,24 @@ Cell[BoxData[
              RowBox[{
              "valent", " ", "graph", " ", "with", " ", "crossingNumber", " ", 
               RowBox[{"vertices", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"2", "permutation"}], "\[Equal]", 
-            RowBox[{"(*", 
-             RowBox[{
-             "This", " ", "2", "permutation", " ", "is", " ", "the", " ", 
-              "value", " ", "of", " ", "the", " ", "list", " ", "of", " ", 
-              "even", " ", "numbers", " ", "that", " ", "represent", " ", 
-              "the", " ", 
-              RowBox[{"knot", ".", " ", "It"}], " ", "has", " ", "to", " ", 
-              "be", " ", "minimal", " ", "over", " ", "all", " ", "starting", 
-              " ", "points", " ", "and", " ", 
-              RowBox[{"directions", "."}]}], "*)"}], 
-            RowBox[{
-             RowBox[{"Sort", "[", 
-              RowBox[{"Join", "[", 
-               RowBox[{"(*", 
-                RowBox[{
-                "This", " ", "Sort", " ", "finds", " ", "the", " ", "minimal",
-                  " ", "permutation", " ", "and", " ", "the", " ", "Join", 
-                 " ", "connects", " ", "the", " ", "Table", " ", "of", " ", 
-                 "permutations", " ", "in", " ", "the", " ", "original", " ", 
-                 "direction", " ", "with", " ", "the", " ", "Table", " ", 
-                 "of", " ", "permutations", " ", "in", " ", "the", " ", 
-                 "opposite", " ", 
-                 RowBox[{"direction", "."}]}], "*)"}], "\[IndentingNewLine]", 
-               RowBox[{
-                RowBox[{"Table", "[", 
-                 RowBox[{"(*", 
-                  RowBox[{
-                  "This", " ", "Table", " ", "generates", " ", "all", " ", 
-                   "2", "crossingNumber", " ", "permutations", " ", "that", 
-                   " ", "are", " ", "obtained", " ", "by", " ", "fixing", " ",
-                    "direction", " ", "and", " ", "changing", " ", "the", " ",
-                    "starting", " ", 
-                   RowBox[{"point", "."}]}], "*)"}], "\[IndentingNewLine]", 
-                 RowBox[{
-                  RowBox[{
-                   RowBox[{
-                    RowBox[{"Sort", "[", 
-                    RowBox[{"(*", 
-                    RowBox[{
-                    "This", " ", "Sort", " ", "arranges", " ", "the", " ", 
-                    "crossing", " ", "pairs", " ", "so", " ", "that", " ", 
-                    "the", " ", "odd", " ", "numbers", " ", "are", " ", 
-                    RowBox[{"ascending", "."}]}], "*)"}], 
-                    "\[IndentingNewLine]", 
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{"Mod", "[", 
-                    RowBox[{"(*", 
-                    RowBox[{
-                    "This", " ", "Mod", " ", "is", " ", "used", " ", "to", 
-                    " ", "modify", " ", "the", " ", "elements", " ", "of", 
-                    " ", "the", " ", "crossing", " ", "pairs", " ", "as", " ",
-                     "the", " ", "indices", " ", "wrap", " ", "around", " ", 
-                    "after", " ", "reaching", " ", "2", 
-                    RowBox[{"crossingNumber", ".", " ", "An"}], " ", "offset",
-                     " ", "of", " ", "1", " ", "is", " ", "used", " ", "to", 
-                    " ", "avoid", " ", "indexing", " ", "from", " ", "0."}], 
-                    "*)"}], "\[IndentingNewLine]", 
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{"2", 
-                    RowBox[{"Table", "[", 
-                    RowBox[{"index", ",", 
-                    RowBox[{"{", 
-                    RowBox[{"index", ",", "crossingNumber"}], "}"}]}], 
-                    "]"}]}], "-", "1"}], ",", 
-                    RowBox[{"(*", 
-                    RowBox[{
-                    RowBox[{
-                    "This", " ", "Table", " ", "generates", " ", "the", " ", 
-                    "list", " ", "of", " ", "numbers", " ", "from", " ", "1", 
-                    " ", "to", " ", "crossingNumber", " ", "which", " ", "is",
-                     " ", "then", " ", "doubled", " ", "and", " ", "from", 
-                    " ", "which", " ", "1", " ", "is", " ", "subtracted"}], 
-                    ",", " ", 
-                    RowBox[{
-                    RowBox[{
-                    "making", " ", "it", " ", "a", " ", "list", " ", "of", 
-                    " ", "all", " ", "the", " ", "odd", " ", "numbers", " ", 
-                    "from", " ", "1", " ", "to", " ", "2", "crossingNumber"}],
-                     "-", "1."}]}], "*)"}], "\[IndentingNewLine]", 
-                    RowBox[{"2", "permutation"}]}], "}"}], 
-                    RowBox[{"(*", 
-                    RowBox[{
-                    "This", " ", "2", "permutation", " ", "is", " ", "the", 
-                    " ", "value", " ", "of", " ", "the", " ", "list", " ", 
-                    "of", " ", "even", " ", "numbers", " ", "that", " ", 
-                    "represent", " ", "the", " ", 
-                    RowBox[{"knot", "."}]}], "*)"}], "\[IndentingNewLine]", 
-                    "+", "shift"}], ",", 
-                    RowBox[{"2", "crossingNumber"}], ",", "1"}], "]"}], 
-                    "\[LeftDoubleBracket]", 
-                    RowBox[{"(*", 
-                    RowBox[{
-                    "This", " ", "shifts", " ", "all", " ", "the", " ", 
-                    "values", " ", "in", " ", "the", " ", "knot", " ", "by", 
-                    " ", "an", " ", "offset", " ", "of", " ", 
-                    RowBox[{"shift", ".", " ", "Mod"}], " ", "is", " ", 
-                    "applied", " ", "to", " ", "make", " ", "sure", " ", 
-                    "all", " ", "the", " ", "values", " ", "are", " ", "in", 
-                    " ", "the", " ", "range", " ", "from", " ", "1", " ", 
-                    "to", " ", "2", 
-                    RowBox[{"crossingNumber", "."}]}], "*)"}], 
-                    "\[IndentingNewLine]", 
-                    RowBox[{"If", "[", 
-                    RowBox[{
-                    RowBox[{"EvenQ", "@", "shift"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{"1", ",", "2"}], "}"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{"2", ",", "1"}], "}"}]}], "]"}], 
-                    "\[RightDoubleBracket]"}], "\[Transpose]"}], "]"}], 
-                    "\[Transpose]"}], "\[LeftDoubleBracket]", 
-                   RowBox[{"(*", 
-                    RowBox[{
-                    RowBox[{"If", " ", "shift", " ", "is", " ", "odd"}], ",", 
-                    " ", 
-                    RowBox[{
-                    "the", " ", "order", " ", "of", " ", "the", " ", "two", 
-                    " ", "lists", " ", "must", " ", "be", " ", "swapped", " ",
-                     "as", " ", "the", " ", "odd", " ", "numbers", " ", 
-                    "will", " ", "end", " ", "up", " ", "in", " ", "the", " ",
-                     "second", " ", "list", " ", "and", " ", "vice", " ", 
-                    RowBox[{"versa", ".", " ", "The"}], " ", "matrix", " ", 
-                    "is", " ", "then", " ", "transposed", " ", "so", " ", 
-                    "all", " ", "the", " ", "crossings", " ", "are", " ", 
-                    "in", " ", "pairs"}], ",", " ", 
-                    RowBox[{
-                    "then", " ", "sorted", " ", "with", " ", "respect", " ", 
-                    "to", " ", "the", " ", "first", " ", "element"}], ",", 
-                    " ", 
-                    RowBox[{
-                    "then", " ", "transposed", " ", "again", " ", "to", " ", 
-                    "turn", " ", "it", " ", "back", " ", "into", " ", "two", 
-                    " ", "lists"}], ",", " ", 
-                    RowBox[{
-                    "one", " ", "of", " ", "ordered", " ", "odd", " ", 
-                    "numbers", " ", "and", " ", "one", " ", "of", " ", 
-                    "shuffled", " ", "even", " ", 
-                    RowBox[{"numbers", "."}]}]}], "*)"}], 
-                   "\[IndentingNewLine]", "2", "\[RightDoubleBracket]"}], ",", 
-                  RowBox[{"(*", 
-                   RowBox[{
-                    RowBox[{
-                    "This", " ", "only", " ", "considers", " ", "the", " ", 
-                    "list", " ", "of", " ", "even", " ", "numbers", " ", "in",
-                     " ", "the", " ", "crossing", " ", "lists"}], ",", " ", 
-                    RowBox[{"disregarding", " ", "the", " ", "odd", " ", 
-                    RowBox[{"numbers", "."}]}]}], "*)"}], 
-                  "\[IndentingNewLine]", 
-                  RowBox[{"{", 
-                   RowBox[{"shift", ",", 
-                    RowBox[{"2", "crossingNumber"}]}], "}"}]}], "]"}], ",", 
-                RowBox[{"(*", 
-                 RowBox[{
-                 "This", " ", "creates", " ", "a", " ", "Table", " ", "of", 
-                  " ", "all", " ", "possible", " ", "offsets", " ", "of", " ",
-                   "permutation", " ", "in", " ", "the", " ", "forward", " ", 
-                  "direction", " ", "with", " ", "shift", " ", "ranging", " ",
-                   "from", " ", "1", " ", "to", " ", "2", 
-                  RowBox[{"crossingNumber", "."}]}], "*)"}], 
-                "\[IndentingNewLine]", 
-                RowBox[{"Table", "[", 
-                 RowBox[{"(*", 
-                  RowBox[{
-                  "This", " ", "Table", " ", "generates", " ", "all", " ", 
-                   "2", "crossingNumber", " ", "permutations", " ", "that", 
-                   " ", "are", " ", "obtained", " ", "by", " ", "reversing", 
-                   " ", "direction", " ", "and", " ", "changing", " ", "the", 
-                   " ", "starting", " ", 
-                   RowBox[{"point", "."}]}], "*)"}], "\[IndentingNewLine]", 
-                 RowBox[{
-                  RowBox[{
-                   RowBox[{
-                    RowBox[{"Sort", "[", 
-                    RowBox[{"(*", 
-                    RowBox[{
-                    "This", " ", "Sort", " ", "arranges", " ", "the", " ", 
-                    "crossing", " ", "pairs", " ", "so", " ", "that", " ", 
-                    "the", " ", "odd", " ", "numbers", " ", "are", " ", 
-                    RowBox[{"ascending", "."}]}], "*)"}], 
-                    "\[IndentingNewLine]", 
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{"Mod", "[", 
-                    RowBox[{"(*", 
-                    RowBox[{
-                    "This", " ", "Mod", " ", "is", " ", "used", " ", "to", 
-                    " ", "modify", " ", "the", " ", "elements", " ", "of", 
-                    " ", "the", " ", "crossing", " ", "pairs", " ", "as", " ",
-                     "the", " ", "indices", " ", "wrap", " ", "around", " ", 
-                    "after", " ", "reaching", " ", "2", 
-                    RowBox[{"crossingNumber", ".", " ", "An"}], " ", "offset",
-                     " ", "of", " ", "1", " ", "is", " ", "used", " ", "to", 
-                    " ", "avoid", " ", "indexing", " ", "from", " ", "0."}], 
-                    "*)"}], "\[IndentingNewLine]", 
-                    RowBox[{
-                    RowBox[{"shift", 
-                    RowBox[{"(*", 
-                    RowBox[{
-                    "This", " ", "shifts", " ", "all", " ", "the", " ", 
-                    "values", " ", "in", " ", "the", " ", "knot", " ", "by", 
-                    " ", "an", " ", "offset", " ", "of", " ", 
-                    RowBox[{"shift", "."}]}], "*)"}], "\[IndentingNewLine]", 
-                    "-", 
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{"2", 
-                    RowBox[{"Table", "[", 
-                    RowBox[{"index", ",", 
-                    RowBox[{"{", 
-                    RowBox[{"index", ",", "crossingNumber"}], "}"}]}], 
-                    "]"}]}], "-", "1"}], ",", 
-                    RowBox[{"(*", 
-                    RowBox[{
-                    RowBox[{
-                    "This", " ", "Table", " ", "generates", " ", "the", " ", 
-                    "list", " ", "of", " ", "numbers", " ", "from", " ", "1", 
-                    " ", "to", " ", "crossingNumber", " ", "which", " ", "is",
-                     " ", "then", " ", "doubled", " ", "and", " ", "from", 
-                    " ", "which", " ", "1", " ", "is", " ", "subtracted"}], 
-                    ",", " ", 
-                    RowBox[{
-                    RowBox[{
-                    "making", " ", "it", " ", "a", " ", "list", " ", "of", 
-                    " ", "all", " ", "the", " ", "odd", " ", "numbers", " ", 
-                    "from", " ", "1", " ", "to", " ", "2", "crossingNumber"}],
-                     "-", 
-                    RowBox[{
-                    "1.", " ", "The", " ", "values", " ", "are", " ", 
-                    "negated", " ", "to", " ", "reverse", " ", "the", " ", 
-                    RowBox[{"direction", "."}]}]}]}], "*)"}], 
-                    "\[IndentingNewLine]", 
-                    RowBox[{"2", "permutation"}]}], "}"}]}], ",", 
-                    RowBox[{"(*", 
-                    RowBox[{
-                    "This", " ", "2", "permutation", " ", "is", " ", "the", 
-                    " ", "value", " ", "of", " ", "the", " ", "list", " ", 
-                    "of", " ", "even", " ", "numbers", " ", "that", " ", 
-                    "represent", " ", "the", " ", 
-                    RowBox[{"knot", ".", " ", "The"}], " ", "values", " ", 
-                    "are", " ", "negated", " ", "to", " ", "reverse", " ", 
-                    "the", " ", 
-                    RowBox[{"direction", "."}]}], "*)"}], 
-                    "\[IndentingNewLine]", 
-                    RowBox[{"2", "crossingNumber"}], ",", "1"}], "]"}], 
-                    "\[LeftDoubleBracket]", 
-                    RowBox[{"(*", 
-                    RowBox[{
-                    "Mod", " ", "is", " ", "applied", " ", "to", " ", "make", 
-                    " ", "sure", " ", "all", " ", "the", " ", "values", " ", 
-                    "are", " ", "in", " ", "the", " ", "range", " ", "from", 
-                    " ", "1", " ", "to", " ", "2", 
-                    RowBox[{"crossingNumber", "."}]}], "*)"}], 
-                    "\[IndentingNewLine]", 
-                    RowBox[{"If", "[", 
-                    RowBox[{
-                    RowBox[{"EvenQ", "@", "shift"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{"1", ",", "2"}], "}"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{"2", ",", "1"}], "}"}]}], "]"}], 
-                    "\[RightDoubleBracket]"}], "\[Transpose]"}], "]"}], 
-                    "\[Transpose]"}], "\[LeftDoubleBracket]", 
-                   RowBox[{"(*", 
-                    RowBox[{
-                    RowBox[{"If", " ", "shift", " ", "is", " ", "odd"}], ",", 
-                    " ", 
-                    RowBox[{
-                    "the", " ", "order", " ", "of", " ", "the", " ", "two", 
-                    " ", "lists", " ", "must", " ", "be", " ", "swapped", " ",
-                     "as", " ", "the", " ", "odd", " ", "numbers", " ", 
-                    "will", " ", "end", " ", "up", " ", "in", " ", "the", " ",
-                     "second", " ", "list", " ", "and", " ", "vice", " ", 
-                    RowBox[{"versa", ".", " ", "The"}], " ", "matrix", " ", 
-                    "is", " ", "then", " ", "transposed", " ", "so", " ", 
-                    "all", " ", "the", " ", "crossings", " ", "are", " ", 
-                    "in", " ", "pairs"}], ",", " ", 
-                    RowBox[{
-                    "then", " ", "sorted", " ", "with", " ", "respect", " ", 
-                    "to", " ", "the", " ", "first", " ", "element"}], ",", 
-                    " ", 
-                    RowBox[{
-                    "then", " ", "transposed", " ", "again", " ", "to", " ", 
-                    "turn", " ", "it", " ", "back", " ", "into", " ", "two", 
-                    " ", "lists"}], ",", " ", 
-                    RowBox[{
-                    "one", " ", "of", " ", "ordered", " ", "odd", " ", 
-                    "numbers", " ", "and", " ", "one", " ", "of", " ", 
-                    "shuffled", " ", "even", " ", 
-                    RowBox[{"numbers", "."}]}]}], "*)"}], 
-                   "\[IndentingNewLine]", "2", "\[RightDoubleBracket]"}], ",", 
-                  RowBox[{"(*", 
-                   RowBox[{
-                    RowBox[{
-                    "This", " ", "only", " ", "considers", " ", "the", " ", 
-                    "list", " ", "of", " ", "even", " ", "numbers", " ", "in",
-                     " ", "the", " ", "crossing", " ", "lists"}], ",", " ", 
-                    RowBox[{"disregarding", " ", "the", " ", "odd", " ", 
-                    RowBox[{"numbers", "."}]}]}], "*)"}], 
-                  "\[IndentingNewLine]", 
-                  RowBox[{"{", 
-                   RowBox[{"shift", ",", 
-                    RowBox[{"2", "crossingNumber"}]}], "}"}]}], "]"}]}], 
-               "]"}], "]"}], "\[LeftDoubleBracket]", 
-             RowBox[{"(*", 
-              RowBox[{
-              "This", " ", "creates", " ", "a", " ", "Table", " ", "of", " ", 
-               "all", " ", "possible", " ", "offsets", " ", "of", " ", 
-               "permutation", " ", "in", " ", "the", " ", "forward", " ", 
-               "direction", " ", "with", " ", "shift", " ", "ranging", " ", 
-               "from", " ", "1", " ", "to", " ", "2", 
-               RowBox[{"crossingNumber", "."}]}], "*)"}], 
-             "\[IndentingNewLine]", "1", "\[RightDoubleBracket]"}]}]}], ",", 
+           RowBox[{"permutation", "\[Equal]", 
+            RowBox[{"Minimal", "@", "permutation"}]}]}], ",", 
           RowBox[{"(*", 
            RowBox[{
-            RowBox[{
-            "This", " ", "chooses", " ", "the", " ", "first", " ", 
-             "permutation", " ", "from", " ", "a", " ", "sorted", " ", 
-             "list"}], ",", " ", 
-            RowBox[{
-            "making", " ", "it", " ", "the", " ", "smallest", " ", "such", 
-             " ", "permutation", " ", 
-             RowBox[{"lexicographically", "."}]}]}], "*)"}], 
-          "\[IndentingNewLine]", 
+           "This", " ", "verifies", " ", "that", " ", "permutation", " ", 
+            "is", " ", "lexicographically", " ", "minimal", " ", "over", " ", 
+            "all", " ", "directions", " ", "and", " ", "starting", " ", 
+            RowBox[{"points", "."}]}], "*)"}], "\[IndentingNewLine]", 
           RowBox[{"AppendTo", "[", 
-           RowBox[{"rolfsenTable", ",", "permutation"}], "]"}]}], "]"}], ";", 
+           RowBox[{"rolfsenTableAlternating", ",", "permutation"}], "]"}]}], 
+         "]"}], ";", 
         RowBox[{"(*", 
          RowBox[{
          "This", " ", "AppendTo", " ", "adds", " ", "permutation", " ", "to", 
-          " ", "rolfsenTable", " ", "If", " ", "it", " ", "has", " ", 
-          "cleared", " ", "all", " ", "the", " ", "above", " ", 
+          " ", "rolfsenTableAlternating", " ", "If", " ", "it", " ", "has", 
+          " ", "cleared", " ", "all", " ", "the", " ", "above", " ", 
           RowBox[{"conditions", "."}]}], "*)"}], "\[IndentingNewLine]", 
-        RowBox[{"Label", "@", "label"}]}]}], "]"}], ";", 
+        RowBox[{"Label", "@", "permutationLabel"}]}]}], "]"}], ";", 
      RowBox[{"(*", 
       RowBox[{
       "This", " ", "Label", " ", "is", " ", "positioned", " ", "at", " ", 
@@ -1240,11 +1248,381 @@ Cell[BoxData[
        "condition", " ", "is", " ", "immediately", " ", "checked", " ", "at", 
        " ", "the", " ", "start", " ", "of", " ", "the", " ", "next", " ", 
        RowBox[{"iteration", "."}]}], "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"Length", "@", "rolfsenTable"}]}]}], "]"}], 
+     RowBox[{"rolfsenTableAlternating", "=", 
+      RowBox[{"Sort", "@", "rolfsenTableAlternating"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"For", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"knotIndex", "=", "1"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"knotIndex", "\[LessEqual]", 
+        RowBox[{"Length", "@", "rolfsenTableAlternating"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"knotIndex", "++"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"permutation", "=", 
+         RowBox[{
+         "rolfsenTableAlternating", "\[LeftDoubleBracket]", "knotIndex", 
+          "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"For", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"crossingIndex", "=", "1"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"crossingIndex", "\[LessEqual]", "crossingNumber"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"crossingIndex", "++"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"For", "[", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"flypeOddLength", "=", "1"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"Mod", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"2", "crossingIndex"}], "-", "1", "+", 
+                  RowBox[{
+                   RowBox[{
+                   "direction", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "flypeOddLength"}]}], ",", 
+                 RowBox[{"2", "crossingNumber"}], ",", "1"}], "]"}], 
+               "\[NotEqual]", 
+               RowBox[{"2", 
+                RowBox[{
+                "permutation", "\[LeftDoubleBracket]", "crossingIndex", 
+                 "\[RightDoubleBracket]"}]}]}], ",", "\[IndentingNewLine]", 
+              RowBox[{"flypeOddLength", "++"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"For", "[", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"flypeEvenLength", "=", "1"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"Mod", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"2", 
+                    RowBox[{
+                    "permutation", "\[LeftDoubleBracket]", "crossingIndex", 
+                    "\[RightDoubleBracket]"}]}], "+", 
+                    RowBox[{
+                    RowBox[{
+                    "direction", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "flypeEvenLength"}]}], ",", 
+                   RowBox[{"2", "crossingNumber"}], ",", "1"}], "]"}], 
+                 "\[NotEqual]", 
+                 RowBox[{
+                  RowBox[{"2", "crossingIndex"}], "-", "1"}]}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"flypeEvenLength", "++"}], ",", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"strandSet", "=", 
+                  RowBox[{"Union", "[", 
+                   RowBox[{
+                    RowBox[{"Table", "[", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"Mod", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"2", "crossingIndex"}], "-", "1", "+", 
+                    RowBox[{
+                    RowBox[{
+                    "direction", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "index"}]}], ",", 
+                    RowBox[{"2", "crossingNumber"}], ",", "1"}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"{", 
+                    RowBox[{"index", ",", "flypeOddLength"}], "}"}]}], "]"}], 
+                    ",", "\[IndentingNewLine]", 
+                    RowBox[{"Table", "[", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"Mod", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"2", 
+                    RowBox[{
+                    "permutation", "\[LeftDoubleBracket]", "crossingIndex", 
+                    "\[RightDoubleBracket]"}]}], "+", 
+                    RowBox[{
+                    RowBox[{
+                    "direction", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "index"}]}], ",", 
+                    RowBox[{"2", "crossingNumber"}], ",", "1"}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"{", 
+                    RowBox[{"index", ",", "flypeEvenLength"}], "}"}]}], 
+                    "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"Complement", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Sort", "[", 
+                    RowBox[{
+                    RowBox[{"Join", "[", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Rebuild", "[", "permutation", "]"}], 
+                    "\[Transpose]"}], ",", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"Reverse", "[", 
+                    RowBox[{"Rebuild", "@", "permutation"}], "]"}], 
+                    "\[Transpose]"}]}], "]"}], "\[Transpose]"}], "]"}], 
+                    "\[LeftDoubleBracket]", 
+                    RowBox[{"2", ",", "strandSet"}], 
+                    "\[RightDoubleBracket]"}], ",", "\[IndentingNewLine]", 
+                    "strandSet"}], "]"}], "\[Equal]", 
+                    RowBox[{"{", "}"}]}], "&&", "\[IndentingNewLine]", 
+                    RowBox[{"permutation", "\[NotEqual]", 
+                    RowBox[{
+                    RowBox[{"Sort", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"permutation", ",", "\[IndentingNewLine]", 
+                    RowBox[{"Minimal", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Sort", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"OddQ", "[", 
+                    RowBox[{
+                    "#", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "]"}], ",", "#", ",", 
+                    RowBox[{"#", "\[LeftDoubleBracket]", 
+                    RowBox[{"{", 
+                    RowBox[{"2", ",", "1"}], "}"}], 
+                    "\[RightDoubleBracket]"}]}], "]"}], "&"}], "/@", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Rebuild", "@", "permutation"}], "/.", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"value_Integer", "\[RuleDelayed]", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"Mod", "[", 
+                    RowBox[{
+                    RowBox[{"value", "+", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Mod", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    "direction", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], 
+                    RowBox[{"(", 
+                    RowBox[{"value", "-", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"2", "crossingIndex"}], "-", "1"}], ")"}]}], 
+                    ")"}]}], ",", 
+                    RowBox[{"2", "crossingNumber"}], ",", "1"}], "]"}], 
+                    "\[LessEqual]", "flypeOddLength"}], ",", 
+                    RowBox[{"-", 
+                    RowBox[{
+                    "direction", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]}], ",", "\[IndentingNewLine]", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Mod", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    "direction", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], 
+                    RowBox[{"(", 
+                    RowBox[{"value", "-", 
+                    RowBox[{"2", 
+                    RowBox[{
+                    "permutation", "\[LeftDoubleBracket]", "crossingIndex", 
+                    "\[RightDoubleBracket]"}]}]}], ")"}]}], ",", 
+                    RowBox[{"2", "crossingNumber"}], ",", "1"}], "]"}], 
+                    "\[LessEqual]", "flypeEvenLength"}], ",", 
+                    RowBox[{"-", 
+                    RowBox[{
+                    "direction", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}]}], ",", "\[IndentingNewLine]", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"value", "\[Equal]", 
+                    RowBox[{
+                    RowBox[{"2", "crossingIndex"}], "-", "1"}]}], ",", 
+                    RowBox[{
+                    RowBox[{
+                    "direction", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "flypeOddLength"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"value", "\[Equal]", 
+                    RowBox[{"2", 
+                    RowBox[{
+                    "permutation", "\[LeftDoubleBracket]", "crossingIndex", 
+                    "\[RightDoubleBracket]"}]}]}], ",", 
+                    RowBox[{
+                    RowBox[{
+                    "direction", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "flypeEvenLength"}], ",", 
+                    "0"}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"2", "crossingNumber"}], ",", "1"}], "]"}]}]}], 
+                    ")"}], "\[Transpose]"}], ")"}]}], "]"}], "\[Transpose]"}],
+                     "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+                    "/", "2"}], "]"}]}], "}"}], "]"}], "\[LeftDoubleBracket]",
+                     "1", "\[RightDoubleBracket]"}]}]}], ",", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{
+                    RowBox[{"rolfsenTableAlternating", "=", 
+                    RowBox[{"Delete", "[", 
+                    RowBox[{"rolfsenTableAlternating", ",", "knotIndex"}], 
+                    "]"}]}], ";", "\[IndentingNewLine]", 
+                    RowBox[{"knotIndex", "--"}], ";", "\[IndentingNewLine]", 
+                    RowBox[{"Goto", "@", "flypeLabel"}]}]}], "]"}]}]}], 
+               "]"}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"direction", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"1", ",", "1"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"1", ",", 
+                  RowBox[{"-", "1"}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], ",", 
+                  RowBox[{"-", "1"}]}], "}"}]}], "}"}]}], "}"}]}], "]"}]}], 
+         "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"Label", "@", "flypeLabel"}]}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"rolfsenTableFull", "=", 
+      RowBox[{"Flatten", "[", 
+       RowBox[{
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"knot", " ", "crossings"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"crossings", ",", 
+              RowBox[{"Flatten", "[", 
+               RowBox[{
+                RowBox[{"Outer", "@@", 
+                 RowBox[{"Flatten", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"List", ",", 
+                    RowBox[{"Join", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"{", "1", "}"}], "}"}], ",", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "1"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"crossingNumber", "-", "1"}], "}"}]}], "]"}]}], 
+                    "]"}]}], "}"}], ",", "1"}], "]"}]}], ",", 
+                RowBox[{"crossingNumber", "-", "1"}]}], "]"}]}], "}"}]}], 
+           "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"knot", ",", "rolfsenTableAlternating"}], "}"}]}], "]"}], 
+        ",", "1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"knotIndex", "=", "1"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"knotIndex", "\[LessEqual]", 
+        RowBox[{"Length", "@", "rolfsenTableFull"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"knotIndex", "++"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"For", "[", 
+        RowBox[{
+         RowBox[{"crossingIndex", "=", "1"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"crossingIndex", "\[LessEqual]", "crossingNumber"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"crossingIndex", "++"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"permutation", "=", 
+           RowBox[{
+           "rolfsenTableFull", "\[LeftDoubleBracket]", "knotIndex", 
+            "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{
+               "permutation", "\[LeftDoubleBracket]", "crossingIndex", 
+                "\[RightDoubleBracket]"}], ">", "0"}], ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"permutation", "\[LeftDoubleBracket]", 
+                 RowBox[{"Mod", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{
+                    "permutation", "\[LeftDoubleBracket]", "crossingIndex", 
+                    "\[RightDoubleBracket]"}], "+", "1"}], ",", 
+                   "crossingNumber", ",", "1"}], "]"}], 
+                 "\[RightDoubleBracket]"}], "\[Equal]", 
+                RowBox[{"-", "crossingIndex"}]}], "||", 
+               RowBox[{
+                RowBox[{"permutation", "\[LeftDoubleBracket]", 
+                 RowBox[{
+                 "permutation", "\[LeftDoubleBracket]", "crossingIndex", 
+                  "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}], 
+                "\[Equal]", 
+                RowBox[{"-", "crossingIndex"}]}]}], ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"permutation", "\[LeftDoubleBracket]", 
+                 RowBox[{"Mod", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{
+                    "permutation", "\[LeftDoubleBracket]", "crossingIndex", 
+                    "\[RightDoubleBracket]"}]}], "+", "1"}], ",", 
+                   "crossingNumber", ",", "1"}], "]"}], 
+                 "\[RightDoubleBracket]"}], "\[Equal]", "crossingIndex"}], "||", 
+               RowBox[{
+                RowBox[{"permutation", "\[LeftDoubleBracket]", 
+                 RowBox[{"Mod", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{
+                    "permutation", "\[LeftDoubleBracket]", "crossingIndex", 
+                    "\[RightDoubleBracket]"}]}], "+", "1"}], ",", 
+                   "crossingNumber", ",", "1"}], "]"}], 
+                 "\[RightDoubleBracket]"}], "\[Equal]", 
+                RowBox[{"Mod", "[", 
+                 RowBox[{
+                  RowBox[{"crossingIndex", "-", "1"}], ",", "crossingNumber", 
+                  ",", "1"}], "]"}]}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"rolfsenTableFull", "=", 
+              RowBox[{"Delete", "[", 
+               RowBox[{"rolfsenTableFull", ",", "knotIndex"}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"knotIndex", "--"}], ";", "\[IndentingNewLine]", 
+             RowBox[{"Break", "[", "]"}]}]}], "]"}]}]}], "]"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Length", "@", "rolfsenTableFull"}]}]}], "]"}], 
   RowBox[{"(*", 
    RowBox[{
    "FIXME", " ", "Make", " ", "this", " ", "write", " ", "to", " ", "a", " ", 
-    RowBox[{"file", "."}]}], "*)"}]}]], "Input",
+    RowBox[{"file", "."}]}], "*)"}]}]}], "Input",
  CellChangeTimes->{{3.671495360401065*^9, 3.6714954068737803`*^9}, {
    3.671495500724288*^9, 3.6714955185406823`*^9}, {3.6714956814861917`*^9, 
    3.6714956818713818`*^9}, {3.6714958090493717`*^9, 3.671495876790922*^9}, {
@@ -1518,14 +1896,83 @@ Cell[BoxData[
    3.672258784958949*^9}, {3.6722588363765345`*^9, 3.6722588365058527`*^9}, 
    3.672259957291834*^9, {3.672259989566665*^9, 3.672260684276478*^9}, {
    3.672260744695894*^9, 3.6722608604256477`*^9}, {3.6722608973041325`*^9, 
-   3.6722609540552697`*^9}, {3.672260991046313*^9, 3.6722613659165964`*^9}}],
+   3.6722609540552697`*^9}, {3.672260991046313*^9, 3.6722613659165964`*^9}, {
+   3.672276890259488*^9, 3.6722770147610083`*^9}, {3.67227705027746*^9, 
+   3.672277110162453*^9}, {3.672277217414448*^9, 3.6722774249386344`*^9}, {
+   3.6722774926592145`*^9, 3.6722776687949753`*^9}, {3.672277730867348*^9, 
+   3.6722777587847776`*^9}, {3.6722777899196153`*^9, 3.672277825168798*^9}, {
+   3.6722778643139267`*^9, 3.6722778834524374`*^9}, {3.6722780308332024`*^9, 
+   3.672278166652872*^9}, 3.6722782568216867`*^9, {3.672278301930997*^9, 
+   3.672278319183669*^9}, {3.6722783665946198`*^9, 3.672278394296197*^9}, {
+   3.672278433249631*^9, 3.6722784538913755`*^9}, {3.6722786205490694`*^9, 
+   3.6722786244457183`*^9}, {3.672278854515213*^9, 3.6722788546042323`*^9}, {
+   3.672278892608304*^9, 3.672278965985468*^9}, {3.6722790339037423`*^9, 
+   3.672279145642482*^9}, {3.6722791804254475`*^9, 3.672279237006036*^9}, {
+   3.6723194878061733`*^9, 3.6723195303084917`*^9}, {3.672319591367996*^9, 
+   3.6723197050834117`*^9}, {3.6723198802409697`*^9, 3.672320065113696*^9}, {
+   3.672321158473385*^9, 3.6723211715883164`*^9}, {3.6723212871778026`*^9, 
+   3.6723214855481663`*^9}, {3.6723215477824697`*^9, 3.672321549503175*^9}, {
+   3.6723216095033464`*^9, 3.6723216414770465`*^9}, 3.672321671999514*^9, {
+   3.6723247100311365`*^9, 3.6723247125937085`*^9}, {3.672324756305911*^9, 
+   3.6723249487651987`*^9}, {3.6723249807335835`*^9, 
+   3.6723250226064987`*^9}, {3.6723270680967655`*^9, 
+   3.6723270940903063`*^9}, {3.672327127892379*^9, 3.6723271472625904`*^9}, {
+   3.672327286660557*^9, 3.672327287509489*^9}, {3.672327337015517*^9, 
+   3.6723273990023413`*^9}, {3.6723274438929873`*^9, 3.672327448101584*^9}, {
+   3.672327528309884*^9, 3.6723276226609173`*^9}, 3.6723276648197546`*^9, {
+   3.67232776265399*^9, 3.6723277765771265`*^9}, {3.6723278082508063`*^9, 
+   3.6723278126873703`*^9}, {3.672327860864053*^9, 3.6723279500945106`*^9}, {
+   3.672328077381406*^9, 3.672328080631837*^9}, {3.672328126677827*^9, 
+   3.6723281652629733`*^9}, {3.6723286444791102`*^9, 3.672328644694178*^9}, {
+   3.672328806873272*^9, 3.67232881315602*^9}, {3.6723290025905356`*^9, 
+   3.6723290193521643`*^9}, {3.6723290591007357`*^9, 3.672329079878644*^9}, {
+   3.672329409994306*^9, 3.6723296391484027`*^9}, {3.6723296749115953`*^9, 
+   3.672329777495435*^9}, {3.6723299881698503`*^9, 3.672330073318638*^9}, {
+   3.672330643304922*^9, 3.672330673209118*^9}, {3.6723307763855553`*^9, 
+   3.672330777335723*^9}, 3.672330810350917*^9, {3.672331211193392*^9, 
+   3.6723312667667217`*^9}, {3.6723313006351366`*^9, 
+   3.6723313079434147`*^9}, {3.6723317281944237`*^9, 
+   3.6723317697049074`*^9}, {3.6723318697960014`*^9, 3.672331888898156*^9}, {
+   3.6723319201444674`*^9, 3.67233205413794*^9}, {3.6723321638702307`*^9, 
+   3.672332182150071*^9}, {3.6723322842376595`*^9, 3.6723323770726376`*^9}, {
+   3.6723326388540707`*^9, 3.672332778982955*^9}, 3.6723354060336833`*^9, {
+   3.6723355431515417`*^9, 3.6723355441389966`*^9}, {3.6723359662188644`*^9, 
+   3.672335974967927*^9}, {3.6723360306637783`*^9, 3.672336133028474*^9}, {
+   3.6723362635969934`*^9, 3.672336318247176*^9}, {3.672339078419262*^9, 
+   3.6723390787132*^9}, {3.6723413081217957`*^9, 3.6723413307909203`*^9}, {
+   3.67234136445463*^9, 3.6723413953554535`*^9}, {3.6723414513683724`*^9, 
+   3.6723414517158003`*^9}, {3.672341680731575*^9, 3.67234172243906*^9}, {
+   3.672341830942092*^9, 3.672341978551021*^9}, {3.672342080072653*^9, 
+   3.6723420954550505`*^9}, {3.6723425096754413`*^9, 3.672342610777105*^9}, {
+   3.6723426826490135`*^9, 3.6723426934995365`*^9}, {3.6723428147838697`*^9, 
+   3.6723428314561653`*^9}, {3.6723428733977623`*^9, 3.672342874278255*^9}, {
+   3.6723431165284925`*^9, 3.6723431753426065`*^9}, {3.6723432074260817`*^9, 
+   3.672343238879283*^9}, {3.672343297948924*^9, 3.6723433119780016`*^9}, {
+   3.6723433508019304`*^9, 3.6723433534032264`*^9}, {3.672343402341902*^9, 
+   3.6723434046126585`*^9}, {3.672343458745042*^9, 3.672343472330312*^9}, {
+   3.6723486674190006`*^9, 3.672348673061658*^9}, {3.672348713051652*^9, 
+   3.6723488178632965`*^9}, {3.6723491731528573`*^9, 
+   3.6723492513167124`*^9}, {3.6723496644146657`*^9, 
+   3.6723497865303683`*^9}, {3.6723498900112166`*^9, 3.672350109199355*^9}, {
+   3.6723503491010847`*^9, 3.6723503654923964`*^9}, {3.6723504125449286`*^9, 
+   3.672350412999925*^9}, {3.672350449566047*^9, 3.6723505004785023`*^9}, {
+   3.67235055167004*^9, 3.672350581178939*^9}, {3.6723517589054017`*^9, 
+   3.672351812716346*^9}, {3.6723518583009987`*^9, 3.67235190264104*^9}, {
+   3.672353918382882*^9, 3.6723539189759536`*^9}, {3.672355405708025*^9, 
+   3.6723554479328365`*^9}, {3.672355611562397*^9, 3.6723556309476175`*^9}, {
+   3.6723556924051943`*^9, 3.672355693741502*^9}, {3.672355936606473*^9, 
+   3.6723559536878567`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"2.953125`6.490881743468981", ",", "84"}], "}"}]], "Output",
- CellChangeTimes->{{3.672260901778264*^9, 3.672260936904447*^9}, {
-   3.6722609793270903`*^9, 3.6722610604035225`*^9}, 3.6722611837630863`*^9, 
-   3.672261369563697*^9}]
+  RowBox[{"6.40625`6.827203796015473", ",", "317"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.672348812922514*^9, 3.6723501175323687`*^9, 3.6723503713855467`*^9, 
+   3.672350415193799*^9, {3.672350451391245*^9, 3.672350500977585*^9}, {
+   3.67235055509386*^9, 3.672350564915556*^9}, 3.672351765142354*^9, 
+   3.672351821609681*^9, {3.672351892720344*^9, 3.6723519031026397`*^9}, 
+   3.672353921226957*^9, {3.67235542183116*^9, 3.6723554485639157`*^9}, 
+   3.6723556868157425`*^9, 3.6723557572681913`*^9, 3.6723559618623667`*^9}]
 }, Open  ]]
 },
 WindowSize->{1366, 685},
@@ -1545,8 +1992,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 85656, 1498, 3352, "Input"],
-Cell[86239, 1522, 269, 5, 64, "Output"]
+Cell[580, 22, 106591, 1941, 4632, "Input"],
+Cell[107174, 1965, 558, 9, 31, "Output"]
 }, Open  ]]
 }
 ]
