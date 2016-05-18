@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    172157,       3217]
-NotebookOptionsPosition[    171667,       3196]
-NotebookOutlinePosition[    172013,       3211]
-CellTagsIndexPosition[    171970,       3208]
+NotebookDataLength[    171227,       3188]
+NotebookOptionsPosition[    170736,       3167]
+NotebookOutlinePosition[    171082,       3182]
+CellTagsIndexPosition[    171039,       3179]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1986,7 +1986,9 @@ Cell[BoxData[
   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
   "\[IndentingNewLine]"}]], "Input",
- CellChangeTimes->{{3.6724502042659936`*^9, 3.6724502053133435`*^9}}],
+ CellChangeTimes->{{3.6724502042659936`*^9, 3.6724502053133435`*^9}, {
+  3.67253656690018*^9, 3.6725365696711884`*^9}, {3.6725366063368835`*^9, 
+  3.6725366185804243`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -2006,69 +2008,52 @@ Cell[BoxData[
       "1"}], ",", 
      RowBox[{"2", "permutation"}]}], "}"}]}], ";", 
   RowBox[{
-   RowBox[{"Minimal", "[", "permutation_", "]"}], ":=", 
+   RowBox[{"Compactify", "[", "fullPermutation_", "]"}], ":=", 
    RowBox[{
     RowBox[{
-     RowBox[{"Union", "[", 
+     RowBox[{"Sort", "[", 
       RowBox[{
-       RowBox[{"Table", "[", 
-        RowBox[{
-         RowBox[{
+       RowBox[{
+        FractionBox[
+         RowBox[{"If", "[", 
           RowBox[{
-           RowBox[{"Sort", "[", 
+           RowBox[{"OddQ", "@", 
             RowBox[{
-             RowBox[{
-              RowBox[{"Mod", "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"Rebuild", "@", "permutation"}], "+", "shift"}], ",", 
-                RowBox[{"2", 
-                 RowBox[{"Length", "@", "permutation"}]}], ",", "1"}], "]"}], 
-              "\[LeftDoubleBracket]", 
-              RowBox[{"If", "[", 
-               RowBox[{
-                RowBox[{"EvenQ", "@", "shift"}], ",", 
-                RowBox[{"{", 
-                 RowBox[{"1", ",", "2"}], "}"}], ",", 
-                RowBox[{"{", 
-                 RowBox[{"2", ",", "1"}], "}"}]}], "]"}], 
-              "\[RightDoubleBracket]"}], "\[Transpose]"}], "]"}], 
-           "\[Transpose]"}], "\[LeftDoubleBracket]", "2", 
-          "\[RightDoubleBracket]"}], ",", 
-         RowBox[{"{", 
-          RowBox[{"shift", ",", 
-           RowBox[{"2", 
-            RowBox[{"Length", "@", "permutation"}]}]}], "}"}]}], "]"}], ",", 
-       RowBox[{"Table", "[", 
-        RowBox[{
+            "#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+           ",", "#", ",", 
+           RowBox[{"#", "\[LeftDoubleBracket]", 
+            RowBox[{"{", 
+             RowBox[{"2", ",", "1"}], "}"}], "\[RightDoubleBracket]"}]}], 
+          "]"}], "2"], "&"}], "/@", 
+       RowBox[{"(", 
+        RowBox[{"Mod", "[", 
          RowBox[{
-          RowBox[{
-           RowBox[{"Sort", "[", 
+          RowBox[{"fullPermutation", "\[Transpose]"}], ",", 
+          RowBox[{"2", 
+           RowBox[{"Length", "[", 
+            RowBox[{"fullPermutation", "\[Transpose]"}], "]"}]}], ",", "1"}], 
+         "]"}], ")"}]}], "]"}], "\[Transpose]"}], "\[LeftDoubleBracket]", "2",
+     "\[RightDoubleBracket]"}]}], ";", 
+  RowBox[{
+   RowBox[{"Minimal", "[", "permutation_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"Union", "@@", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Compactify", "@@@", 
+         RowBox[{"List", "/@", 
+          RowBox[{"{", 
+           RowBox[{
             RowBox[{
-             RowBox[{
-              RowBox[{"Mod", "[", 
-               RowBox[{
-                RowBox[{"shift", "-", 
-                 RowBox[{"Rebuild", "@", "permutation"}]}], ",", 
-                RowBox[{"2", 
-                 RowBox[{"Length", "@", "permutation"}]}], ",", "1"}], "]"}], 
-              "\[LeftDoubleBracket]", 
-              RowBox[{"If", "[", 
-               RowBox[{
-                RowBox[{"EvenQ", "@", "shift"}], ",", 
-                RowBox[{"{", 
-                 RowBox[{"1", ",", "2"}], "}"}], ",", 
-                RowBox[{"{", 
-                 RowBox[{"2", ",", "1"}], "}"}]}], "]"}], 
-              "\[RightDoubleBracket]"}], "\[Transpose]"}], "]"}], 
-           "\[Transpose]"}], "\[LeftDoubleBracket]", "2", 
-          "\[RightDoubleBracket]"}], ",", 
-         RowBox[{"{", 
-          RowBox[{"shift", ",", 
-           RowBox[{"2", 
-            RowBox[{"Length", "@", "permutation"}]}]}], "}"}]}], "]"}]}], 
-      "]"}], "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], "/", 
-    "2"}]}], ";", 
+             RowBox[{"Rebuild", "@", "permutation"}], "+", "shift"}], ",", 
+            RowBox[{"shift", "-", 
+             RowBox[{"Rebuild", "@", "permutation"}]}]}], "}"}]}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"shift", ",", 
+          RowBox[{"2", 
+           RowBox[{"Length", "@", "permutation"}]}]}], "}"}]}], "]"}]}], 
+     ")"}], "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], ";", 
   RowBox[{
    RowBox[{"ReducibleBelow", "[", 
     RowBox[{"permutation_", ",", "crossingNumber_"}], "]"}], ":=", 
@@ -2478,31 +2463,11 @@ Cell[BoxData[
                     RowBox[{"Sort", "[", 
                     RowBox[{"{", 
                     RowBox[{"permutation", ",", 
-                    RowBox[{"Minimal", "[", 
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{"Sort", "[", 
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{"If", "[", 
-                    RowBox[{
-                    RowBox[{"OddQ", "[", 
-                    RowBox[{
-                    "#", "\[LeftDoubleBracket]", "1", 
-                    "\[RightDoubleBracket]"}], "]"}], ",", "#", ",", 
-                    RowBox[{"#", "\[LeftDoubleBracket]", 
-                    RowBox[{"{", 
-                    RowBox[{"2", ",", "1"}], "}"}], 
-                    "\[RightDoubleBracket]"}]}], "]"}], "&"}], "/@", 
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"(", 
+                    RowBox[{"Minimal", "@", 
+                    RowBox[{"Compactify", "[", 
                     RowBox[{
                     RowBox[{"Rebuild", "@", "permutation"}], "/.", 
                     RowBox[{"value_Integer", "\[RuleDelayed]", 
-                    RowBox[{"Mod", "[", 
-                    RowBox[{
                     RowBox[{"value", "+", 
                     RowBox[{"If", "[", 
                     RowBox[{
@@ -2566,12 +2531,9 @@ Cell[BoxData[
                     RowBox[{
                     "direction", "\[LeftDoubleBracket]", "2", 
                     "\[RightDoubleBracket]"}], "flypeEvenLength"}], ",", 
-                    "0"}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], ",", 
-                    RowBox[{"2", "crossingNumber"}], ",", "1"}], "]"}]}]}], 
-                    ")"}], "\[Transpose]"}], ")"}]}], "]"}], "\[Transpose]"}],
-                     "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
-                    "/", "2"}], "]"}]}], "}"}], "]"}], "\[LeftDoubleBracket]",
-                     "1", "\[RightDoubleBracket]"}]}]}], ",", 
+                    "0"}], "]"}]}], "]"}]}], "]"}]}], "]"}]}]}]}], "]"}]}]}], 
+                    "}"}], "]"}], "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]}]}], ",", 
                     RowBox[{
                     RowBox[{"rolfsenTableAlternating", "=", 
                     RowBox[{"Delete", "[", 
@@ -2611,22 +2573,19 @@ Cell[BoxData[
              RowBox[{"Flatten", "[", 
               RowBox[{
                RowBox[{"Outer", "@@", 
-                RowBox[{"Flatten", "[", 
+                RowBox[{"Join", "[", 
                  RowBox[{
                   RowBox[{"{", 
                    RowBox[{"List", ",", 
-                    RowBox[{"Join", "[", 
-                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{"{", "1", "}"}], "}"}], ",", 
-                    RowBox[{"Table", "[", 
-                    RowBox[{
+                    RowBox[{"{", "1", "}"}]}], "}"}], ",", 
+                  RowBox[{"Table", "[", 
+                   RowBox[{
                     RowBox[{"{", 
                     RowBox[{"1", ",", 
                     RowBox[{"-", "1"}]}], "}"}], ",", 
                     RowBox[{"{", 
                     RowBox[{"crossingNumber", "-", "1"}], "}"}]}], "]"}]}], 
-                    "]"}]}], "}"}], ",", "1"}], "]"}]}], ",", 
+                 "]"}]}], ",", 
                RowBox[{"crossingNumber", "-", "1"}]}], "]"}]}], "}"}]}], 
           "]"}], ",", "1"}], "]"}]}], ";", 
       RowBox[{"For", "[", 
@@ -3184,14 +3143,26 @@ Cell[BoxData[
    3.6725181854726243`*^9, 3.6725182091606607`*^9}, {3.6725182927602324`*^9, 
    3.6725183502396293`*^9}, {3.6725184140725327`*^9, 
    3.6725184353404264`*^9}, {3.6725184803908052`*^9, 
-   3.6725185944013557`*^9}, {3.6725186418494015`*^9, 3.6725186533937216`*^9}}],
+   3.6725185944013557`*^9}, {3.6725186418494015`*^9, 
+   3.6725186533937216`*^9}, {3.6725351771523232`*^9, 3.672535208029135*^9}, {
+   3.6725353902648706`*^9, 3.672535390495799*^9}, {3.6725354845963826`*^9, 
+   3.6725355028735085`*^9}, {3.6725359387971916`*^9, 3.672535943101189*^9}, {
+   3.6725361490945168`*^9, 3.6725363380815487`*^9}, {3.672536374652071*^9, 
+   3.6725364428044353`*^9}, {3.672536493350381*^9, 3.672536581096419*^9}, {
+   3.672536639137854*^9, 3.672536639800215*^9}, {3.672536680594445*^9, 
+   3.6725367051293488`*^9}, {3.6725367512191486`*^9, 3.67253676389569*^9}, {
+   3.672536803775959*^9, 3.672536808093831*^9}, {3.6725371955048747`*^9, 
+   3.672537200862754*^9}, {3.6725372976938567`*^9, 3.672537364604065*^9}, {
+   3.67253759155921*^9, 3.672537635554242*^9}, {3.672537732017598*^9, 
+   3.6725379209495583`*^9}, {3.6725380234641037`*^9, 
+   3.6725380264676447`*^9}, {3.6725381096269655`*^9, 3.6725382309266624`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"2.265625`6.375787941530712", ",", "14"}], "}"}]], "Output",
- CellChangeTimes->{{3.672517939700262*^9, 3.6725179479105864`*^9}, {
-  3.672518364716359*^9, 3.672518370068046*^9}, {3.67251865969068*^9, 
-  3.6725186656940236`*^9}}]
+  RowBox[{"2.390625`6.399111370113336", ",", "14"}], "}"}]], "Output",
+ CellChangeTimes->{{3.672537837556662*^9, 3.672537849640973*^9}, {
+   3.6725379028715286`*^9, 3.67253792402199*^9}, 3.672538029326524*^9, 
+   3.672538235103118*^9}]
 }, Open  ]]
 },
 WindowSize->{1366, 685},
@@ -3214,10 +3185,10 @@ Cell[CellGroupData[{
 Cell[580, 22, 106791, 1943, 4692, "Input"],
 Cell[107374, 1967, 586, 10, 31, "Output"]
 }, Open  ]],
-Cell[107975, 1980, 559, 8, 412, "Input"],
+Cell[107975, 1980, 662, 10, 412, "Input"],
 Cell[CellGroupData[{
-Cell[108559, 1992, 62823, 1194, 1492, "Input"],
-Cell[171385, 3188, 266, 5, 64, "Output"]
+Cell[108662, 1994, 61791, 1163, 1448, "Input"],
+Cell[170456, 3159, 264, 5, 31, "Output"]
 }, Open  ]]
 }
 ]
