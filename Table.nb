@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    189310,       3691]
-NotebookOptionsPosition[    187969,       3645]
-NotebookOutlinePosition[    188315,       3660]
-CellTagsIndexPosition[    188272,       3657]
+NotebookDataLength[    192624,       3775]
+NotebookOptionsPosition[    191291,       3729]
+NotebookOutlinePosition[    191637,       3744]
+CellTagsIndexPosition[    191594,       3741]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2139,8 +2139,9 @@ Cell[BoxData[
    RowBox[{"Module", "[", 
     RowBox[{
      RowBox[{"{", 
-      RowBox[{"crossingIndex", ",", 
-       RowBox[{"crossingNumber", "=", "8"}], ",", "difference", ",", 
+      RowBox[{
+      "adjacentKnot", ",", "connectionIndex", ",", "crossingIndex", ",", 
+       RowBox[{"crossingNumber", "=", "7"}], ",", "difference", ",", 
        "flypeEvenLength", ",", "flypeLabel", ",", "flypeOddLength", ",", 
        "knotConnections", ",", "knotIndex", ",", "permutation", ",", 
        "permutationIndex", ",", "permutationLabel", ",", "queue", ",", 
@@ -2597,6 +2598,7 @@ Cell[BoxData[
             RowBox[{"Delete", "[", 
              RowBox[{"rolfsenTableFull", ",", "knotIndex"}], "]"}]}], ";", 
            RowBox[{"knotIndex", "--"}]}]}], "]"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
       RowBox[{"For", "[", 
        RowBox[{
         RowBox[{"knotIndex", "=", "1"}], ",", 
@@ -2744,14 +2746,16 @@ Cell[BoxData[
                     RowBox[{"{", 
                     RowBox[{"0", ",", "1"}], "}"}]}], "]"}], ",", "2"}], 
                  "]"}]}], ";", 
-               RowBox[{"If", "[", 
+               RowBox[{"(*", 
                 RowBox[{
-                 RowBox[{
-                  RowBox[{"Length", "@", "queueKnot"}], "\[LessEqual]", 
-                  RowBox[{"crossingNumber", "+", "1"}]}], ",", 
-                 RowBox[{
-                  RowBox[{"AppendTo", "[", 
-                   RowBox[{"knotConnections", ",", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Length", "@", "queueKnot"}], "\[LessEqual]", 
+                    RowBox[{"crossingNumber", "+", "1"}]}], ",", 
+                   RowBox[{
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"knotConnections", ",", 
                     RowBox[{"Insert", "[", 
                     RowBox[{
                     RowBox[{"queueKnot", "/.", 
@@ -2762,9 +2766,9 @@ Cell[BoxData[
                     RowBox[{"value", "\[GreaterEqual]", "crossingIndex"}], 
                     ",", "1", ",", "0"}], "]"}]}]}]}], ",", "crossingIndex", 
                     ",", "crossingIndex"}], "]"}]}], "]"}], ";", 
-                  "\[IndentingNewLine]", 
-                  RowBox[{"AppendTo", "[", 
-                   RowBox[{"knotConnections", ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"knotConnections", ",", 
                     RowBox[{"Compactify", "[", 
                     RowBox[{
                     RowBox[{"Append", "[", 
@@ -2789,15 +2793,18 @@ Cell[BoxData[
                     RowBox[{"2", "crossingIndex"}], ",", 
                     RowBox[{
                     RowBox[{"2", "crossingIndex"}], "+", "1"}]}], "}"}]}], 
-                    "]"}], "\[Transpose]"}], "]"}]}], "]"}]}]}], "]"}], ";", 
-               RowBox[{"If", "[", 
+                    "]"}], "\[Transpose]"}], "]"}]}], "]"}]}]}], "]"}], ";"}],
+                 "*)"}], 
+               RowBox[{"(*", 
                 RowBox[{
-                 RowBox[{
-                  RowBox[{"Length", "@", "queueKnot"}], "\[GreaterEqual]", 
-                  RowBox[{"crossingNumber", "+", "1"}]}], ",", 
-                 RowBox[{
-                  RowBox[{"If", "[", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
                    RowBox[{
+                    RowBox[{"Length", "@", "queueKnot"}], "\[GreaterEqual]", 
+                    RowBox[{"crossingNumber", "+", "1"}]}], ",", 
+                   RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
                     RowBox[{
                     RowBox[{
                     "permutation", "\[LeftDoubleBracket]", "crossingIndex", 
@@ -2814,8 +2821,8 @@ Cell[BoxData[
                     RowBox[{
                     RowBox[{"value", ">", "crossingIndex"}], ",", "1", ",", 
                     "0"}], "]"}]}]}]}]}], "]"}]}], "]"}], ";", 
-                  RowBox[{"If", "[", 
-                   RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
                     RowBox[{
                     RowBox[{
                     "permutation", "\[LeftDoubleBracket]", "crossingIndex", 
@@ -2844,31 +2851,39 @@ Cell[BoxData[
                     RowBox[{"value", "\[GreaterEqual]", 
                     RowBox[{"2", "crossingIndex"}]}], ",", "1", ",", "0"}], 
                     "]"}]}], "]"}]}]}]}], "]"}]}], "]"}]}], "]"}]}]}], "]"}], 
-               ";", 
-               RowBox[{"Table", "[", 
+                 ";"}], "*)"}], 
+               RowBox[{"For", "[", 
                 RowBox[{
-                 RowBox[{"If", "[", 
-                  RowBox[{
-                   RowBox[{"!", 
+                 RowBox[{"connectionIndex", "=", "1"}], ",", 
+                 RowBox[{"connectionIndex", "\[LessEqual]", 
+                  RowBox[{"Length", "@", "knotConnections"}]}], ",", 
+                 RowBox[{"connectionIndex", "++"}], ",", 
+                 RowBox[{
+                  RowBox[{"adjacentKnot", "=", 
+                   RowBox[{"Minimal", "@", 
+                    RowBox[{
+                    "knotConnections", "\[LeftDoubleBracket]", 
+                    "connectionIndex", "\[RightDoubleBracket]"}]}]}], ";", 
+                  RowBox[{"If", "[", 
+                   RowBox[{
+                    RowBox[{"!", 
                     RowBox[{"MemberQ", "[", 
-                    RowBox[{"queue", ",", 
-                    RowBox[{"Minimal", "@", "knot"}]}], "]"}]}], ",", 
-                   RowBox[{"If", "[", 
+                    RowBox[{"queue", ",", "adjacentKnot"}], "]"}]}], ",", 
+                    RowBox[{"If", "[", 
                     RowBox[{
                     RowBox[{
                     RowBox[{"ReducibleBelow", "[", 
-                    RowBox[{"knot", ",", "crossingNumber"}], "]"}], "||", 
+                    RowBox[{"adjacentKnot", ",", "crossingNumber"}], "]"}], "||", 
                     RowBox[{
                     RowBox[{
-                    RowBox[{"Length", "@", "knot"}], "\[Equal]", 
+                    RowBox[{"Length", "@", "adjacentKnot"}], "\[Equal]", 
                     "crossingNumber"}], "&&", 
                     RowBox[{"permutation", "\[NotEqual]", 
                     RowBox[{
                     RowBox[{"Sort", "[", 
                     RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"Minimal", "@", "knot"}], ",", "permutation"}], 
-                    "}"}], "]"}], "\[LeftDoubleBracket]", "1", 
+                    RowBox[{"adjacentKnot", ",", "permutation"}], "}"}], 
+                    "]"}], "\[LeftDoubleBracket]", "1", 
                     "\[RightDoubleBracket]"}]}]}]}], ",", 
                     RowBox[{
                     RowBox[{"rolfsenTableFull", "=", 
@@ -2878,14 +2893,10 @@ Cell[BoxData[
                     RowBox[{"knotIndex", "--"}], ";", 
                     RowBox[{"Goto", "@", "queueLabel"}]}], ",", 
                     RowBox[{"AppendTo", "[", 
-                    RowBox[{"queue", ",", 
-                    RowBox[{"Minimal", "@", "knot"}]}], "]"}]}], "]"}]}], 
-                  "]"}], ",", 
-                 RowBox[{"{", 
-                  RowBox[{"knot", ",", "knotConnections"}], "}"}]}], 
-                "]"}]}]}], "]"}]}]}], "]"}], ";", 
+                    RowBox[{"queue", ",", "adjacentKnot"}], "]"}]}], "]"}]}], 
+                   "]"}]}]}], "]"}]}]}], "]"}]}]}], "]"}], ";", 
          RowBox[{"Label", "@", "queueLabel"}]}]}], "]"}], ";", 
-      RowBox[{"Length", "@", "rolfsenTableFull"}]}]}], "]"}]}]}]], "Input",
+      "rolfsenTableFull"}]}], "]"}]}]}]], "Input",
  CellChangeTimes->{{3.671495360401065*^9, 3.6714954068737803`*^9}, {
    3.671495500724288*^9, 3.6714955185406823`*^9}, {3.6714956814861917`*^9, 
    3.6714956818713818`*^9}, {3.6714958090493717`*^9, 3.671495876790922*^9}, {
@@ -3283,14 +3294,87 @@ Cell[BoxData[
    3.67279605483012*^9, 3.6727960557933416`*^9}, {3.6727961598803473`*^9, 
    3.6727962251679525`*^9}, {3.672796280332815*^9, 3.672796322513238*^9}, {
    3.672797328493414*^9, 3.672797446480501*^9}, {3.6727974900469213`*^9, 
-   3.6727974978983603`*^9}, {3.6727975457485533`*^9, 3.672797588508375*^9}}],
+   3.6727974978983603`*^9}, {3.6727975457485533`*^9, 3.672797588508375*^9}, {
+   3.6728749813976116`*^9, 3.67287499240013*^9}, {3.6728750308024187`*^9, 
+   3.6728750413657722`*^9}, {3.6728750732952356`*^9, 3.672875073722767*^9}, {
+   3.6728752161862288`*^9, 3.672875356050519*^9}, {3.6728754082952185`*^9, 
+   3.6728754094152136`*^9}, {3.672875907831831*^9, 3.672875907933547*^9}, {
+   3.672876960277766*^9, 3.6728770075739794`*^9}, 3.6728770476101246`*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"395.8125`8.618089418651019", ",", "54"}], "}"}]], "Output",
+  RowBox[{"2.890625`6.48159166769875", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "2", ",", "4", ",", "5", ",", "6", ",", "1", ",", "7", ",", "3"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "2", ",", "4", ",", "6", ",", "1", ",", "7", ",", "3", ",", "5"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "2", ",", "4", ",", "6", ",", "5", ",", "1", ",", "7", ",", "3"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "2", ",", "4", ",", "6", ",", "7", ",", "1", ",", "3", ",", "5"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "4", ",", "6", ",", 
+       RowBox[{"-", "7"}], ",", "1", ",", "3", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "4", ",", 
+       RowBox[{"-", "6"}], ",", "7", ",", "1", ",", 
+       RowBox[{"-", "3"}], ",", 
+       RowBox[{"-", "5"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "2", ",", "5", ",", "6", ",", "7", ",", "1", ",", "4", ",", "3"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "5", ",", 
+       RowBox[{"-", "6"}], ",", 
+       RowBox[{"-", "7"}], ",", "1", ",", "4", ",", 
+       RowBox[{"-", "3"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "2", ",", "5", ",", "7", ",", "6", ",", "1", ",", "3", ",", "4"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "5", ",", "7", ",", 
+       RowBox[{"-", "6"}], ",", "1", ",", 
+       RowBox[{"-", "3"}], ",", 
+       RowBox[{"-", "4"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "2", ",", "5", ",", "7", ",", "6", ",", "1", ",", "4", ",", "3"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "3", ",", "5", ",", "6", ",", "7", ",", "1", ",", "2", ",", "4"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", 
+       RowBox[{"-", "5"}], ",", 
+       RowBox[{"-", "6"}], ",", "7", ",", 
+       RowBox[{"-", "1"}], ",", 
+       RowBox[{"-", "2"}], ",", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "3", ",", "5", ",", "6", ",", "7", ",", "2", ",", "1", ",", "4"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "4", ",", "5", ",", "6", ",", "7", ",", "1", ",", "2", ",", "3"}], 
+      "}"}]}], "}"}]}], "}"}]], "Output",
  CellChangeTimes->{{3.6727943937147007`*^9, 3.672794415880683*^9}, 
    3.672794464715249*^9, 3.672797533692374*^9, 3.6727975828749523`*^9, 
-   3.6727979891591215`*^9}]
+   3.6727979891591215`*^9, 3.6728750181404343`*^9, 3.672875067560423*^9, 
+   3.6728753871257863`*^9, 3.672875850395505*^9, 3.672875944580969*^9, {
+   3.672876963814695*^9, 3.6728770164164877`*^9}, 3.672877051449698*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -3665,34 +3749,34 @@ Cell[107374, 1967, 586, 10, 31, "Output"]
 }, Open  ]],
 Cell[107975, 1980, 662, 10, 412, "Input"],
 Cell[CellGroupData[{
-Cell[108662, 1994, 68395, 1291, 1708, "Input"],
-Cell[177060, 3287, 267, 5, 31, "Output"]
+Cell[108662, 1994, 69341, 1307, 1708, "Input"],
+Cell[178006, 3303, 2643, 73, 72, "Output"]
 }, Open  ]],
-Cell[177342, 3295, 445, 8, 31, "Input"],
-Cell[177790, 3305, 151, 4, 31, "Input"],
-Cell[177944, 3311, 507, 14, 31, "Input"],
-Cell[178454, 3327, 459, 11, 31, "Input"],
+Cell[180664, 3379, 445, 8, 31, "Input"],
+Cell[181112, 3389, 151, 4, 31, "Input"],
+Cell[181266, 3395, 507, 14, 31, "Input"],
+Cell[181776, 3411, 459, 11, 31, "Input"],
 Cell[CellGroupData[{
-Cell[178938, 3342, 1339, 38, 75, "Input"],
-Cell[180280, 3382, 219, 3, 31, "Output"]
+Cell[182260, 3426, 1339, 38, 75, "Input"],
+Cell[183602, 3466, 219, 3, 31, "Output"]
 }, Open  ]],
-Cell[180514, 3388, 223, 4, 52, "Input"],
+Cell[183836, 3472, 223, 4, 52, "Input"],
 Cell[CellGroupData[{
-Cell[180762, 3396, 259, 7, 31, "Input"],
-Cell[181024, 3405, 421, 13, 47, "Output"]
+Cell[184084, 3480, 259, 7, 31, "Input"],
+Cell[184346, 3489, 421, 13, 47, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[181482, 3423, 307, 9, 31, "Input"],
-Cell[181792, 3434, 420, 13, 47, "Output"]
+Cell[184804, 3507, 307, 9, 31, "Input"],
+Cell[185114, 3518, 420, 13, 47, "Output"]
 }, Open  ]],
-Cell[182227, 3450, 94, 1, 31, "Input"],
-Cell[182324, 3453, 92, 1, 31, "Input"],
-Cell[182419, 3456, 126, 2, 31, "Input"],
+Cell[185549, 3534, 94, 1, 31, "Input"],
+Cell[185646, 3537, 92, 1, 31, "Input"],
+Cell[185741, 3540, 126, 2, 31, "Input"],
 Cell[CellGroupData[{
-Cell[182570, 3462, 5185, 173, 132, InheritFromParent],
-Cell[187758, 3637, 71, 1, 31, "Output"]
+Cell[185892, 3546, 5185, 173, 132, "Input"],
+Cell[191080, 3721, 71, 1, 31, "Output"]
 }, Open  ]],
-Cell[187844, 3641, 121, 2, 31, "Input"]
+Cell[191166, 3725, 121, 2, 31, "Input"]
 }
 ]
 *)
