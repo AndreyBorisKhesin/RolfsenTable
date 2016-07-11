@@ -1,0 +1,313 @@
+\documentclass[twoside]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{capt-of}
+\usepackage{caption}
+\usepackage[strict]{changepage}
+\usepackage{chngcntr}
+\usepackage[americanvoltage,siunitx]{circuitikz}
+\usepackage{color,colortbl}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+\usepackage[T1]{fontenc}
+\usepackage{gensymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{import}
+\usepackage{indentfirst}
+\usepackage{mathptmx}
+\usepackage{mathrsfs}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{siunitx}
+\usepackage{tabu}
+\usepackage{tikz}
+\usepackage{xspace}
+
+\patchcmd{\thebibliography}{\section*{\refname}}{\vspace{-1em}}{}{}
+
+\captionsetup{labelformat=empty,labelsep=none}
+\usepgfplotslibrary{external}
+\usetikzlibrary{positioning,matrix,shapes,chains,arrows}
+\tikzexternalize[prefix=precompiled_figures/]
+
+\newcommand\svg[1]{\def\svgwidth{\columnwidth}
+\vspace{12pt}
+{\centering\input{#1.pdf_tex}}}
+
+% Indent
+\setlength{\parindent}{0.3in}
+
+\newcounter{papertheoremamount}
+\newcommand\theorems[0]{\newtheorem{claim}[subsection]{Claim}
+\newtheorem{conjecture}[subsection]{Conjecture}
+\newtheorem{corollary}[subsection]{Corollary}
+\newtheorem{lemma}[subsection]{Lemma}\newtheorem{remark}[subsection]{Remark}
+\newtheorem{theorem}[subsection]{Theorem}
+\newtheorem{question}[subsection]{Question}
+\newenvironment{paperclaim}[1]
+{\begin{claim}\global\expandafter\edef\csname clm##1\endcsname{
+Claim \thesubsection\noexpand\xspace}}{\end{claim}}
+\newenvironment{paperconjecture}[1]
+{\begin{conjecture}\global\expandafter\edef\csname cnj##1\endcsname{
+Conjecture \thesubsection\noexpand\xspace}}{\end{conjecture}}
+\newenvironment{papercorollary}[1]
+{\begin{corollary}\global\expandafter\edef\csname cor##1\endcsname{
+Corollary \thesubsection\noexpand\xspace}}{\end{corollary}}
+\newenvironment{paperlemma}[1]
+{\begin{lemma}\global\expandafter\edef\csname lem##1\endcsname{
+Lemma \thesubsection\noexpand\xspace}}{\end{lemma}}
+\newenvironment{paperremark}[1]
+{\begin{remark}\global\expandafter\edef\csname rem##1\endcsname{
+Remark \thesubsection\noexpand\xspace}}{\end{remark}}
+\newenvironment{papertheorem}[1]
+{\begin{theorem}\global\expandafter\edef\csname thm##1\endcsname{
+Theorem \thesubsection\noexpand\xspace}}{\end{theorem}}
+\newenvironment{paperquestion}[1]
+{\begin{question}\global\expandafter\edef\csname qtn##1\endcsname{
+Question \thesubsection\noexpand\xspace}}{\end{question}}}
+\newcommand\subtheorems[0]{\stepcounter{papertheoremamount}
+\newtheorem{conjecture}[subsubsection]{Conjecture}
+\newtheorem{corollary}[subsubsection]{Corollary}
+\newtheorem{lemma}[subsubsection]{Lemma}
+\newtheorem{remark}[subsubsection]{Remark}
+\newtheorem{theorem}[subsubsection]{Theorem}
+\newtheorem{question}[subsubsection]{Question}
+\newenvironment{paperclaim}[1]
+{\begin{claim}\global\expandafter\edef\csname clm##1\endcsname{
+Claim \thesubsubsection\noexpand\xspace}}{\end{claim}}
+\newenvironment{paperconjecture}[1]
+{\begin{conjecture}\global\expandafter\edef\csname cnj##1\endcsname{
+Conjecture \thesubsubsection\noexpand\xspace}}{\end{conjecture}}
+\newenvironment{papercorollary}[1]
+{\begin{corollary}\global\expandafter\edef\csname cor##1\endcsname{
+Corollary \thesubsubsection\noexpand\xspace}}{\end{corollary}}
+\newenvironment{paperlemma}[1]
+{\begin{lemma}\global\expandafter\edef\csname lem##1\endcsname{
+Lemma \thesubsubsection\noexpand\xspace}}{\end{lemma}}
+\newenvironment{paperremark}[1]
+{\begin{remark}\global\expandafter\edef\csname rem##1\endcsname{
+Remark \thesubsubsection\noexpand\xspace}}{\end{remark}}
+\newenvironment{papertheorem}[1]
+{\begin{theorem}\global\expandafter\edef\csname thm##1\endcsname{
+Theorem \thesubsubsection\noexpand\xspace}}{\end{theorem}}
+\newenvironment{paperquestion}[1]
+{\begin{question}\global\expandafter\edef\csname qtn##1\endcsname{
+Question \thesubsubsection\noexpand\xspace}}{\end{question}}}
+
+% Title section
+\pagestyle{fancy}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand\papertitle[1]{{\centering\fontsize{20pt}{1em}\textsc{#1}\\\mbox{}\\}
+\fancyhead[OC]{\fontsize{12pt}{1em}\selectfont\textit{#1}}}
+\newcounter{people}
+\newcommand\paperauthortext[4]{{\centering\fontsize{12pt}{1em}\selectfont
+\textsc{#1. #2}\\[-0.1em]{\fontsize{9pt}{1em}\selectfont\textit{\ifx&#3&
+\vspace{-1em}\else#3\fi}}\\\mbox{}\\
+\fancyhead[EC]{\fontsize{12pt}{1em}\selectfont\textit{#4}}}}
+\newcommand\paperauthor[3]{{\stepcounter{people}
+\ifnum\value{people}=1
+{\paperauthortext{#1}{#2}{#3}{#1. #2}
+\global\def\auth{#2\xspace}}
+\else\ifnum\value{people}=2
+{\paperauthortext{#1}{#2}{#3}{\auth and #2}}
+\else{\paperauthortext{#1}{#2}{#3}{\auth et al}}\fi\fi}}
+\newcommand\paperdate[1]{{\centering\fontsize{9pt}{1em}\selectfont\text{
+(Received #1)}\\[2em]}}
+
+% Page header
+\newcommand{\paperheader}[1]{\fancyhead[EC]{\fontsize{12pt}{1em}\selectfont
+\textit{#1}}}
+\fancyhead[RO, EL]{\fontsize{12pt}{1em}\selectfont\thepage}
+\fancyhead[RE, OL]{}
+\cfoot{}
+
+\makeatletter
+\newenvironment{paperadjustwidth}[2]{
+  \begin{list}{}{
+    \setlength\partopsep\z@
+    \setlength\topsep\z@
+    \setlength\listparindent\parindent
+    \setlength\parsep\parskip
+    \linespread{0}\selectfont
+    \@ifmtarg{#1}{\setlength{\leftmargin}{\z@}}
+                 {\setlength{\leftmargin}{#1}}
+    \@ifmtarg{#2}{\setlength{\rightmargin}{\z@}}
+                 {\setlength{\rightmargin}{#2}}
+    }
+    \item[]}{\end{list}}
+\makeatother
+
+% Abstract environment
+\newenvironment{paperabstract}
+{\begin{paperadjustwidth}{0.5in}{0.5in}\bgroup\fontsize{9pt}{1em}\selectfont
+\hspace{0.5in}}
+{\egroup\end{paperadjustwidth}}
+
+% Paper environment
+\setlength\columnsep{0.5in}
+\newenvironment{paper}
+{\begin{multicols*}{2}\bgroup\fontsize{12pt}{1em}\selectfont}
+{\egroup\end{multicols*}}
+
+%Sources
+\newsavebox{\sourcebox}
+\newcommand{\papersource}[1]{
+\vspace{-2em}
+\text{}\\*
+\fontsize{9pt}{10.35}\selectfont
+\noindent\renewcommand{\labelenumi}{}
+\savebox{\sourcebox}{\parbox{3in}{\begin{enumerate}
+%\vspace{-\baselineskip}
+\setlength{\leftmargini}{-1ex}
+\setlength{\leftmargin}{-1ex}
+\setlength{\labelwidth}{0pt}
+\setlength{\labelsep}{0pt}
+\setlength{\listparindent}{0pt}
+\item\textit{\hspace{-0.35in}#1}
+\end{enumerate}}}
+\usebox{\sourcebox}
+}
+
+%Section headers
+\newcounter{papersectioncounter}
+\newcounter{papersubsectioncounter}[papersectioncounter]
+\newcommand\papersection[1]{\stepcounter{papersectioncounter}
+\stepcounter{section}
+\begin{center}\Roman{papersectioncounter} \textsc{#1}\end{center}}
+\newcommand\papersubsection[1]{\stepcounter{papersubsectioncounter}
+\addtocounter{subsection}{\thepapertheoremamount}
+\setcounter{subsubsection}{0}
+{\begin{center}
+\Roman{section}.\Roman{papersubsectioncounter}
+\textsc{#1}\\[0.5em]\end{center}}}
+
+%equation
+\newcounter{paperequationcounter}
+\newcommand\paperequation[3]{{
+\stepcounter{paperequationcounter}
+\mbox{}\vspace{-0.75em}
+\begin{equation*}
+#2
+\tag*{\fontsize{12pt}{1em}\selectfont
+$\begin{array}{r}
+\cr{\text{[\arabic{paperequationcounter}]}}
+\cr{\fontsize{9pt}{1em}\selectfont\textit{\ifx\\#3\\~\else(\fi#3\ifx\\#3\\~
+\else)\fi}}
+\end{array}$}
+\end{equation*}
+}
+\expandafter\edef\csname eq#1\endcsname{[\arabic{paperequationcounter}]\noexpand
+\xspace}}
+
+% Where
+\newcommand{\paperwherevar}[3]{&$#1$ & #2 \ifx\\#3\\~\else($\smash{\text{\si{\fi
+#3\ifx\\#3\\~\else}}}$)\fi\\}
+\newenvironment{paperwhere}
+{\bgroup\fontsize{9pt}{1em}\selectfont Where:\vspace{2pt}\\\begin{tabular}
+{rr@{ = }p{2.42in}}}
+{\end{tabular}\egroup\vspace{5pt}}
+
+% Tables
+\definecolor{LineGray}{gray}{0.5}
+\newtabulinestyle{outer=2.25pt LineGray}
+\newtabulinestyle{inner=0.75pt LineGray}
+\tabulinesep=1.5pt
+
+\newcommand{\paperiline}[0]{\tabucline[inner]{-}}
+\newcommand{\paperoline}[0]{\tabucline[outer]{-}}
+
+% Index column type
+\newcolumntype{I}{X[-5,c]}
+% Column type with uncertainty
+\newcolumntype{U}{@{}X[-5,r]@{$\pm$}X[-5,l]@{}}
+% Column type without uncertainty
+\newcolumntype{C}{@{}X[-5,c]@{}}
+
+\newcounter{papertableindexcounter}
+\newcommand{\papertableindexheader}[0]{\multirow{2}{*}{\textsc{Index}}}
+\newcommand{\papertableindex}[0]{\stepcounter{papertableindexcounter}
+\arabic{papertableindexcounter}}
+\newcommand{\papertableuheadersymbol}[1]{&\multicolumn{2}{c|[inner]}{$#1$}}
+\newcommand{\papertableuheadersymbole}[1]{&\multicolumn{2}{c|[outer]}{$#1$}}
+\newcommand{\papertableuheaderunit}[1]{&\multicolumn{2}{c|[inner]}{(#1)}}
+\newcommand{\papertableuheaderunite}[1]{&\multicolumn{2}{c|[outer]}{(#1)}}
+\newcommand{\papertablecheadersymbol}[1]{&$#1$}
+\newcommand{\papertablecheaderunit}[2]{&($\pm$#1 #2)}
+
+% Value in table with uncertainty.
+\newcommand{\papertableuval}[2]{& #1 & #2}
+% Value in table without uncertainty.
+\newcommand{\papertablecval}[1]{& #1}
+
+\newenvironment{papertable}[1]
+{\setcounter{papertableindexcounter}{0} 
+\begin{tabu} to \linewidth {#1}}
+{\end{tabu}\vspace{12pt}}
+
+%Figure counter
+\newcounter{paperfigurecounter}
+\newcommand{\papercaption}[2]{\vspace{-12pt}
+\bgroup\stepcounter{paperfigurecounter}
+\captionof{figure}{\fontsize{9pt}{1em}\selectfont
+\hspace{0.3in}Fig \arabic{paperfigurecounter}. #2}\egroup\expandafter\edef
+\csname fig#1\endcsname{Fig \arabic{paperfigurecounter}.\noexpand\xspace}}
+
+\newcommand{\paperaxis}[9]
+{title=#1,
+axis x line = bottom,
+xmin=#4,xmax=#6,
+axis y line = left,
+ymin=#5,ymax=#7,
+height = 180pt,
+grid=both,
+x axis line style=-,
+y axis line style=-,
+x tick label style={
+/pgf/number format/.cd,
+fixed,
+fixed zerofill,
+precision=#8,
+/tikz/.cd},
+y tick label style={
+/pgf/number format/.cd,
+fixed,
+fixed zerofill,
+precision=#9,
+/tikz/.cd}}
+\newcommand{\paperaxisxlabel}[2]{
+xlabel=\fontsize{10pt}{1em}\selectfont#1$(#2)\rightarrow$}
+\newcommand{\paperaxisylabel}[2]{
+ylabel=\fontsize{10pt}{1em}\selectfont#1$(#2)\rightarrow$}
+\newcommand{\papergraphoutline}[4]{
+\addplot [mark=none,line width=0.75pt] coordinates {
+(#1,#2)
+(#1,#4)
+(#3,#4)
+(#3,#2)
+(#1,#2)};}
+
+\newenvironment{papergraph}{
+\begin{tikzpicture}
+\begin{axis}}
+{\end{axis}
+\end{tikzpicture}}
+
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\oo}[0]{\infty}
+\newcommand{\sigmaSum}[3]{\sum\limits_{#1}^{#2} #3}
+\newcommand{\limto}[3]{\lim\limits_{#1\rightarrow#2}#3}
+\renewcommand{\d}[0]{\mathrm{d}}
+\newcommand{\cross}[0]{\times}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand\pars[1]{\lp#1\rp}
+\newcommand\sqbrack[1]{\left[#1\right]}
+\newcommand\R{\mathbb{R}}
+\newcommand\di{\partial}
+\newcommand\x{\times}
+\newcommand\del{\nabla}
