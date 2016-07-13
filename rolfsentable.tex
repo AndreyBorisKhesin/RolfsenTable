@@ -203,5 +203,38 @@ Finally, to split the final pair, it is necessary to allow R2 and for the
 crossing number to increase by as much as 2.
 This finds that there was a final pair of equivalent knots and produces the full
 reduced list of the 250 prime knots with 10 crossings or fewer.
+\papersection{Invariants}
+Since computation time is massively increased by examining knots with more
+crossings that are connected to a given knot.
+To avoid searching through the connections of each of the 253 knots, invariants
+can be used.
+Thus, the Jones polynomial can be used to check if a given knot's polynomial is
+unique in the list of candidates.
+If it is not, the connections of that knot are investigated and any duplicates
+are excised, eventually whittling the list down to just the knots that have a
+unique Jones polynomial among the candidates or those whose connection tree has
+been examined and no other members of the candidate list were found to be
+connected to it.
+
+To find the Jones polynomial of a given knot, it must be written in planar
+diagram notation as opposed to in DT code form.
+To find this notation, it is sufficient to determine for each crossing which of
+the two possible arrangements of strands around a crossing will result in the
+whole knot being planar.
+From earlier, it is clear that a solution exists.
+To find this solution, it is sufficient to construct a spanning tree of the knot.
+Then, a linear system of equations can be formed with $n$ variables where each
+can be one of two choices, one for each of the two edge configurations.
+
+To construct each equation, each pair of edge that was not included in the tree
+is examined.
+A closed loop can be formed for each edge in each pair by connecting the
+vertices the edge was meant to connect by a path inside the tree and by an edge
+outside of it.
+Since the loops cannot intersect outside the tree, they must intersect an even
+number of times inside it.
+Since the number of intersections is dependent on the configuration at some
+vertices, a set of linear equations can be formed and then solved to convert the
+knot into planar diagram notation.
 \end{paper}
 \end{document}
