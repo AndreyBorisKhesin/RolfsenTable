@@ -1,0 +1,7 @@
+{{2, -3, -4, -1}, Null, REIDEMEISTER_TWO}
+{{2, -3, -4, 1}, Null, REIDEMEISTER_TWO}
+{{2, -3, 4, -1}, Null, TWOONE_PASS}
+{{2, -3, 4, 1}, Null, REIDEMEISTER_TWO}
+{{2, 3, -4, -1}, Null, REIDEMEISTER_TWO}
+{{2, 3, -4, 1}, Null, REIDEMEISTER_TWO}
+{{2, 3, 4, -1}, Null, REIDEMEISTER_TWO}
