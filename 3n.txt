@@ -1,3 +1,0 @@
-{{2, -3, -1}, Null, REIDEMEISTER_TWO}
-{{2, -3, 1}, Null, REIDEMEISTER_TWO}
-{{2, 3, -1}, Null, REIDEMEISTER_TWO}
