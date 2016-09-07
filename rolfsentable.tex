@@ -8,12 +8,12 @@
 \begin{paperabstract}
 The list of knots with up to 10 crossings is commonly referred to as the Rolfsen
 Table.
-The knots in the table are all unique up to composition, reflection, and the
-three Reidemeister moves.
-The approach used to reconstruct this list was very similar to that used by TODO
-AUTHORS in TODO SOURCE.
-It involved generating all planar diagrams with up to 10 crossings, and applying
-several simplifications to group the diagrams into equivalence classes.
+The concepts behind the process of calculating this list are not too complicated.
+The purpose of this paper was made to generate the Rolfsen table in as simple,
+clear, and reproducible manner as possible.
+The methods used were very similar to those used by TODO AUTHORS in TODO SOURCE.
+This involved generating all planar diagrams with up to 10 crossings, and
+applying several simplifications to group the diagrams into equivalence classes.
 From these diagrams, the full list of candidate knots was generated and reduced
 with several sets of moves.
 Lastly, invariants were used to show that every remaining diagram was also a
@@ -22,87 +22,89 @@ distinct knot, proving that there are 250 knots with 10 crossings or fewer.
 \begin{paper}
 \papersection{Introduction}
 
-There are clearly a finite number of ways to tie a knot with a given number of
-crossings.
-It is also clear that not every knot that appears to have a certain number of
-crossings actually has that many once it has been reduced.
+It is clear that there are a finite number of ways to tie a knot with a given
+number of crossings.
+Additionally, many of these knots are be reducible, meaning that they can be
+transformed into equivalent knots with a smaller number of crossings.
 This means that there is no simple formula for calculating the number of such
 knots (at least not at the time of this writing).
 This presents the challenge of finding the true number of such knots.
 
-This has been accomplished several for knots of up to 10 crossings several times
-in the past TODO SOURCES and has even been done to up to 17 crossings TODO
-SOURCE by TODO AUTHORS.
-This computation is much too large to be done (easily) by hand, so it is done
-with a computer algorithm.
-It is often the case in computer science that an algorithm will take longer as
-the implementation becomes simpler.
-Thus, to demonstrate this algorithm, the authors have created a simple, yet slow
-implementation for finding all 250 knots with up to 10 crossings.
+This has been accomplished for knots of up to 10 crossings several times in the
+past TODO SOURCES and has even been done for up to 17 crossings TODO
+SOURCE.
+This computation is far too involved to be done (easily) by hand, so it was done
+by a computer.
+To demonstrate a method of generating the Rolfsen table, a somewhat inefficient
+but simple implementation for finding all 250 knots with up to 10 crossings was
+created.
 
-There exist far more than 250 diagrams of knots with up to 10 crossings, even if
-only minimal diagrams (those depicting a knot that cannot be represented with
-fewer crossings than in that diagram) are considered.
-The reason for this is that several equivalence relations are defined to reduce
-the list of knots to only those that are truly distinct.
+There are far more than 250 diagrams of knots with up to 10 crossings, even
+after only reduced diagrams are considered.
+The reason for this is that there are several moves (see TODO FIGURE) that can
+transform one knot diagram into an equivalent one.
+In fact, this is true by the definition of the equivalence relation between knot
+diagrams.
 
-The first manner in which this is done is by eliminating knots that are mirror
-images of one another.
-For example, the right-handed and left-handed trefoils are fundamentally
-different and it is impossible to twist one into the other. TODO DIAGRAM
-However only one of them is included in the final list.
-It should be noted that the notation the authors used to represent a knot did
-not distinguish handedness so this was not an issue.
+The first manner in which the list of diagrams was simplified is by eliminating
+knots that are mirror images of each other.
+For example, the right-handed and left-handed trefoils are not equivalent as it
+is impossible to twist one into the other.
+However, only one of the two is included in the Rolfsen table.
+It should be noted that the notation that was used to represent a knot does not
+specify the handedness of a knot so this was not an issue.
 
-It is clear that any two knots can be cut and then stitched together end to end.
-This (commutative) operation is much akin to knot multiplication and many
-invariants of the product knot will be the product of the invariants of the two
-multiplicand knots.
-Knots that cannot be separated into two factors are called prime.
-Only prime knots are included in the final list.
+Any two knots can be cut at some point and then joined by one of their ends.
+This commutative operation is knot multiplication.
+Knots that cannot be decomposed into knot factors other than themselves and the
+unknot are called prime.
+Only prime knots were included in the final list.
 
-Lastly, there can be many diagrams that represent the same knot and are related
-by some simple moves.
-These make up the bulk of the diagrams that need to be eliminated.
+Lastly, every knot in the list must be unique, which means that out of every
+pair of equivalent diagrams one was removed.
 
 \papersection{Method}
 
-In TODO SOURCE, TODO AUTHORS introduce notation to represent an $n$-crossing
-knot with $n$ numbers.
+In TODO SOURCE notation was introduced to represent an $n$-crossing knot with
+$n$ integers.
+Its density and simplicity made it an ideal choice for the purposes of a
+computer algorithm.
+
+For any given knot, its representation in this notation was constructed as
+follows.
 If one were to travel along a knot diagram with $n$ crossings, they would pass
 each crossing twice, once under and once over.
 If each time they passed a crossing, they wrote down at that crossing the number
 of crossings they have encountered so far, then they would end up writing down
-the numbers from 1 to $2n$.
-Furthermore, these numbers would be grouped into $n$ pairs, with each pair
-representing the first and second time that a given crossing was visited.
-It is a trivial matter to show that each pair will contain one even number and
-one odd number.
-If the even numbers were sorted in increasing order of their odd counterpart,
-the resulting list of $n$ even numbers could reconstruct all the pairings.
+each number from 1 to $2n$.
+Furthermore, these numbers would be grouped into $n$ pairs, as there would be
+two numbers written at each crossing.
+It can be shown that each pair will contain one even number and one odd number.
+If the list of pairs was sorted by the odd value in each pair,
+the result would be a list of $n$ even numbers.
+The order of these values would be sufficient to reconstruct all of the original
+pairings.
 
-For example, no matter how one chooses a starting point and direction on the
-trefoil, they will find that 1 is paired with 4, 2 with 5, and 3 with 6.
-Thus, the pairs can be ordered by their odd number to get (1, 4), (3, 6), and
+For example, if one were to do this for the trefoil, they will find that the
+pairs are (1, 4), (2, 5) and (3, 6).
+Thus, the pairs can be ordered by their odd value to get (1, 4), (3, 6), and
 (5, 2).
-This set of pairs can be reconstructed with the sequence (4, 6, 2).
-Since this sequence contains only even numbers, storing half of each value is
-sufficient and makes computation easier.
-Therefore, the trefoil is represented by (2, 3, 1).
+The original pairs can be reconstructed with nothing but the sequence (4, 6, 2).
+Since this sequence contains only even numbers, storing half of each value was
+sufficient and made some computations easier.
+Therefore, the trefoil was represented by (2, 3, 1).
 
-At this point, several things should be noted.
-TODO AUTHORS did not take half of the resulting values, choosing to store the
-original even numbers.
-This was done here for ease of computation.
+In TODO SOURCE, the even values were not halved at the end, but were stored as
+they were.
 Additionally, as described so far, the sequence has no way of restoring the
-orientation of each crossing.
+order of the strands in each crossing.
 In other words, the shape of the knot diagram can be reconstructed, but it will
-not be clear which strand is above and which is below at each crossing.
-To rectify this, if the upper strand of a crossing mas marked with an even
+not be clear which strands are above and which are below.
+To rectify this, if the upper strand of a crossing was marked with an even
 number, the corresponding value in the list of even numbers will be negated.
-If one were to look at a knot diagram from the back side, all the numbers in its
-sequence would become negated, so the first element of the sequence is always
-written with a positive sign.
+If one were to look at a knot diagram from the back, all the numbers in its
+sequence would become negated, so the sequence is normalized by a sign to make
+the leading term positive.
 As a result, every knot with $n$ crossings can be represented by a signed
 permutation of the numbers from 1 to $n$.
 
@@ -113,113 +115,107 @@ be alternating.
 This is due to the fact that all the odd strands would pass above and all the
 even strands would pass below, meaning that one traveling along the knot would
 always alternate between passing above or below.
-Thus, it is sufficient to generate a reduced list of alternating knots before
-constructing the non-alternating knots by flipping some of the crossings.
+Thus, to generate all relevant knot diagrams, it sufficed to generate a reduced
+list of alternating knots before constructing the non-alternating knots by
+flipping the crossings of the alternating knots in every possible combination.
 
-It is clear that there are $10!$ positive permutations with 10 elements so to
-get less than 250 alternating knots with 10 crossings, some must be eliminated.
-A permutation is eliminated if it does not meet any of the following four
-conditions:
+There are $10!$ positive permutations with 10 elements so to get fewer than 250
+alternating knots with 10 crossings, some were eliminated.
+A permutation was eliminated unless it met all of the following conditions:
 \begin{itemize}
-\item The permutation must be lexicographically minimal over starting points and
+\item The permutation was lexicographically minimal over starting points and
 directions of enumeration.
-It is clear that the same knot can produce different permutations depending on
-where one starts numbering and in which direction they proceed.
+A knot can produce different permutations depending on where one starts
+numbering and in which direction they proceed.
 There are $4n$ ways to choose both a starting point and direction (though for
 cases like (2, 3, 1), all such choices result in the same permutation).
-If a permutation satisfies this condition it is called minimal.
-\item The resulting knot must be prime, meaning it cannot be a composition of
+If a permutation satisfied this condition it was called minimal.
+\item The resulting knot was prime, meaning that it could not be a product of
 two knots.
 For permutations, this means that there must not exist a sequence of $2k$
 consecutive numbers modulo $2n$ where each number is paired with a different
 number in that sequence.
-This also handily eliminates knots that contain a kink and can be simplified
+This also handily eliminated knots that contained a kink and could be simplified
 with the first Reidemeister move (the third and the simplifying direction of the
 second Reidemeister moves cannot occur in alternating knots).
-\item The permutation must encode a diagram which is realizable.
+\item The permutation encoded a diagram which was realizable.
 This means that there must be a way to draw the knot without adding any
 intersections beyond the ones encoded in the permutation.
 The simplest permutation that fails this test is (2, 4, 1, 5, 3).
-\item The permutation must be lexicographically minimal over all minimal
-permutations of knots connected to it via flypes (see Figure TODO FIGURE).
+\item The permutation was lexicographically minimal over all minimal
+permutations of knots connected to it via flypes.
 \end{itemize}
 
-The first two conditions can be used to avoid checking all such permutations.
-If one were to arrange all the permutations lexicographically, then went along
-checking each one, it would frequently be possible to jump $k!$ permutations
-ahead instead of just one.
-This would be because if there is a number in the permutation whose double is
-closer to its corresponding odd number than the twice first number in the
-permutation is to 1, then all permutations with that number in that position
-will not be minimal.
-Similarly, if a knot is not prime, this will be represented by a few consecutive
-numbers in the permutation, meaning all permutations obtained by only
-rearranging all later numbers will be similarly composite.
+The first two conditions were used to avoid checking all $n!$ permutations.
+If one were to arrange the permutations lexicographically, then went along
+checking each one, it would frequently be possible to skip checking up to $k!$
+permutations at a time.
+If there was a value in the doubled permutation which was closer to its paired
+odd number than the first number in the permutation was to 1, then all
+permutations with that number in that position would not be minimal as starting
+the enumeration with that number would have resulted in a smaller first element.
+Similarly, if a knot was not prime, this was represented by a few consecutive
+numbers in the permutation, meaning that all permutations obtained by
+rearranging the values that came after this sequence would also be composite.
 
-The third condition can be checked using a modified graph planarity algorithm.
+The third condition was checked using a modified graph planarity algorithm.
 If a 4-valent graph were to be constructed out of a knot by replacing each
 crossing with a vertex and each strand with an edge, then typical planarity
 tests would frequently give false positives.
-That is to say if there are four strands surrounding a crossing, ignoring
-rotational symmetry, there are only 2 ways of arranging them for a knot, but
-there are 6 ways of doing so for an actual graph.
+If there are four strands emanating from a crossing, there are only 2 ways of
+arranging them in a valid manner for a knot, but there are 6 ways of doing so
+for a graph.
 The example from earlier involving the permutation (2, 4, 1, 5, 3) is one such
 case.
 This permutation does not form a planar knot, but the graph that is created by
-making the appropriate connections is, strictly speaking, planar.
+making the same connections between vertices is planar.
 
-The reason for cases such as these is due to the fact that a graph might only be
-planar when the edges around a particular vertex are aligned such that if one
-were to travel along the knot, they would exit a vertex along an edge adjacent
-to the one they used to enter it.
+This would happen when a graph was only planar when the edges around a
+particular vertex were aligned such that if one were to travel along the knot,
+they would exit a vertex along an edge adjacent to the one they used to enter
+it.
 This would not be allowed in a knot as the whole point of a crossing is that one
-ends up opposite their point of entry.
+exits a vertex from the edge opposite the one from which they entered.
 
-To solve this problem, it is sufficient to replace each vertex with four
-vertices in a diamond pattern (see Figure TODO FIGURE) to construct the modified
-graph of the knot.
-This would preserve the planarity of the two allowable configurations but would
-bar the other four, as the diamond would be transformed into a non-planar
-bowtie shape.
-Thus, it is sufficient to check whether or not the modified graph of the knot is
-planar.
+To solve this problem, it was sufficient to replace each vertex with four
+vertices in a square (see TODO FIGURE) to construct the modified graph of the
+knot.
+This preserved the planarity of the two allowable configurations but barred the
+other four, as the square would be transformed into a non-planar bowtie shape.
+Thus, it was sufficient to check whether or not the modified graph of the knot
+was planar.
 
-Finally, the fourth condition can be checked by using a graph searching
-algorithm such as breadth first search to find all knots that are connected to a
-given knot via flypes.
-All knots except the one that is minimal lexicographically are eliminated from
+Finally, the fourth condition was checked by using a graph searching algorithm
+to find all knots that were connected to a given knot via flypes.
+All knots except the one that is minimal lexicographically were eliminated from
 the list of candidates.
 A flype is represented in a permutation as a pair (the one that gets moved) and
 two sequences of arbitrary length that either start or end with the odd and even
 number respectively and are only paired with other elements of those sequences.
 These sequences represent the two strands that make up the body that gets
 flyped.
+To find the fully reduced list of alternating knots, it is sufficient to only
+check for knots connected via flypes TODO SOURCE.
 
 Having eliminated all the knots that do not satisfy the four conditions, a
-complete list of all of the alternating knots has been constructed.
+complete list of all of the alternating knots had been constructed.
 
 \papersection{Non-Alternating Knots}
 
-After generating all the alternating knots, a list of candidates for the
-non-alternating knots can be generated by flipping the crossings of the
-alternating in every possible way.
-The overwhelming majority of these knots are eliminated as they can be reduced
-with the second Reidemeister move.
-Many of those that remain can be reduced with a (2, 1)--pass or a (3, 2)--pass.
-TODO DIAGRAM
-Note that a (1, 0)--pass would be the first Reidemeister move,
-This pass move is very general and can be found in many simplifiable knots.
-It is worth nothing that since 10 crossing knots only have 11 internal faces
-then any occurrence of a strand passing over or under three consecutive
-crossings guarantees that there is a possible (3, 2)--pass move as the contrary
-would imply that dual of the knot graph contains two vertices that are 5 edges
-apart.
+After generating all of the alternating knots, a list of candidates for the
+non-alternating knots was generated by flipping the crossings of the alternating
+knots in every possible manner.
+The overwhelming majority of these knots were eliminated as they could be
+reduced with the second Reidemeister move.
+Many of those that remained could be reduced with a (2, 1)--pass or a
+(3, 2)--pass.
+(A (1, 0)--pass is the first Reidemeister move.)
+This pass move can be found in most simplifiable knots.
 
-By removing all knots that can be simplified with a ($k+1$, $k$)--pass move or
-the second Reidemeister move, the list contains few knot diagrams that have
-fewer than 10 crossings in their minimal form.
-This is because a reducibility test that only checks for those moves will
-occasionally result in false negatives.
+By removing all knots that can be simplified with a pass move or the second
+Reidemeister move, the list was left with very few reducible knots.
+This is because a reducibility test that only checks for those two moves will
+occasionally give false negatives.
 This was dealt with at a later stage.
 
 \papersection{Connections}
@@ -227,162 +223,158 @@ This was dealt with at a later stage.
 Here it would be wise to extend the definition of lexicographic orderings to
 signed permutations.
 First, a positive permutation always comes before a signed permutation.
-If two signed permutations were to be compared, the one that would come first
-would be the one whose absolute value is lexicographically smaller.
+With two signed permutations the one that comes first is the one whose absolute
+value is lexicographically smaller.
 If the absolute values of the permutations are equal, then the permutations are
-ordered lexicographically.
+ordered lexicographically, meaning that the one that comes first is the one that
+has a negative value at the first index where the permutations differ.
 
-Now the goal is to determine which knot diagrams represent equivalent knots and
-save the lexicographically smallest one in each equivalence class.
+Now the goal was to determine which knot diagrams are equivalent and to save the
+lexicographically smallest one in each equivalence class.
 For 10 crossings or fewer, the third Reidemeister move, the 2--pass, and the
-flype are sufficient to reduce the list of candidates down from 1373 to 251.
-If two knots are found to be equivalent, the one that is lexicographically
-smaller is kept and the other is discarded.
-Applying the third Reidemeister move is preferable to the first two as adding
-crossings and later removing them results in an enormous number of possibilities
-that need to be checked and examined because there are tons of ways to add a
-kink but only a few crossings where the third Reidemeister move can be applied.
+flype were sufficient to reduce the list of candidates down from 1373 to 251.
+Applying the third Reidemeister move was preferable to the first two
+Reidemeister moves as there are many ways of adding crossings but only a few
+ways to apply a crossing number-preserving move.
 
-To narrow down this list, and find knots that are in the same equivalence class,
-a graph searching algorithm such as breadth first search must be implemented.
-The vertices of the graph are knot diagrams that are being considered and the
-edges of the graph are moves.
-Each connected component of such a graph would represent a knot.
+To find knots that are in the same equivalence class, a graph searching
+algorithm was implemented.
+The vertices of the graph were candidate knot diagrams and the edges of the
+graph were moves that connected two different but equivalent diagrams.
+Each connected component of the graph consisted of a set of equivalent diagrams,
+all representing the same knot.
 
-Since the resulting list has 251 knots instead of 250, it must contain one
+Since the resulting list had 251 knots instead of 250, it contained one
 duplication.
-This is the infamous Perko pair, which has a long history of going undetected by
-tabulators.
-At this point, there are several options to narrow the list down to 250.
-The first is to introduce more crossing number-preserving moves such as the
-Perko move.
-The second is to expand the list of reachable vertices to include ones with more
-crossings.
-This must be done in conjunction with allowing moves that change the crossing
-number.
-By allowing the first Reidemeister move and allowing the crossing number to
-increase by a maximum of 1, the list can be narrowed to 250.
-This produces the full list of the 250 prime knots with 10 crossings or fewer.
+This duplication was the infamous Perko pair, which has a history of going
+undetected by tabulators.
+At this point, there were several options for how to narrow down the list to
+250 knots.
+The first was to introduce more crossing number-preserving moves such as the
+Perko move, which is a move designed specifically for the Perko pair.
+The second was to allow moves that change the crossing number such as the first
+two Reidemeister moves.
+By allowing use of the first Reidemeister move and allowing the crossing number
+to increase to 11, the list was reduced to 250 knots.
+This produced the full list of the 250 prime knots with 10 crossings or fewer.
 
 \papersection{Invariants}
 
-Since computation time is massively increased by examining equivalent knots with
-more than 10 crossings, invariants can be used to speed of the task of finding
-the Perko pair.
-The Jones polynomial is a decently strong invariant.
-However, it becomes much stronger when combined with the simplest invariant of
-them all, that being the crossing number.
-The Jones polynomial can be used to check whether the polynomial of a given knot
-is unique when compared to the polynomials of all the other knots.
-If it is not, the connections of that knot are investigated and any duplicates
-are excised.
-Eventually, the list will contain only knots whose invariants are unique among
-the candidates.
-The Jones is actually not quite sufficient for the task at hand, and a stronger
-but slower invariant must be introduced to finish the job.
+Since the computation time was massively increased by examining equivalent knots
+with 11 crossings, it was unreasonable to do this for all 251 knots.
+Thus, invariants were used to establish which knots were definitively not
+duplicated in the table.
+If there was a pair of knots all of whose determinants match, their 11 crossing
+connections were examined for equivalent diagrams.
+Eventually, the list contained only knots whose invariants were unique among the
+candidates.
+The Jones polynomial was actually not sufficient for the task at hand, and a
+second invariant was introduced to finish the job.
 
 \papersection{Planar Diagram Notation}
 
-To find the Jones polynomial of a given knot, the knot must be written in planar
+To find the Jones polynomial of a given knot, the knot was written in planar
 diagram notation as opposed to as a signed permutation.
-To find this notation, it is necessary to determine the handedness of each of
+To find this notation, it was necessary to determine the handedness of each of
 the knot's crossings.
-Since the only knots being considered are those whose modified graph is planar,
-there must be a solution among the $2^n$ possible combinations.
-To find this solution, it is sufficient to construct a spanning tree of the
+There are $2^n$ possible ways to set the handedness of the crossings.
+Since the only knots being considered were those whose modified graph is planar,
+it was known that at least one of these would make the knot diagram planar.
+To find this solution, it was necessary to construct a spanning tree of the
 knot.
-Then, an $n$ variable system of linear equations can be formed where each of the
-variables represents the handedness of a given crossing.
-It is sufficient to find just one solution to the system in a ring that only has
-two elements.
-The only such ring is the one that contains 0 and 1 modulo 2.
+Then, an $n$ variable system of linear equations was formed where each of the
+variables represented the handedness of a given crossing.
+It was sufficient to find just one solution to the system in a ring that only
+has two elements.
+The only such ring is the one that contains 0 and 1 modulo 2, $\mathbb{Z}_2$.
 
-The system has a solution, thus it can have no more than $n$ equations; however,
-far more are generated.
-What happens is that many are eliminated due to linear dependence and the matrix
-for the system is only examined in row-reduced form.
-To construct the $\frac{(n+1)(n+2)}2$ equations, every possible combination of
-two edges that were not included in the spanning tree must be examined.
-The number above is derived from ${n+1}\choose2$ where n+1 is the number of
-edges not included in the tree.
+To construct the $\frac{(n+1)(n+2)}2$ equations of the system, every possible
+combination of two edges that were not included in the spanning tree were
+examined.
+The value above is ${n+1}\choose2$ where $n+1$ is the number of edges not
+included in the tree.
 
-For each edge in each pair of edges, a closed loop can be constructed that
-consists of two pieces.
-The first is the unique path along the tree between the two vertices that are
-the endpoints of the edge.
-The second is an imaginary path drawn directly between the endpoints.
-A tree has no internal faces, so this can be done without intersecting the tree.
-The purpose of this is to determine whether these the latter segments of these
-loops, the ones outside the tree, intersect.
-Since the goal of this is to find a planar representation of the knot, they must
-not do so.
-To determine whether the number of intersections outside is 0 or 1, it suffices
-to determine the parity of the intersections inside as any two closed loops will
-have an even number of intersections.
-To have an even number of intersections on the tree, the segments must not
-intersect as two or more intersections would imply that the tree contains
-cycles.
-It should be pointed out what exactly counts as an intersection and what does
-not. TODO DIAGRAM
+For both edges in each pair of edges, a closed loop was constructed that
+consisted of two pieces.
+The first piece was the unique path along the tree between the two vertices that
+were the endpoints of the edge.
+The second was an imaginary path connecting the endpoints, such that the path
+did not intersect the tree.
+The purpose of this was to determine whether the latter segments of these loops,
+the ones outside the tree, intersected.
+Since the goal of this was to find a planar representation of the knot, the
+segments could not intersect.
+To determine whether the number of intersections outside the tree, between the
+second pieces of the loops, was 0 or 1, it sufficed to determine the number of
+the intersections inside as any two closed loops will have an even number of
+intersections.
+To have an even number of intersections inside the tree, the segments needed to
+have 0 intersections as 2 or more intersections would imply that the tree
+contained cycles.
+It should be pointed out what counted as an intersection and what did not. TODO
+DIAGRAM
 Note that the intersection where two segments pass straight through a crossing
-and intersect cannot occur as that would imply that there is only 1 intersection
-inside the tree no matter how you twist it.
+and intersect could not occur as that would have implied that there was only 1
+intersection inside the tree no matter how one twisted the crossings.
+This was impossible as that would have meant that there were two edges which
+definitely intersected outside of the tree, which could not happen as it is
+known that there is a configuration for the knot that makes it planar.
 
-When the two segments merge, run together for a bit, and the split again, is
-where the variables arise.
-Depending on how those intersections are oriented, the resulting number of
+When the two segments merged, ran together for a bit, and then split again, was
+where the variables arose.
+Depending on how those intersections were oriented, the resulting number of
 internal intersections could change.
-It should be noted that when the ends where the segments are the same (up to
-rotation), the result is 1 intersection.
+It should be noted that when the ends where the segments merge and split were
+rotationally identical, the result is 1 intersection.
 When they are different, the result is 0.
-This would suggest that every crossing has a value of $\frac12$ or
-$\frac{\text-1}2$.
-Every pair of edges that does not merge thusly will generate a trivial equation
-of $0=0$.
+This would suggest that every crossing where a merge or split occurred had a
+value of $\frac12$ or $\frac{\text-1}2$.
+Every pair of edges that did not merge thusly generated a trivial equation of
+$0=0$.
 
 Here it is important to differentiate between crossing handedness and whether it
-appears in the equations with a positive or negative sign.
-The sign in the equations represents how the segments connecting the endpoints
-of those edges merge at a crossing.
-However, since the requirement is to solve for handedness, then it suffices for
-there to be coefficients of 1 or -1 that convert from handedness to the right
-form for the equations.
-To clarify, the equations must come out to be 0, which means the segments must
-have different orientations at the merge and the split.
-This means that if accomplishing this requires making one of the crossings
-right-handed and the other left handed, then the variables must have
-coefficients of 1 as that is the only way to get 0 when one variable is the
-negative of the other.
-Conversely, if making both crossings have the same handedness is required, then
-one of the variables must have a coefficient of 1 and the other must have a
-coefficient of -1.
-That way, the only way to get 0 is by setting both variables to the same value.
+appeared in the equations with a positive or negative sign.
+The sign in the equations represented how the segments connecting the endpoints
+of those edges merged at a crossing.
+However, since the requirement was to solve for handedness, then it sufficed for
+there to be coefficients of 1 or -1 for each crossing that converted from
+handedness to the right form for the equations.
+To clarify, the equations had to come out to be 0, which meant that the segments
+must have had different orientations at the merge and the split.
+This meant that if accomplishing this requires making one of the crossings
+right-handed and the other left-handed, then both of the variables must have had
+coefficients of 1 as that was the only way to get a sum of 0 when one variable
+is the negative of the other.
+Conversely, if making both crossings have the same handedness was required, then
+one of the variables must have had a coefficient of 1 and the other must have
+had a coefficient of -1.
+That way, the only way to get 0 was by setting both variables to the same value.
 
-At this point it is clear that it is not really necessary to solve for solutions
-in the domain containing $\frac12$ and $\frac{\text-1}2$.
-It suffices to simply take 1 and -1.
-However, it is clear that all this really is doing is asking whether two
-variables must be the same or distinct.
-Thus, it is simpler to replace every equation that contains both 1 and -1 as
-coefficients with the same equation whose coefficients are both 1 and whose
-total is 1 as well.
-This results in variables having to sum to 1 when they are different, and 0 when
-they are the same.
-This is exactly the structure of the modulo 2 ring from above.
-After the matrix of equations has been row-reduced and some solution has been
-found, all that remains is to use the solutions to reconstruct the planar
+It was not necessary to solve for solutions in a domain containing $\frac12$ and
+$\frac{\text-1}2$.
+It sufficed to simply take 1 and -1.
+However, all that this was really doing was asking whether two variables must be
+the same or distinct.
+Thus, it was simpler to replace every equation that contained both 1 and -1 as
+coefficients with the same equation whose coefficients were both 1 and whose
+total was 1 as well.
+This resulted in variables having to sum to 1 when they were different and to 0
+when they were the same.
+This is exactly the structure of the modulo 2 ring from above, $\mathbb{Z}_2$.
+After the matrix of equations had been row-reduced and some solution had been
+found, all that remained was to use the solutions to reconstruct the planar
 diagram notation for each crossing.
 
 Every crossing is represented in planar diagram notation as $X_{i,j,k,l}$. TODO
 DIAGRAM
-Where $i$ is the index given to the lower incoming strand and then $j$, $k$, and
+Here, $i$ is the index given to the lower incoming strand and then $j$, $k$, and
 $l$ proceed counterclockwise.
 If the handedness of the crossing was flipped from right to left, the crossing's
 notation would become $X_{l,i,j,k}$.
 
 \papersection{Jones Polynomial}
 
-The Jones Polynomial of a knot is computed from the product of its crossings.
+The Jones polynomial of a knot is computed from the product of its crossings.
 Every crossing can be smoothed in two distinct ways. TODO DIAGRAM
 By smoothing a crossing in a particular manner, the polynomial of that smoothing
 is multiplied by a coefficient of either $A$ or $B$ for the 0 and 1 smoothings,
@@ -394,5 +386,20 @@ non-intersecting strands, a strand stitching operation can be performed to turn
 a product of $n$ smoothings into an unlink of several components.
 Each of these components is given a coefficient of $d$ and thus the result is a
 polynomial in $A$, $B$, and $d$ of degree $2n$.
+
+To make this polynomial invariant over the second and third Reidemeister moves,
+then one must set $d+A^2+B^2=0$ and $AB=1$.
+To make this invariant over the first Reidemeister move, the whole polynomial
+must be multiplied by a coefficient of $A^{\text-3w}$ where $w$ is the writhe of
+the knot, which is difference between the number of right-handed and left-handed
+crossings in the knot.
+Since the resulting polynomial will have a factor of $d$ in every component, the
+polynomial is normalized by dividing it by $d$.
+Lastly, the result is a polynomial in $A^4$ so the rule $q=A^{\text-4}$ is
+applied.
+
+Since the Jones polynomial of the mirror image of a knot is the polynomial of
+the original knot with $q$ replaced by $\frac1q$, the minimal of these two
+polynomials was taken as the value of the invariant for that knot.
 \end{paper}
 \end{document}
