@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    249243,       5104]
-NotebookOptionsPosition[    248724,       5082]
-NotebookOutlinePosition[    249258,       5103]
-CellTagsIndexPosition[    249215,       5100]
+NotebookDataLength[    249356,       5107]
+NotebookOptionsPosition[    248837,       5085]
+NotebookOutlinePosition[    249371,       5106]
+CellTagsIndexPosition[    249328,       5103]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1183,24 +1183,26 @@ Cell[BoxData[{
                   RowBox[{
                    RowBox[{
                     RowBox[{
-                    RowBox[{
                     RowBox[{"2", 
                     RowBox[{
                     "k", "\[LeftDoubleBracket]", "1", 
                     "\[RightDoubleBracket]"}]}], "-", "1"}], ">", 
+                    RowBox[{"(", 
+                    RowBox[{
                     RowBox[{"Abs", "[", 
                     RowBox[{
                     RowBox[{"2", "i"}], "-", "1", "-", 
                     RowBox[{"2", 
                     RowBox[{
                     "k", "\[LeftDoubleBracket]", "i", 
-                    "\[RightDoubleBracket]"}]}]}], "]"}]}], 
+                    "\[RightDoubleBracket]"}]}]}], "]"}], 
                     "\[IndentingNewLine]", "//", 
                     RowBox[{
                     RowBox[{"Min", "[", 
                     RowBox[{"#", ",", 
                     RowBox[{
-                    RowBox[{"2", "n"}], "-", "#"}]}], "]"}], "&"}]}], ",", 
+                    RowBox[{"2", "n"}], "-", "#"}]}], "]"}], "&"}]}], ")"}]}],
+                    ",", 
                    RowBox[{
                     RowBox[{"p", "+=", 
                     RowBox[{
@@ -3938,7 +3940,8 @@ Cell[BoxData[{
    3.6823851649827046`*^9, 3.6823851817329693`*^9}, {3.6823855979295435`*^9, 
    3.6823856097010775`*^9}, {3.6823858523232985`*^9, 3.682385867382713*^9}, {
    3.6823859022163587`*^9, 3.682385902310643*^9}, {3.6823859596622066`*^9, 
-   3.682385973652566*^9}, 3.6823864405532975`*^9}],
+   3.682385973652566*^9}, 3.6823864405532975`*^9, {3.6839900081686215`*^9, 
+   3.683990012049899*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -5103,8 +5106,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 201015, 3918, 5291, "Input"],
-Cell[201598, 3942, 47110, 1137, 1172, "Output"]
+Cell[580, 22, 201128, 3921, 5291, "Input"],
+Cell[201711, 3945, 47110, 1137, 1172, "Output"]
 }, Open  ]]
 }
 ]
