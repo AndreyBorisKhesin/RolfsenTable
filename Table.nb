@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    249356,       5107]
-NotebookOptionsPosition[    248837,       5085]
-NotebookOutlinePosition[    249371,       5106]
-CellTagsIndexPosition[    249328,       5103]
+NotebookDataLength[    249358,       5107]
+NotebookOptionsPosition[    248839,       5085]
+NotebookOutlinePosition[    249373,       5106]
+CellTagsIndexPosition[    249330,       5103]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -3945,7 +3945,7 @@ Cell[BoxData[{
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"3303.625`9.539590657232557", ",", 
+  RowBox[{"1427.59375`9.175204551227822", ",", 
    RowBox[{"{", 
     RowBox[{"250", ",", 
      RowBox[{"{", 
@@ -5080,7 +5080,7 @@ Cell[BoxData[
          RowBox[{"-", "8"}], ",", "10", ",", "4", ",", 
          RowBox[{"-", "2"}], ",", "6"}], "]"}]}], "}"}]}], "}"}]}], 
   "}"}]], "Output",
- CellChangeTimes->{3.682389756165653*^9}]
+ CellChangeTimes->{3.683994722917766*^9}]
 }, Open  ]]
 },
 PrintingStyleEnvironment->"Working",
@@ -5107,7 +5107,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 201128, 3921, 5291, "Input"],
-Cell[201711, 3945, 47110, 1137, 1172, "Output"]
+Cell[201711, 3945, 47112, 1137, 1172, "Output"]
 }, Open  ]]
 }
 ]
