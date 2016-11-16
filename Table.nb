@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    259211,       5406]
-NotebookOptionsPosition[    252643,       5194]
-NotebookOutlinePosition[    257016,       5341]
-CellTagsIndexPosition[    255979,       5306]
+NotebookDataLength[    259254,       5407]
+NotebookOptionsPosition[    252686,       5195]
+NotebookOutlinePosition[    257059,       5342]
+CellTagsIndexPosition[    256022,       5307]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -3811,7 +3811,7 @@ Cell[BoxData[
       RowBox[{"{", 
        RowBox[{
         RowBox[{"l", "=", "a"}], ",", 
-        RowBox[{"r", "=", "t"}], ",", "i"}], "}"}], ",", 
+        RowBox[{"r", "=", "t"}]}], "}"}], ",", 
       RowBox[{
        RowBox[{"Do", "[", 
         RowBox[{
@@ -3864,7 +3864,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.6860603956714745`*^9, 3.6860604229884977`*^9}, {
   3.686060453622503*^9, 3.6860605254345493`*^9}, {3.6862527009754915`*^9, 
   3.686252706104393*^9}, {3.6862527837541466`*^9, 3.6862527893914237`*^9}, {
-  3.6862529749282928`*^9, 3.686253034988019*^9}},
+  3.6862529749282928`*^9, 3.686253034988019*^9}, {3.6864111393188944`*^9, 
+  3.6864111393379188`*^9}},
  CellTags->"Invariants"],
 
 Cell[BoxData[
@@ -5296,46 +5297,46 @@ CellTagsIndex->{
   Cell[194525, 3774, 855, 24, 72, "Input",
    CellTags->"Is Reducible"]},
  "Invariants"->{
-  Cell[195383, 3800, 2581, 67, 112, "Input",
+  Cell[195383, 3800, 2624, 68, 112, "Input",
    CellTags->"Invariants"]},
  "Rolfsen Table"->{
-  Cell[197967, 3869, 6561, 158, 372, "Input",
+  Cell[198010, 3870, 6561, 158, 372, "Input",
    CellTags->"Rolfsen Table"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Set Directory", 253132, 5210},
- {"Build", 253213, 5213},
- {"Compactify", 253292, 5216},
- {"PermutationConjugate", 253389, 5219},
- {"Convert", 253482, 5222},
- {"IsSorted", 253562, 5225},
- {"Candidate Knots", 253655, 5228},
- {"Alternating Knots", 253759, 5231},
- {"Valid Knots", 253858, 5234},
- {"Knot Association", 253956, 5237},
- {"Data", 254045, 5240},
- {"Create Graph", 254129, 5243},
- {"Draw Graph", 254223, 5246},
- {"Strand Properties", 254320, 5249},
- {"ToPD", 254411, 5252},
- {"Writhe", 254493, 5255},
- {"Jones Substitution", 254586, 5258},
- {"JonesPolynomial", 254688, 5261},
- {"Homomorphisms", 254787, 5264},
- {"2 - Pass", 254881, 5267},
- {"Reidemeister 1", 254976, 5270},
- {"Reidemeister 3", 255074, 5273},
- {"Flype", 255165, 5276},
- {"All Flypes", 255249, 5279},
- {"Is Planar", 255340, 5282},
- {"Shift", 255423, 5285},
- {"Minimal", 255504, 5288},
- {"Pass Reducible", 255595, 5291},
- {"Is Reducible", 255693, 5294},
- {"Invariants", 255784, 5297},
- {"Rolfsen Table", 255878, 5300}
+ {"Set Directory", 253175, 5211},
+ {"Build", 253256, 5214},
+ {"Compactify", 253335, 5217},
+ {"PermutationConjugate", 253432, 5220},
+ {"Convert", 253525, 5223},
+ {"IsSorted", 253605, 5226},
+ {"Candidate Knots", 253698, 5229},
+ {"Alternating Knots", 253802, 5232},
+ {"Valid Knots", 253901, 5235},
+ {"Knot Association", 253999, 5238},
+ {"Data", 254088, 5241},
+ {"Create Graph", 254172, 5244},
+ {"Draw Graph", 254266, 5247},
+ {"Strand Properties", 254363, 5250},
+ {"ToPD", 254454, 5253},
+ {"Writhe", 254536, 5256},
+ {"Jones Substitution", 254629, 5259},
+ {"JonesPolynomial", 254731, 5262},
+ {"Homomorphisms", 254830, 5265},
+ {"2 - Pass", 254924, 5268},
+ {"Reidemeister 1", 255019, 5271},
+ {"Reidemeister 3", 255117, 5274},
+ {"Flype", 255208, 5277},
+ {"All Flypes", 255292, 5280},
+ {"Is Planar", 255383, 5283},
+ {"Shift", 255466, 5286},
+ {"Minimal", 255547, 5289},
+ {"Pass Reducible", 255638, 5292},
+ {"Is Reducible", 255736, 5295},
+ {"Invariants", 255827, 5298},
+ {"Rolfsen Table", 255921, 5301}
  }
 *)
 (*NotebookFileOutline
@@ -5400,13 +5401,13 @@ Cell[186926, 3588, 7596, 184, 465, "Input",
  CellTags->"Pass Reducible"],
 Cell[194525, 3774, 855, 24, 72, "Input",
  CellTags->"Is Reducible"],
-Cell[195383, 3800, 2581, 67, 112, "Input",
+Cell[195383, 3800, 2624, 68, 112, "Input",
  CellTags->"Invariants"],
-Cell[197967, 3869, 6561, 158, 372, "Input",
+Cell[198010, 3870, 6561, 158, 372, "Input",
  CellTags->"Rolfsen Table"],
 Cell[CellGroupData[{
-Cell[204553, 4031, 959, 21, 31, "Input"],
-Cell[205515, 4054, 47112, 1137, 1172, "Output"]
+Cell[204596, 4032, 959, 21, 31, "Input"],
+Cell[205558, 4055, 47112, 1137, 1172, "Output"]
 }, Open  ]]
 }
 ]
