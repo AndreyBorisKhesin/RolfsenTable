@@ -34,9 +34,9 @@
 \usetikzlibrary{positioning,matrix,shapes,chains,arrows}
 \tikzexternalize[prefix=precompiled_figures/]
 
-\newcommand\svg[1]{\def\svgwidth{\columnwidth}
-\vspace{12pt}
+\newcommand\svgsize[2]{\def\svgwidth{#2}
 {\centering\input{#1.pdf_tex}}}
+\newcommand\svg[1]{\svgsize{#1}{\columnwidth}}
 
 % Indent
 \setlength{\parindent}{0.3in}
@@ -202,13 +202,13 @@ Theorem \thesubsubsection\noexpand\xspace}}{\end{theorem}}}
 #2
 \tag*{\fontsize{12pt}{1em}\selectfont
 $\begin{array}{r}
-\cr{\text{[\arabic{papereqcounter}]}}
+\cr{\text{(\arabic{papereqcounter})}}
 \cr{\fontsize{9pt}{1em}\selectfont\textit{\ifx\\#3\\~\else(\fi#3\ifx\\#3\\~
 \else)\fi}}
 \end{array}$}
 \end{equation*}
 }
-\expandafter\edef\csname eq#1\endcsname{[\arabic{papereqcounter}]\noexpand
+\expandafter\edef\csname eq#1\endcsname{(\arabic{papereqcounter})\noexpand
 \xspace}}
 
 % Where

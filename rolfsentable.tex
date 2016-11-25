@@ -448,10 +448,12 @@ crossing.
 
 TODO FIX EQUATIONS BELOW
 
-\papereq{BracketPlus}{\langle+XING\rangle
-=A\langle VERT\rangle+B\langle HORIZ\rangle}{}
-\papereq{BracketMinus}{\langle-XING\rangle
-=A\langle HORIZ\rangle+B\langle VERT\rangle}{}
+\papereq{BracketPlus}{\left\langle\svgsize{diagrams/positive}{2em}\right\rangle
+=A\left\langle\svgsize{diagrams/zero}{2em}\right\rangle
++B\left\langle\svgsize{diagrams/one}{2em}\right\rangle}{}
+\papereq{BracketMinus}{\left\langle\svgsize{diagrams/negative}{2em}\right\rangle
+=A\left\langle\svgsize{diagrams/one}{2em}\right\rangle
++B\left\langle\svgsize{diagrams/zero}{2em}\right\rangle}{}
 
 A given smoothing is a 0-smoothing if the incoming end of the lower strand is
 connected to the next end going counterclockwise around the knot, in other
@@ -459,7 +461,7 @@ words, the nearest end on its right.
 If it is connected to the end on its left, the resulting smoothing is a
 1-smoothing.
 
-Thus, we can evaluate $\langle TODORHT\rangle$.
+Thus, we can evaluate $\langle\svgsize{diagrams/right}{1em}\rangle$.
 Note that this trefoil is right-handed so we will only need \eqBracketPlus.
 There are 8 ways to smooth the three crossings altogether and unless we apply
 three 0-smoothings or three 1-smoothings, there are going to be cases which are
@@ -468,14 +470,19 @@ Thus we can expand the bracket of the trefoil.
 
 TODO FIX EQUATIONS BELOW
 
-\papereq{TrefoilOne}{\fontsize{10.5pt}{1em}\selectfont\langle a\rangle
-=A^3\langle b\rangle+3A^2B\langle c\rangle+3AB^2\langle d\rangle
-+B^3\langle e\rangle}{}
+\papereq{TrefoilOne}{\fontsize{9pt}{1em}\selectfont
+\langle\svgsize{diagrams/right}{1em}\rangle
+=A^3\langle\svgsize{diagrams/triple}{1em}\rangle
++3A^2B\langle\svgsize{diagrams/double}{1em}\rangle
++3AB^2\langle\svgsize{diagrams/single}{1em}\rangle
++B^3\langle\svgsize{diagrams/nil}{1em}\rangle}{}
 
 Thus, by counting the number of components in each unlink, we can evalutate the
 remaining brackets with the corresponding power of $d$.
 
-\papereq{TrefoilTwo}{\langle a\rangle=A^3d^2+3A^2Bd+3AB^2d^2+B^3d^3}{}
+\papereq{TrefoilTwo}{\fontsize{11pt}{1em}\selectfont
+\langle\svgsize{diagrams/right}{1em}\rangle
+=A^3d^2+3A^2Bd+3AB^2d^2+B^3d^3}{}
 
 To make this polynomial invariant over the second and third Reidemeister moves,
 we must set $d+A^2+B^2=0$ and $AB=1$.
@@ -508,7 +515,8 @@ However, the left-handed trefoil has a smaller Jones polynomial (by degree) so
 we state that the Jones polynomial for the trefoil is the Jones polynomial for
 the left-handed trefoil.
 
-\papereq{TrefoilJones}{J(LHT)=\text-q^{\text-4}+q^{\text-3}+q^{\text-1}}{}
+\papereq{TrefoilJones}{J(\svgsize{diagrams/left}{1em})
+=\text-q^{\text-4}+q^{\text-3}+q^{\text-1}}{}
 
 \papersec{Knot Colourings}
 
