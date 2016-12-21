@@ -36,7 +36,10 @@
 
 \newcommand\svgsize[2]{\def\svgwidth{#2}
 {\centering\input{#1.pdf_tex}}}
-\newcommand\svg[1]{\svgsize{#1}{\columnwidth}}
+\newcommand\svgc[1]{\svgsize{#1}{\columnwidth}}
+\newcommand\svgl[1]{\svgsize{#1}{1em}}
+\newcommand\diagrams[0]{\renewcommand\svgsize[2]{\def\svgwidth{##2}
+{\centering\input{diagrams/##1.pdf_tex}}}}
 
 % Indent
 \setlength{\parindent}{0.3in}
@@ -259,11 +262,12 @@ $\begin{array}{r}
 
 %Figure counter
 \newcounter{paperfigurecounter}
-\newcommand{\papercaption}[2]{\vspace{-12pt}
+\newcommand{\papercap}[2]{\vspace{-12pt}
 \bgroup\stepcounter{paperfigurecounter}
 \captionof{figure}{\fontsize{9pt}{1em}\selectfont
-\hspace{0.3in}Fig \arabic{paperfigurecounter}. #2}\egroup\expandafter\edef
-\csname fig#1\endcsname{Fig \arabic{paperfigurecounter}.\noexpand\xspace}}
+\hspace{0.3in}Fig.~\arabic{paperfigurecounter}.\quad#2}\vspace{0.5em}
+\egroup\expandafter\edef
+\csname fig#1\endcsname{Fig.~\arabic{paperfigurecounter}\noexpand\xspace}}
 
 \newcommand{\paperaxis}[9]
 {title=#1,
