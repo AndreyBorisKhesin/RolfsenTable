@@ -1,5 +1,6 @@
 \input{header}
 \theorems
+\diagrams
 \begin{document}
 \papertitle{The 250 Knots with up to 10 Crossings}
 %\paperauth{D}{Bar-Natan}{}
@@ -11,8 +12,8 @@ Table.
 The concepts behind the calculation of this list are simple, but involved.
 The purpose of this paper is to generate the Rolfsen table in as simple, clear,
 and reproducible manner as possible.
-The methods we use are very similar to those used by TODO AUTHORS in TODO
-SOURCE.
+The methods we use are very similar to those used by J.~Hoste,
+M.~Thistlethwaite, and J.~Weeks in TODO SOURCE.
 This involves generating all planar diagrams with up to 10 crossings and
 applying several simplifications to group the diagrams into equivalence classes.
 From these diagrams, the full list of candidate knots is generated and reduced
@@ -34,8 +35,7 @@ least not at the time of this writing).
 This absence presents the challenge of finding the true number of such knots.
 
 This has been accomplished for knots of up to 10 crossings several times in the
-past TODO SOURCES and has even been done for up to 17 crossings TODO
-SOURCE.
+past TODO SOURCES and has even been done for up to 17 crossings TODO SOURCE.
 This computation is far too involved to be done (easily) by hand, so it is done
 by a computer.
 To demonstrate a method of generating the Rolfsen table, we created a somewhat
@@ -49,10 +49,23 @@ transform one knot diagram into an equivalent one.
 In fact, the definition of knot equivalence is that such a series of moves
 exists.
 
+\vspace{0.5em}
+\svgsize{right}{0.4\columnwidth}
+\hfill
+\svgsize{left}{0.4\columnwidth}\\
+
+\hspace{0.05\columnwidth}Right\hspace{0.5\columnwidth}Left
+
+\papercap{Trefoil}{The right-handed and left-handed trefoils.
+These knots are considered equivalent for our purposes as they are mirror images
+of each other.
+However, it is important to note that no series of moves can transform one of
+these into the other.}
+
 The first manner in which the list of diagrams is simplified is by eliminating
 knots that are mirror images of each other.
 For example, the right-handed and left-handed trefoils are not equivalent as it
-is impossible to twist one into the other (see TODO FIGURE).
+is impossible to twist one into the other (see \figTrefoil).
 However, only one of the two is included in the Rolfsen table.
 We should note that the notation we used to represent a knot does not
 encode the handedness of the knot so this is not an issue.
@@ -272,16 +285,26 @@ If at least one of those knot diagrams is determined to be reducible, the entire
 component is excised from the graph.
 After this step, the graph no longer contains any reducible knots.
 
+\vspace{0.5em}
+\svgsize{perkoone}{0.4\columnwidth}
+\hfill
+\svgsize{perkotwo}{0.4\columnwidth}
+\vspace{1em}
+
+\papercap{Perko}{The two different representations of the same knot,
+$10_161$, that are commonly referred to as the Perko pair.
+These were initially thought to be different knots in Rolfsen's original
+tabulation until the error was corrected by Perko.}
+
 To rebuild our list of candidate knots, we take the lexicographically smallest
 knot diagram from each connected component of the graph.
 The resulting list has 251 knots instead of 250, so it must contain one
 duplication.
-This duplication is the infamous Perko pair (see TODO FIGURE), which has a
+This duplication is the infamous Perko pair (see \figPerko), which has a
 history of going undetected by tabulators.
 At this point, we face a dilemma for how to narrow down the list to 250 knots.
 We could introduce more moves that preserve crossing number such as the Perko
-move (see TODO FIGURE), a move designed specifically to deal with the Perko
-pair.
+move, a move designed specifically to deal with the Perko pair.
 We could also to allow moves that change the crossing number such as the first
 two Reidemeister moves.
 By allowing use of the first Reidemeister move and allowing the crossing number
@@ -361,7 +384,7 @@ To have an even number of intersections inside the tree, the segments needed to
 have 0 intersections as 2 or more intersections would imply that the tree
 contained cycles.
 It should be pointed out what counted as an intersection and what did not. TODO
-DIAGRAM
+FIGURE
 Note that the intersection where two segments pass straight through a crossing
 and intersect could not occur as that would have implied that there is only 1
 intersection inside the tree no matter how one twisted the crossings.
@@ -416,7 +439,7 @@ diagram notation for each crossing.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Every crossing is represented in planar diagram notation as $X_{i,j,k,l}$. TODO
-DIAGRAM
+FIGURE
 Here, $i$ is the index given to the lower incoming strand and then $j$, $k$, and
 $l$ proceed counterclockwise.
 If the handedness of the crossing is flipped from right to left, the crossing's
@@ -448,12 +471,12 @@ crossing.
 
 TODO FIX EQUATIONS BELOW
 
-\papereq{BracketPlus}{\left\langle\svgsize{diagrams/positive}{2em}\right\rangle
-=A\left\langle\svgsize{diagrams/zero}{2em}\right\rangle
-+B\left\langle\svgsize{diagrams/one}{2em}\right\rangle}{}
-\papereq{BracketMinus}{\left\langle\svgsize{diagrams/negative}{2em}\right\rangle
-=A\left\langle\svgsize{diagrams/one}{2em}\right\rangle
-+B\left\langle\svgsize{diagrams/zero}{2em}\right\rangle}{}
+\papereq{BracketPlus}{\left\langle\svgsize{positive}{2em}\right\rangle
+=A\left\langle\svgsize{zero}{2em}\right\rangle
++B\left\langle\svgsize{one}{2em}\right\rangle}{}
+\papereq{BracketMinus}{\left\langle\svgsize{negative}{2em}\right\rangle
+=A\left\langle\svgsize{one}{2em}\right\rangle
++B\left\langle\svgsize{zero}{2em}\right\rangle}{}
 
 A given smoothing is a 0-smoothing if the incoming end of the lower strand is
 connected to the next end going counterclockwise around the knot, in other
@@ -461,27 +484,25 @@ words, the nearest end on its right.
 If it is connected to the end on its left, the resulting smoothing is a
 1-smoothing.
 
-Thus, we can evaluate $\langle\svgsize{diagrams/right}{1em}\rangle$.
+Thus, we can evaluate $\langle\svgl{right}\rangle$.
 Note that this trefoil is right-handed so we will only need \eqBracketPlus.
 There are 8 ways to smooth the three crossings altogether and unless we apply
 three 0-smoothings or three 1-smoothings, there are going to be cases which are
 rotationally symmetric and have the same bracket value.
 Thus we can expand the bracket of the trefoil.
 
-TODO FIX EQUATIONS BELOW
-
 \papereq{TrefoilOne}{\fontsize{9pt}{1em}\selectfont
-\langle\svgsize{diagrams/right}{1em}\rangle
-=A^3\langle\svgsize{diagrams/triple}{1em}\rangle
-+3A^2B\langle\svgsize{diagrams/double}{1em}\rangle
-+3AB^2\langle\svgsize{diagrams/single}{1em}\rangle
-+B^3\langle\svgsize{diagrams/nil}{1em}\rangle}{}
+\langle\svgl{right}\rangle
+=A^3\langle\svgl{triple}\rangle
++3A^2B\langle\svgl{double}\rangle
++3AB^2\langle\svgl{single}\rangle
++B^3\langle\svgl{nil}\rangle}{}
 
 Thus, by counting the number of components in each unlink, we can evalutate the
 remaining brackets with the corresponding power of $d$.
 
 \papereq{TrefoilTwo}{\fontsize{11pt}{1em}\selectfont
-\langle\svgsize{diagrams/right}{1em}\rangle
+\langle\svgl{right}\rangle
 =A^3d^2+3A^2Bd+3AB^2d^2+B^3d^3}{}
 
 To make this polynomial invariant over the second and third Reidemeister moves,
@@ -503,7 +524,8 @@ multiplied by $A^{\text-9}$.
 Applying $d=\text-A^2-B^2$ and $B=A^{\text-1}$, we can find the Jones polynomial
 of the trefoil.
 
-\papereq{TrefoilThree}{J(a)=\text-A^{\text-16}+A^{\text-12}+A^{\text-4}}{}
+\papereq{TrefoilThree}{J(\svgl{right})
+=\text-A^{\text-16}+A^{\text-12}+A^{\text-4}}{}
 
 Since the Jones polynomial of the mirror image of a knot is the Jones polynomial
 of the original knot with $q$ replaced by $q^{\text-1}$, the minimal of these two
@@ -515,7 +537,7 @@ However, the left-handed trefoil has a smaller Jones polynomial (by degree) so
 we state that the Jones polynomial for the trefoil is the Jones polynomial for
 the left-handed trefoil.
 
-\papereq{TrefoilJones}{J(\svgsize{diagrams/left}{1em})
+\papereq{TrefoilJones}{J(\svgl{left})
 =\text-q^{\text-4}+q^{\text-3}+q^{\text-1}}{}
 
 \papersec{Knot Colourings}
@@ -556,75 +578,106 @@ homomorphisms from those groups to $S_n$ will be the same.
 This means that to show that two groups are different, it suffices to show that
 $\exists n\in\mathbb N$ such that the number of homomorphisms from our to groups
 to $S_n$ is different.
-Each homomorphism to $S_n$ from the fundamental group of the complement of a
+Each homomorphism to $S_m$ from the fundamental group of the complement of a
 knot is called a \textit{colouring} of that knot.
 
-It would be incorrect so simply take all $2n$ strands of the knot, assign them
-to various values of $S_n$, and then count the number of ways to do that.
+It would be incorrect to simply count the number of ways we can take all $2n$
+strands of the knot and assign them to various values of $S_m$.
 The reason for that is that a path that passes under an upper strand is the same
-regardless of whether it passed under it before or after a crossing (see TODO
-FIGURE).
-Thus, if we define the values in $S_n$ corresponding to each strand as $i$, $j$,
-$k$, and $l$ starting from the incoming lower strand and proceeding
-counterclockwise (see TODO FIGURE NUMBER), we can construct two relations that
-those four values have to satisfy.
+regardless of whether it do so before or after a crossing (see TODO FIGURE).
+Thus, if we assign the values in $S_m$ to each strand as $i$, $j$, $k$, and $l$
+starting from the incoming lower strand and proceeding counterclockwise (see
+TODO FIGURE), we can construct two relations that those four values have to
+satisfy.
 
-\papereq{Upper}{b=d}{}
-\papereq{Lower}{a=b^{\text-1}cd}{}
+\papereq{Upper}{j=l}{}
+\papereq{Lower}{i=j^{\text-1}kl}{}
 
 We can put these together into an all-encompassing equation for each crossing.
 
-\papereq{Both}{a=b^{\text-1}cb}{}
+\papereq{Both}{i=j^{\text-1}kj}{}
 
-We note that taking the permutation conjugation TODO DOUBLE CHECK THAT I AM
-USING THIS TERM CORRECTLY of $b$ with $c$, the cycle lengths of $c$ are
-preserved TODO DOUBLE CHECK THAT THIS STATEMENT IS TRUE TODO SOURCE.
+We note that by taking the permutation conjugation of $j$ with $k$, the cycle
+lengths of $k$ are preserved.
 This means that all of the values for the strands must have the same cycle
 lengths.
 This makes our job a lot easier and gives us a lot more information.
-Whereas before we would map strands to $S_n$ and count the total number of
-homomorphisms, now we map them to a subgroup TODO CHECK THAT IT IS REALLY A
-SUBGROUP OR IF I NEED TO REDEFINE THE OPERATION of $S_n$ that all share cycle
-lengths and count the number of homomorphisms to each subgroup independently.
+Whereas before we would have had to map strands to $S_m$ and count the total
+number of homomorphisms, now we can map them to a subgroup of $S_m$ all of whose
+elements have the same cycle lengths and count the number of homomorphisms to
+each subgroup independently.
 Thus, instead of ending up with a single number as our invariant, we end up with
-$P(n)$ different numbers, where $P$ is the partition function.
+$P(m)$ different numbers, where $P$ is the partition function.
 Thus, to show that the groups are different, it suffices for any one of these
 numbers to differ.
 
-If our knots have $n$ crossings then we are going to get $n$ equations such as
-\eqBoth and we have to combine them.
-Clearly, there must be at least 2 starting points, values that are chosen from a
-subgroup of $S_n$ and from which the other values are derived using repeated
-application of \eqBoth.
+If our knots have $n$ crossings then we have to find relations between $2n$ strands.
+Finding $n$ such relations is easy with \eqUpper.
+We are going to get another $n$ equations from \eqBoth and we have to combine them.
+We need to find a set of generators, strands whose values can be chosen from
+$S_m$ independently, for our knot and then find the values for the remaining
+strands using \eqUpper and \eqBoth.
 
-To find these starting points, which we are going to henceforth call generators,
-we need to figure out which of the $2n$ strands can be derived using \eqBoth
-from the others.
-It is immediately clear that $n$ of them can be derived from the other $n$ by
+To find these generators we need to figure out which of the $2n$ strands can be
+derived using \eqBoth from the others.
+It is immediately clear that $n$ strands can be derived from the other $n$ by
 using \eqUpper.
 Thus, we are only interested in the other $n$.
 We create a graph with $2^n$ vertices, where each vertex holds a subset of our
 $n$ strands of interest.
-For each crossing, we draw an edge from every vertex whose subset contains just
-two of $a$, $b$, and $c$ to the vertex whose subset is identical but also
-contains the third one.
+For each crossing, we draw a directed edge from every vertex containing $j$, and
+either $i$ or $k$ to the vertex containing the same elements but including both
+of $i$ and $k$.
 This edge represents the fact that if we are given the values for the elements
 of the subset at the first vertex, we can derive all the values for the elements
 of the subset of the second vertex.
 We then find our generators by taking the connected component containing the
-vertex that holds all $n$ values and taking the smallest vertex of the component
-by size.
-We can then determine the order in which the values of $n$ strands will be
-determined by finding the shortest path from the set of generators to the set of
-all of the strands.
+vertex that holds all $n$ values and finding the vertex in that component that
+contains the smallest subset.
+We can then determine the order in which the values of the $n$ strands will be
+determined by finding a path from vertex containing the set of generators to the
+vertex containing all $n$ strands.
 
-Once we have found the generators, all that is left is to try every possible
-combination of values for them from the subgroup of $S_n$ that we chose.
+Once we have found the generators, we assign to them every possible
+combination of values of our chosen subgroup of $S_m$.
 We set the generator values, generate the rest of the values for the strands,
-and then check that all of the equations for each crossing are satisfied.
-If they are, then the homomorphism is valid, otherwise, it is not.
+and then check that \eqBoth is satisfied for each crossing.
+If it is, then the homomorphism is valid, otherwise, it is not.
+
+We count the total number of valid homomorphisms and our invariant becomes an
+array of size $P(m)$ containing the number of valid homomorphisms from the
+fundamental group of the complement of the knot to a subgroup of $S_m$.
+Each element of the array corresponds to a different subgroup of $S_m$, where
+all of the elements in each subgroup have the same set of cycle lengths.
+Using this invariant we can separate out the two knots that have the same Jones
+polynomial.
+
+Thus, we have constructed the table containing the 250 knots with 10 crossings
+or fewer.
 
 \papersec{Knot Graphs}
+
+During our calculation of the Rolfsen Table, we have used three crossing
+number-preserving moves: the 2-pass, the third Reidemeister move, and the flype.
+We generated a graph of connections to determine whether a knot was reducible
+and whether or not two knots were equivalent.
+If we were to run our algorithms with a different set of knots, we could
+generate the graph of connections between all irreducible knot diagrams.
+To do this, we simply replace the set of alternating knots with the set of
+candidate knots, which satisfy the same conditions as those for alternating
+knots, except for the condition that they must be minimal over flypes.
+
+From these knots, we can generate all their non-alternating knot diagrams,
+map each diagram to a vertex, connect these vertices with edges representing
+2-passes, third Reidemeister moves, and flypes, and remove all connected
+components that were found to be removable.
+
+The result will the full graph of irreducible knot diagrams and their
+connections.
+This can be used for testing knot invariants.
+Each invariant must produce the same result for each vertex in a connected
+component as an invariant must be the same for any diagram that represents the
+same knot.
 
 \papersec{References}
 
