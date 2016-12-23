@@ -35,7 +35,7 @@ least not at the time of this writing).
 This absence presents the challenge of finding the true number of such knots.
 
 This has been accomplished for knots of up to 10 crossings several times in the
-past TODO SOURCES and has even been done for up to 17 crossings TODO SOURCE.
+past and has even been done for up to 17 crossings TODO SOURCE.
 This computation is far too involved to be done (easily) by hand, so it is done
 by a computer.
 To demonstrate a method of generating the Rolfsen table, we created a somewhat
@@ -150,11 +150,11 @@ modified).
 The $2\times n$ matrix of pairs is called a EDT code (E is for extended).
 The EDT code for the trefoil is $\begin{pmatrix}1&3&5\\4&6&2\end{pmatrix}$.\\
 
-\svgsize{positive}{0.4\columnwidth}
+\svgsize{positive}{0.33\columnwidth}
 \hfill
-\svgsize{negative}{0.4\columnwidth}\\
+\svgsize{negative}{0.33\columnwidth}\\
 
-{\noindent\fontsize{10pt}{1em}\selectfont Right-handed crossing\hfill
+{\noindent\fontsize{9pt}{1em}\selectfont Right-handed crossing\hfill
 Left-handed crossing}\\
 
 \papercap{Crossings}{The right-handed and left-handed crossings.
@@ -277,7 +277,7 @@ paired with other elements of those sequences.
 These sequences represent the two strands that make up the body that gets
 flyped.
 To find the fully reduced list of alternating knots, it is sufficient to only
-check for knots connected via flypes TODO SOURCE.
+check for knots connected via flypes.
 
 Having eliminated all the knots that do not satisfy the four conditions, a
 complete list of all of the alternating knots remains.
@@ -551,14 +551,14 @@ $\bigcirc$ and \o~represent the unknot and the empty knot, respectively.
 Using this notation we can write down a formula for the smoothings of a
 crossing.
 
-TODO FIX EQUATIONS BELOW
-
-\papereq{BracketPlus}{\left\langle\svgsize{positive}{2em}\right\rangle
-=A\left\langle\svgsize{zero}{2em}\right\rangle
-+B\left\langle\svgsize{one}{2em}\right\rangle}{}
-\papereq{BracketMinus}{\left\langle\svgsize{negative}{2em}\right\rangle
-=A\left\langle\svgsize{one}{2em}\right\rangle
-+B\left\langle\svgsize{zero}{2em}\right\rangle}{}
+\papereq{BracketPlus}{
+\left\langle\begin{matrix}\svgsize{positive}{2em}\end{matrix}\right\rangle
+=A\left\langle\begin{matrix}\svgsize{zero}{2em}\end{matrix}\right\rangle
++B\left\langle\begin{matrix}\svgsize{one}{2em}\end{matrix}\right\rangle}{}
+\papereq{BracketMinus}{
+\left\langle\begin{matrix}\svgsize{negative}{2em}\end{matrix}\right\rangle
+=A\left\langle\begin{matrix}\svgsize{one}{2em}\end{matrix}\right\rangle
++B\left\langle\begin{matrix}\svgsize{zero}{2em}\end{matrix}\right\rangle}{}
 
 A given smoothing is a 0-smoothing if the incoming end of the lower strand is
 connected to the next end going counterclockwise around the knot, in other
@@ -595,7 +595,7 @@ writhe of the knot, which is the difference between the number of right-handed
 and left-handed crossings in the knot.
 Since the resulting polynomial will have a factor of $d$ in every component, the
 polynomial is normalized by dividing it by $d$.
-Lastly, the result will always be a polynomial in $A^4$ TODO SOURCE so the rule
+Lastly, the result will always be a polynomial in $A^4$ so the rule
 $A=q^{\text-1/4}$ is applied to result in a Laurent polynomial in $q$.
 
 For the trefoil, these substitutions allow us to transform our equation into a
