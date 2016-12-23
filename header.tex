@@ -48,6 +48,7 @@
 \newcommand\theorems[0]{\newtheorem{claim}[subsection]{Claim}
 \newtheorem{conjecture}[subsection]{Conjecture}
 \newtheorem{corollary}[subsection]{Corollary}
+\newtheorem{definition}[subsection]{Definition}
 \newtheorem{lemma}[subsection]{Lemma}\newtheorem{remark}[subsection]{Remark}
 \newtheorem{theorem}[subsection]{Theorem}
 \newtheorem{question}[subsection]{Question}
@@ -60,6 +61,9 @@ Conjecture \thesubsection\noexpand\xspace}}{\end{conjecture}}
 \newenvironment{papercor}[1]
 {\begin{corollary}\global\expandafter\edef\csname cor##1\endcsname{
 Corollary \thesubsection\noexpand\xspace}}{\end{corollary}}
+\newenvironment{paperdef}[1]
+{\begin{definition}\global\expandafter\edef\csname def##1\endcsname{
+Definition \thesubsection\noexpand\xspace}}{\end{definition}}
 \newenvironment{paperlem}[1]
 {\begin{lemma}\global\expandafter\edef\csname lem##1\endcsname{
 Lemma \thesubsection\noexpand\xspace}}{\end{lemma}}
@@ -78,6 +82,7 @@ Theorem \thesubsection\noexpand\xspace}}{\end{theorem}}}
 \newcommand\subtheorems[0]{\stepcounter{paperthmamount}
 \newtheorem{conjecture}[subsubsection]{Conjecture}
 \newtheorem{corollary}[subsubsection]{Corollary}
+\newtheorem{definition}[subsubsection]{Definition}
 \newtheorem{lemma}[subsubsection]{Lemma}
 \newtheorem{remark}[subsubsection]{Remark}
 \newtheorem{theorem}[subsubsection]{Theorem}
@@ -91,6 +96,9 @@ Conjecture \thesubsubsection\noexpand\xspace}}{\end{conjecture}}
 \newenvironment{papercor}[1]
 {\begin{corollary}\global\expandafter\edef\csname cor##1\endcsname{
 Corollary \thesubsubsection\noexpand\xspace}}{\end{corollary}}
+\newenvironment{paperdef}[1]
+{\begin{definition}\global\expandafter\edef\csname def##1\endcsname{
+Definition \thesubsubsection\noexpand\xspace}}{\end{definition}}
 \newenvironment{paperlem}[1]
 {\begin{lemma}\global\expandafter\edef\csname lem##1\endcsname{
 Lemma \thesubsubsection\noexpand\xspace}}{\end{lemma}}
