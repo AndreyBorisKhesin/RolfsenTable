@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    263644,       5510]
-NotebookOptionsPosition[    253250,       5202]
-NotebookOutlinePosition[    257078,       5307]
-CellTagsIndexPosition[    256733,       5296]
+NotebookDataLength[    310938,       6656]
+NotebookOptionsPosition[    300462,       6345]
+NotebookOutlinePosition[    304290,       6450]
+CellTagsIndexPosition[    303945,       6439]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -418,8 +418,8 @@ Cell[BoxData[
 \) gives the extended DT form of the knot \
 \!\(\*\\nStyleBox[\\\"k\\\",\\nFontSlant->\\\"Italic\\\"]\), which is given \
 in modified DT form.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.691672575454029*^9},
- CellTags->"Info3691679775-5999978"]
+ CellChangeTimes->{3.6916737960033703`*^9},
+ CellTags->"Info3691680995-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -452,8 +452,8 @@ Cell[BoxData[
 Italic\\\"]\) gives the modified DT form of the knot \
 \!\(\*\\nStyleBox[\\\"k\\\",\\nFontSlant->\\\"Italic\\\"]\), which is given \
 in extended DT form.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6916725756290646`*^9},
- CellTags->"Info3691679775-5999978"]
+ CellChangeTimes->{3.691673796171502*^9},
+ CellTags->"Info3691680996-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -529,8 +529,8 @@ Cell[BoxData[
 each crossing of the knot \
 \!\(\*\\nStyleBox[\\\"k\\\",\\nFontSlant->\\\"Italic\\\"]\), which is given \
 in modified DT form.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.691672575794095*^9},
- CellTags->"Info3691679775-5999978"]
+ CellChangeTimes->{3.691673796337591*^9},
+ CellTags->"Info3691680996-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -617,8 +617,8 @@ Cell[BoxData[
 knots always come first and all further order is determined lexicographically \
 where non-alternating knots are first compared by absolute value, and then \
 further canonically.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.69167257597114*^9},
- CellTags->"Info3691679775-5999978"]
+ CellChangeTimes->{3.691673796504614*^9},
+ CellTags->"Info3691680996-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -690,8 +690,8 @@ conjugation of the permutations \
 \!\(\*\\nStyleBox[\\\"g\\\",\\nFontSlant->\\\"Italic\\\"]\) by evaluating \
 \!\(\*SuperscriptBox[\\n StyleBox[\\\"gag\\\",\\nFontSlant->\\\"Italic\\\"], \
 \\n RowBox[{\\\"-\\\", \\\"1\\\"}]]\)\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6916725762661104`*^9},
- CellTags->"Info3691679776-5999978"]
+ CellChangeTimes->{3.691673796671691*^9},
+ CellTags->"Info3691680996-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -720,8 +720,8 @@ Cell[BoxData[
 \"]\) gives the minimial modified DT form of the knot \!\(\*\\nStyleBox[\\\"k\
 \\\",\\nFontSlant->\\\"Italic\\\"]\), which is given in extended DT \
 form.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.691672576429657*^9},
- CellTags->"Info3691679776-5999978"]
+ CellChangeTimes->{3.6916737969397964`*^9},
+ CellTags->"Info3691680996-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -744,8 +744,8 @@ Cell[BoxData[
 \"]\) gives True if the list of knots \
 \!\(\*\\nStyleBox[\\\"l\\\",\\nFontSlant->\\\"Italic\\\"]\) is sorted and \
 False otherwise.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.691672576595381*^9},
- CellTags->"Info3691679776-5999978"]
+ CellChangeTimes->{3.6916737971048503`*^9},
+ CellTags->"Info3691680996-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -2098,8 +2098,8 @@ Italic\\\"]\) gives the sorted list of all irreducible planar minimal \
 alternating knot diagrams with \
 \!\(\*\\nStyleBox[\\\"n\\\",\\nFontSlant->\\\"Italic\\\"]\) crossings.\"\>", 
   "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6916725767614317`*^9},
- CellTags->"Info3691679776-5999978"]
+ CellChangeTimes->{3.6916737972719584`*^9},
+ CellTags->"Info3691680997-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -2264,8 +2264,8 @@ Cell[BoxData[
 Italic\\\"]\) gives the sorted list of all irreducible planar minimal \
 alternating knots with \!\(\*\\nStyleBox[\\\"n\\\",\\nFontSlant->\\\"Italic\\\
 \"]\) crossings.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6916725770515165`*^9},
- CellTags->"Info3691679776-5999978"]
+ CellChangeTimes->{3.6916737974570255`*^9},
+ CellTags->"Info3691680997-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -2322,8 +2322,8 @@ Italic\\\"]\) gives the sorted list of all non-trivially reducible planar \
 minimal knot diagrams with \
 \!\(\*\\nStyleBox[\\\"n\\\",\\nFontSlant->\\\"Italic\\\"]\) crossings.\"\>", 
   "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6916725772565937`*^9},
- CellTags->"Info3691679777-5999978"]
+ CellChangeTimes->{3.691673797633073*^9},
+ CellTags->"Info3691680997-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -2388,8 +2388,8 @@ Italic\\\"]\) gives an association that returns the list of all valid knots \
 with \!\(\*\\nStyleBox[\\\"n\\\",\\nFontSlant->\\\"Italic\\\"]\) crossings \
 whose alternating form is equal to the given knot.\"\>", "MSG"]], "Print", \
 "PrintUsage",
- CellChangeTimes->{3.6916725774216547`*^9},
- CellTags->"Info3691679777-5999978"]
+ CellChangeTimes->{3.69167379780514*^9},
+ CellTags->"Info3691680997-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -2429,8 +2429,8 @@ Cell[BoxData[
 \!\(\*\\nStyleBox[\\\"n\\\",\\nFontSlant->\\\"Italic\\\"]\) crossings will be \
 saved to and loaded from.\\nData@\\\"all\\\" gives the graph of all knots \
 with up to 10 crossings.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6916725775867157`*^9},
- CellTags->"Info3691679777-5999978"]
+ CellChangeTimes->{3.69167379799922*^9},
+ CellTags->"Info3691680997-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -2458,8 +2458,8 @@ returns true if the lists \
 \!\(\*\\nStyleBox[\\\"b\\\",\\nFontSlant->\\\"Italic\\\"]\), containing a \
 pair of vertices and an edge name, are in sorted order and false otherwise.\"\
 \>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.691672577750764*^9},
- CellTags->"Info3691679777-5999978"]
+ CellChangeTimes->{3.691673798166314*^9},
+ CellTags->"Info3691680998-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -2528,8 +2528,8 @@ move.\\nCreateGraph@\\\"all\\\" gives a graph with minimal irreducible knot \
 diagrams with up to 10 crossings as vertices and edges connecting each pair \
 of knot diagrams that are equivalent under one 2-pass, flype, or third \
 Reidemeister move.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.691672577914818*^9},
- CellTags->"Info3691679777-5999978"]
+ CellChangeTimes->{3.6916737983333597`*^9},
+ CellTags->"Info3691680998-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -2669,8 +2669,8 @@ Cell[BoxData[
 then saves it to the appropriate file.\\nMakeGraph@\\\"all\\\" creates the \
 graph of knot diagrams with up to 10 crossings and then saves it to the \
 appropriate file.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.691672578111889*^9},
- CellTags->"Info3691679777-5999978"]
+ CellChangeTimes->{3.6916737985204334`*^9},
+ CellTags->"Info3691680998-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -2709,8 +2709,8 @@ Cell[BoxData[
 \\nFontSlant->\\\"Italic\\\"]\) crossings that it loaded from the appropriate \
 file.\\nDrawGraph@\\\"all\\\" displays the graph of knot diagrams with up to \
 10 crossings.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6916725783089356`*^9},
- CellTags->"Info3691679778-5999978"]
+ CellChangeTimes->{3.6916737986835036`*^9},
+ CellTags->"Info3691680998-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -2801,8 +2801,8 @@ a strand from index \!\(\*\\nStyleBox[\\\"i\\\",\\nFontSlant->\\\"Italic\\\"]\
 \) to index \!\(\*\\nStyleBox[\\\"j\\\",\\nFontSlant->\\\"Italic\\\"]\) that \
 can be stitched with other strands into longer strands or circles.\"\>", 
   "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6916725784729896`*^9},
- CellTags->"Info3691679778-5999978"]
+ CellChangeTimes->{3.6916737988486013`*^9},
+ CellTags->"Info3691680998-5088792"]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -2855,8 +2855,8 @@ Cell[BoxData[
 \) gives a planar diagram notation for the knot \
 \!\(\*\\nStyleBox[\\\"k\\\",\\nFontSlant->\\\"Italic\\\"]\), which is given \
 in modified DT form.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6916725786350584`*^9},
- CellTags->"Info3691679778-5999978"]
+ CellChangeTimes->{3.691673799046714*^9},
+ CellTags->"Info3691680998-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -3074,8 +3074,8 @@ Cell[BoxData[
 left-handed crossings, of the knot \!\(\*\\nStyleBox[\\\"k\\\",\\nFontSlant->\
 \\\"Italic\\\"]\), which is given in modified DT form.\"\>", "MSG"]], "Print",\
  "PrintUsage",
- CellChangeTimes->{3.691672578831094*^9},
- CellTags->"Info3691679778-5999978"]
+ CellChangeTimes->{3.6916737992297707`*^9},
+ CellTags->"Info3691680999-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -3120,8 +3120,8 @@ Cell[BoxData[
 Italic\\\"]\) gives the Jones polynomial of the knot \
 \!\(\*\\nStyleBox[\\\"k\\\",\\nFontSlant->\\\"Italic\\\"]\), which is given \
 in modified DT form.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.691672578988143*^9},
- CellTags->"Info3691679778-5999978"]
+ CellChangeTimes->{3.691673799395817*^9},
+ CellTags->"Info3691680999-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -3201,8 +3201,8 @@ calculated from the generators, which are returned as a list as the first \
 element of the result, of the knot \!\(\*\\nStyleBox[\\\"k\\\",\\nFontSlant->\
 \\\"Italic\\\"]\), which is given in modified DT form.\"\>", "MSG"]], "Print",\
  "PrintUsage",
- CellChangeTimes->{3.6916725791502256`*^9},
- CellTags->"Info3691679779-5999978"]
+ CellChangeTimes->{3.691673799562868*^9},
+ CellTags->"Info3691680999-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -3323,8 +3323,8 @@ mappings given by the list \
 \!\(\*\\nStyleBox[\\\"s\\\",\\nFontSlant->\\\"Italic\\\"]\), and generator \
 values given by the list \!\(\*\\nStyleBox[\\\"g\\\",\\nFontSlant->\\\"Italic\
 \\\"]\) and False otherwise.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.691672579394274*^9},
- CellTags->"Info3691679779-5999978"]
+ CellChangeTimes->{3.691673799739393*^9},
+ CellTags->"Info3691680999-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -3443,8 +3443,8 @@ form onto the permutation group \!\(\*SubscriptBox[\\n \
 StyleBox[\\\"S\\\",\\nFontSlant->\\\"Italic\\\"], \\n \
 StyleBox[\\\"o\\\",\\nFontSlant->\\\"Italic\\\"]]\).\"\>", "MSG"]], "Print", \
 "PrintUsage",
- CellChangeTimes->{3.69167257959237*^9},
- CellTags->"Info3691679779-5999978"]
+ CellChangeTimes->{3.6916737999179516`*^9},
+ CellTags->"Info3691680999-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -3632,8 +3632,8 @@ in an \!\(\*\\nStyleBox[\\\"n\\\",\\nFontSlant->\\\"Italic\\\"]\)-crossing \
 knot with a list of pairs \
 \!\(\*\\nStyleBox[\\\"p\\\",\\nFontSlant->\\\"Italic\\\"]\).\"\>", 
   "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6916725797934628`*^9},
- CellTags->"Info3691679779-5999978"]
+ CellChangeTimes->{3.6916738001331034`*^9},
+ CellTags->"Info3691681000-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -3854,8 +3854,8 @@ Cell[BoxData[
 \"]\) gives all the knots that can be obtained by applying one 2-pass to the \
 knot \!\(\*\\nStyleBox[\\\"k\\\",\\nFontSlant->\\\"Italic\\\"]\), which is \
 given in modified DT form.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6916725799945393`*^9},
- CellTags->"Info3691679779-5999978"]
+ CellChangeTimes->{3.6916738003201838`*^9},
+ CellTags->"Info3691681000-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -4046,8 +4046,8 @@ Italic\\\"]\) gives all the knots that can be obtained by adding a positive \
 kink at an even index to the knot \
 \!\(\*\\nStyleBox[\\\"k\\\",\\nFontSlant->\\\"Italic\\\"]\), which is given \
 in modified DT form.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6916725801976533`*^9},
- CellTags->"Info3691679780-5999978"]
+ CellChangeTimes->{3.6916738005002213`*^9},
+ CellTags->"Info3691681000-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -4111,8 +4111,8 @@ Cell[BoxData[
 third Reidemeister move to the knot \
 \!\(\*\\nStyleBox[\\\"k\\\",\\nFontSlant->\\\"Italic\\\"]\), which is given \
 in modified DT form.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.69167258040071*^9},
- CellTags->"Info3691679780-5999978"]
+ CellChangeTimes->{3.691673800664295*^9},
+ CellTags->"Info3691681000-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -4302,8 +4302,8 @@ Cell[BoxData[
 \) gives a list of lists of all of the knots that can be obtained by applying \
 one flype to each knot of the list \!\(\*\\nStyleBox[\\\"l\\\",\\nFontSlant->\
 \\\"Italic\\\"]\).\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6916725806177974`*^9},
- CellTags->"Info3691679780-5999978"]
+ CellChangeTimes->{3.691673800845718*^9},
+ CellTags->"Info3691681000-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -4574,8 +4574,8 @@ in modified DT form, by \
 reversing the direction if the sign \
 \!\(\*\\nStyleBox[\\\"s\\\",\\nFontSlant->\\\"Italic\\\"]\) is negative.\"\>",
    "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6916725808158703`*^9},
- CellTags->"Info3691679780-5999978"]
+ CellChangeTimes->{3.6916738010302973`*^9},
+ CellTags->"Info3691681000-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -4612,8 +4612,8 @@ Cell[BoxData[
 \"]\) gives the lexicographically smallest indexing of the knot \
 \!\(\*\\nStyleBox[\\\"k\\\",\\nFontSlant->\\\"Italic\\\"]\), which is given \
 in modified DT form.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.691672580972951*^9},
- CellTags->"Info3691679780-5999978"]
+ CellChangeTimes->{3.691673801218033*^9},
+ CellTags->"Info3691681001-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -4659,8 +4659,8 @@ Italic\\\"]\) gives True if the knot \
 \!\(\*\\nStyleBox[\\\"k\\\",\\nFontSlant->\\\"Italic\\\"]\), which is given \
 in modified DT form, is reducible with a 2,1-pass move or a 3,2-pass move, \
 and False otherwise.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.69167258113503*^9},
- CellTags->"Info3691679781-5999978"]
+ CellChangeTimes->{3.691673801379586*^9},
+ CellTags->"Info3691681001-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -4861,8 +4861,8 @@ Italic\\\"]\) gives True if the knot \
 in modified DT form, can be reduced using the first Reidemeister move, a \
 2,1-pass move, or a 3,2-pass move and False otherwise.\"\>", "MSG"]], "Print",\
  "PrintUsage",
- CellChangeTimes->{3.6916725813320975`*^9},
- CellTags->"Info3691679781-5999978"]
+ CellChangeTimes->{3.6916738015586977`*^9},
+ CellTags->"Info3691681001-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -4907,8 +4907,8 @@ set of equivalent knots in \
 \!\(\*\\nStyleBox[\\\"a\\\",\\nFontSlant->\\\"Italic\\\"]\) is moved to \
 \!\(\*\\nStyleBox[\\\"t\\\",\\nFontSlant->\\\"Italic\\\"]\).\"\>", 
   "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.69167258151998*^9},
- CellTags->"Info3691679781-5999978"]
+ CellChangeTimes->{3.691673801716751*^9},
+ CellTags->"Info3691681001-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -4994,8 +4994,8 @@ Italic\\\"]\) gives the set of knots in the Rolfsen table with \
 \!\(\*\\nStyleBox[\\\"n\\\",\\nFontSlant->\\\"Italic\\\"]\) \
 crossings.\\nRolfsenTable@\\\"all\\\" produces the Rolfsen table, the table \
 of knots with 10 crossings or fewer.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.691672581681059*^9},
- CellTags->"Info3691679781-5999978"]
+ CellChangeTimes->{3.6916738018908353`*^9},
+ CellTags->"Info3691681001-5088792"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -5182,14 +5182,16 @@ Cell[BoxData[
    3.6916599533452473`*^9, 3.691659955184494*^9}, 3.6916599997342753`*^9, 
    3.6916601487008457`*^9, 3.6916602666571045`*^9}],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
- RowBox[{
+ RowBox[{"Timing", "[", 
   RowBox[{
-   RowBox[{"Timing", "@", 
+   RowBox[{
     RowBox[{"{", 
      RowBox[{
-      RowBox[{"Length", "@", "#"}], ",", "#"}], "}"}]}], "&"}], "@", 
-  RowBox[{"RolfsenTable", "@", "\"\<all\>\""}]}]], "Input",
+      RowBox[{"Length", "@", "#"}], ",", "#"}], "}"}], "&"}], "@", 
+   RowBox[{"RolfsenTable", "@", "\"\<all\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.686060159805394*^9, 3.6860602244174385`*^9}, {
    3.686252468084843*^9, 3.686252499839305*^9}, 3.686253566830182*^9, 
    3.6862547374174833`*^9, {3.686255480761981*^9, 3.686255492136856*^9}, 
@@ -5198,7 +5200,1148 @@ Cell[BoxData[
    3.6862632849486074`*^9, 3.6862632852782283`*^9}, {3.6862641656386642`*^9, 
    3.686264165696969*^9}, {3.6862646092215643`*^9, 3.686264612658002*^9}, {
    3.6862654757018366`*^9, 3.6862654759710054`*^9}, {3.688350664340925*^9, 
-   3.6883506686969557`*^9}, {3.691608027293692*^9, 3.69160804279123*^9}}]
+   3.6883506686969557`*^9}, {3.691608027293692*^9, 3.69160804279123*^9}, {
+   3.69167377865552*^9, 3.6916737793632703`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1039.265625`9.037326475974613", ",", 
+   RowBox[{"{", 
+    RowBox[{"250", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"MDT", "[", "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "3", ",", "1"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "3", ",", "4", ",", "1"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", "5", ",", "1", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"3", ",", "4", ",", "5", ",", "1", ",", "2"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", "5", ",", "1", ",", "6", ",", "3"}], 
+        "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", "5", ",", "6", ",", "1", ",", "3"}], 
+        "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", "6", ",", "5", ",", "1", ",", "3"}], 
+        "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "5", ",", "6", ",", "1", ",", "7", ",", "3"}], 
+        "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "6", ",", "1", ",", "7", ",", "3", ",", "5"}], 
+        "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "7", ",", "1", ",", "4", ",", "3"}], 
+        "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "6", ",", "1", ",", "4", ",", "3"}], 
+        "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "6", ",", "7", ",", "1", ",", "2", ",", "4"}], 
+        "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "6", ",", "7", ",", "2", ",", "1", ",", "4"}], 
+        "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "4", ",", "5", ",", "6", ",", "7", ",", "1", ",", "2", ",", "3"}], 
+        "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "5", ",", "7", ",", "1", ",", "8", ",", "3", ",", 
+         "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "6", ",", "1", ",", "7", ",", "3", ",", "8", ",", 
+         "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "6", ",", "1", ",", "7", ",", "8", ",", "3", ",", 
+         "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "6", ",", "1", ",", "8", ",", "7", ",", "3", ",", 
+         "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "7", ",", "5", ",", "1", ",", "8", ",", "3", ",", 
+         "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "7", ",", "1", ",", "8", ",", "3", ",", 
+         "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "7", ",", "1", ",", "8", ",", "4", ",", 
+         "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "7", ",", "8", ",", "1", ",", "3", ",", 
+         "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "7", ",", "8", ",", "1", ",", "4", ",", 
+         "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "8", ",", "6", ",", "1", ",", "4", ",", 
+         "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "8", ",", "7", ",", "6", ",", "1", ",", "4", ",", 
+         "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", ",", "1", ",", 
+         "2"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "6", ",", "1", ",", "7", ",", "8", ",", "2", ",", 
+         "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "6", ",", "7", ",", "2", ",", "8", ",", "1", ",", 
+         "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "7", ",", "6", ",", "2", ",", "8", ",", "1", ",", 
+         "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "6", ",", "7", ",", "8", ",", "2", ",", "1", ",", 
+         "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "6", ",", "8", ",", "7", ",", "2", ",", "1", ",", 
+         "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "6", ",", "5", ",", "8", ",", "7", ",", "2", ",", "1", ",", 
+         "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "6"}], ",", "1", ",", 
+         RowBox[{"-", "7"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "5"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "6"}], ",", "1", ",", "7", ",", 
+         RowBox[{"-", "3"}], ",", "8", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "6"}], ",", "1", ",", 
+         RowBox[{"-", "7"}], ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "5"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "5", ",", "7", ",", "1", ",", "8", ",", "3", ",", 
+         "9", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "5", ",", "7", ",", "1", ",", "8", ",", "9", ",", 
+         "3", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "5", ",", "7", ",", "1", ",", "9", ",", "8", ",", 
+         "3", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "6", ",", "1", ",", "8", ",", "3", ",", "9", ",", 
+         "5", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "6", ",", "1", ",", "8", ",", "7", ",", "3", ",", 
+         "9", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "6", ",", "7", ",", "1", ",", "8", ",", "9", ",", 
+         "5", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "7", ",", "1", ",", "8", ",", "9", ",", "3", ",", 
+         "6", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "7", ",", "1", ",", "9", ",", "8", ",", "3", ",", 
+         "6", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "7", ",", "5", ",", "1", ",", "8", ",", "9", ",", 
+         "3", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "7", ",", "5", ",", "1", ",", "9", ",", "8", ",", 
+         "3", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "7", ",", "6", ",", "1", ",", "8", ",", "9", ",", 
+         "5", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "7", ",", "1", ",", "9", ",", "8", ",", 
+         "3", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "7", ",", "1", ",", "9", ",", "8", ",", 
+         "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "7", ",", "8", ",", "1", ",", "3", ",", 
+         "9", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "7", ",", "8", ",", "1", ",", "9", ",", 
+         "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "8", ",", "1", ",", "4", ",", "9", ",", 
+         "3", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "8", ",", "7", ",", "1", ",", "9", ",", 
+         "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "6", ",", "8", ",", "1", ",", "3", ",", 
+         "9", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "8", ",", "1", ",", "9", ",", "4", ",", 
+         "3", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "8", ",", "6", ",", "1", ",", "9", ",", 
+         "3", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "8", ",", "6", ",", "1", ",", "9", ",", 
+         "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "8", ",", "7", ",", "1", ",", "9", ",", "4", ",", 
+         "3", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "7", ",", "8", ",", "9", ",", "1", ",", "5", ",", 
+         "3", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "7", ",", "8", ",", "9", ",", "1", ",", "5", ",", 
+         "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "8", ",", "9", ",", "7", ",", "1", ",", "4", ",", 
+         "5", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "8", ",", "9", ",", "7", ",", "1", ",", "5", ",", 
+         "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "9", ",", "8", ",", "7", ",", "1", ",", "5", ",", 
+         "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "5", ",", "8", ",", "7", ",", "9", ",", "2", ",", 
+         "1", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "7", ",", "6", ",", "8", ",", "1", ",", "9", ",", 
+         "2", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "7", ",", "9", ",", "2", ",", "8", ",", "1", ",", 
+         "4", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "7", ",", "9", ",", "2", ",", "8", ",", "4", ",", 
+         "1", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "7", ",", "9", ",", "8", ",", "1", ",", "4", ",", 
+         "2", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "6", ",", "7", ",", "8", ",", "9", ",", "1", ",", "2", ",", 
+         "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "6", ",", "7", ",", "8", ",", "9", ",", "2", ",", "1", ",", 
+         "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "6", ",", "7", ",", "9", ",", "8", ",", "1", ",", "2", ",", 
+         "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "6", ",", "7", ",", "9", ",", "8", ",", "2", ",", "1", ",", 
+         "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "8", ",", "7", ",", "6", ",", "2", ",", "1", ",", "9", ",", 
+         "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "4", ",", "6", ",", "7", ",", "8", ",", "9", ",", "1", ",", "2", ",", 
+         "3", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "4", ",", "6", ",", "7", ",", "8", ",", "9", ",", "1", ",", "3", ",", 
+         "2", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "4", ",", "6", ",", "8", ",", "7", ",", "9", ",", "2", ",", "1", ",", 
+         "3", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "5", ",", "6", ",", "7", ",", "8", ",", "9", ",", "1", ",", "2", ",", 
+         "3", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", "5", ",", 
+         RowBox[{"-", "7"}], ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", "5", ",", 
+         RowBox[{"-", "7"}], ",", "1", ",", "8", ",", 
+         RowBox[{"-", "3"}], ",", "9", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", "5", ",", "7", ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", "3", ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", "5", ",", 
+         RowBox[{"-", "7"}], ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "5", ",", 
+         RowBox[{"-", "7"}], ",", 
+         RowBox[{"-", "6"}], ",", 
+         RowBox[{"-", "8"}], ",", "1", ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "4"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "5", ",", 
+         RowBox[{"-", "7"}], ",", 
+         RowBox[{"-", "6"}], ",", "8", ",", "1", ",", 
+         RowBox[{"-", "3"}], ",", "9", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"3", ",", "4", ",", "5", ",", "8", ",", "7", ",", 
+         RowBox[{"-", "9"}], ",", "2", ",", "1", ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"3", ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "7"}], ",", "6", ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "1"}], ",", "9", ",", 
+         RowBox[{"-", "2"}], ",", 
+         RowBox[{"-", "4"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "5", ",", "7", ",", "1", ",", "8", ",", "9", ",", 
+         "3", ",", "10", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "5", ",", "7", ",", "1", ",", "9", ",", "3", ",", 
+         "10", ",", "6", ",", "8"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "5", ",", "7", ",", "1", ",", "9", ",", "8", ",", 
+         "3", ",", "10", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "5", ",", "8", ",", "1", ",", "9", ",", "10", ",",
+          "3", ",", "7", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "5", ",", "8", ",", "1", ",", "10", ",", "9", ",",
+          "3", ",", "7", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "6", ",", "1", ",", "7", ",", "9", ",", "3", ",", 
+         "10", ",", "5", ",", "8"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "6", ",", "1", ",", "8", ",", "3", ",", "9", ",", 
+         "5", ",", "10", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "6", ",", "1", ",", "8", ",", "3", ",", "9", ",", 
+         "10", ",", "5", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "6", ",", "1", ",", "8", ",", "3", ",", "10", ",",
+          "9", ",", "5", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "6", ",", "1", ",", "9", ",", "7", ",", "3", ",", 
+         "10", ",", "5", ",", "8"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "6", ",", "7", ",", "1", ",", "8", ",", "10", ",",
+          "9", ",", "5", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "6", ",", "9", ",", "1", ",", "8", ",", "10", ",",
+          "3", ",", "5", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "7", ",", "1", ",", "8", ",", "9", ",", "3", ",", 
+         "10", ",", "5", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "7", ",", "1", ",", "8", ",", "9", ",", "3", ",", 
+         "10", ",", "6", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "7", ",", "1", ",", "8", ",", "9", ",", "10", ",",
+          "3", ",", "5", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "7", ",", "1", ",", "8", ",", "9", ",", "10", ",",
+          "3", ",", "6", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "7", ",", "1", ",", "9", ",", "8", ",", "3", ",", 
+         "6", ",", "10", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "7", ",", "1", ",", "9", ",", "10", ",", "8", ",",
+          "3", ",", "6", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "7", ",", "1", ",", "10", ",", "9", ",", "8", ",",
+          "3", ",", "6", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "7", ",", "5", ",", "1", ",", "9", ",", "3", ",", 
+         "10", ",", "6", ",", "8"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "7", ",", "6", ",", "1", ",", "8", ",", "10", ",",
+          "9", ",", "5", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "8", ",", "5", ",", "1", ",", "9", ",", "10", ",",
+          "3", ",", "7", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "8", ",", "5", ",", "1", ",", "10", ",", "9", ",",
+          "3", ",", "7", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "4", ",", "9", ",", "6", ",", "1", ",", "8", ",", "10", ",",
+          "3", ",", "5", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "7", ",", "8", ",", "1", ",", "10", ",",
+          "9", ",", "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "7", ",", "9", ",", "1", ",", "3", ",", 
+         "10", ",", "4", ",", "8"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "7", ",", "9", ",", "1", ",", "8", ",", 
+         "3", ",", "10", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "8", ",", "1", ",", "4", ",", "9", ",", 
+         "10", ",", "3", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "8", ",", "1", ",", "4", ",", "10", ",",
+          "9", ",", "3", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "8", ",", "1", ",", "10", ",", "3", ",",
+          "9", ",", "4", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "8", ",", "1", ",", "10", ",", "4", ",",
+          "9", ",", "3", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "8", ",", "7", ",", "1", ",", "10", ",",
+          "9", ",", "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "8", ",", "9", ",", "1", ",", "10", ",",
+          "3", ",", "4", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "8", ",", "9", ",", "1", ",", "10", ",",
+          "4", ",", "3", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "6", ",", "8", ",", "10", ",", "1", ",", "4", ",",
+          "9", ",", "3", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "6", ",", "1", ",", "8", ",", "9", ",", 
+         "10", ",", "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "6", ",", "9", ",", "1", ",", "3", ",", 
+         "10", ",", "4", ",", "8"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "6", ",", "9", ",", "1", ",", "8", ",", 
+         "3", ",", "10", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "8", ",", "1", ",", "4", ",", "9", ",", 
+         "10", ",", "6", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "8", ",", "1", ",", "9", ",", "4", ",", 
+         "3", ",", "10", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "8", ",", "1", ",", "9", ",", "10", ",",
+          "3", ",", "4", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "8", ",", "1", ",", "9", ",", "10", ",",
+          "4", ",", "3", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "8", ",", "1", ",", "10", ",", "9", ",",
+          "3", ",", "4", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "8", ",", "1", ",", "10", ",", "9", ",",
+          "4", ",", "3", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "9", ",", "1", ",", "8", ",", "3", ",", 
+         "10", ",", "4", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "9", ",", "1", ",", "8", ",", "4", ",", 
+         "10", ",", "6", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "7", ",", "9", ",", "1", ",", "8", ",", "10", ",",
+          "4", ",", "6", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "8", ",", "6", ",", "1", ",", "4", ",", "9", ",", 
+         "10", ",", "3", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "8", ",", "6", ",", "1", ",", "4", ",", "10", ",",
+          "9", ",", "3", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "8", ",", "7", ",", "1", ",", "4", ",", "9", ",", 
+         "10", ",", "6", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "8", ",", "7", ",", "1", ",", "9", ",", "4", ",", 
+         "3", ",", "10", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "8", ",", "7", ",", "1", ",", "10", ",", "4", ",",
+          "9", ",", "3", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "8", ",", "9", ",", "6", ",", "1", ",", "10", ",",
+          "4", ",", "3", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "5", ",", "9", ",", "8", ",", "6", ",", "1", ",", "10", ",",
+          "4", ",", "3", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "7", ",", "8", ",", "9", ",", "1", ",", "5", ",", 
+         "10", ",", "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "7", ",", "8", ",", "9", ",", "1", ",", "10", ",",
+          "3", ",", "4", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "7", ",", "8", ",", "9", ",", "1", ",", "10", ",",
+          "3", ",", "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "7", ",", "8", ",", "9", ",", "1", ",", "10", ",",
+          "5", ",", "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "7", ",", "8", ",", "9", ",", "10", ",", "1", ",",
+          "3", ",", "4", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "7", ",", "8", ",", "9", ",", "10", ",", "1", ",",
+          "3", ",", "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "7", ",", "8", ",", "9", ",", "10", ",", "1", ",",
+          "5", ",", "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "7", ",", "8", ",", "10", ",", "9", ",", "1", ",",
+          "4", ",", "3", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "7", ",", "9", ",", "8", ",", "1", ",", "5", ",", 
+         "10", ",", "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "7", ",", "9", ",", "8", ",", "1", ",", "10", ",",
+          "5", ",", "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "7", ",", "9", ",", "8", ",", "10", ",", "1", ",",
+          "5", ",", "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "8", ",", "7", ",", "9", ",", "1", ",", "4", ",", 
+         "10", ",", "5", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "8", ",", "7", ",", "9", ",", "1", ",", "10", ",",
+          "3", ",", "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "8", ",", "9", ",", "7", ",", "1", ",", "5", ",", 
+         "10", ",", "3", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "8", ",", "9", ",", "7", ",", "1", ",", "5", ",", 
+         "10", ",", "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "8", ",", "9", ",", "10", ",", "7", ",", "1", ",",
+          "5", ",", "3", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "8", ",", "9", ",", "10", ",", "7", ",", "1", ",",
+          "5", ",", "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "8", ",", "10", ",", "9", ",", "1", ",", "4", ",",
+          "3", ",", "5", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "9", ",", "10", ",", "7", ",", "8", ",", "1", ",",
+          "5", ",", "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "9", ",", "10", ",", "8", ",", "7", ",", "1", ",",
+          "5", ",", "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "2", ",", "6", ",", "10", ",", "9", ",", "8", ",", "7", ",", "1", ",",
+          "5", ",", "4", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "5", ",", "7", ",", "8", ",", "9", ",", "10", ",",
+          "1", ",", "2", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "5", ",", "7", ",", "8", ",", "10", ",", "9", ",",
+          "1", ",", "2", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "6", ",", "1", ",", "8", ",", "2", ",", "9", ",", 
+         "10", ",", "5", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "7", ",", "1", ",", "8", ",", "9", ",", "2", ",", 
+         "10", ",", "5", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "7", ",", "1", ",", "8", ",", "9", ",", "2", ",", 
+         "10", ",", "6", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "7", ",", "1", ",", "8", ",", "9", ",", "10", ",",
+          "2", ",", "5", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "7", ",", "1", ",", "8", ",", "9", ",", "10", ",",
+          "2", ",", "6", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "7", ",", "8", ",", "2", ",", "9", ",", "10", ",",
+          "1", ",", "5", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "7", ",", "8", ",", "2", ",", "9", ",", "10", ",",
+          "1", ",", "6", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "7", ",", "9", ",", "8", ",", "2", ",", "10", ",",
+          "5", ",", "1", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "8", ",", "7", ",", "2", ",", "9", ",", "10", ",",
+          "1", ",", "5", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "8", ",", "7", ",", "2", ",", "9", ",", "10", ",",
+          "1", ",", "6", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "4", ",", "9", ",", "7", ",", "8", ",", "2", ",", "10", ",",
+          "1", ",", "5", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "6", ",", "7", ",", "9", ",", "8", ",", "10", ",",
+          "1", ",", "2", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "6", ",", "10", ",", "9", ",", "8", ",", "4", ",",
+          "1", ",", "2", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "7", ",", "1", ",", "8", ",", "9", ",", "10", ",",
+          "4", ",", "2", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "7", ",", "1", ",", "8", ",", "10", ",", "9", ",",
+          "4", ",", "2", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "7", ",", "8", ",", "1", ",", "9", ",", "2", ",", 
+         "10", ",", "4", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "7", ",", "8", ",", "2", ",", "9", ",", "1", ",", 
+         "10", ",", "6", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "7", ",", "8", ",", "9", ",", "2", ",", "10", ",",
+          "1", ",", "4", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "7", ",", "9", ",", "1", ",", "8", ",", "10", ",",
+          "2", ",", "4", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "7", ",", "9", ",", "8", ",", "2", ",", "10", ",",
+          "1", ",", "4", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "8", ",", "7", ",", "1", ",", "9", ",", "4", ",", 
+         "10", ",", "2", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "8", ",", "7", ",", "9", ",", "2", ",", "10", ",",
+          "1", ",", "6", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "8", ",", "10", ",", "7", ",", "1", ",", "9", ",",
+          "2", ",", "4", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "8", ",", "10", ",", "7", ",", "2", ",", "9", ",",
+          "1", ",", "6", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "9", ",", "6", ",", "2", ",", "8", ",", "10", ",",
+          "4", ",", "1", ",", "7"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "9", ",", "7", ",", "1", ",", "8", ",", "10", ",",
+          "4", ",", "2", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "9", ",", "7", ",", "8", ",", "2", ",", "10", ",",
+          "4", ",", "1", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "9", ",", "8", ",", "7", ",", "2", ",", "10", ",",
+          "4", ",", "1", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "5", ",", "10", ",", "7", ",", "8", ",", "9", ",", "2", ",",
+          "4", ",", "1", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "6", ",", "7", ",", "8", ",", "9", ",", "1", ",", "2", ",", 
+         "10", ",", "4", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "6", ",", "7", ",", "8", ",", "9", ",", "1", ",", "2", ",", 
+         "10", ",", "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "6", ",", "7", ",", "8", ",", "9", ",", "2", ",", "1", ",", 
+         "10", ",", "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "6", ",", "7", ",", "8", ",", "9", ",", "10", ",", "2", ",",
+          "1", ",", "4", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "6", ",", "7", ",", "8", ",", "9", ",", "10", ",", "2", ",",
+          "1", ",", "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "6", ",", "7", ",", "9", ",", "10", ",", "8", ",", "2", ",",
+          "1", ",", "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "6", ",", "7", ",", "10", ",", "9", ",", "8", ",", "2", ",",
+          "1", ",", "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "7", ",", "6", ",", "8", ",", "9", ",", "10", ",", "2", ",",
+          "1", ",", "4", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "7", ",", "6", ",", "8", ",", "9", ",", "10", ",", "2", ",",
+          "1", ",", "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "7", ",", "6", ",", "9", ",", "10", ",", "8", ",", "2", ",",
+          "1", ",", "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "7", ",", "6", ",", "10", ",", "9", ",", "8", ",", "2", ",",
+          "1", ",", "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "8", ",", "6", ",", "7", ",", "9", ",", "2", ",", "10", ",",
+          "1", ",", "4", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "8", ",", "6", ",", "7", ",", "9", ",", "2", ",", "10", ",",
+          "1", ",", "5", ",", "4"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "3", ",", "8", ",", "9", ",", "7", ",", "1", ",", "2", ",", "10", ",",
+          "4", ",", "5", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "4", ",", "5", ",", "6", ",", "7", ",", "8", ",", "9", ",", "10", ",",
+          "1", ",", "2", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "4", ",", "5", ",", "7", ",", "8", ",", "1", ",", "9", ",", "10", ",",
+          "3", ",", "2", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{
+        "4", ",", "5", ",", "8", ",", "7", ",", "1", ",", "9", ",", "10", ",",
+          "3", ",", "2", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", "5", ",", 
+         RowBox[{"-", "7"}], ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", "5", ",", 
+         RowBox[{"-", "7"}], ",", "1", ",", "8", ",", "9", ",", 
+         RowBox[{"-", "3"}], ",", "10", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", "5", ",", 
+         RowBox[{"-", "7"}], ",", "1", ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "6"}], ",", 
+         RowBox[{"-", "8"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "6"}], ",", "1", ",", 
+         RowBox[{"-", "7"}], ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "8"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "6"}], ",", "1", ",", "7", ",", "9", ",", 
+         RowBox[{"-", "3"}], ",", "10", ",", "5", ",", "8"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", "6", ",", "1", ",", 
+         RowBox[{"-", "7"}], ",", 
+         RowBox[{"-", "9"}], ",", "3", ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "8"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "6"}], ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "7"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "6"}], ",", "1", ",", "8", ",", 
+         RowBox[{"-", "3"}], ",", "9", ",", "5", ",", "10", ",", "7"}], "]"}],
+        ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", "6", ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", "3", ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "7"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "6"}], ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "7"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "6"}], ",", "1", ",", "8", ",", 
+         RowBox[{"-", "3"}], ",", "9", ",", "10", ",", "5", ",", "7"}], "]"}],
+        ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", "6", ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", "3", ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "7"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "6"}], ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "7"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "6"}], ",", 
+         RowBox[{"-", "9"}], ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "7"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "7"}], ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "7"}], ",", "1", ",", "8", ",", "9", ",", 
+         RowBox[{"-", "3"}], ",", "10", ",", "5", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", "7", ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "9"}], ",", "3", ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "7"}], ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "6"}], ",", 
+         RowBox[{"-", "5"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "7"}], ",", "1", ",", "8", ",", "9", ",", 
+         RowBox[{"-", "3"}], ",", "10", ",", "6", ",", "5"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", "7", ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "9"}], ",", "3", ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "6"}], ",", 
+         RowBox[{"-", "5"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "7"}], ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "7"}], ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "6"}], ",", 
+         RowBox[{"-", "5"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "4", ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "6"}], ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "7"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "5", ",", 
+         RowBox[{"-", "7"}], ",", "6", ",", "1", ",", "8", ",", "9", ",", 
+         RowBox[{"-", "10"}], ",", "4", ",", 
+         RowBox[{"-", "3"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "5", ",", 
+         RowBox[{"-", "7"}], ",", 
+         RowBox[{"-", "8"}], ",", "1", ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "4"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "5", ",", 
+         RowBox[{"-", "7"}], ",", 
+         RowBox[{"-", "8"}], ",", "1", ",", "9", ",", 
+         RowBox[{"-", "4"}], ",", 
+         RowBox[{"-", "3"}], ",", "10", ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "5", ",", 
+         RowBox[{"-", "7"}], ",", 
+         RowBox[{"-", "8"}], ",", "1", ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "4"}], ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "5", ",", 
+         RowBox[{"-", "7"}], ",", 
+         RowBox[{"-", "8"}], ",", "1", ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "4"}], ",", 
+         RowBox[{"-", "3"}], ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "5", ",", 
+         RowBox[{"-", "7"}], ",", 
+         RowBox[{"-", "8"}], ",", "1", ",", "9", ",", "10", ",", 
+         RowBox[{"-", "4"}], ",", 
+         RowBox[{"-", "3"}], ",", "6"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "5", ",", "7", ",", "8", ",", "1", ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "10"}], ",", "4", ",", "3", ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "6", ",", 
+         RowBox[{"-", "8"}], ",", 
+         RowBox[{"-", "7"}], ",", 
+         RowBox[{"-", "9"}], ",", "1", ",", 
+         RowBox[{"-", "4"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "3"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "6", ",", 
+         RowBox[{"-", "8"}], ",", "7", ",", 
+         RowBox[{"-", "9"}], ",", "1", ",", "4", ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "3"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"2", ",", "6", ",", "8", ",", 
+         RowBox[{"-", "7"}], ",", "9", ",", "1", ",", 
+         RowBox[{"-", "4"}], ",", "10", ",", "5", ",", "3"}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"3", ",", "4", ",", "5", ",", "7", ",", "8", ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "10"}], ",", "1", ",", "2", ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"3", ",", "4", ",", "5", ",", "7", ",", "8", ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "9"}], ",", "1", ",", "2", ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"3", ",", "4", ",", "6", ",", "1", ",", 
+         RowBox[{"-", "8"}], ",", "2", ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "10"}], ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "7"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"3", ",", "4", ",", "7", ",", "9", ",", "8", ",", "2", ",", 
+         RowBox[{"-", "10"}], ",", "5", ",", "1", ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"3", ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "6"}], ",", "7", ",", 
+         RowBox[{"-", "9"}], ",", 
+         RowBox[{"-", "8"}], ",", "10", ",", 
+         RowBox[{"-", "1"}], ",", 
+         RowBox[{"-", "2"}], ",", 
+         RowBox[{"-", "4"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"3", ",", "5", ",", "7", ",", "8", ",", "9", ",", "2", ",", 
+         RowBox[{"-", "10"}], ",", "1", ",", "4", ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"3", ",", "5", ",", "7", ",", "9", ",", "8", ",", "2", ",", 
+         RowBox[{"-", "10"}], ",", "1", ",", "4", ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"3", ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "8"}], ",", "7", ",", 
+         RowBox[{"-", "1"}], ",", 
+         RowBox[{"-", "9"}], ",", "4", ",", "10", ",", 
+         RowBox[{"-", "2"}], ",", 
+         RowBox[{"-", "6"}]}], "]"}], ",", 
+       RowBox[{"MDT", "[", 
+        RowBox[{"3", ",", 
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "9"}], ",", "7", ",", 
+         RowBox[{"-", "1"}], ",", 
+         RowBox[{"-", "8"}], ",", "10", ",", "4", ",", 
+         RowBox[{"-", "2"}], ",", "6"}], "]"}]}], "}"}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.6916748488304524`*^9}]
+}, Open  ]]
 },
 PrintingStyleEnvironment->"Working",
 WindowSize->{1366, 685},
@@ -5216,92 +6359,92 @@ StyleDefinitions->"Default.nb"
 (* Internal cache information *)
 (*CellTagsOutline
 CellTagsIndex->{
- "Info3691679775-5999978"->{
-  Cell[15684, 415, 353, 6, 40, "Print",
-   CellTags->"Info3691679775-5999978"],
-  Cell[16849, 449, 360, 6, 40, "Print",
-   CellTags->"Info3691679775-5999978"],
+ "Info3691680995-5088792"->{
+  Cell[15684, 415, 355, 6, 40, "Print",
+   CellTags->"Info3691680995-5088792"]},
+ "Info3691680996-5088792"->{
+  Cell[16851, 449, 358, 6, 40, "Print",
+   CellTags->"Info3691680996-5088792"],
   Cell[19701, 525, 414, 7, 40, "Print",
-   CellTags->"Info3691679775-5999978"],
-  Cell[23322, 612, 503, 8, 40, "Print",
-   CellTags->"Info3691679775-5999978"]},
- "Info3691679776-5999978"->{
-  Cell[26123, 683, 601, 10, 43, "Print",
-   CellTags->"Info3691679776-5999978"],
-  Cell[27511, 717, 364, 6, 40, "Print",
-   CellTags->"Info3691679776-5999978"],
-  Cell[28259, 741, 342, 6, 40, "Print",
-   CellTags->"Info3691679776-5999978"],
-  Cell[127622, 2094, 389, 7, 40, "Print",
-   CellTags->"Info3691679776-5999978"],
-  Cell[134366, 2261, 380, 6, 40, "Print",
-   CellTags->"Info3691679776-5999978"]},
- "Info3691679777-5999978"->{
-  Cell[136639, 2318, 385, 7, 40, "Print",
-   CellTags->"Info3691679777-5999978"],
-  Cell[138917, 2384, 419, 7, 40, "Print",
-   CellTags->"Info3691679777-5999978"],
-  Cell[140345, 2425, 438, 7, 58, "Print",
-   CellTags->"Info3691679777-5999978"],
-  Cell[141410, 2452, 530, 9, 40, "Print",
-   CellTags->"Info3691679777-5999978"],
-  Cell[143958, 2520, 730, 11, 58, "Print",
-   CellTags->"Info3691679777-5999978"],
-  Cell[150099, 2664, 504, 8, 58, "Print",
-   CellTags->"Info3691679777-5999978"]},
- "Info3691679778-5999978"->{
-  Cell[151820, 2705, 463, 7, 58, "Print",
-   CellTags->"Info3691679778-5999978"],
-  Cell[155530, 2796, 519, 8, 40, "Print",
-   CellTags->"Info3691679778-5999978"],
-  Cell[157427, 2852, 360, 6, 40, "Print",
-   CellTags->"Info3691679778-5999978"],
-  Cell[166669, 3070, 424, 7, 40, "Print",
-   CellTags->"Info3691679778-5999978"],
-  Cell[168303, 3117, 363, 6, 40, "Print",
-   CellTags->"Info3691679778-5999978"]},
- "Info3691679779-5999978"->{
-  Cell[171303, 3196, 497, 8, 40, "Print",
-   CellTags->"Info3691679779-5999978"],
-  Cell[175942, 3313, 875, 13, 40, "Print",
-   CellTags->"Info3691679779-5999978"],
-  Cell[181269, 3437, 527, 9, 42, "Print",
-   CellTags->"Info3691679779-5999978"],
+   CellTags->"Info3691680996-5088792"],
+  Cell[23322, 612, 504, 8, 40, "Print",
+   CellTags->"Info3691680996-5088792"],
+  Cell[26124, 683, 599, 10, 43, "Print",
+   CellTags->"Info3691680996-5088792"],
+  Cell[27510, 717, 366, 6, 40, "Print",
+   CellTags->"Info3691680996-5088792"],
+  Cell[28260, 741, 344, 6, 40, "Print",
+   CellTags->"Info3691680996-5088792"]},
+ "Info3691680997-5088792"->{
+  Cell[127625, 2094, 389, 7, 40, "Print",
+   CellTags->"Info3691680997-5088792"],
+  Cell[134369, 2261, 380, 6, 40, "Print",
+   CellTags->"Info3691680997-5088792"],
+  Cell[136642, 2318, 383, 7, 40, "Print",
+   CellTags->"Info3691680997-5088792"],
+  Cell[138918, 2384, 416, 7, 40, "Print",
+   CellTags->"Info3691680997-5088792"],
+  Cell[140343, 2425, 435, 7, 58, "Print",
+   CellTags->"Info3691680997-5088792"]},
+ "Info3691680998-5088792"->{
+  Cell[141405, 2452, 530, 9, 40, "Print",
+   CellTags->"Info3691680998-5088792"],
+  Cell[143953, 2520, 732, 11, 58, "Print",
+   CellTags->"Info3691680998-5088792"],
+  Cell[150096, 2664, 506, 8, 58, "Print",
+   CellTags->"Info3691680998-5088792"],
+  Cell[151819, 2705, 463, 7, 58, "Print",
+   CellTags->"Info3691680998-5088792"],
+  Cell[155529, 2796, 519, 8, 40, "Print",
+   CellTags->"Info3691680998-5088792"],
+  Cell[157426, 2852, 358, 6, 40, "Print",
+   CellTags->"Info3691680998-5088792"]},
+ "Info3691680999-5088792"->{
+  Cell[166666, 3070, 426, 7, 40, "Print",
+   CellTags->"Info3691680999-5088792"],
+  Cell[168302, 3117, 363, 6, 40, "Print",
+   CellTags->"Info3691680999-5088792"],
+  Cell[171302, 3196, 495, 8, 40, "Print",
+   CellTags->"Info3691680999-5088792"],
+  Cell[175939, 3313, 875, 13, 40, "Print",
+   CellTags->"Info3691680999-5088792"],
+  Cell[181266, 3437, 530, 9, 42, "Print",
+   CellTags->"Info3691680999-5088792"]},
+ "Info3691681000-5088792"->{
   Cell[188755, 3616, 1227, 19, 40, "Print",
-   CellTags->"Info3691679779-5999978"],
+   CellTags->"Info3691681000-5088792"],
   Cell[198534, 3851, 394, 6, 40, "Print",
-   CellTags->"Info3691679779-5999978"]},
- "Info3691679780-5999978"->{
+   CellTags->"Info3691681000-5088792"],
   Cell[206377, 4042, 424, 7, 40, "Print",
-   CellTags->"Info3691679780-5999978"],
-  Cell[208733, 4107, 420, 7, 40, "Print",
-   CellTags->"Info3691679780-5999978"],
-  Cell[216268, 4299, 390, 6, 40, "Print",
-   CellTags->"Info3691679780-5999978"],
-  Cell[227337, 4565, 680, 12, 40, "Print",
-   CellTags->"Info3691679780-5999978"],
-  Cell[228911, 4609, 374, 6, 40, "Print",
-   CellTags->"Info3691679780-5999978"]},
- "Info3691679781-5999978"->{
-  Cell[230501, 4655, 421, 7, 40, "Print",
-   CellTags->"Info3691679781-5999978"],
+   CellTags->"Info3691681000-5088792"],
+  Cell[208733, 4107, 421, 7, 40, "Print",
+   CellTags->"Info3691681000-5088792"],
+  Cell[216269, 4299, 388, 6, 40, "Print",
+   CellTags->"Info3691681000-5088792"],
+  Cell[227336, 4565, 680, 12, 40, "Print",
+   CellTags->"Info3691681000-5088792"]},
+ "Info3691681001-5088792"->{
+  Cell[228910, 4609, 374, 6, 40, "Print",
+   CellTags->"Info3691681001-5088792"],
+  Cell[230500, 4655, 422, 7, 40, "Print",
+   CellTags->"Info3691681001-5088792"],
   Cell[238720, 4856, 455, 8, 40, "Print",
-   CellTags->"Info3691679781-5999978"],
-  Cell[240213, 4899, 620, 11, 40, "Print",
-   CellTags->"Info3691679781-5999978"],
-  Cell[243751, 4990, 448, 7, 58, "Print",
-   CellTags->"Info3691679781-5999978"]}
+   CellTags->"Info3691681001-5088792"],
+  Cell[240213, 4899, 621, 11, 40, "Print",
+   CellTags->"Info3691681001-5088792"],
+  Cell[243752, 4990, 450, 7, 58, "Print",
+   CellTags->"Info3691681001-5088792"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Info3691679775-5999978", 253748, 5218},
- {"Info3691679776-5999978", 254098, 5227},
- {"Info3691679777-5999978", 254533, 5238},
- {"Info3691679778-5999978", 255056, 5251},
- {"Info3691679779-5999978", 255496, 5262},
- {"Info3691679780-5999978", 255939, 5273},
- {"Info3691679781-5999978", 256380, 5284}
+ {"Info3691680995-5088792", 300960, 6361},
+ {"Info3691680996-5088792", 301070, 6364},
+ {"Info3691680997-5088792", 301581, 6377},
+ {"Info3691680998-5088792", 302021, 6388},
+ {"Info3691680999-5088792", 302544, 6401},
+ {"Info3691681000-5088792", 302985, 6412},
+ {"Info3691681001-5088792", 303510, 6425}
  }
 *)
 (*NotebookFileOutline
@@ -5309,209 +6452,212 @@ Notebook[{
 Cell[558, 20, 14980, 387, 1392, "Input"],
 Cell[CellGroupData[{
 Cell[15563, 411, 118, 2, 31, "Input"],
-Cell[15684, 415, 353, 6, 40, "Print",
- CellTags->"Info3691679775-5999978"]
+Cell[15684, 415, 355, 6, 40, "Print",
+ CellTags->"Info3691680995-5088792"]
 }, Open  ]],
-Cell[16052, 424, 648, 17, 31, "Input"],
+Cell[16054, 424, 648, 17, 31, "Input"],
 Cell[CellGroupData[{
-Cell[16725, 445, 121, 2, 31, "Input"],
-Cell[16849, 449, 360, 6, 40, "Print",
- CellTags->"Info3691679775-5999978"]
+Cell[16727, 445, 121, 2, 31, "Input"],
+Cell[16851, 449, 358, 6, 40, "Print",
+ CellTags->"Info3691680996-5088792"]
 }, Open  ]],
 Cell[17224, 458, 2329, 59, 112, "Input"],
 Cell[CellGroupData[{
 Cell[19578, 521, 120, 2, 31, "Input"],
 Cell[19701, 525, 414, 7, 40, "Print",
- CellTags->"Info3691679775-5999978"]
+ CellTags->"Info3691680996-5088792"]
 }, Open  ]],
 Cell[20130, 535, 3045, 69, 112, "Input"],
 Cell[CellGroupData[{
 Cell[23200, 608, 119, 2, 31, "Input"],
-Cell[23322, 612, 503, 8, 40, "Print",
- CellTags->"Info3691679775-5999978"]
+Cell[23322, 612, 504, 8, 40, "Print",
+ CellTags->"Info3691680996-5088792"]
 }, Open  ]],
-Cell[23840, 623, 2122, 52, 112, "Input"],
+Cell[23841, 623, 2122, 52, 112, "Input"],
 Cell[CellGroupData[{
-Cell[25987, 679, 133, 2, 31, "Input"],
-Cell[26123, 683, 601, 10, 43, "Print",
- CellTags->"Info3691679776-5999978"]
+Cell[25988, 679, 133, 2, 31, "Input"],
+Cell[26124, 683, 599, 10, 43, "Print",
+ CellTags->"Info3691680996-5088792"]
 }, Open  ]],
-Cell[26739, 696, 624, 13, 52, "Input"],
+Cell[26738, 696, 624, 13, 52, "Input"],
 Cell[CellGroupData[{
-Cell[27388, 713, 120, 2, 31, "Input"],
-Cell[27511, 717, 364, 6, 40, "Print",
- CellTags->"Info3691679776-5999978"]
+Cell[27387, 713, 120, 2, 31, "Input"],
+Cell[27510, 717, 366, 6, 40, "Print",
+ CellTags->"Info3691680996-5088792"]
 }, Open  ]],
-Cell[27890, 726, 223, 7, 31, "Input"],
+Cell[27891, 726, 223, 7, 31, "Input"],
 Cell[CellGroupData[{
-Cell[28138, 737, 118, 2, 31, "Input"],
-Cell[28259, 741, 342, 6, 40, "Print",
- CellTags->"Info3691679776-5999978"]
+Cell[28139, 737, 118, 2, 31, "Input"],
+Cell[28260, 741, 344, 6, 40, "Print",
+ CellTags->"Info3691680996-5088792"]
 }, Open  ]],
-Cell[28616, 750, 98855, 1336, 31, "Input"],
+Cell[28619, 750, 98855, 1336, 31, "Input"],
 Cell[CellGroupData[{
-Cell[127496, 2090, 123, 2, 31, "Input"],
-Cell[127622, 2094, 389, 7, 40, "Print",
- CellTags->"Info3691679776-5999978"]
+Cell[127499, 2090, 123, 2, 31, "Input"],
+Cell[127625, 2094, 389, 7, 40, "Print",
+ CellTags->"Info3691680997-5088792"]
 }, Open  ]],
-Cell[128026, 2104, 6185, 149, 312, "Input"],
+Cell[128029, 2104, 6185, 149, 312, "Input"],
 Cell[CellGroupData[{
-Cell[134236, 2257, 127, 2, 31, "Input"],
-Cell[134366, 2261, 380, 6, 40, "Print",
- CellTags->"Info3691679776-5999978"]
+Cell[134239, 2257, 127, 2, 31, "Input"],
+Cell[134369, 2261, 380, 6, 40, "Print",
+ CellTags->"Info3691680997-5088792"]
 }, Open  ]],
-Cell[134761, 2270, 1729, 40, 152, "Input"],
+Cell[134764, 2270, 1729, 40, 152, "Input"],
 Cell[CellGroupData[{
-Cell[136515, 2314, 121, 2, 31, "Input"],
-Cell[136639, 2318, 385, 7, 40, "Print",
- CellTags->"Info3691679777-5999978"]
+Cell[136518, 2314, 121, 2, 31, "Input"],
+Cell[136642, 2318, 383, 7, 40, "Print",
+ CellTags->"Info3691680997-5088792"]
 }, Open  ]],
-Cell[137039, 2328, 1725, 48, 121, "Input"],
+Cell[137040, 2328, 1725, 48, 121, "Input"],
 Cell[CellGroupData[{
-Cell[138789, 2380, 125, 2, 31, "Input"],
-Cell[138917, 2384, 419, 7, 40, "Print",
- CellTags->"Info3691679777-5999978"]
+Cell[138790, 2380, 125, 2, 31, "Input"],
+Cell[138918, 2384, 416, 7, 40, "Print",
+ CellTags->"Info3691680997-5088792"]
 }, Open  ]],
-Cell[139351, 2394, 851, 23, 72, "Input"],
+Cell[139349, 2394, 851, 23, 72, "Input"],
 Cell[CellGroupData[{
-Cell[140227, 2421, 115, 2, 31, "Input"],
-Cell[140345, 2425, 438, 7, 58, "Print",
- CellTags->"Info3691679777-5999978"]
+Cell[140225, 2421, 115, 2, 31, "Input"],
+Cell[140343, 2425, 435, 7, 58, "Print",
+ CellTags->"Info3691680997-5088792"]
 }, Open  ]],
-Cell[140798, 2435, 464, 9, 31, "Input"],
+Cell[140793, 2435, 464, 9, 31, "Input"],
 Cell[CellGroupData[{
-Cell[141287, 2448, 120, 2, 31, "Input"],
-Cell[141410, 2452, 530, 9, 40, "Print",
- CellTags->"Info3691679777-5999978"]
+Cell[141282, 2448, 120, 2, 31, "Input"],
+Cell[141405, 2452, 530, 9, 40, "Print",
+ CellTags->"Info3691680998-5088792"]
 }, Open  ]],
-Cell[141955, 2464, 1855, 48, 132, "Input"],
+Cell[141950, 2464, 1855, 48, 132, "Input"],
 Cell[CellGroupData[{
-Cell[143835, 2516, 120, 2, 31, "Input"],
-Cell[143958, 2520, 730, 11, 58, "Print",
- CellTags->"Info3691679777-5999978"]
+Cell[143830, 2516, 120, 2, 31, "Input"],
+Cell[143953, 2520, 732, 11, 58, "Print",
+ CellTags->"Info3691680998-5088792"]
 }, Open  ]],
-Cell[144703, 2534, 5246, 122, 252, "Input"],
+Cell[144700, 2534, 5246, 122, 252, "Input"],
 Cell[CellGroupData[{
-Cell[149974, 2660, 122, 2, 31, "Input"],
-Cell[150099, 2664, 504, 8, 58, "Print",
- CellTags->"Info3691679777-5999978"]
+Cell[149971, 2660, 122, 2, 31, "Input"],
+Cell[150096, 2664, 506, 8, 58, "Print",
+ CellTags->"Info3691680998-5088792"]
 }, Open  ]],
-Cell[150618, 2675, 1052, 22, 52, "Input"],
+Cell[150617, 2675, 1052, 22, 52, "Input"],
 Cell[CellGroupData[{
-Cell[151695, 2701, 122, 2, 31, "Input"],
-Cell[151820, 2705, 463, 7, 58, "Print",
- CellTags->"Info3691679778-5999978"]
+Cell[151694, 2701, 122, 2, 31, "Input"],
+Cell[151819, 2705, 463, 7, 58, "Print",
+ CellTags->"Info3691680998-5088792"]
 }, Open  ]],
-Cell[152298, 2715, 3085, 73, 172, "Input"],
+Cell[152297, 2715, 3085, 73, 172, "Input"],
 Cell[CellGroupData[{
-Cell[155408, 2792, 119, 2, 31, "Input"],
-Cell[155530, 2796, 519, 8, 40, "Print",
- CellTags->"Info3691679778-5999978"]
+Cell[155407, 2792, 119, 2, 31, "Input"],
+Cell[155529, 2796, 519, 8, 40, "Print",
+ CellTags->"Info3691680998-5088792"]
 }, Open  ]],
-Cell[156064, 2807, 1222, 37, 92, "Input"],
+Cell[156063, 2807, 1222, 37, 92, "Input"],
 Cell[CellGroupData[{
-Cell[157311, 2848, 113, 2, 31, "Input"],
-Cell[157427, 2852, 360, 6, 40, "Print",
- CellTags->"Info3691679778-5999978"]
+Cell[157310, 2848, 113, 2, 31, "Input"],
+Cell[157426, 2852, 358, 6, 40, "Print",
+ CellTags->"Info3691680998-5088792"]
 }, Open  ]],
-Cell[157802, 2861, 8722, 201, 252, "Input"],
+Cell[157799, 2861, 8722, 201, 252, "Input"],
 Cell[CellGroupData[{
-Cell[166549, 3066, 117, 2, 31, "Input"],
-Cell[166669, 3070, 424, 7, 40, "Print",
- CellTags->"Info3691679778-5999978"]
+Cell[166546, 3066, 117, 2, 31, "Input"],
+Cell[166666, 3070, 426, 7, 40, "Print",
+ CellTags->"Info3691680999-5088792"]
 }, Open  ]],
-Cell[167108, 3080, 1041, 29, 72, "Input"],
+Cell[167107, 3080, 1041, 29, 72, "Input"],
 Cell[CellGroupData[{
-Cell[168174, 3113, 126, 2, 31, "Input"],
-Cell[168303, 3117, 363, 6, 40, "Print",
- CellTags->"Info3691679778-5999978"]
+Cell[168173, 3113, 126, 2, 31, "Input"],
+Cell[168302, 3117, 363, 6, 40, "Print",
+ CellTags->"Info3691680999-5088792"]
 }, Open  ]],
-Cell[168681, 3126, 2469, 62, 185, "Input"],
+Cell[168680, 3126, 2469, 62, 185, "Input"],
 Cell[CellGroupData[{
-Cell[171175, 3192, 125, 2, 31, "Input"],
-Cell[171303, 3196, 497, 8, 40, "Print",
- CellTags->"Info3691679779-5999978"]
+Cell[171174, 3192, 125, 2, 31, "Input"],
+Cell[171302, 3196, 495, 8, 40, "Print",
+ CellTags->"Info3691680999-5088792"]
 }, Open  ]],
-Cell[171815, 3207, 3972, 98, 252, "Input"],
+Cell[171812, 3207, 3972, 98, 252, "Input"],
 Cell[CellGroupData[{
-Cell[175812, 3309, 127, 2, 31, "Input"],
-Cell[175942, 3313, 875, 13, 40, "Print",
- CellTags->"Info3691679779-5999978"]
+Cell[175809, 3309, 127, 2, 31, "Input"],
+Cell[175939, 3313, 875, 13, 40, "Print",
+ CellTags->"Info3691680999-5088792"]
 }, Open  ]],
-Cell[176832, 3329, 4288, 100, 212, "Input"],
+Cell[176829, 3329, 4288, 100, 212, "Input"],
 Cell[CellGroupData[{
-Cell[181145, 3433, 121, 2, 31, "Input"],
-Cell[181269, 3437, 527, 9, 42, "Print",
- CellTags->"Info3691679779-5999978"]
+Cell[181142, 3433, 121, 2, 31, "Input"],
+Cell[181266, 3437, 530, 9, 42, "Print",
+ CellTags->"Info3691680999-5088792"]
 }, Open  ]],
 Cell[181811, 3449, 6796, 159, 332, "Input"],
 Cell[CellGroupData[{
 Cell[188632, 3612, 120, 2, 31, "Input"],
 Cell[188755, 3616, 1227, 19, 40, "Print",
- CellTags->"Info3691679779-5999978"]
+ CellTags->"Info3691681000-5088792"]
 }, Open  ]],
 Cell[189997, 3638, 8363, 204, 332, "Input"],
 Cell[CellGroupData[{
 Cell[198385, 3846, 146, 3, 31, "Input"],
 Cell[198534, 3851, 394, 6, 40, "Print",
- CellTags->"Info3691679779-5999978"]
+ CellTags->"Info3691681000-5088792"]
 }, Open  ]],
 Cell[198943, 3860, 7280, 174, 312, "Input"],
 Cell[CellGroupData[{
 Cell[206248, 4038, 126, 2, 31, "Input"],
 Cell[206377, 4042, 424, 7, 40, "Print",
- CellTags->"Info3691679780-5999978"]
+ CellTags->"Info3691681000-5088792"]
 }, Open  ]],
 Cell[206816, 4052, 1763, 47, 112, "Input"],
 Cell[CellGroupData[{
 Cell[208604, 4103, 126, 2, 31, "Input"],
-Cell[208733, 4107, 420, 7, 40, "Print",
- CellTags->"Info3691679780-5999978"]
+Cell[208733, 4107, 421, 7, 40, "Print",
+ CellTags->"Info3691681000-5088792"]
 }, Open  ]],
-Cell[209168, 4117, 6954, 174, 328, "Input"],
+Cell[209169, 4117, 6954, 174, 328, "Input"],
 Cell[CellGroupData[{
-Cell[216147, 4295, 118, 2, 31, "Input"],
-Cell[216268, 4299, 390, 6, 40, "Print",
- CellTags->"Info3691679780-5999978"]
+Cell[216148, 4295, 118, 2, 31, "Input"],
+Cell[216269, 4299, 388, 6, 40, "Print",
+ CellTags->"Info3691681000-5088792"]
 }, Open  ]],
-Cell[216673, 4308, 10520, 249, 432, "Input"],
+Cell[216672, 4308, 10520, 249, 432, "Input"],
 Cell[CellGroupData[{
-Cell[227218, 4561, 116, 2, 31, "Input"],
-Cell[227337, 4565, 680, 12, 40, "Print",
- CellTags->"Info3691679780-5999978"]
+Cell[227217, 4561, 116, 2, 31, "Input"],
+Cell[227336, 4565, 680, 12, 40, "Print",
+ CellTags->"Info3691681000-5088792"]
 }, Open  ]],
-Cell[228032, 4580, 731, 21, 52, "Input"],
+Cell[228031, 4580, 731, 21, 52, "Input"],
 Cell[CellGroupData[{
-Cell[228788, 4605, 120, 2, 31, "Input"],
-Cell[228911, 4609, 374, 6, 40, "Print",
- CellTags->"Info3691679780-5999978"]
+Cell[228787, 4605, 120, 2, 31, "Input"],
+Cell[228910, 4609, 374, 6, 40, "Print",
+ CellTags->"Info3691681001-5088792"]
 }, Open  ]],
-Cell[229300, 4618, 1047, 29, 76, "Input"],
+Cell[229299, 4618, 1047, 29, 76, "Input"],
 Cell[CellGroupData[{
-Cell[230372, 4651, 126, 2, 31, "Input"],
-Cell[230501, 4655, 421, 7, 40, "Print",
- CellTags->"Info3691679781-5999978"]
+Cell[230371, 4651, 126, 2, 31, "Input"],
+Cell[230500, 4655, 422, 7, 40, "Print",
+ CellTags->"Info3691681001-5088792"]
 }, Open  ]],
 Cell[230937, 4665, 7634, 183, 405, "Input"],
 Cell[CellGroupData[{
 Cell[238596, 4852, 121, 2, 31, "Input"],
 Cell[238720, 4856, 455, 8, 40, "Print",
- CellTags->"Info3691679781-5999978"]
+ CellTags->"Info3691681001-5088792"]
 }, Open  ]],
 Cell[239190, 4867, 874, 24, 72, "Input"],
 Cell[CellGroupData[{
 Cell[240089, 4895, 121, 2, 31, "Input"],
-Cell[240213, 4899, 620, 11, 40, "Print",
- CellTags->"Info3691679781-5999978"]
+Cell[240213, 4899, 621, 11, 40, "Print",
+ CellTags->"Info3691681001-5088792"]
 }, Open  ]],
-Cell[240848, 4913, 2752, 69, 152, "Input"],
+Cell[240849, 4913, 2752, 69, 152, "Input"],
 Cell[CellGroupData[{
-Cell[243625, 4986, 123, 2, 31, "Input"],
-Cell[243751, 4990, 448, 7, 58, "Print",
- CellTags->"Info3691679781-5999978"]
+Cell[243626, 4986, 123, 2, 31, "Input"],
+Cell[243752, 4990, 450, 7, 58, "Print",
+ CellTags->"Info3691681001-5088792"]
 }, Open  ]],
-Cell[244214, 5000, 8137, 182, 412, "Input"],
-Cell[252354, 5184, 892, 16, 31, "Input"]
+Cell[244217, 5000, 8137, 182, 412, "Input"],
+Cell[CellGroupData[{
+Cell[252379, 5186, 949, 17, 31, "Input"],
+Cell[253331, 5205, 47115, 1137, 1172, "Output"]
+}, Open  ]]
 }
 ]
 *)
