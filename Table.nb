@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    315159,       6847]
-NotebookOptionsPosition[    301006,       6380]
-NotebookOutlinePosition[    308060,       6607]
-CellTagsIndexPosition[    306958,       6569]
+NotebookDataLength[    315163,       6847]
+NotebookOptionsPosition[    301010,       6380]
+NotebookOutlinePosition[    308064,       6607]
+CellTagsIndexPosition[    306962,       6569]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -39,8 +39,8 @@ FontSlant->\"Italic\"]\), which is given in extended DT form.\>\""}],
   RowBox[{
    RowBox[{"KnotGraph", "::", "usage"}], "=", "\"\<KnotGraph@\!\(\*
 StyleBox[\"k\",
-FontSlant->\"Italic\"]\) gives the modified 3-valent graph with a 4 vertices \
-in a diamond at each crossing of the knot \!\(\*
+FontSlant->\"Italic\"]\) gives the modified 3-valent graph with 4 vertices in \
+a square at each crossing of the knot \!\(\*
 StyleBox[\"k\",
 FontSlant->\"Italic\"]\), which is given in modified DT form.\>\""}], 
   ";"}], "\[IndentingNewLine]", 
@@ -389,22 +389,22 @@ FontSlant->\"Italic\"]\) crossings.\\nRolfsenTable@\\\"all\\\" produces the \
 Rolfsen table, the table of knots with 10 crossings or fewer.\>\""}], 
   ";"}]}], "Input",
  CellChangeTimes->CompressedData["
-1:eJwd0WlI0wEYBvAp+cXKxERNlgeh4W2H07I8Vk5Rp9khc1jJJA9qm4irNI8p
-zsXywpZmNpumFrpFKqVIWMzCo0NQETya50TdJpvMFLHs//w/vPy+vDwPvK8r
-h3/1jjmFQgklBgYs/K5YyNOGB45EVUKaT4q1hnCHlUZKz7R3h7TQBNLNKTs6
-rBA7k0qvvZ+G+cw+0hw9QwMNbt46KN66Z4IFTjZbMO2f1S6kjg/tkXmuzukr
-hKZdtwwoSbrNhbFO2zkwuzckF9YEDgihNDOrDJYbdWJY+utNNVxmyl7Axqlu
-NXRwpM/DuORUDfwstNVBbrzUBKnGJ1uwZUzmskrYZpxzhQ9FSZ6Q40Xzgv3U
-An9YODBK2qKaDIJW9vpIeI5ZzSf3rW9kQ5ZWJYJyjlIMTTkN9XC7ka8gc4Kf
-foCKl6W98PBeHW2N8NbZg0FwPuIYHfZGMBhwWHnGYMKdpIP78Mcy1WaLsG+f
-bwefcysd4XXK0AV4s6EzDAaN27LhgVOtPNjzgCOAXc96RbBj9KIEtrPLo/8Q
-rh61TICW/itsuK4358PNRsV9WJPYmQdVJ+eK4LvFRdJ5/WQ7XAltVsK2Jaev
-kNWaOwy3Twh/QrbbW1KHTNMcnJDXLEL1osJxhzDZRxQA3TmKYMiLuBsG5Vdm
-GVC1pI2Bs8cPsSBrQJkMjxgm0qF0pF8Ao2i5+XAmWlgFm0s1cg+hNrysNus1
-/DTM86wiHLOg+cKmxMtF5sXacL/u4BLI89wXwaHCaAmcfsSohetaszq4ZpiY
-8ib8KLDQwO9zWqYPYQYvgQ1bLSUz0CPz2yykTJlZ+hbjr8WkXZXaS1B3OjES
-xm6E9sDHTfX9MGCJq4IuxlekRSEleiiXdRihzW5lih/hyEJdKuSnpnPh6gaX
-9HxkTHYcoeDLIOnfTZk6Hj1VatL/M0s1kQ==
+1:eJwd0WlI0wEYBvAp+cXKxEJNlgeh4W2H09K8yime2SFzWMkkddQ2EWdpHlOc
+i+WFLc1Mm6YWuoUH5ZCwmIVHh6AieOS8Juo22WSmiGX/5//h5ffl5XngfZ1Y
+vOv3TCkUSggx0Hfxd8VinibUbzSyEtI8UyzVhLuMNNIwto0LpAUnkG5NW4fB
+CpEDqeRG1wzMj+0nzdbR1VDv7KGFou0HRlhgb7UN0/5Z7EHqxPA+mefkkL5K
+aNxzzoDipLscGGO/kw2zFEG5sMZvUAAl7MwyWG7QimDpr7fVcCW28SVsmu6d
+h7Z2YQswLjlVDT8LTmghJ15ihFTD023YOt7ouEbYblA5wUfCJDfIcqe5wwFq
+gQ8sHBwjbVVO+UMLG10EvBhbzSP3LW9lQYZGKYRSllwEjdkN9XCniScjcwKe
+fYCyV6UKeHS/jrZOeOfCYX+4EH4yDCrC6XQ4Ij+vN+JOkqED+GOFarVN2H/A
+s4YvOJV28CZlOBDebugOgf4TJ5jw0Nk2Lux7yOLDnucKIewcuyyGHczyqD+E
+a8fNE6C5zyoTbuhMeXCrSZYDaxK786DyjKoIvl9aIl3QTXXA1eAWOWxftv8K
+GW25I3DntOAnZDq/I7VlG1VwUlqzBOeXZHa7hMmeQl/owpIFQG74/RAovTZH
+h8plTTScO3WEARmD8mR4TD+ZDiWjA3wYScvNh7NRgirYUqqWugo0oWW1mW/g
+pxGuWxXhuBnNCzYnXi0yLdaEevcGlECu24EQDhdGieHMY3ot3NCY1MF1/eS0
+B+FHvpkafldpYj0JM7gJTNhmLp6Fruxvc5AybWLuVYy/FpP2VGquQO25xAgY
+sxncB5801w9A32WOEjoaXpMWBZXooLSx0wCt9ipTvAlHF+tSIS81nQPXNjmk
+lyKis+II+V+GSP9uNc7Ho6dqnrQ9XstnEnYFJuXA/9guPbE=
   "]],
 
 Cell[CellGroupData[{
@@ -527,11 +527,11 @@ Cell[BoxData[
 
 Cell[BoxData[
  StyleBox["\<\"KnotGraph@\!\(\*\\nStyleBox[\\\"k\\\",\\nFontSlant->\\\"Italic\
-\\\"]\) gives the modified 3-valent graph with a 4 vertices in a diamond at \
-each crossing of the knot \
+\\\"]\) gives the modified 3-valent graph with 4 vertices in a square at each \
+crossing of the knot \
 \!\(\*\\nStyleBox[\\\"k\\\",\\nFontSlant->\\\"Italic\\\"]\), which is given \
 in modified DT form.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6916764754657164`*^9},
+ CellChangeTimes->{3.691697083186742*^9},
  CellTags->"knotgraph"]
 }, Open  ]],
 
@@ -6395,459 +6395,459 @@ StyleDefinitions->"Default.nb"
 (*CellTagsOutline
 CellTagsIndex->{
  "build"->{
-  Cell[15696, 415, 338, 6, 40, "Print",
+  Cell[15705, 415, 338, 6, 40, "Print",
    CellTags->"build"],
-  Cell[16049, 424, 668, 18, 31, "Input",
+  Cell[16058, 424, 668, 18, 31, "Input",
    CellTags->"build"]},
  "compactify"->{
-  Cell[16866, 450, 348, 6, 40, "Print",
+  Cell[16875, 450, 348, 6, 40, "Print",
    CellTags->"compactify"],
-  Cell[17229, 459, 2354, 60, 112, "Input",
+  Cell[17238, 459, 2354, 60, 112, "Input",
    CellTags->"compactify"]},
  "knotgraph"->{
-  Cell[19731, 527, 403, 7, 40, "Print",
+  Cell[19740, 527, 398, 7, 40, "Print",
    CellTags->"knotgraph"],
-  Cell[20149, 537, 3069, 70, 112, "Input",
+  Cell[20153, 537, 3069, 70, 112, "Input",
    CellTags->"knotgraph"]},
  "knotsort"->{
-  Cell[23365, 615, 492, 8, 40, "Print",
+  Cell[23369, 615, 492, 8, 40, "Print",
    CellTags->"knotsort"],
-  Cell[23872, 626, 2145, 53, 112, "Input",
+  Cell[23876, 626, 2145, 53, 112, "Input",
    CellTags->"knotsort"]},
  "permutationconjugation"->{
-  Cell[26178, 687, 601, 10, 43, "Print",
+  Cell[26182, 687, 601, 10, 43, "Print",
    CellTags->"permutationconjugation"],
-  Cell[26794, 700, 661, 14, 52, "Input",
+  Cell[26798, 700, 661, 14, 52, "Input",
    CellTags->"permutationconjugation"]},
  "convert"->{
-  Cell[27603, 722, 351, 6, 40, "Print",
+  Cell[27607, 722, 351, 6, 40, "Print",
    CellTags->"convert"],
-  Cell[27969, 731, 245, 8, 31, "Input",
+  Cell[27973, 731, 245, 8, 31, "Input",
    CellTags->"convert"]},
  "sortedq"->{
-  Cell[28360, 747, 329, 6, 40, "Print",
+  Cell[28364, 747, 329, 6, 40, "Print",
    CellTags->"sortedq"],
-  Cell[28704, 756, 98926, 1338, 31, "Input",
+  Cell[28708, 756, 98926, 1338, 31, "Input",
    CellTags->"sortedq"]},
  "candidateknots"->{
-  Cell[127781, 2102, 379, 7, 40, "Print",
+  Cell[127785, 2102, 379, 7, 40, "Print",
    CellTags->"candidateknots"],
-  Cell[128175, 2112, 6214, 150, 312, "Input",
+  Cell[128179, 2112, 6214, 150, 312, "Input",
    CellTags->"candidateknots"]},
  "alternatingknots"->{
-  Cell[134544, 2270, 372, 6, 40, "Print",
+  Cell[134548, 2270, 372, 6, 40, "Print",
    CellTags->"alternatingknots"],
-  Cell[134931, 2279, 1760, 41, 152, "Input",
+  Cell[134935, 2279, 1760, 41, 152, "Input",
    CellTags->"alternatingknots"]},
  "validknots"->{
-  Cell[136840, 2328, 370, 7, 40, "Print",
+  Cell[136844, 2328, 370, 7, 40, "Print",
    CellTags->"validknots"],
-  Cell[137225, 2338, 1750, 49, 121, "Input",
+  Cell[137229, 2338, 1750, 49, 121, "Input",
    CellTags->"validknots"]},
  "knotassociation"->{
-  Cell[139128, 2395, 410, 7, 40, "Print",
+  Cell[139132, 2395, 410, 7, 40, "Print",
    CellTags->"knotassociation"],
-  Cell[139553, 2405, 881, 24, 72, "Input",
+  Cell[139557, 2405, 881, 24, 72, "Input",
    CellTags->"knotassociation"]},
  "data"->{
-  Cell[140577, 2437, 420, 7, 58, "Print",
+  Cell[140581, 2437, 420, 7, 58, "Print",
    CellTags->"data"],
-  Cell[141012, 2447, 483, 10, 31, "Input",
+  Cell[141016, 2447, 483, 10, 31, "Input",
    CellTags->"data"]},
  "graphsort"->{
-  Cell[141643, 2465, 517, 9, 40, "Print",
+  Cell[141647, 2465, 517, 9, 40, "Print",
    CellTags->"graphsort"],
-  Cell[142175, 2477, 1912, 49, 132, "Input",
+  Cell[142179, 2477, 1912, 49, 132, "Input",
    CellTags->"graphsort"]},
  "creategraph"->{
-  Cell[144235, 2534, 719, 11, 58, "Print",
+  Cell[144239, 2534, 719, 11, 58, "Print",
    CellTags->"creategraph"],
-  Cell[144969, 2548, 5272, 123, 252, "Input",
+  Cell[144973, 2548, 5272, 123, 252, "Input",
    CellTags->"creategraph"]},
  "makegraph"->{
-  Cell[150391, 2679, 493, 8, 58, "Print",
+  Cell[150395, 2679, 493, 8, 58, "Print",
    CellTags->"makegraph"],
-  Cell[150899, 2690, 1076, 23, 52, "Input",
+  Cell[150903, 2690, 1076, 23, 52, "Input",
    CellTags->"makegraph"]},
  "drawgraph"->{
-  Cell[152125, 2721, 448, 7, 58, "Print",
+  Cell[152129, 2721, 448, 7, 58, "Print",
    CellTags->"drawgraph"],
-  Cell[152588, 2731, 3109, 74, 172, "Input",
+  Cell[152592, 2731, 3109, 74, 172, "Input",
    CellTags->"drawgraph"]},
  "strand"->{
-  Cell[155844, 2813, 503, 8, 40, "Print",
+  Cell[155848, 2813, 503, 8, 40, "Print",
    CellTags->"strand"],
-  Cell[156362, 2824, 1243, 38, 92, "Input",
+  Cell[156366, 2824, 1243, 38, 92, "Input",
    CellTags->"strand"]},
  "topd"->{
-  Cell[157746, 2870, 340, 6, 40, "Print",
+  Cell[157750, 2870, 340, 6, 40, "Print",
    CellTags->"topd"],
-  Cell[158101, 2879, 8741, 202, 252, "Input",
+  Cell[158105, 2879, 8741, 202, 252, "Input",
    CellTags->"topd"]},
  "writhe"->{
-  Cell[166987, 3089, 410, 7, 40, "Print",
+  Cell[166991, 3089, 410, 7, 40, "Print",
    CellTags->"writhe"],
-  Cell[167412, 3099, 1062, 30, 72, "Input",
+  Cell[167416, 3099, 1062, 30, 72, "Input",
    CellTags->"writhe"]},
  "jonespolynomial"->{
-  Cell[168628, 3137, 356, 6, 40, "Print",
+  Cell[168632, 3137, 356, 6, 40, "Print",
    CellTags->"jonespolynomial"],
-  Cell[168999, 3146, 2499, 63, 185, "Input",
+  Cell[169003, 3146, 2499, 63, 185, "Input",
    CellTags->"jonespolynomial"]},
  "edgesequence"->{
-  Cell[171651, 3217, 485, 8, 40, "Print",
+  Cell[171655, 3217, 485, 8, 40, "Print",
    CellTags->"edgesequence"],
-  Cell[172151, 3228, 3999, 99, 252, "Input",
+  Cell[172155, 3228, 3999, 99, 252, "Input",
    CellTags->"edgesequence"]},
  "validcolouring"->{
-  Cell[176305, 3335, 867, 13, 40, "Print",
+  Cell[176309, 3335, 867, 13, 40, "Print",
    CellTags->"validcolouring"],
-  Cell[177187, 3351, 4317, 101, 212, "Input",
+  Cell[177191, 3351, 4317, 101, 212, "Input",
    CellTags->"validcolouring"]},
  "colourings"->{
-  Cell[181653, 3460, 518, 9, 42, "Print",
+  Cell[181657, 3460, 518, 9, 42, "Print",
    CellTags->"colourings"],
-  Cell[182186, 3472, 6821, 160, 332, "Input",
+  Cell[182190, 3472, 6821, 160, 332, "Input",
    CellTags->"colourings"]},
  "passmapping"->{
-  Cell[189155, 3640, 1214, 19, 40, "Print",
+  Cell[189159, 3640, 1214, 19, 40, "Print",
    CellTags->"passmapping"],
-  Cell[190384, 3662, 8389, 205, 332, "Input",
+  Cell[190388, 3662, 8389, 205, 332, "Input",
    CellTags->"passmapping"]},
  "twopass"->{
-  Cell[198947, 3876, 379, 6, 40, "Print",
+  Cell[198951, 3876, 379, 6, 40, "Print",
    CellTags->"twopass"],
-  Cell[199341, 3885, 7302, 175, 312, "Input",
+  Cell[199345, 3885, 7302, 175, 312, "Input",
    CellTags->"twopass"]},
  "reidemeisterone"->{
-  Cell[206797, 4068, 417, 7, 40, "Print",
+  Cell[206801, 4068, 417, 7, 40, "Print",
    CellTags->"reidemeisterone"],
-  Cell[207229, 4078, 1793, 48, 112, "Input",
+  Cell[207233, 4078, 1793, 48, 112, "Input",
    CellTags->"reidemeisterone"]},
  "reidemeisterthree"->{
-  Cell[209176, 4134, 418, 7, 40, "Print",
+  Cell[209180, 4134, 418, 7, 40, "Print",
    CellTags->"reidemeisterthree"],
-  Cell[209609, 4144, 6986, 175, 328, "Input",
+  Cell[209613, 4144, 6986, 175, 328, "Input",
    CellTags->"reidemeisterthree"]},
  "flype"->{
-  Cell[216741, 4327, 373, 6, 40, "Print",
+  Cell[216745, 4327, 373, 6, 40, "Print",
    CellTags->"flype"],
-  Cell[217129, 4336, 10540, 250, 432, "Input",
+  Cell[217133, 4336, 10540, 250, 432, "Input",
    CellTags->"flype"]},
  "shift"->{
-  Cell[227813, 4594, 663, 12, 40, "Print",
+  Cell[227817, 4594, 663, 12, 40, "Print",
    CellTags->"shift"],
-  Cell[228491, 4609, 751, 22, 52, "Input",
+  Cell[228495, 4609, 751, 22, 52, "Input",
    CellTags->"shift"]},
  "minimal"->{
-  Cell[229390, 4639, 359, 6, 40, "Print",
+  Cell[229394, 4639, 359, 6, 40, "Print",
    CellTags->"minimal"],
-  Cell[229764, 4648, 1069, 30, 76, "Input",
+  Cell[229768, 4648, 1069, 30, 76, "Input",
    CellTags->"minimal"]},
  "passreducible"->{
-  Cell[230987, 4686, 413, 7, 40, "Print",
+  Cell[230991, 4686, 413, 7, 40, "Print",
    CellTags->"passreducible"],
-  Cell[231415, 4696, 7662, 184, 405, "Input",
+  Cell[231419, 4696, 7662, 184, 405, "Input",
    CellTags->"passreducible"]},
  "reducibleq"->{
-  Cell[239226, 4888, 441, 8, 40, "Print",
+  Cell[239230, 4888, 441, 8, 40, "Print",
    CellTags->"reducibleq"],
-  Cell[239682, 4899, 899, 25, 72, "Input",
+  Cell[239686, 4899, 899, 25, 72, "Input",
    CellTags->"reducibleq"]},
  "invariants"->{
-  Cell[240730, 4932, 608, 11, 40, "Print",
+  Cell[240734, 4932, 608, 11, 40, "Print",
    CellTags->"invariants"],
-  Cell[241353, 4946, 2777, 70, 152, "Input",
+  Cell[241357, 4946, 2777, 70, 152, "Input",
    CellTags->"invariants"]},
  "rolfsentable"->{
-  Cell[244281, 5024, 438, 7, 58, "Print",
+  Cell[244285, 5024, 438, 7, 58, "Print",
    CellTags->"rolfsentable"],
-  Cell[244734, 5034, 8164, 183, 412, "Input",
+  Cell[244738, 5034, 8164, 183, 412, "Input",
    CellTags->"rolfsentable"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"build", 301487, 6396},
- {"compactify", 301632, 6401},
- {"knotgraph", 301788, 6406},
- {"knotsort", 301941, 6411},
- {"permutationconjugation", 302106, 6416},
- {"convert", 302283, 6421},
- {"sortedq", 302428, 6426},
- {"candidateknots", 302585, 6431},
- {"alternatingknots", 302761, 6436},
- {"validknots", 302934, 6441},
- {"knotassociation", 303100, 6446},
- {"data", 303263, 6451},
- {"graphsort", 303409, 6456},
- {"creategraph", 303569, 6461},
- {"makegraph", 303733, 6466},
- {"drawgraph", 303890, 6471},
- {"strand", 304045, 6476},
- {"topd", 304191, 6481},
- {"writhe", 304337, 6486},
- {"jonespolynomial", 304494, 6491},
- {"edgesequence", 304667, 6496},
- {"validcolouring", 304836, 6501},
- {"colourings", 305007, 6506},
- {"passmapping", 305170, 6511},
- {"twopass", 305333, 6516},
- {"reidemeisterone", 305494, 6521},
- {"reidemeisterthree", 305672, 6526},
- {"flype", 305843, 6531},
- {"shift", 305991, 6536},
- {"minimal", 306138, 6541},
- {"passreducible", 306295, 6546},
- {"reducibleq", 306463, 6551},
- {"invariants", 306622, 6556},
- {"rolfsentable", 306786, 6561}
+ {"build", 301491, 6396},
+ {"compactify", 301636, 6401},
+ {"knotgraph", 301792, 6406},
+ {"knotsort", 301945, 6411},
+ {"permutationconjugation", 302110, 6416},
+ {"convert", 302287, 6421},
+ {"sortedq", 302432, 6426},
+ {"candidateknots", 302589, 6431},
+ {"alternatingknots", 302765, 6436},
+ {"validknots", 302938, 6441},
+ {"knotassociation", 303104, 6446},
+ {"data", 303267, 6451},
+ {"graphsort", 303413, 6456},
+ {"creategraph", 303573, 6461},
+ {"makegraph", 303737, 6466},
+ {"drawgraph", 303894, 6471},
+ {"strand", 304049, 6476},
+ {"topd", 304195, 6481},
+ {"writhe", 304341, 6486},
+ {"jonespolynomial", 304498, 6491},
+ {"edgesequence", 304671, 6496},
+ {"validcolouring", 304840, 6501},
+ {"colourings", 305011, 6506},
+ {"passmapping", 305174, 6511},
+ {"twopass", 305337, 6516},
+ {"reidemeisterone", 305498, 6521},
+ {"reidemeisterthree", 305676, 6526},
+ {"flype", 305847, 6531},
+ {"shift", 305995, 6536},
+ {"minimal", 306142, 6541},
+ {"passreducible", 306299, 6546},
+ {"reducibleq", 306467, 6551},
+ {"invariants", 306626, 6556},
+ {"rolfsentable", 306790, 6561}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 14992, 387, 1392, "Input"],
+Cell[558, 20, 15001, 387, 1392, "Input"],
 Cell[CellGroupData[{
-Cell[15575, 411, 118, 2, 31, "Input"],
-Cell[15696, 415, 338, 6, 40, "Print",
+Cell[15584, 411, 118, 2, 31, "Input"],
+Cell[15705, 415, 338, 6, 40, "Print",
  CellTags->"build"]
 }, Open  ]],
-Cell[16049, 424, 668, 18, 31, "Input",
+Cell[16058, 424, 668, 18, 31, "Input",
  CellTags->"build"],
 Cell[CellGroupData[{
-Cell[16742, 446, 121, 2, 31, "Input"],
-Cell[16866, 450, 348, 6, 40, "Print",
+Cell[16751, 446, 121, 2, 31, "Input"],
+Cell[16875, 450, 348, 6, 40, "Print",
  CellTags->"compactify"]
 }, Open  ]],
-Cell[17229, 459, 2354, 60, 112, "Input",
+Cell[17238, 459, 2354, 60, 112, "Input",
  CellTags->"compactify"],
 Cell[CellGroupData[{
-Cell[19608, 523, 120, 2, 31, "Input"],
-Cell[19731, 527, 403, 7, 40, "Print",
+Cell[19617, 523, 120, 2, 31, "Input"],
+Cell[19740, 527, 398, 7, 40, "Print",
  CellTags->"knotgraph"]
 }, Open  ]],
-Cell[20149, 537, 3069, 70, 112, "Input",
+Cell[20153, 537, 3069, 70, 112, "Input",
  CellTags->"knotgraph"],
 Cell[CellGroupData[{
-Cell[23243, 611, 119, 2, 31, "Input"],
-Cell[23365, 615, 492, 8, 40, "Print",
+Cell[23247, 611, 119, 2, 31, "Input"],
+Cell[23369, 615, 492, 8, 40, "Print",
  CellTags->"knotsort"]
 }, Open  ]],
-Cell[23872, 626, 2145, 53, 112, "Input",
+Cell[23876, 626, 2145, 53, 112, "Input",
  CellTags->"knotsort"],
 Cell[CellGroupData[{
-Cell[26042, 683, 133, 2, 31, "Input"],
-Cell[26178, 687, 601, 10, 43, "Print",
+Cell[26046, 683, 133, 2, 31, "Input"],
+Cell[26182, 687, 601, 10, 43, "Print",
  CellTags->"permutationconjugation"]
 }, Open  ]],
-Cell[26794, 700, 661, 14, 52, "Input",
+Cell[26798, 700, 661, 14, 52, "Input",
  CellTags->"permutationconjugation"],
 Cell[CellGroupData[{
-Cell[27480, 718, 120, 2, 31, "Input"],
-Cell[27603, 722, 351, 6, 40, "Print",
+Cell[27484, 718, 120, 2, 31, "Input"],
+Cell[27607, 722, 351, 6, 40, "Print",
  CellTags->"convert"]
 }, Open  ]],
-Cell[27969, 731, 245, 8, 31, "Input",
+Cell[27973, 731, 245, 8, 31, "Input",
  CellTags->"convert"],
 Cell[CellGroupData[{
-Cell[28239, 743, 118, 2, 31, "Input"],
-Cell[28360, 747, 329, 6, 40, "Print",
+Cell[28243, 743, 118, 2, 31, "Input"],
+Cell[28364, 747, 329, 6, 40, "Print",
  CellTags->"sortedq"]
 }, Open  ]],
-Cell[28704, 756, 98926, 1338, 31, "Input",
+Cell[28708, 756, 98926, 1338, 31, "Input",
  CellTags->"sortedq"],
 Cell[CellGroupData[{
-Cell[127655, 2098, 123, 2, 31, "Input"],
-Cell[127781, 2102, 379, 7, 40, "Print",
+Cell[127659, 2098, 123, 2, 31, "Input"],
+Cell[127785, 2102, 379, 7, 40, "Print",
  CellTags->"candidateknots"]
 }, Open  ]],
-Cell[128175, 2112, 6214, 150, 312, "Input",
+Cell[128179, 2112, 6214, 150, 312, "Input",
  CellTags->"candidateknots"],
 Cell[CellGroupData[{
-Cell[134414, 2266, 127, 2, 31, "Input"],
-Cell[134544, 2270, 372, 6, 40, "Print",
+Cell[134418, 2266, 127, 2, 31, "Input"],
+Cell[134548, 2270, 372, 6, 40, "Print",
  CellTags->"alternatingknots"]
 }, Open  ]],
-Cell[134931, 2279, 1760, 41, 152, "Input",
+Cell[134935, 2279, 1760, 41, 152, "Input",
  CellTags->"alternatingknots"],
 Cell[CellGroupData[{
-Cell[136716, 2324, 121, 2, 31, "Input"],
-Cell[136840, 2328, 370, 7, 40, "Print",
+Cell[136720, 2324, 121, 2, 31, "Input"],
+Cell[136844, 2328, 370, 7, 40, "Print",
  CellTags->"validknots"]
 }, Open  ]],
-Cell[137225, 2338, 1750, 49, 121, "Input",
+Cell[137229, 2338, 1750, 49, 121, "Input",
  CellTags->"validknots"],
 Cell[CellGroupData[{
-Cell[139000, 2391, 125, 2, 31, "Input"],
-Cell[139128, 2395, 410, 7, 40, "Print",
+Cell[139004, 2391, 125, 2, 31, "Input"],
+Cell[139132, 2395, 410, 7, 40, "Print",
  CellTags->"knotassociation"]
 }, Open  ]],
-Cell[139553, 2405, 881, 24, 72, "Input",
+Cell[139557, 2405, 881, 24, 72, "Input",
  CellTags->"knotassociation"],
 Cell[CellGroupData[{
-Cell[140459, 2433, 115, 2, 31, "Input"],
-Cell[140577, 2437, 420, 7, 58, "Print",
+Cell[140463, 2433, 115, 2, 31, "Input"],
+Cell[140581, 2437, 420, 7, 58, "Print",
  CellTags->"data"]
 }, Open  ]],
-Cell[141012, 2447, 483, 10, 31, "Input",
+Cell[141016, 2447, 483, 10, 31, "Input",
  CellTags->"data"],
 Cell[CellGroupData[{
-Cell[141520, 2461, 120, 2, 31, "Input"],
-Cell[141643, 2465, 517, 9, 40, "Print",
+Cell[141524, 2461, 120, 2, 31, "Input"],
+Cell[141647, 2465, 517, 9, 40, "Print",
  CellTags->"graphsort"]
 }, Open  ]],
-Cell[142175, 2477, 1912, 49, 132, "Input",
+Cell[142179, 2477, 1912, 49, 132, "Input",
  CellTags->"graphsort"],
 Cell[CellGroupData[{
-Cell[144112, 2530, 120, 2, 31, "Input"],
-Cell[144235, 2534, 719, 11, 58, "Print",
+Cell[144116, 2530, 120, 2, 31, "Input"],
+Cell[144239, 2534, 719, 11, 58, "Print",
  CellTags->"creategraph"]
 }, Open  ]],
-Cell[144969, 2548, 5272, 123, 252, "Input",
+Cell[144973, 2548, 5272, 123, 252, "Input",
  CellTags->"creategraph"],
 Cell[CellGroupData[{
-Cell[150266, 2675, 122, 2, 31, "Input"],
-Cell[150391, 2679, 493, 8, 58, "Print",
+Cell[150270, 2675, 122, 2, 31, "Input"],
+Cell[150395, 2679, 493, 8, 58, "Print",
  CellTags->"makegraph"]
 }, Open  ]],
-Cell[150899, 2690, 1076, 23, 52, "Input",
+Cell[150903, 2690, 1076, 23, 52, "Input",
  CellTags->"makegraph"],
 Cell[CellGroupData[{
-Cell[152000, 2717, 122, 2, 31, "Input"],
-Cell[152125, 2721, 448, 7, 58, "Print",
+Cell[152004, 2717, 122, 2, 31, "Input"],
+Cell[152129, 2721, 448, 7, 58, "Print",
  CellTags->"drawgraph"]
 }, Open  ]],
-Cell[152588, 2731, 3109, 74, 172, "Input",
+Cell[152592, 2731, 3109, 74, 172, "Input",
  CellTags->"drawgraph"],
 Cell[CellGroupData[{
-Cell[155722, 2809, 119, 2, 31, "Input"],
-Cell[155844, 2813, 503, 8, 40, "Print",
+Cell[155726, 2809, 119, 2, 31, "Input"],
+Cell[155848, 2813, 503, 8, 40, "Print",
  CellTags->"strand"]
 }, Open  ]],
-Cell[156362, 2824, 1243, 38, 92, "Input",
+Cell[156366, 2824, 1243, 38, 92, "Input",
  CellTags->"strand"],
 Cell[CellGroupData[{
-Cell[157630, 2866, 113, 2, 31, "Input"],
-Cell[157746, 2870, 340, 6, 40, "Print",
+Cell[157634, 2866, 113, 2, 31, "Input"],
+Cell[157750, 2870, 340, 6, 40, "Print",
  CellTags->"topd"]
 }, Open  ]],
-Cell[158101, 2879, 8741, 202, 252, "Input",
+Cell[158105, 2879, 8741, 202, 252, "Input",
  CellTags->"topd"],
 Cell[CellGroupData[{
-Cell[166867, 3085, 117, 2, 31, "Input"],
-Cell[166987, 3089, 410, 7, 40, "Print",
+Cell[166871, 3085, 117, 2, 31, "Input"],
+Cell[166991, 3089, 410, 7, 40, "Print",
  CellTags->"writhe"]
 }, Open  ]],
-Cell[167412, 3099, 1062, 30, 72, "Input",
+Cell[167416, 3099, 1062, 30, 72, "Input",
  CellTags->"writhe"],
 Cell[CellGroupData[{
-Cell[168499, 3133, 126, 2, 31, "Input"],
-Cell[168628, 3137, 356, 6, 40, "Print",
+Cell[168503, 3133, 126, 2, 31, "Input"],
+Cell[168632, 3137, 356, 6, 40, "Print",
  CellTags->"jonespolynomial"]
 }, Open  ]],
-Cell[168999, 3146, 2499, 63, 185, "Input",
+Cell[169003, 3146, 2499, 63, 185, "Input",
  CellTags->"jonespolynomial"],
 Cell[CellGroupData[{
-Cell[171523, 3213, 125, 2, 31, "Input"],
-Cell[171651, 3217, 485, 8, 40, "Print",
+Cell[171527, 3213, 125, 2, 31, "Input"],
+Cell[171655, 3217, 485, 8, 40, "Print",
  CellTags->"edgesequence"]
 }, Open  ]],
-Cell[172151, 3228, 3999, 99, 252, "Input",
+Cell[172155, 3228, 3999, 99, 252, "Input",
  CellTags->"edgesequence"],
 Cell[CellGroupData[{
-Cell[176175, 3331, 127, 2, 31, "Input"],
-Cell[176305, 3335, 867, 13, 40, "Print",
+Cell[176179, 3331, 127, 2, 31, "Input"],
+Cell[176309, 3335, 867, 13, 40, "Print",
  CellTags->"validcolouring"]
 }, Open  ]],
-Cell[177187, 3351, 4317, 101, 212, "Input",
+Cell[177191, 3351, 4317, 101, 212, "Input",
  CellTags->"validcolouring"],
 Cell[CellGroupData[{
-Cell[181529, 3456, 121, 2, 31, "Input"],
-Cell[181653, 3460, 518, 9, 42, "Print",
+Cell[181533, 3456, 121, 2, 31, "Input"],
+Cell[181657, 3460, 518, 9, 42, "Print",
  CellTags->"colourings"]
 }, Open  ]],
-Cell[182186, 3472, 6821, 160, 332, "Input",
+Cell[182190, 3472, 6821, 160, 332, "Input",
  CellTags->"colourings"],
 Cell[CellGroupData[{
-Cell[189032, 3636, 120, 2, 31, "Input"],
-Cell[189155, 3640, 1214, 19, 40, "Print",
+Cell[189036, 3636, 120, 2, 31, "Input"],
+Cell[189159, 3640, 1214, 19, 40, "Print",
  CellTags->"passmapping"]
 }, Open  ]],
-Cell[190384, 3662, 8389, 205, 332, "Input",
+Cell[190388, 3662, 8389, 205, 332, "Input",
  CellTags->"passmapping"],
 Cell[CellGroupData[{
-Cell[198798, 3871, 146, 3, 31, "Input"],
-Cell[198947, 3876, 379, 6, 40, "Print",
+Cell[198802, 3871, 146, 3, 31, "Input"],
+Cell[198951, 3876, 379, 6, 40, "Print",
  CellTags->"twopass"]
 }, Open  ]],
-Cell[199341, 3885, 7302, 175, 312, "Input",
+Cell[199345, 3885, 7302, 175, 312, "Input",
  CellTags->"twopass"],
 Cell[CellGroupData[{
-Cell[206668, 4064, 126, 2, 31, "Input"],
-Cell[206797, 4068, 417, 7, 40, "Print",
+Cell[206672, 4064, 126, 2, 31, "Input"],
+Cell[206801, 4068, 417, 7, 40, "Print",
  CellTags->"reidemeisterone"]
 }, Open  ]],
-Cell[207229, 4078, 1793, 48, 112, "Input",
+Cell[207233, 4078, 1793, 48, 112, "Input",
  CellTags->"reidemeisterone"],
 Cell[CellGroupData[{
-Cell[209047, 4130, 126, 2, 31, "Input"],
-Cell[209176, 4134, 418, 7, 40, "Print",
+Cell[209051, 4130, 126, 2, 31, "Input"],
+Cell[209180, 4134, 418, 7, 40, "Print",
  CellTags->"reidemeisterthree"]
 }, Open  ]],
-Cell[209609, 4144, 6986, 175, 328, "Input",
+Cell[209613, 4144, 6986, 175, 328, "Input",
  CellTags->"reidemeisterthree"],
 Cell[CellGroupData[{
-Cell[216620, 4323, 118, 2, 31, "Input"],
-Cell[216741, 4327, 373, 6, 40, "Print",
+Cell[216624, 4323, 118, 2, 31, "Input"],
+Cell[216745, 4327, 373, 6, 40, "Print",
  CellTags->"flype"]
 }, Open  ]],
-Cell[217129, 4336, 10540, 250, 432, "Input",
+Cell[217133, 4336, 10540, 250, 432, "Input",
  CellTags->"flype"],
 Cell[CellGroupData[{
-Cell[227694, 4590, 116, 2, 31, "Input"],
-Cell[227813, 4594, 663, 12, 40, "Print",
+Cell[227698, 4590, 116, 2, 31, "Input"],
+Cell[227817, 4594, 663, 12, 40, "Print",
  CellTags->"shift"]
 }, Open  ]],
-Cell[228491, 4609, 751, 22, 52, "Input",
+Cell[228495, 4609, 751, 22, 52, "Input",
  CellTags->"shift"],
 Cell[CellGroupData[{
-Cell[229267, 4635, 120, 2, 31, "Input"],
-Cell[229390, 4639, 359, 6, 40, "Print",
+Cell[229271, 4635, 120, 2, 31, "Input"],
+Cell[229394, 4639, 359, 6, 40, "Print",
  CellTags->"minimal"]
 }, Open  ]],
-Cell[229764, 4648, 1069, 30, 76, "Input",
+Cell[229768, 4648, 1069, 30, 76, "Input",
  CellTags->"minimal"],
 Cell[CellGroupData[{
-Cell[230858, 4682, 126, 2, 31, "Input"],
-Cell[230987, 4686, 413, 7, 40, "Print",
+Cell[230862, 4682, 126, 2, 31, "Input"],
+Cell[230991, 4686, 413, 7, 40, "Print",
  CellTags->"passreducible"]
 }, Open  ]],
-Cell[231415, 4696, 7662, 184, 405, "Input",
+Cell[231419, 4696, 7662, 184, 405, "Input",
  CellTags->"passreducible"],
 Cell[CellGroupData[{
-Cell[239102, 4884, 121, 2, 31, "Input"],
-Cell[239226, 4888, 441, 8, 40, "Print",
+Cell[239106, 4884, 121, 2, 31, "Input"],
+Cell[239230, 4888, 441, 8, 40, "Print",
  CellTags->"reducibleq"]
 }, Open  ]],
-Cell[239682, 4899, 899, 25, 72, "Input",
+Cell[239686, 4899, 899, 25, 72, "Input",
  CellTags->"reducibleq"],
 Cell[CellGroupData[{
-Cell[240606, 4928, 121, 2, 31, "Input"],
-Cell[240730, 4932, 608, 11, 40, "Print",
+Cell[240610, 4928, 121, 2, 31, "Input"],
+Cell[240734, 4932, 608, 11, 40, "Print",
  CellTags->"invariants"]
 }, Open  ]],
-Cell[241353, 4946, 2777, 70, 152, "Input",
+Cell[241357, 4946, 2777, 70, 152, "Input",
  CellTags->"invariants"],
 Cell[CellGroupData[{
-Cell[244155, 5020, 123, 2, 31, "Input"],
-Cell[244281, 5024, 438, 7, 58, "Print",
+Cell[244159, 5020, 123, 2, 31, "Input"],
+Cell[244285, 5024, 438, 7, 58, "Print",
  CellTags->"rolfsentable"]
 }, Open  ]],
-Cell[244734, 5034, 8164, 183, 412, "Input",
+Cell[244738, 5034, 8164, 183, 412, "Input",
  CellTags->"rolfsentable"],
 Cell[CellGroupData[{
-Cell[252923, 5221, 949, 17, 31, "Input"],
-Cell[253875, 5240, 47115, 1137, 1172, "Output"]
+Cell[252927, 5221, 949, 17, 31, "Input"],
+Cell[253879, 5240, 47115, 1137, 1172, "Output"]
 }, Open  ]]
 }
 ]

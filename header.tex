@@ -41,6 +41,10 @@
 \newcommand\diagrams[0]{\renewcommand\svgsize[2]{\def\svgwidth{##2}
 {\centering\input{diagrams/##1.pdf_tex}}}}
 
+\newcommand\pdf[1]{\noindent\includegraphics[width=\columnwidth]{#1.pdf}}
+\newcommand\code[0]{\renewcommand\pdf[1]{\noindent
+\includegraphics[width=\columnwidth]{code/##1.pdf}}}
+
 % Indent
 \setlength{\parindent}{0.3in}
 
