@@ -14,16 +14,19 @@
 \usepackage{gensymb}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
+\usepackage{hyperref}
 \usepackage{import}
 \usepackage{indentfirst}
 \usepackage{mathptmx}
 \usepackage{mathrsfs}
 \usepackage{multicol}
 \usepackage{multirow}
+\usepackage{needspace}
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
 \usepackage{siunitx}
 \usepackage{tabu}
+\usepackage{tabularx}
 \usepackage{tikz}
 \usepackage{xspace}
 
@@ -45,16 +48,29 @@
 \newcommand\code[0]{\renewcommand\pdf[1]{\noindent
 \includegraphics[width=\columnwidth]{code/##1.pdf}}}
 
+\newcommand\size[2]{{\fontsize{#1pt}{1em}\selectfont#2}}
+\newcommand\brokensize[2]{\fontsize{#1pt}{1em}\selectfont#2}
+
 % Indent
 \setlength{\parindent}{0.3in}
 
 \newcounter{paperthmamount}
-\newcommand\theorems[0]{\newtheorem{claim}[subsection]{Claim}
+\newcommand\theorems[0]{
+\theoremstyle{remark}
+\newtheorem{claim}[subsection]{Claim}
+\theoremstyle{plain}
 \newtheorem{conjecture}[subsection]{Conjecture}
+\theoremstyle{plain}
 \newtheorem{corollary}[subsection]{Corollary}
+\theoremstyle{definition}
 \newtheorem{definition}[subsection]{Definition}
-\newtheorem{lemma}[subsection]{Lemma}\newtheorem{remark}[subsection]{Remark}
+\theoremstyle{plain}
+\newtheorem{lemma}[subsection]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[subsection]{Remark}
+\theoremstyle{plain}
 \newtheorem{theorem}[subsection]{Theorem}
+\theoremstyle{definition}
 \newtheorem{question}[subsection]{Question}
 \newenvironment{paperclm}[1]
 {\begin{claim}\global\expandafter\edef\csname clm##1\endcsname{
@@ -84,12 +100,21 @@ Remark \thesubsection\noexpand\xspace}}{\end{remark}}
 {\begin{theorem}\global\expandafter\edef\csname thm##1\endcsname{
 Theorem \thesubsection\noexpand\xspace}}{\end{theorem}}}
 \newcommand\subtheorems[0]{\stepcounter{paperthmamount}
+\theoremstyle{remark}
+\newtheorem{claim}[subsubsection]{Claim}
+\theoremstyle{plain}
 \newtheorem{conjecture}[subsubsection]{Conjecture}
+\theoremstyle{plain}
 \newtheorem{corollary}[subsubsection]{Corollary}
+\theoremstyle{definition}
 \newtheorem{definition}[subsubsection]{Definition}
+\theoremstyle{plain}
 \newtheorem{lemma}[subsubsection]{Lemma}
+\theoremstyle{remark}
 \newtheorem{remark}[subsubsection]{Remark}
+\theoremstyle{plain}
 \newtheorem{theorem}[subsubsection]{Theorem}
+\theoremstyle{definition}
 \newtheorem{question}[subsubsection]{Question}
 \newenvironment{paperclm}[1]
 {\begin{claim}\global\expandafter\edef\csname clm##1\endcsname{
@@ -184,7 +209,6 @@ Theorem \thesubsubsection\noexpand\xspace}}{\end{theorem}}}
 \fontsize{9pt}{10.35}\selectfont
 \noindent\renewcommand{\labelenumi}{}
 \savebox{\sourcebox}{\parbox{3in}{\begin{enumerate}
-%\vspace{-\baselineskip}
 \setlength{\leftmargini}{-1ex}
 \setlength{\leftmargin}{-1ex}
 \setlength{\labelwidth}{0pt}
@@ -198,10 +222,12 @@ Theorem \thesubsubsection\noexpand\xspace}}{\end{theorem}}}
 %Section headers
 \newcounter{paperseccounter}
 \newcounter{papersubseccounter}[paperseccounter]
-\newcommand\papersec[1]{\stepcounter{paperseccounter}
+\newcommand\papersec[1]{\needspace{1in}
+\stepcounter{paperseccounter}
 \stepcounter{section}
 \begin{center}\Roman{paperseccounter} \textsc{#1}\end{center}}
-\newcommand\papersubsec[1]{\stepcounter{papersubseccounter}
+\newcommand\papersubsec[1]{\needspace{1in}
+\stepcounter{papersubseccounter}
 \addtocounter{subsection}{\thepaperthmamount}
 \setcounter{subsubsection}{0}
 {\begin{center}
@@ -274,12 +300,16 @@ $\begin{array}{r}
 
 %Figure counter
 \newcounter{paperfigurecounter}
-\newcommand{\papercap}[2]{\vspace{-12pt}
-\bgroup\stepcounter{paperfigurecounter}
+\newcommand{\papercap}[2]{\bgroup\stepcounter{paperfigurecounter}
 \captionof{figure}{\fontsize{9pt}{1em}\selectfont
-\hspace{0.3in}Fig.~\arabic{paperfigurecounter}.\quad#2}\vspace{0.5em}
+\hspace{0.3in}Fig.~\arabic{paperfigurecounter}.\quad#2}
 \egroup\expandafter\edef
 \csname fig#1\endcsname{Fig.~\arabic{paperfigurecounter}\noexpand\xspace}}
+
+\newcommand\paperfig[3]{\noindent\begin{minipage}{\columnwidth}
+#2\papercap{#1}{#3}\end{minipage}\expandafter\edef
+\csname fig#1\endcsname{Fig.~\arabic{paperfigurecounter}\noexpand\xspace}}
+\newcommand\papersvg[3]{\paperfig{#1}{\svgc{#2}}{#3}}
 
 \newcommand{\paperaxis}[9]
 {title=#1,
