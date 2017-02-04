@@ -95,12 +95,22 @@ Only one of the two is included in the Rolfsen table.
 The notation we used to represent a knot does not encode the handedness of the
 knot so this is not an issue.
 
+\papersvg{Composite}{composite}
+{An example of a composite knot.
+This knot can be cut along the dotted line into two knot factors, R and R'.
+Any two knots can be cut along one of their strands and then joined together the
+way R and R' are joined along the dotted line.
+Knots that cannot be decomposed into two such knot factors are called prime and
+are the kind of knot we want to include in our reconstruction of the Rolfsen
+table.}
+
 For any two knots, we can cut each of them at some point and then join their
 ends together to create one larger knot.
 This commutative operation is \textit{knot composition}.
-Knots that cannot be decomposed into two \textit{knot factors} other than
-themselves and the unknot are called \textit{prime}.
-Only prime knots (and the unknot) are included in the final list.
+Knots that can and cannot be decomposed into two \textit{knot factors} other
+than themselves and the unknot are called \textit{composite} and \textit{prime},
+respectively (see \figComposite).
+Only prime knots are included in the final list.
 
 Lastly, out of every set of equivalent diagrams, only one is included in the
 Rolfsen table.
@@ -246,7 +256,7 @@ strands in the crossings of one of the factors.
 In a permutation, this would be expressed as a set of $k$ crossings all $2k$ of
 whose values would form a consecutive sequence.
 Thus, such a set must not exist in the EDT code for the knot diagram to be
-considered prime.
+considered prime (see \figComposite).
 This also handily eliminates knots that contain a kink and could be simplified
 with the first Reidemeister move (the third Reidemeister move and the
 simplifying direction of the second Reidemeister move cannot occur in
