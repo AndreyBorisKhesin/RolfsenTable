@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{496.72726665bp}%
+    \setlength{\unitlength}{496.72724986bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,7 +48,7 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.96656267)%
+  \begin{picture}(1,0.95164655)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{diagrams/labeled.pdf}}%
   \end{picture}%
 \endgroup%
