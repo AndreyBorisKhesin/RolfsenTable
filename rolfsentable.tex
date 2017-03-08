@@ -98,7 +98,7 @@ knot so this is not an issue.
 \papersvg{Composite}{composite}
 {An example of a composite knot.
 This knot can be cut along the dotted line into two knot factors, R and R'.
-Any two knots can be cut along one of their strands and then joined together the
+Any two knots can be cut along one of their edges and then joined together the
 way R and R' are joined along the dotted line.
 Knots that cannot be decomposed into two such knot factors are called prime and
 are the kind of knot we want to include in our reconstruction of the Rolfsen
@@ -140,12 +140,11 @@ value, is sufficient to fully reconstruct the original list of pairs.\\
 
 \paperfig{Labeled}
 {\begin{center}\svgsize{labeled}{0.5\columnwidth}\end{center}}
-{The right-handed trefoil with its strands labeled from 1 to
-6.
-The labeling starts at the white circle in the centre of the top strand and
+{The right-handed trefoil with the strands in its crossings labeled from 1 to 6.
+The labeling starts at the white circle in the centre of the top edge and
 proceeds to the right in the direction of the arrow.
-The labeling then continues until all 6 strands are labeled and they are paired
-up.
+The labeling then continues until all 6 strands at the knot's crossings are
+labeled and they are paired up.
 We see that the pairs are (1, 4), (3, 6), and (5, 2).
 Note that since the trefoil is an alternating knot, the odd strands are always
 above the even strands so all the terms in the MDT code for the trefoil are
@@ -175,7 +174,6 @@ The EDT code for the trefoil is $\begin{pmatrix}1&3&5\\4&6&2\end{pmatrix}$.\\
 When computing values such as the writhe of a knot, right-handed crossings are
 considered positive and left-handed crossings are considered negative.}
 
-
 As described so far, this sequence only tells us which strands cross which.
 What it does not tell us is the handedness of each crossing (see \figCrossings).
 In other words, the shape of the knot diagram can be reconstructed, but every
@@ -187,7 +185,7 @@ strand of the crossing.
 If a crossing is not positive, it is \textit{negative} and we indicate this by
 negating the even value in each negative crossing.
 For example, if a crossing is marked (17, 34) and the strand labeled 17 passes
-above the strand labeled 34, we leave the crossing as it.
+above the strand labeled 34, we leave the crossing as is.
 On the other hand, if the upper strand is marked 34, we denote the crossing by
 the pair (17, -34).
 
@@ -199,9 +197,13 @@ permutation of the numbers from 1 to $n$.
 
 \papersec{Alternating Knots}
 
-For a given knot, if we were to follow a strand and find that our strand always
-alternates between crossing other strands from above and from below, then we
-say that this knot is an \textit{alternating knot}.
+For a given knot diagram, if we were to trace its shape and find that the curve
+we are following always alternates between passing above crossings and below
+crossings, then we say that this knot diagram is \textit{alternating}.
+We note that being an alternating knot diagram is an equivalence relation
+between minimal knot diagrams of the same knot.
+Thus, it make sense to talk of \textit{alternating knots} as this property is
+independent of our choice of knot diagram.
 We first enumerate all alternating knots, as doing this will simplify the task
 of finding the non-alternating knots.
 
@@ -282,9 +284,9 @@ a time (where $0\leq k<n$).
 If there is a value $x$ in the permutation which is closer to its paired odd
 value than the first number in the permutation is to 1, then all permutations
 with $x$ in the same position would not be minimal.
-This is because starting the enumeration of the knot's strands with the one
-labeled $x$ (thereby labeling it 1) wouldresult in a smaller first element in
-the MDT code, which is not allowed as knots must be minimal.
+This is because starting the enumeration of the knot's strands at the crossings
+with the one labeled $x$ (thereby labeling it 1) would result in a smaller first
+element in the MDT code, which is not allowed as knots must be minimal.
 
 \pdf{minimal}
 
@@ -294,15 +296,15 @@ the values that come after this sequence would also fail this test.
 
 The third condition is checked using a modified graph planarity algorithm.
 If a 4-valent graph is constructed out of a knot by replacing each crossing with
-a vertex and each strand with an edge, then typical planarity tests would
-frequently give false positives.
-If there are 4 strands emanating from a crossing, there are only 2 ways of
+a vertex and each edge of the knot with an edge in the graph, then typical
+planarity tests would frequently give false positives.
+If there are 4 edges emanating from a crossing, there are only 2 ways of
 arranging them in a valid manner for a knot, but there are 6 ways of arranging
 4 edges around a vertex.
 The reason for this is that a strand is not allowed to exit a crossing via an
 edge that is adjacent to its incoming edge.
 However, we have not yet imposed any restrictions that would tell a graph
-planarity algorithm that such cases are banned.
+planarity algorithm that such cases should not be considered.
 Permutations that fail this test do not form a planar knot, but the graph that
 is created by making the same connections between vertices is planar.\\
 
@@ -510,13 +512,13 @@ vertices, to ban the last edge configuration that was allowed earlier.\\
 $l$\hspace{0.4\columnwidth}$i$\\
 $X_{i,j,k,l}$\end{center}}
 {A right-handed crossing labeled in planar diagram notation.
-The lower incoming strand is labeled $i$ and then the remaining three are
-labeled $j$, $k$, and $l$, proceeding counterclockwise from $i$.
+The lower incoming edge is labeled $i$ and then the remaining three are labeled
+$j$, $k$, and $l$, proceeding counterclockwise from $i$.
 The crossing is labeled as $X_{i,j,k,l}$.}
 
 Every crossing is represented in planar diagram notation as $X_{i,j,k,l}$ (see
 \figX).
-Here, $i$ is the index given to the lower incoming strand and then $j$, $k$, and
+Here, $i$ is the index given to the lower incoming edge and then $j$, $k$, and
 $l$ proceed counterclockwise.
 
 The knot is then written as the product of its crossings in planar diagram
@@ -549,12 +551,14 @@ Every crossing can be \textit{smoothed} in two distinct ways (see
 By smoothing a crossing in a particular manner, the polynomial of that smoothing
 is multiplied by a coefficient of either $A$ or $B$ for the 0 and 1-smoothings,
 respectively.
-Since each smoothing is actually a coefficient multiplied by two
-non-intersecting strands, a strand stitching operation can be performed to turn
-a product of $n$ smoothings into an unlink of several components.
+Since each smoothing is actually a coefficient ($A$ or $B$) multiplied by the
+two non-intersecting strands of the smoothing, a strand stitching operation can
+be applied to turn a product of $n$ smoothings into an unlink of several
+components.
 This operation is such that the product of two strands that share an endpoint,
-such as the strand ($p$, $q$) and the strand ($q$, $r$), will be equal to one
-strand running between their non-common endpoints, or in this case, ($p$, $r$).
+such as the strand from $p$ to $q$, ($p$, $q$), and the strand ($q$, $r$), will
+be equal to one strand running between their non-common endpoints, ($p$, $r$) in
+this case.
 The final result will always be the product of several strands that are closed
 loops of the form ($p$, $p$).
 Each of these components of the link is given a coefficient of $d$ and thus the
@@ -611,7 +615,8 @@ and left-handed crossings in the knot.
 Since the resulting polynomial will have a factor of $d$ in every component, the
 polynomial is normalized by dividing it by $d$.
 Lastly, the result will always be a polynomial in $A^4$ so the rule
-$A=q^{\text-1/4}$ is applied to result in a Laurent polynomial in $q$.
+$A=q^{\text-1/4}$ (TODO CITE) is applied to result in a Laurent polynomial in
+$q$.
 
 \pdf{writhe}
 
@@ -649,51 +654,34 @@ If we use a little additional information about each knot, such as its crossing
 number and whether or not it is alternating then the Jones polynomial only fails
 to differentiate between two pairs of knots.
 All four of these knots have 10 crossings and are non-alternating.
-Two of them are the Perko pair, and must be split out.
-The other two are truly different knots and a new invariant is required to show
-this.
+We must determine which two of them are the Perko pair, and then only retain one
+of them, as well as the two other knots, in our table.
+As all of our old invariants have failed to distinguish between these two pairs
+of knots, a new invariant is required to show this.
 
-Consider the fundamental group of the complement of the knot in
-three-dimensional space.
-Every path in the complement is isomorphic to a path that wraps around the
-strands of the knots.
-We note that there are two ways for a path to wrap around a strand and that
-these two paths are inverses of each other.
-We will define the positive one to be the one that creates a right-handed
-crossing with the strand (see \figCrossings).
-We know that the fundamental group of the complement is a complete invariant,
-meaning that it is never the same group for two different knots.
+As we have very few knots to analyze, we can spend some additional time
+computing a more complicated determinant, in exchange for the guarantee that it
+will separate our knots.
+This invariant is the number of \textit{colourings} of the knot with elements of
+the permutation group $S_m$, for some $m$.
+Such a colouring is an assignment of permutations of $m$ elements to edges of
+the knot such that these permutations are the same along any strand of the knot
+diagram and such that the product of the four permutations around a given
+crossing is equal to the identity permutation.
 
-We need a way to test whether two given groups are the same.
-Iff two groups are the same, then $\forall n\in\mathbb N$, the number of
-homomorphisms from those groups to $S_n$ will be the same.
-This means that to show that two groups are different, it suffices to show that
-$\exists n\in\mathbb N$ such that the number of homomorphisms from our
-fundamental groups to $S_n$ is different.
-Each homomorphism to $S_m$ from the fundamental group of the complement of a
-knot is called a \textit{colouring} of that knot.
-
-\paperfig{Passes}{
-\svgsize{before}{0.4\columnwidth}\\
-
-\vspace{-4.5em}\hspace{19ex}{\fontsize{20pt}{1em}\selectfont$\equiv$}\\
-
-\vspace{-5em}\hfill\svgsize{after}{0.4\columnwidth}}
-{A path in the complement of the knot passing under the
-upper strand of a crossing.
-Such a path is equivalent regardless of whether or not it passes in front of or
-behind the crossing as the path can always be slipped through the crossing
-between the lower and upper strands.
-If all three strands in the diagram are directed upwards then the path is
-labeled positive as it forms a right-handed crossing with the strand that it
-passes under.}
+Two knots are the same if and only if the number of colourings using elements of
+$S_m$ is the same for all natural numbers $m$.
+Thus, to show that two knot diagrams are different, we need to find a value of
+$m$ such that the the invariant produces a different value for the two knots.
+In other words, the number of ways to colour both of the knots using elements of
+$S_m$ must be different.
 
 It would be incorrect to simply count the number of ways that various values of
-$S_m$ can be assigned to all $2n$ strands of the knot.
-The reason for that is that a path that passes under an upper strand is the same
-regardless of whether it does so before or after a crossing (see \figPasses).
-Thus, if we assign the values in $S_m$ to each strand as $i$, $j$, $k$, and $l$
-starting from the incoming lower strand and proceeding counterclockwise (see
+$S_m$ can be assigned to all $2n$ edges of the knot.
+The reason for that is that the values assigned to edges along a strand must be
+the same.
+Thus, if we assign the values in $S_m$ to each edge as $i$, $j$, $k$, and $l$
+starting from the incoming lower edge and proceeding counterclockwise (see
 \figX), two relations that those four values have to satisfy can e constructed.
 
 \papereq{Upper}{j=l}{}
@@ -707,32 +695,32 @@ Put these together into an all-encompassing equation for each crossing.
 
 We note that by taking the permutation conjugation of $j$ with $k$, the cycle
 lengths of $k$ are preserved.
-This means that all of the values for the strands must have the same cycle
+This means that all of the values for the edges must have the same cycle
 lengths.
 This makes simplifies the procedure and gives us a lot more information.
-Whereas before we would have had to map strands to $S_m$ and count the total
-number of homomorphisms, now they can be mappedto a subgroup of $S_m$ all of
-whose elements have the same cycle lengths and count the number of homomorphisms
-to each subgroup independently.
+Whereas before we would have had to map edges to $S_m$ and count the total
+number of homomorphisms, now they can be mapped to a subset of $S_m$ all of
+whose elements have the same cycle lengths and the number of homomorphisms
+to each subset can be counted independently.
 Thus, instead of ending up with a single number as our invariant, we end up with
 $P(m)$ different numbers, where $P$ is the partition function.
 Thus, to show that the groups are different, it suffices for any one of these
 numbers to differ.
 
-For knots with $n$ crossings we have to find relations between $2n$ strands.
+For knots with $n$ crossings we have to find relations between the $2n$ edges.
 Finding $n$ such relations is easy with \eqUpper.
 We are going to get another $n$ equations from \eqBoth and we have to combine them.
-We need to find a set of \textit{generators}, strands whose values can be chosen
+We need to find a set of \textit{generators}, edges whose values can be chosen
 from $S_m$ independently, for our knot and then find the values for the
-remaining strands using \eqUpper and \eqBoth.
+remaining edges using \eqUpper and \eqBoth.
 
-To find these generators we need to determine which of the $2n$ strands can be
+To find these generators we need to determine which of the $2n$ edges can be
 derived using \eqBoth from the others.
-It is immediately clear that $n$ strands can be derived from the other $n$ by
+It is immediately clear that $n$ edges can be derived from the other $n$ by
 using \eqUpper.
 Thus, we are only interested in the other $n$.
 We create a graph with $2^n$ vertices, where each vertex holds a subset of our
-$n$ strands of interest.
+$n$ edges of interest.
 For each crossing, we draw a directed edge from every vertex containing $j$, and
 either $i$ or $k$ to the vertex containing the same elements but including both
 of $i$ and $k$.
@@ -742,15 +730,15 @@ subset of the second vertex can be derived by using \eqBoth.
 We then find our generators by taking the connected component containing the
 vertex that holds all $n$ values and finding the vertex in that component that
 contains the smallest subset.
-Then, the order in which the values of the $n$ strands will be determined can be
+Then, the order in which the values of the $n$ edges will be determined can be
 established by finding a path from vertex containing the set of generators to
-the vertex containing all $n$ strands.
+the vertex containing all $n$ edges.
 
 \pdf{edgesequence}
 
 Once we have found the generators, we assign to them every possible
 combination of values of our chosen subgroup of $S_m$.
-We set the generator values, generate the rest of the values for the strands,
+We set the generator values, generate the rest of the values for the edges,
 and then check that \eqBoth is satisfied for each crossing.
 If it is, then the homomorphism is valid, otherwise, it is not.
 
