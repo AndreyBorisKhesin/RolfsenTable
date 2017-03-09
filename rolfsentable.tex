@@ -691,12 +691,26 @@ It would be incorrect to simply count the number of ways that various values of
 $S_m$ can be assigned to all $2n$ edges of the knot diagram.
 The reason for that is that the values assigned to edges along a strand must be
 the same.
-Thus, if we assign the values in $S_m$ to each edge as $i$, $j$, $k$, and $l$
-starting from the incoming lower edge and proceeding counterclockwise (see
-\figX), two relations that those four values have to satisfy can be constructed.
+Thus, if we label the values in $S_m$ that we assign to each edge as $i$, $j$,
+$k$, and $l$ starting from the incoming lower edge and proceeding
+counterclockwise (see \figX), two relations that those four values have to
+satisfy can be constructed.
+
+We know that the permutations must be the same along any strand.
+Thus, the two edges that form the top strand have the same permutations.
 
 \papereq{Upper}{j=l}{}
-\papereq{Lower}{i=j^{\text-1}kl}{}
+
+We also know that the product of all four permutations around the crossing is
+the identity.
+However, as we go around the crossing, we have to invert the permutation if the
+edge is outgoing instead of incoming.
+This means that we can derive an expression for a positive crossing (see
+\figCrossings) and replace $j$ and $l$ with $j^{\text-1}$ and $l^{\text-1}$,
+respectively.
+So for a positive crossing, we get an expression for $i$.
+
+\papereq{Lower}{i=l^{\text-1}kj}{}
 
 Put these together into an all-encompassing equation for each crossing.
 
@@ -704,47 +718,65 @@ Put these together into an all-encompassing equation for each crossing.
 
 \pdf{permutationconjugation}
 
-We note that by taking the permutation conjugation of $j$ with $k$, the cycle
-lengths of $k$ are preserved.
-This means that all of the values for the edges must have the same cycle
-lengths.
-This makes simplifies the procedure and gives us a lot more information.
+We note that since we are taking the permutation conjugation of $j$ with $k$,
+then $i$ and $k$ will have the same cycle lengths.
+As any two edges across a crossing have the same cycle lengths, and since we can
+follow the path of the knot by going through each crossing, one by one, never
+changing cycle lengths, then all of the values for the edges must have the same
+cycle lengths.
+This simplifies the procedure and gives us a lot more information.
 Whereas before we would have had to map edges to $S_m$ and count the total
-number of homomorphisms, now they can be mapped to a subset of $S_m$ all of
-whose elements have the same cycle lengths and the number of homomorphisms
-to each subset can be counted independently.
+number of colourings, now they can be mapped to a subset of $S_m$.
+If all elements of this subset have the same cycle lengths, then number of
+colourings for each such subset can be counted independently.
 Thus, instead of ending up with a single number as our invariant, we end up with
-$P(m)$ different numbers, where $P$ is the partition function.
-Thus, to show that the groups are different, it suffices for any one of these
-numbers to differ.
+$P(m)$ different values, where $P$ is the partition function.
+This is due to the fact that an element of $S_m$ can have $P(m)$ different
+possible cycle lengths.
+Thus, to show that the knot diagrams are different, it suffices for any one of
+these $P(m)$ values to differ.
 
-For knot diagrams with $n$ crossings we have to find relations between the $2n$
+As previously stated, we cannot simply find the number of ways to map edges to
+elements of $S_m$.
+We need to find as many equations that relate the edges as possible using
+\eqUpper and \eqLower.
+For knot diagrams with $n$ crossings we have to find equations relating the $2n$
 edges.
-Finding $n$ such relations is easy with \eqUpper.
-We are going to get another $n$ equations from \eqBoth and we have to combine them.
+Finding $n$ such equations is easy with \eqUpper as every crossing has an upper
+strand whose two edges must have equal values in $S_m$.
+We are going to get another $n$ equations from \eqBoth and we have to combine
+the two sets of equations.
 We need to find a set of \textit{generators}, edges whose values can be chosen
 from $S_m$ independently, for our knot diagram and then find the values for the
 remaining edges using \eqUpper and \eqBoth.
 
-To find these generators we need to determine which of the $2n$ edges can be
-derived using \eqBoth from the others.
+To find these generators we need to find the smallest subset of these $2n$ edges
+whose values, when plugged into \eqUpper and \eqLower will allow us to determine
+the values of all $2n$ edges.
+When $n=10$, the set usually contains between 3 and 5 edges.
 It is immediately clear that $n$ edges can be derived from the other $n$ by
 using \eqUpper.
-Thus, we are only interested in the other $n$.
-We create a graph with $2^n$ vertices, where each vertex holds a subset of our
-$n$ edges of interest.
-For each crossing, we draw a directed edge from every vertex containing $j$, and
-either $i$ or $k$ to the vertex containing the same elements but including both
-of $i$ and $k$.
+Thus, we are only interested in finding which of the other $n$ can be
+chosen independently.
+We create a graph with $2^n$ vertices, where each vertex represents a subset of
+our $n$ edges of interest.
+For each crossing, we know that by using \eqBoth, knowing $j$, as well as either
+$i$ or $k$, is sufficient to reestablish the missing value: $k$ or $i$,
+respectively.
+Thus, we draw a directed edge from every vertex whose subset $S$ contains $j$
+and either $i$ or $k$ to the vertex whose subset is $S\cup\{i,k\}$.
 This edge represents the fact that if we are given the values for the elements
 of the subset at the first vertex, all of the values for the elements of the
 subset of the second vertex can be derived by using \eqBoth.
 We then find our generators by taking the connected component containing the
 vertex that holds all $n$ values and finding the vertex in that component that
 contains the smallest subset.
-Then, the order in which the values of the $n$ edges will be determined can be
-established by finding a path from vertex containing the set of generators to
-the vertex containing all $n$ edges.
+There will then be a path from the latter vertex, the one containing the
+generators, to the former vertex, the one containing all $n$ edges of interest,
+that consists of repeatedly applying \eqBoth by deriving one additional value at
+a time out of the $n$ we seek.
+Then, this will be the order in which the values of the $n$ edges are be
+determined.
 
 \pdf{edgesequence}
 
@@ -752,15 +784,15 @@ Once we have found the generators, we assign to them every possible
 combination of values of our chosen subgroup of $S_m$.
 We set the generator values, generate the rest of the values for the edges,
 and then check that \eqBoth is satisfied for each crossing.
-If it is, then the homomorphism is valid, otherwise, it is not.
+If it is, then the colouring is valid, otherwise, it is not.
 
 \pdf{validcolouring}
 
-We count the total number of valid homomorphisms and our invariant becomes an
-array of size $P(m)$ containing the number of valid homomorphisms from the
-fundamental group of the complement of the knot to a subgroup of $S_m$.
-Each element of the array corresponds to a different subgroup of $S_m$, where
-all of the elements in each subgroup have the same set of cycle lengths.
+We count the total number of valid colourings and our invariant becomes a list
+of size $P(m)$ containing the number of valid colourings of the knot diagram
+using elements of $S_m$.
+Each element of the array corresponds to a different subset of $S_m$, where all
+of the elements in each subset have the same cycle lengths.
 Using this invariant, the two knot diagrams that have the same Jones polynomial
 can be distinguished from each other.
 
