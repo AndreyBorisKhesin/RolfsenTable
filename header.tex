@@ -45,8 +45,15 @@
 {\centering\input{diagrams/##1.pdf_tex}}}}
 
 \newcommand\pdf[1]{\noindent\includegraphics[width=\columnwidth]{#1.pdf}}
+\newcommand\pdfex[1]{\pdf{#1}
+
+\noindent\includegraphics[width=\columnwidth]{#1ex.pdf}}
 \newcommand\code[0]{\renewcommand\pdf[1]{\noindent
-\includegraphics[width=\columnwidth]{code/##1.pdf}}}
+\includegraphics[width=\columnwidth]{code/##1.pdf}}
+\renewcommand\pdfex[1]{\pdf{##1}
+
+\noindent
+\includegraphics[width=\columnwidth]{code/##1ex.pdf}}}
 
 \newcommand\size[2]{{\fontsize{#1pt}{1em}\selectfont#2}}
 \newcommand\brokensize[2]{\fontsize{#1pt}{1em}\selectfont#2}

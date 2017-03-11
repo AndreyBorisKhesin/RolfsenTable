@@ -275,7 +275,7 @@ lexicographically minimal over all knots diagrams connected to it via any
 sequence of flypes (see \figMoves).
 \end{enumerate}
 
-\pdf{candidateknots}
+\pdfex{candidateknots}
 
 The first two conditions are used to avoid checking all $n!$ permutations.
 If we arranged the permutations lexicographically and went along checking each
@@ -290,7 +290,7 @@ crossings with the one labeled $x$ (thereby labeling it 1) would result in a
 smaller first element in the MDT code, which is not allowed as the knot diagrams
 in the table must be minimal.
 
-\pdf{minimal}
+\pdfex{minimal}
 
 Similarly, if a knot diagram is not prime, this is represented by several
 consecutive terms in the permutation, meaning that all permutations obtained by
@@ -332,7 +332,7 @@ other four, as the square would be transformed into a non-planar bowtie shape.
 Thus, it suffices to use our old graph planarity algorithms to check whether the
 modified graph of the knot diagram is planar.
 
-\pdf{knotgraph}
+\pdfex{knotgraph}
 
 Finally, the fourth condition is checked by using a graph searching algorithm to
 find all knot diagrams that are connected to a given knot diagram via flypes
@@ -348,12 +348,12 @@ flyped.
 To find the fully reduced list of alternating knots, it is sufficient to only
 check for knots connected via flypes. (TODO CITE)
 
-\pdf{flype}
+\pdfex{flype}
 
 Having eliminated all of the knot diagrams that do not satisfy the four
 conditions, a complete list of all of the alternating knots remains.
 
-\pdf{alternatingknots}
+\pdfex{alternatingknots}
 
 \papersec{Non-Alternating Knots}
 
@@ -368,7 +368,7 @@ Many of those that remain can be reduced with a (2, 1)--pass or a (3, 2)--pass
 (A (1, 0)--pass is the first Reidemeister move.)
 This pass move can be found in most reducible knot diagrams.
 
-\pdf{passreducible}
+\pdfex{passreducible}
 
 By removing all knot diagrams that can be simplified with one of these moves,
 the list is left with very few reducible knot diagrams.
@@ -376,7 +376,7 @@ The reason for this is that a reducibility test checking only for those two
 moves might in principle give false negatives.
 This will be dealt with at a later stage.
 
-\pdf{validknots}
+\pdfex{validknots}
 
 \papersec{Connections}
 
@@ -392,7 +392,7 @@ If the absolute values of the permutations are equal, then the permutations are
 ordered lexicographically, meaning that the one that has a negative value at the
 first index where the permutations differ comes first.
 
-\pdf{knotsort}
+\pdfex{knotsort}
 
 Now the goal is to determine which knot diagrams are equivalent and to save the
 lexicographically smallest one for each knot.
@@ -404,7 +404,7 @@ Reidemeister moves as there are many ways of adding crossings but only a few
 ways to apply a move that preserves the crossing number of a knot diagram with a
 given move.
 
-\pdf{twopass}
+\pdfex{twopass}
 
 To find equivalent knot diagrams, a graph searching algorithm is implemented.
 In our graph, we let each knot diagram be represented by a vertex.
@@ -455,7 +455,7 @@ By allowing use of the first Reidemeister move and allowing the crossing number
 to increase to 11, the list can be reduced to 250 knots by executing the
 following procedure.
 
-\pdf{reidemeisterone}
+\pdfex{reidemeisterone}
 
 Both knot diagrams in the Perko pair are transformed into knot diagrams with 11
 crossings by adding a positive kink into the knot diagram.
@@ -465,7 +465,7 @@ $k$.
 The resulting knot diagrams are found to be equivalent under repeated
 application of the third Reidemeister move (see \figMoves).
 
-\pdf{reidemeisterthree}
+\pdfex{reidemeisterthree}
 
 This produces the full list of the 250 prime knots with 10 crossings or fewer.
 All that is left is to show we have not missed any more duplications: pairs of
@@ -490,7 +490,7 @@ slow.
 These are the Jones polynomial and the number of colourings of a given knot
 diagram.
 
-\pdf{invariants}
+\pdfex{invariants}
 
 \papersec{Planar Diagram Notation}
 
@@ -534,7 +534,7 @@ diagram notation.
 For example, the left-handed trefoil (see \figTrefoil and \figLabeled) is
 written as $X_{1,4,2,5}X_{3,6,4,1}X_{5,2,6,3}$.
 
-\pdf{topd}
+\pdfex{topd}
 
 \papersec{Jones Polynomial}
 
@@ -627,7 +627,7 @@ Lastly, the result will always be a polynomial in $A^4$ so the rule
 $A=q^{\text-1/4}$ (TODO CITE) is applied to result in a Laurent polynomial in
 $q$.
 
-\pdf{writhe}
+\pdfex{writhe}
 
 For the trefoil, these substitutions allow us to transform our equation into a
 simpler form.
@@ -654,7 +654,7 @@ the left-handed trefoil.
 \papereq{TrefoilJones}{J(\svgl{left})
 =\text-q^{\text-4}+q^{\text-3}+q^{\text-1}}{}
 
-\pdf{jonespolynomial}
+\pdfex{jonespolynomial}
 
 \papersec{Knot Colourings}
 
@@ -716,7 +716,7 @@ Put these together into an all-encompassing equation for each crossing.
 
 \papereq{Both}{i=j^{\text-1}kj}{}
 
-\pdf{permutationconjugation}
+\pdfex{permutationconjugation}
 
 We note that since we are taking the permutation conjugation of $j$ with $k$,
 then $i$ and $k$ will have the same cycle lengths.
@@ -778,7 +778,7 @@ a time out of the $n$ we seek.
 Then, this will be the order in which the values of the $n$ edges are be
 determined.
 
-\pdf{edgesequence}
+\pdfex{edgesequence}
 
 Once we have found the generators, we assign to them every possible
 combination of values of our chosen subgroup of $S_m$.
@@ -786,7 +786,7 @@ We set the generator values, generate the rest of the values for the edges,
 and then check that \eqBoth is satisfied for each crossing.
 If it is, then the colouring is valid, otherwise, it is not.
 
-\pdf{validcolouring}
+\pdfex{validcolouring}
 
 We count the total number of valid colourings and our invariant becomes a list
 of size $P(m)$ containing the number of valid colourings of the knot diagram
@@ -796,12 +796,12 @@ of the elements in each subset have the same cycle lengths.
 Using this invariant, the two knot diagrams that have the same Jones polynomial
 can be distinguished from each other.
 
-\pdf{colourings}
+\pdfex{colourings}
 
 Thus, we have constructed the table containing the 250 knots with 10 crossings
 or fewer.
 
-\pdf{rolfsentable}
+\pdfex{rolfsentable}
 
 \papersec{Knot Graphs}
 
@@ -821,7 +821,7 @@ generated, map each diagram to a vertex, connect these vertices with edges
 representing 2-passes, third Reidemeister moves, and flypes (see \figMoves), and
 remove all connected components that were found to be reducible.
 
-\pdf{creategraph}
+\pdfex{creategraph}
 
 The result will be the full graph of irreducible knot diagrams and their
 connections.
