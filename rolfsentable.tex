@@ -11,15 +11,20 @@ The list of knots with up to 10 crossings is commonly referred to as the Rolfsen
 Table.
 The concepts behind the calculation of this list are rather hard to implement.
 This paper presents a way to generate the Rolfsen table in a simple, clear, and
-reproducible manner, which can also be applied to more complicated settings.
-The methods we use are very similar to those used by J.~Hoste,
-M.~Thistlethwaite, and J.~Weeks in \cite{htw} in that it involves generating all
-planar diagrams with up to 10 crossings and applying several simplifications to
-group the diagrams into equivalence classes.
-From these diagrams, the full list of candidate knots is generated and reduced
+reproducible manner.
+The methods we use are similar to those used by J.~Hoste, M.~Thistlethwaite, and
+J.~Weeks in \cite{htw}.
+The difference between our methods comes from the fact that \cite{htw} uses more
+complicated methods to be able to find all the knots with up to 17 crossings,
+while our approach demonstrates a simpler way to find the knots up to 10
+crossings.
+We do this by generating all planar diagrams with up to 10 crossings and
+applying several simplifications to group the knot diagrams into equivalence
+classes.
+From these diagrams, we generate the full list of candidate knots and reduce it
 with several sets of moves.
-Lastly, invariants are used to show that every remaining diagram is a diagram of
-a distinct knot, proving that there are exactly 250 knots with 10 crossings or
+Lastly, we use invariants to show that every remaining diagram is a diagram of a
+distinct knot, proving that there are exactly 250 knots with 10 crossings or
 fewer.
 Though the algorithms used could be made more efficient, readability was chosen
 over speed for simplicity and reproducibility.
@@ -32,16 +37,17 @@ Here we attempt to generate it and prove its completeness using a computer
 algorithm.
 To do this, we begin by considering which knot diagrams could potentially be
 included in the table.
-There are only a finite number of ways to tie a knot with a given number of
-crossings.
+There are only a finite number of ways to draw a knot diagram with a given
+number of crossings.
 Additionally, many of these knot diagrams are \textit{reducible}, meaning that
 they can be transformed into equivalent knot diagrams with a smaller number of
 crossings.
 
-This has been accomplished for knots of up to 10 crossings several times in the
-past and has even been done for up to 17 crossings (see \cite{htw}).
-This computation is far too involved to be done by hand, and was made possible
-by using a computer.
+The list of all knots with a certain number of crossings has been generated for
+knots of up to 10 crossings several times in the past and has even been
+generated for up to 17 crossings (see \cite{htw}).
+This computation is far too involved to be done by hand and was made possible by
+using a computer.
 To demonstrate a method of generating the Rolfsen table, we created a simple
 program for finding all 250 knots with up to 10 crossings (partially sacrificing
 efficiency).
@@ -65,16 +71,16 @@ Crossing Number-Reducing Moves\vspace{0.5em}
 \paperfig{Moves}{}
 {The 6 moves that we use to construct the Rolfsen table, as well as the second
 Reidemeister move.
-The letter R is used to denote a tangle with an appropriate number of strands.
-If the letter R appears in a different orientation it is because the move caused
-the corresponding part of the knot diagram to flip.}
+The letter $R$ is used to denote a tangle with an appropriate number of strands.
+If the letter $R$ appears in a different orientation it is because the move
+caused the corresponding part of the knot diagram to flip.}
 
-There are far more than 250 diagrams of knots with up to 10 crossings, even
-after only irreducible diagrams are considered.
+There are far more than 250 knot diagrams with up to 10 crossings, even after
+only irreducible knot diagrams are considered.
 The reason for this is that there are several moves (see \figMoves) that can
 transform one knot diagram into an equivalent one.
-Two knot diagrams are equivalent if there exists a series of such moves that
-transforms one of the diagrams into the other.\\
+Two knot diagrams are \textit{equivalent} if and only if there exists a series
+of such moves that transforms one of the diagrams into the other.\\
 
 \paperfig{Trefoil}{
 \svgsize{right}{0.4\columnwidth}\hfill\svgsize{left}{0.4\columnwidth}
@@ -83,11 +89,11 @@ transforms one of the diagrams into the other.\\
 These knots are considered equivalent for our purposes as they are mirror images
 of each other.
 However, it is important to note that no series of moves can transform one of
-them into the other, so while they are not equivalent knots, we only include one
-of them in the Rolfsen table.}
+these into the other, so while they are not equivalent knots, we only include
+one of them in the Rolfsen table.}
 
-The first manner in which the list of diagrams is simplified is by eliminating
-knot diagrams that are mirror images of each other.
+The first manner in which the list of knot diagrams is simplified is by
+eliminating knot diagrams that are mirror images of each other.
 For example, the right-handed and left-handed trefoils are not equivalent as it
 is impossible to turn one into the other (see \figTrefoil).
 Only one of the two is included in the Rolfsen table.
@@ -96,26 +102,34 @@ of the knot so this is not an issue.
 
 \papersvg{Composite}{composite}
 {An example of a composite knot diagram.
-This knot diagram can be cut along the dotted line into two knot factors, R and
-R'.
-Any two knots can be cut along one of their edges and then joined together the
-way R and R' are joined along the dotted line.
-Knots that cannot be decomposed into two such knot factors are called prime and
-are the kind of knot we want to include in our reconstruction of the Rolfsen
-table.}
+This knot diagram can be cut along the dotted line into two knot factors, $T$
+and $T'$.
+Both $T$ and $T'$ can be cut along one of their edges to create the pairs of
+ends $A$ and $B$, as well as $A'$ and $B'$, respectively.
+If $A$ is then joined to $A'$ and $B$ to $B'$, the resulting knot is knot
+composition of $T$ and $T'$, which are now its knot factors.
+Knot diagrams that cannot be decomposed into two such knot factors are prime and
+are the kind of knot diagrams that we want to include in our final list.}
 
-For any two knot diagrams, we can cut each of them at some point and then join
-their ends together to create one larger knot.
+For any two knot diagrams $T$ and $T'$, we can cut $T$ at some point to create
+ends $A$ and $B$ and we can cut $T'$ at some point to create ends $A'$ and $B'$.
+Joining $A$ to $A'$ and $B$ to $B'$ results in one larger knot, $R$.
+We would say that $T$ and $T'$ \textit{knot factors} of $R$.
 This commutative operation is \textit{knot composition}.
 Knots that cannot be decomposed into two \textit{knot factors} other than
 themselves and the unknot are called \textit{prime}.
 If they can, they are called \textit{composite} (see \figComposite).
 Only prime knots are included in the final list.
 
-Lastly, out of every set of equivalent diagrams, only one is included in the
-Rolfsen table.
+Lastly, out of every set of equivalent knot diagrams, up to not only
+Reidemeister moves but several other minor conditions that will be described
+later, only one is included in the Rolfsen table.
 
-\papersec{Method}
+\papersec{MDT Codes}
+
+The first thing we need to do is to establish is a way to efficiently represent
+a knot diagram that is relatively easy for both humans and computers to work
+with.
 
 In \cite{htw}, a notation is introduced to represent an $n$-crossing knot
 diagram with $n$ integers.
@@ -124,17 +138,51 @@ Its density and simplicity make it convenient for our purposes.
 
 For any given knot diagram, its representation in this notation is constructed
 as follows.
+We start by picking an arbitrary point on one of the knot diagram's edges as
+well as an arbitrary direction along that edge.
+We then move around the knot diagram, following each edge until we return to our
+starting point.
 If we were to travel along a knot diagram with $n$ crossings, we will pass each
 crossing twice, once under and once over.
 Each time we pass a crossing, we consider the number of crossings that we
 have encountered so far and write it down at the crossing that we are passing.
+In other words, when we encounter our first crossing, we write down the number 1
+at that point.
+It is important to distinguish between writing the number on the upper or the
+lower strand of a crossing.
+If we passed the first crossing along the upper strand, we write down the number
+1 on the upper strand and vice versa.
+Continuing, we would write down the number 2 at the next crossing we encounter.
 We would end up writing each number from 1 to $2n$ exactly once.
 Furthermore, these numbers would be grouped into $n$ pairs, as there would be
-two numbers written at each crossing.
+two numbers written at each of the $n$ crossings.
 
-Once this is done, each pair contains one even number and one odd number.
-The list of pairs has no order, so sorting them by the odd value in each pair
-does not sacrifice any information.
+\begin{paperclm}
+Grouping the values from 1 to $2n$ as described above means that each pair will
+contain one even number and one odd number.
+\end{paperclm}
+\begin{proof}[Proof of Claim]
+Any pair of closed curves has an even number of intersections.
+For the sake of contradiction, suppose that some pair ($a$, $b$) satisfied
+$a\equiv b~(\hspace{-1.5ex}\mod~2)$.
+We will now define two curves.
+The first is the curve that we traced out when we started at $a$ and ended at
+$b$.
+This curve is closed as $a$ and $b$ are located at the same crossing.
+The second curve is the rest of the knot, which is closed for the same reason.
+We can construct it by starting at $b$ and following the knot in the same
+direction until we come back around to $a$.
+To make sure that there is no confusion at the crossing labeled $a$ and $b$, we
+can eliminate that crossing and connect the ends of our curves together.
+This can be done without adding any intersections as the ends of both curves
+cannot be located across the crossing from each other.
+Since the curves have an even number of intersections, $2k$, then $b$ must be
+exactly $a+2k+1$, which is not possible by our assumption.
+Thus, the claim is true.
+\end{proof}
+
+The list of pairs has no order, so sorting them in ascending order by looking at
+the odd value in each pair does not sacrifice any information.
 It then follows that the list of even values, sorted by their corresponding odd
 value, is sufficient to fully reconstruct the original list of pairs.\\
 
@@ -144,18 +192,18 @@ value, is sufficient to fully reconstruct the original list of pairs.\\
 The labeling starts at the white circle in the centre of the top edge and
 proceeds to the right in the direction of the arrow.
 The labeling then continues until all 6 strands at the knot diagram's crossings
-are labeled and they are paired up.
-We see that the pairs are (1, 4), (3, 6), and (5, 2).
-Note that since the trefoil is an alternating knot, the odd strands are always
-above the even strands so all the terms in the MDT code for the trefoil are
-positive.}
+are labeled.
+We see that the pairs, when sorted in ascending order by their odd value, are
+(1, 4), (3, 6), and (5, 2).}
 
-As an example, we show how this is done for the trefoil.
+As an example, we show how the DT code is found for the trefoil.
 After labeling the trefoil, the pairs are (1, 4), (2, 5) and (3, 6) (see
 \figLabeled).
-Thus, the pairs can be ordered by their odd value to get (1, 4), (3, 6), and
+We flip some of the pairs to place all of the odd values first.
+Then, the pairs can be ordered by their odd value to get (1, 4), (3, 6), and
 (5, 2).
-The original pairs can be reconstructed with the sequence (4, 6, 2).
+The original pairs can be reconstructed with the sequence (4, 6, 2) as there is
+a unique way of reestablishing the odd counterparts to each of the even numbers.
 Since this sequence contains only even numbers, storing half of each value works
 just as well and makes some computations easier.
 Therefore, the trefoil is represented by (2, 3, 1).
@@ -171,18 +219,22 @@ The EDT code for the trefoil is $\begin{pmatrix}1&3&5\\4&6&2\end{pmatrix}$.\\
 \svgsize{negative}{0.33\columnwidth}
 \begin{center}Right-handed\hspace{0.37\columnwidth}Left-handed\end{center}}
 {The right-handed and left-handed crossings.
+The crossings get their name from the fact that pointing the thumb of your right
+hand along of the strands in the right-handed crossing and curling your fingers
+will result in your fingers pointing in the direction of the other strand.
+An analogous statement holds for left-handed crossings.
 When computing values such as the writhe of a knot diagram, right-handed
 crossings are considered positive and left-handed crossings are considered
 negative.}
 
-As described so far, this sequence only tells us which strands cross which.
+As described so far, this notation only tells us which strands cross which.
 What it does not tell us is the handedness of each crossing (see \figCrossings).
 In other words, the shape of the knot diagram can be reconstructed, but every
 crossing will effectively be blurred out, as it will not be clear which of the
 two strands in the crossing is the upper strand and which is the lower strand.
 To account for this, we will declare that a crossing is \textit{positive} if,
-out of the two values that make up a crossing, the odd one marks the upper
-strand of the crossing.
+out of the two values that make up a crossing, the odd one corresponds to the
+upper strand of the crossing.
 If a crossing is not positive, it is \textit{negative} and we indicate this by
 negating the even value in each negative crossing.
 For example, if a crossing is marked (17, 34) and the strand labeled 17 passes
@@ -191,54 +243,74 @@ On the other hand, if the upper strand is marked 34, we denote the crossing by
 the pair (17, -34).
 
 If we were to flip over a knot diagram and look at it from the back, all of the
-even values in its MDT code would change sign, so the MDT code is normalized by
-a sign to make the leading term positive.
+even values in its MDT code would change sign, so if necessary we negate all the
+values in the MDT code to make the leading term positive.
 As a result, every knot diagram with $n$ crossings can be represented by a
 signed permutation of the numbers from 1 to $n$.
 
 \papersec{Alternating Knots}
 
-For a given knot diagram, if we were to trace its shape and find that the curve
-we are following always alternates between passing above crossings and below
-crossings, then we say that this knot diagram is \textit{alternating}.
-We note that being an alternating knot diagram is an equivalence relation
-between minimal knot diagrams of the same knot.
+By determining which of certain knots, which are called
+\textit{alternating knots}, should be included in our final list, we can make
+the task of determining the remainder of the list significantly easier.
+For this reason, we start by determining which alternating knots should be
+included in our reconstruction of the Rolfsen table.
+
+For a given knot diagram, if we were to trace its shape, exactly like when we
+were trying to determine the MDT code, and we found that we are always
+alternating between passing over crossings along upper strand and under
+crossings along lower strands, then we say that this knot diagram is
+\textit{alternating}.
+We note that being any minimal knot diagram that is equivalent to an alternating
+knot diagram will be alternating.
 Thus, it makes sense to refer to \textit{alternating knots} as this property is
 independent of our choice of knot diagram.
-We first enumerate all alternating knots, as doing this will simplify the task
-of finding the non-alternating knots.
+
+Any knot that is not an alternating knot is a \textit{non-alternating knot}.
 
 \begin{paperclm}{Alternating}
 {The MDT codes of alternating knots consist entirely of positive entries.}
 \end{paperclm}
-
-\begin{proof}
+\begin{proof}[Proof of Claim]
 We know that the first element of our MDT code will be positive by definition.
-The element is part of a pair that represents a crossing where the odd strand
-passes above.
-If we were to choose either of strands and follow them in either direction to
-the next crossing, we would find that the strand that passed above in our
-starting crossing would now pass below and vice versa.
+The first element is thus part of a pair that represents a crossing where the
+odd strand passes above the even strand as the first element is positive.
+If we were to choose either of the two strands in that crossing and follow them
+in either direction to the next crossing, we would find that the strand that
+was the upper strand in our starting crossing would now be the lower strand and
+vice versa.
 This is due to the fact that the knot in question is alternating.
 
 We would also see that since we moved to an adjacent crossing along some strand,
 the label of the strand at the first crossing would have the opposite parity of
 the label at the second crossing.
-The consequence of this is that if the odd strand was above in the first
-crossing, it would turn into a even strand that passes below in the adjacent
-crossings.
-The corresponding statement is true for the even strand.
+For example, the label at the original crossing could have been 1 and the label
+at the new crossing will be adjacent to the first one, so it could have been 2.
+The difference between 1 and 2 is only 1 so 1 and 2 have opposite parities.
+
+The consequence of this is that if the odd strand was the upper strand in the
+first crossing, it would turn into an even strand that is the lower strand in
+the adjacent crossing.
+An analogous statement is true for the even strand.
 Thus, the adjacent crossing would have a positive sign in the MDT code as the
-odd strand passes above and the even strand passes below.
-By induction, all of the elements of the MDT code will be positive.
+odd strand in the adjacent crossing is the upper stand and the even strand is
+the lower strand.
+By induction, all of the elements of the MDT code will be positive, proving our
+claim.
 \end{proof}
 
-Thus, to generate all relevant knot diagrams, it suffices to generate a reduced
-list of alternating knots before constructing the non-alternating knots by
-flipping the crossings of the alternating knots in every possible way.
+Thus, to generate all relevant knot diagrams, it suffices to generate the list
+of alternating knots before constructing the non-alternating knots by flipping
+the crossings of each of the alternating knots in every possible way.
+There would be $2^{n-1}$ ways as the first crossing must remain positive.
 
 There are $10!$ positive permutations with 10 elements so to get fewer than 250
 alternating knots with 10 crossings, some must be eliminated.
+There are several criteria which we can use to determine which we can use to
+determine which alternating knots we should include in our list.
+We will first define these criteria, then explain afterwards how to implement a
+test that verifies that these criteria are satisfied.
+
 A permutation is eliminated unless it meets \textit{all} of the following
 criteria:
 
@@ -247,44 +319,63 @@ criteria:
 starts numbering and in which direction they proceed.
 There are $4n$ ways to choose both a starting point and direction (though for
 cases like (2, 3, 1), all such choices result in the same permutation).
-A permutation is \textit{minimal} if it is lexicographically smaller than all
+A permutation is \textit{minimal} if it is lexicographically smaller than all of
 the other $4n-1$ possible permutations of the corresponding knot diagram.
 To satisfy this criterion, a permutation must be minimal.
 
 \item The resulting knot diagram is prime.
 Since a composite knot diagram can be split into to knot factors, we know that
-this is equivalent to splitting the values from 1 to $2n$ into two consecutive
+as we label the knot, we will have to go through all of the crossings of one of
+the knot factors before we can move on to the other.
+This means that the values from 1 to $2n$ will be split into two consecutive
 subsequences since the values in each subsequence will be the labels of the
-strands in the crossings of one of the factors.
-In a permutation, this would be expressed as a set of $k$ crossings all $2k$ of
-whose values would form a consecutive sequence.
-Thus, such a set must not exist in the EDT code for the knot diagram to be
-considered prime (see \figComposite).
+crossings of one of the knot factors.
+In a permutation, this would be expressed as a set of $k$ pairs, all $2k$ of
+whose values form a consecutive subsequence.
+Thus, such a set must not exist in the EDT code for the knot diagram to be prime
+(see \figComposite).
 This also handily eliminates knot diagrams that contain a kink and could be
-simplified with the first Reidemeister move (the third Reidemeister move and the
-simplifying direction of the second Reidemeister move cannot occur in
-alternating knots) (see \figMoves).
+simplified with the first Reidemeister move.
+The third Reidemeister move and the simplifying direction of the second
+Reidemeister move cannot occur in alternating knots (see \figMoves).
 
 \item The permutation encodes a diagram which is realizable.
 This means that there must be a way to draw the knot diagram without adding any
 intersections beyond the ones encoded in the permutation.
 The simplest permutation that fails this test is (2, 4, 1, 5, 3).
+It is physically impossible to draw a knot diagram on a plane that would have a
+non-realizable permutation as its MDT code.
 
-\item The permutation encodes a knot diagram whose minimal permutation is
-lexicographically minimal over all knots diagrams connected to it via any
-sequence of flypes (see \figMoves).
+\item The knot diagram is minimal with respect to flyping.
+This means that the knot diagram's minimal permutation must be lexicographically
+minimal over all the permutations of knot diagrams connected to our original
+diagram via a sequence of flypes (see \figMoves).
 \end{enumerate}
 
 \pdfex{candidateknots}
 
-The first two conditions are used to avoid checking all $n!$ permutations.
-If we arranged the permutations lexicographically and went along checking each
-one, it would frequently be possible to skip checking up to $k!$ permutations at
-a time (where $0\leq k<n$).
+The first two conditions can be used to avoid testing all $n!$ possible
+alternating MDT codes.
+If we arranged the $n!$ permutations lexicographically and went along checking
+each one, it will frequently be possible to skip checking up to $k!$
+permutations at a time, where $0\leq k<n$.
 
-If there is a value $x$ in the permutation which is closer to its paired odd
+Skipping these permutations is made possible as the first two criteria can be
+checked directly from the permutation.
+If a permutation that fails one of the first two criteria contains a value, or
+possibly a string of values, that make the permutation fail this criterion, then
+all permutations that contain the same string of digits will also fail this
+criterion and do not need to be checked.
+Thus, as soon as we find such a permutation, we can increment the last digit of
+the offending subsequence, thereby skipping $k!$ permutations ahead, where $k$
+is the number of digits left in the permutation after the subsequence.
+
+For the first criterion, a permutation is not minimal if we can find a pair in
+our EDT code which are numerically closer together than the leading term and its
+odd-valued pair, the number 1.
+So if there is a value $x$ in the permutation which is closer to its paired odd
 value than the first number in the permutation is to 1, then all permutations
-with $x$ in the same position would not be minimal.
+with $x$ in the same position will not be minimal.
 This is because starting the enumeration of the knot diagram's strands at the
 crossings with the one labeled $x$ (thereby labeling it 1) would result in a
 smaller first element in the MDT code, which is not allowed as the knot diagrams
@@ -295,85 +386,120 @@ in the table must be minimal.
 Similarly, if a knot diagram is not prime, this is represented by several
 consecutive terms in the permutation, meaning that all permutations obtained by
 rearranging the values that come after this sequence would also fail this test.
+Checking if a knot is prime or not was described above, we just need to find a
+subsequence of 1 to $2n$, such that the all of the numbers paired with the
+values of that subsequence form the same subsequence.
+In other words, if a knot is composite, its knot factors will contain
+consecutive strand labels.
+Since two knot factors can never cross, the crossings of a knot factor contain
+two elements of that subsequence.
+Thus, if the pairs of the values in a subsequence do not contain any values
+outside of that subsequence, the knot diagram is not prime.
 
-The third condition is checked using a modified graph planarity algorithm.
+The third condition is checked with the help of a modified graph planarity
+algorithm.
 If a 4-valent graph is constructed out of a knot diagram by replacing each
 crossing with a vertex and each edge of the knot with an edge in the graph, then
 typical planarity tests would frequently give false positives.
-If there are 4 edges emanating from a crossing, there are only 2 ways of
+There are 4 edges emanating from a crossing, but there are only 2 ways of
 arranging them in a valid manner in a knot diagram, but there are 6 ways of
 arranging 4 edges around a vertex.
 The reason for this is that a strand is not allowed to exit a crossing via an
 edge that is adjacent to its incoming edge.
-However, we have not yet imposed any restrictions that would tell a graph
-planarity algorithm that such cases should not be considered.
+Strands must go directly across a crossing which means that the incoming and
+outgoing edges of a strand must be aligned opposite from each other.
+
+We have not yet imposed any restrictions that would tell a graph planarity
+algorithm that such cases should not be considered.
 Permutations that fail this test do not form a planar knot diagram, but the
 graph that is created by making the same connections between vertices is
-planar.\\
+planar.
+The reader can check that the graph formed by the permutation (2, 4, 1, 5, 3) is
+planar, yet a knot diagram with such an MDT code is impossible to draw.
 
 \papersvg{Graph}{graph}
 {The transformation applied to the knot diagram's graph to determine whether or
 not the knot diagram is planar.
-We take each vertex in the 4-valent graph and replace it with 4-vertices
+We take each vertex in the 4-valent graph and replace it with 4 vertices
 connected to each other and to the original edges in a square.
-This makes the graph 4-valent and also allow serves as a proper indicator of the
+This makes the graph 3-valent and also serves as a proper indicator of the
 planarity of the knot diagram's graph.
-The reason for this is that a graph should not be accepted as planar if the
-result is that the two strands in the crossing enter and leave the crossing
+The reason for this is that a graph should not be accepted as planar if there is
+a crossing where the two strands in the crossing enter and leave the crossing
 through adjacent edges.
 The new 3-valent graph would stop being planar if this were to happen since the
 square in the centre would become a non-planar bowtie.}
 
 To solve this problem, it is sufficient to replace each vertex with four
-vertices in a square (see \figGraph) to construct the modified graph of the
-knot diagram.
+vertices in a square to construct the modified graph of the knot diagram (see
+\figGraph).
 This preserves the planarity of the two allowable configurations but bars the
 other four, as the square would be transformed into a non-planar bowtie shape.
-Thus, it suffices to use our old graph planarity algorithms to check whether the
-modified graph of the knot diagram is planar.
+Thus, it suffices to use a regular graph planarity algorithm to check whether
+the modified graph of the knot diagram is planar.
+If it is not, the permutation fails the third criterion.
 
 \pdfex{knotgraph}
 
 Finally, the fourth condition is checked by using a graph searching algorithm to
-find all knot diagrams that are connected to a given knot diagram via flypes
-(see \figMoves).
-All knot diagrams except the lexicographically minimal one are eliminated from
-the list of candidates.
-A flype is represented in a permutation as a pair, the crossing that gets moved
-across the flype, and two arbitrary-length sequences that either start or end
-with the odd and even values of the moved pair and whose elements are only
-paired with other elements of those sequences.
-These sequences represent the two strands that make up the body that gets
-flyped.
-To find the fully reduced list of alternating knots, it is sufficient to only
-check for knots connected via flypes. (TODO CITE)
+find all knot diagrams that can be obtained from a given knot diagram with a
+series of flypes (see \figMoves).
+From these, we keep only the lexicographically minimal knot diagram.
+A flype is represented in a permutation as a pair and two disjoint subsequences
+of 1 to $2n$.
+The pair is the crossing that effectively gets moved to the other side of the
+body that gets flyped.
+The two subsequences are the two strands that make up the part of the knot that
+is flipped over in the flype.
+It is important to note that these subsequences must satisfy several conditions.
+The first of these is that all of the numbers in these subsequences must be
+paired with other elements of the subsequences.
+This is much like the test for whether or not a knot is composite that was
+described earlier.
+The reason for this condition is that the part of the knot that is flipped must
+be what amounts to a two strand knot factor, in the sense that it must not cross
+any part of the knot outside of itself.
+Additionally, these two subsequences, depending on which way the strands run,
+must either start or end with the values adjacent to those of the earlier pair.
+Since that pair contains one odd value and even value, we can save time by
+ignoring the cases where this rule would be violated.
+To find the final list of alternating knots, it is sufficient to just check for
+possible connections between knot diagrams via flypes. (TODO CITE)
 
 \pdfex{flype}
 
-Having eliminated all of the knot diagrams that do not satisfy the four
-conditions, a complete list of all of the alternating knots remains.
+Having found all of the knot diagrams that satisfy the four criteria, a complete
+list of all of the alternating knots is generated.
 
 \pdfex{alternatingknots}
 
 \papersec{Non-Alternating Knots}
 
-After generating all of the alternating knots, a list of candidates for the
-non-alternating knots is generated by flipping the crossings of the alternating
-knots in every possible manner.
-There are $2^n$ ways of doing this for each alternating  knot.
+After generating all of the alternating knots, we have an easier time
+determining which knot diagrams should be tested to see if they should be
+included in our list.
+There are $2^{n-1}n!$ signed permutations with a positive leading term.
+Of these, we only need to consider those that have the shape of alternating
+knots in our list.
+What this means is that we only have to consider the $2^{n-1}$ knot diagrams
+obtained for each alternating knot in our list by flipping the signs of the
+elements of the alternating knot's permutation in every possible way.
+There would be $2^n$ ways to do this but the leading term must stay positive.
+
 The overwhelming majority of these knot diagrams are eliminated as they can be
 reduced with the second Reidemeister move.
 Many of those that remain can be reduced with a (2, 1)--pass or a (3, 2)--pass
 (see \figMoves).
-(A (1, 0)--pass is the first Reidemeister move.)
-This pass move can be found in most reducible knot diagrams.
+We do not consider the (1, 0)--pass as it is the first Reidemeister move.
+These pass moves can be found in most reducible knot diagrams.
 
 \pdfex{passreducible}
 
-By removing all knot diagrams that can be simplified with one of these moves,
-the list is left with very few reducible knot diagrams.
-The reason for this is that a reducibility test checking only for those two
-moves might in principle give false negatives.
+By considering all knot diagrams that cannot be simplified with either the
+second Reidemeister move or a pass move, there are very few reducible knot
+diagrams that have not yet been eliminated.
+The reason for this is that a reducibility test checking only for these moves
+will occasionally give false negatives.
 This will be dealt with at a later stage.
 
 \pdfex{validknots}
@@ -384,48 +510,56 @@ Here it is necessary to extend the definition of lexicographic orderings to
 signed permutations.
 First, a positive permutation always comes before a non-positive permutation.
 In other words, alternating knots always come before non-alternating knots.
-Here, non-positive means that the permutation contains at least one negative
+A non-positive permutation is a permutation that contains at least one negative
 term.
 Between two non-positive permutations the one that comes first is the one whose
 absolute value is lexicographically smaller.
 If the absolute values of the permutations are equal, then the permutations are
-ordered lexicographically, meaning that the one that has a negative value at the
-first index where the permutations differ comes first.
+ordered lexicographically, meaning that the one that has its first negative
+value at an earlier first index comes first.
+This is the same ordering that was used in \cite{htw}.
 
 \pdfex{knotsort}
 
-Now the goal is to determine which knot diagrams are equivalent and to save the
-lexicographically smallest one for each knot.
+Now we need to determine which knot diagrams are equivalent and to take the
+lexicographically smallest permutation for each knot.
+We do this by examining all knot diagrams which cannot be transformed into
+smaller ones with a series of crossing number-preserving moves.
 For 10 crossings and fewer, the third Reidemeister move, the 2--pass, and the
-flype (see \figMoves) are sufficient to reduce the list of candidates down
-from 1373 to 251.
+flype (see \figMoves) are sufficient to eliminate all but 251 of the knot
+diagrams that we had left to consider after removing those that we determined
+were reducible.
 Applying the third Reidemeister move is preferable to the first two
-Reidemeister moves as there are many ways of adding crossings but only a few
-ways to apply a move that preserves the crossing number of a knot diagram with a
-given move.
+Reidemeister moves as there are many ways of adding crossings to a knot diagram
+but there are only a few ways to apply a move that preserves the crossing number
+of a knot diagram.
 
 \pdfex{twopass}
 
 To find equivalent knot diagrams, a graph searching algorithm is implemented.
 In our graph, we let each knot diagram be represented by a vertex.
 Then, for each knot diagram, we connect its vertex to all the vertices that
-represent knot diagrams that the first knot diagram can be transformed into in a
-single move (see \figMoves).
-If the original knot diagram can be transformed into a knot diagrams whose
-vertices are not in the graph, those vertices are added to the graph.
-This will be important for removing the reducible knot diagrams from the graph.
-As a result, the vertices of the graph are candidate knot diagrams and the edges
-of the graph are moves that connect two different but equivalent diagrams.
+represent knot diagrams that the first knot diagram can be transformed into with
+a single move (see \figMoves).
+If the original knot diagram can be transformed into a knot diagram whose vertex
+is not in the graph, that vertex is added to the graph.
+This is important for removing the reducible knot diagrams from the graph.
+
+When we are done the vertices of the graph are candidate knot diagrams and the
+edges of the graph are moves that connect two different but equivalent diagrams.
 Each connected component of the graph consists of a set of equivalent diagrams,
 all representing the same knot.
 
-At this point we return to the earlier concern that this graph contains some
-knot diagrams that are reducible that have not yet been removed.
-The reducible knot diagrams that have not yet been removed have spawned vertices
-in the graph that represent all equivalent knot diagrams.
-If at least one of those knot diagrams is determined to be reducible, the entire
-component is removed from the graph.
-After this step, the graph no longer contains any reducible knot diagrams.
+At this point we return to the earlier concern that this graph might contain
+some reducible knot diagrams.
+Any reducible knot diagram that has not yet been removed is not immediately
+reducible, which means that it cannot be reduced with a pass move or the second
+Reidemeister move.
+However, all such diagrams are equivalent to other diagrams which are
+immediately reducible.
+Thus, if any of the knot diagrams in a connected component are immediately
+reducible, the entire component is removed from the graph.
+After this, the graph no longer contains any reducible knot diagrams.
 
 \paperfig{Perko}{
 \svgsize{perkoone}{0.4\columnwidth}\\
