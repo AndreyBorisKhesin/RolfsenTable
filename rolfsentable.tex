@@ -561,68 +561,116 @@ Thus, if any of the knot diagrams in a connected component are immediately
 reducible, the entire component is removed from the graph.
 After this, the graph no longer contains any reducible knot diagrams.
 
-\paperfig{Perko}{
-\svgsize{perkoone}{0.4\columnwidth}\\
+\paperfig{Perko}{\svgsize{perkoone}{0.4\columnwidth}\\
 
 \vspace{-4.5em}\hspace{19ex}{\fontsize{20pt}{1em}\selectfont$\equiv$}\\
 
 \vspace{-5em}\hfill\svgsize{perkotwo}{0.4\columnwidth}}
-{The two different representations of the same knot,
-$10_{161}$, that are commonly referred to as the Perko pair.
+{Two different knot diagrams of the same knot, $10_{161}$, that are commonly
+referred to as the Perko pair.
 These were initially thought to be different knots in Rolfsen's original
-tabulation until the error was corrected by Kenneth Perko in 1973.}
+tabulation until the error was pointed out by Kenneth Perko in 1973.}
 
-To rebuild our list of candidate knots, we take the lexicographically smallest
-knot diagram from each connected component of the graph.
-The resulting list has 251 knots instead of 250, so it must contain one
-duplication.
+We now must generate our list of knots from our graph.
+To do this, we take the lexicographically smallest knot diagram from each
+connected component of the graph.
+The resulting list has 251 knots, as our graph has 251 components.
+Here we have to be careful as it is possible that we have equivalent knot
+diagrams in our list.
+In fact, we know in advance that the Rolfsen table contains 250 knots, so we
+know that this must be the case.
 This duplication is the infamous Perko pair which has a
 history of going undetected by tabulators (see \figPerko).
 
-At this point, we face a dilemma for how to narrow down the list to 250 knots.
-We could introduce more moves that preserve crossing number such as the Perko
-move, a move designed specifically to deal with the Perko pair.
-We could also allow moves that change the crossing number such as the first two
-Reidemeister moves (see \figMoves).
-
-By allowing use of the first Reidemeister move and allowing the crossing number
-to increase to 11, the list can be reduced to 250 knots by executing the
-following procedure.
+The reason that we have more knot diagrams than we should is because we are
+restricting ourselves to using flypes, 2--passes, and the third Reidemeister
+move to find equivalent knot diagrams.
+Reidemeister's original theorem has the consequence that if two minimal knot
+diagrams are equivalent and it is impossible to transform one into the other by
+repeatedly applying the third Reidemeister move, the only option left available
+to us is to first add crossings using one of the first two Reidemeister moves,
+and proceed from there.
+We are in a similar position because to show that two of our knot diagrams are
+equivalent, we would have to turn them into more complicated equivalent knot
+diagrams.
+However, though there are relatively few ways to apply the third Reidemeister
+move to a knot diagram, there are many ways of adding a kink to one.
 
 \pdfex{reidemeisterone}
 
-Both knot diagrams in the Perko pair are transformed into knot diagrams with 11
-crossings by adding a positive kink into the knot diagram.
-Namely, by inserting $k$ into the $k^\text{th}$ position in the MDT code and
-added 1 to all of the values in the MDT code that are greater than or equal to
-$k$.
-The resulting knot diagrams are found to be equivalent under repeated
-application of the third Reidemeister move (see \figMoves).
+Our next step will be to use invariants to find which pairs of knot diagrams in
+our list might be equivalent.
+As it turns out, we will find one pair that yields the same values for all of
+our invariants.
+Since we know that there are 250 knots in the Rolfsen table, this matches what
+we were expecting.
+To show that the two knot diagrams in the pair are equivalent, we try adding a
+positive kink into the knot diagram in each of the 10 possible ways.
+To add a kink, we insert a $k$ into the $k^\text{th}$ position in the MDT code
+and add 1 to all of the other values in the MDT code that are greater than or
+equal to $k$.
+Out of all of the new 11-crossing knot diagrams, two are found to be equivalent
+under repeated application of the third Reidemeister move (see \figMoves).
 
 \pdfex{reidemeisterthree}
 
+As our invariants will show, our list of 251 knot diagrams contains 250 distinct
+knots, 249 individual knot diagrams and one pair of potentially equivalent knot
+diagrams.
+Having shown that the latter are indeed equivalent, we can reconstruct the
+Rolfsen table by choosing the lexicographically smaller knot diagram out of the
+equivalent pair and adding it to the distinct 249 knot diagrams that we
+separated out earlier.
 This produces the full list of the 250 prime knots with 10 crossings or fewer.
-All that is left is to show we have not missed any more duplications: pairs of
-knot diagrams that are equivalent.
+
+All that is left is to define invariants so that they can actually show that 249
+knots out of our potential 251 are distinct.
+
+It is reasonable to ask is why this is necessary.
+Firstly, it takes some non-trivial computation time to look for connections amid
+all the possible 11-crossing knot diagrams that are created by adding a kink to
+10-crossing knot diagrams.
+Additionally, we wish to show that there are exactly 250 knots.
+We can find an upper bound on this number by generating a set of knot diagrams
+and showing that many of them are equivalent.
+To prove that there are exactly 250 we need to show that all 250 of our knot
+diagrams are distinct, which we do with invariants.
 
 \papersec{Invariants}
 
-Since the computation time is massively increased by examining equivalent knot
-diagrams with 11 crossings, it is unreasonable to do this for all 251 knots.
-Thus, invariants are used to establish which knot diagrams are definitively not
-duplicated in the table to find which knot diagrams form the Perko pair.
-If there is a pair of knot diagrams all of whose invariants are equal, their 11
-crossing connections are examined and if they are found to be equivalent, the
-lexicographically larger knot diagram is removed from the list.
-Eventually, the list contains only knot diagrams whose invariants are unique
-among the candidates.
-Since we know that none of our knot diagrams are reducible and that we have
-found all of the alternating knots with no duplications, we just need to check
-for pairs among the set of non-alternating knots of a given crossing number.
-We use 2 invariants, as one of them is not strong enough and the other is very
-slow.
-These are the Jones polynomial and the number of colourings of a given knot
-diagram.
+All invariants are functions from the space of knot diagrams to an arbitrary
+target space.
+The property that an invariant must satisfy is that the images of two equivalent
+knot diagrams must be equal under an invariant.
+This allows us to show that two knot diagrams on which an invariant produces a
+different value are knot diagrams of two different knots.
+
+The invariant condition is easy to satisfy as we could choose the image of the
+invariant to have unit magnitude.
+However, such an invariant is useless as we want to use to be able to show that
+some knot diagrams are distinct.
+Thus, we need invariants that produce the same value for non-equivalent knot
+daigrams as rarely as possible.
+The degree to which an invariant does it is typically called its strength, where
+weak invariants often produce the same values for different knot diagrams and
+vice versa.
+Often, stronger invariants require more time to compute, which is why it is
+useful for us to have several invariants.
+We can use them in increasing order of strength so that the most difficult
+computations only have to be done for a few knot diagrams, those that the weaker
+invariants were unable to distinguish between.
+
+The weakest invariant of all that we have available to us is crossing number.
+We know that all of our knots are non-reducible and we also know that all of our
+alternating knots are distinct.
+This immediately reduces our task to simply checking invariants amid
+non-alternating knots that all have the same crossing number.
+
+After this initial step, we use two different invariants to complete the task.
+Our initial simplifications would typically be considered too crude to be deemed
+invariants except in the most technical of circumstances.
+Our first invariant, the Jones polynomial, is fast and fairly strong and the
+second, the number of colourings, is slow and even stronger.
 
 \pdfex{invariants}
 
@@ -632,7 +680,11 @@ To find the Jones polynomial of a given knot diagram, the knot diagram must be
 written in planar diagram notation as opposed to as an MDT code.
 To find this notation, it is necessary to determine the handedness of each of
 the knot diagram's crossings (see \figCrossings).
-There are $2^n$ possible ways to set the handedness of the crossings.
+All we know about a knot diagram's crossings from an MDT code is which strand
+passes above or below.
+We do not know the handedness of each crossing.
+As there are 2 types of crossings, there are $2^n$ possible ways to set the
+handedness of a knot diagram's crossings.
 Since the only knot diagrams being considered are realizable, it is known that
 at least one of these $2^n$ crossing orientations will make the knot diagram
 planar.
@@ -642,11 +694,39 @@ $2^n\leq1024$, which is, computationally speaking, a small number.
 For this reason, we can exhaustively iterate through the $2^n$ crossing
 orientations until we find one that creates a planar knot diagram.
 
+\papersvg{Ribbon}{ribbon}
+{The transformation applied to the knot diagram's graph to determine whether or
+not the given configuration of crossings makes the knot diagram planar.
+We take each vertex in the 4-valent graph and replace it with 4 vertices
+connected to each other and to the original edges in a diamond.
+However, the connections to the adjacent vertices have been expanded to be a
+pair of parallel strands.
+This serves as a proper indicator of the planarity of the knot diagram's graph
+with the given crossing configuration.
+The reason for this is that a graph should not be accepted as planar if there is
+a crossing where the two strands in the crossing enter and leave the crossing
+through adjacent edges.
+The new graph would stop being planar if this were to happen since the diamond
+in the centre would become a non-planar bowtie.
+Additionally, the graph should not be accepted as planar if the handedness of
+the crossing is changed as the ribbons would twist and stop being planar.}
+
 To test if the knot diagram with the given crossing orientations is planar, we
 apply the same replacement that we used to check whether the knot diagram was
-planar (see \figGraph TODO ADD A PROPER DIAGRAM FOR THIS) but we replace each
-outer edge with a ribbon, a pair of parallel edges to adjacent vertices, to only
-allow 1 of the 6 edge configurations.\\
+planar (see \figRibbon) but we replace each outer edge with a ribbon, a pair of
+parallel edges to adjacent vertices, to only
+allow 1 of the 6 edge configurations.
+
+Earlier, the square replacement will have remained planar for either of the two
+ways of arranging the edges of the crossing so that the strands enter and exit
+the crossing through opposite edges (see \figGraph).
+Now, we wish to exclude of these two configurations.
+What we do is we arrange the strands into the configuration we desire and change
+the incoming edges into pairs of edges.
+Now, whenever the strands do not exit and enter through opposite edges, the
+graph will not be planar, just as before and for the same reasons.
+More importantly, when the handedness of the crossings changes, a twist will be
+added to each of the ribbons, making the graph non-planar.
 
 \paperfig{X}{
 \begin{center}$k$\hspace{0.4\columnwidth}$j$\\
@@ -670,12 +750,16 @@ written as $X_{1,4,2,5}X_{3,6,4,1}X_{5,2,6,3}$.
 
 \pdfex{topd}
 
+Once we can transform knots into planar diagram notation, we can compute their
+Jones polynomial.
+
 \papersec{Jones Polynomial}
 
 The Jones polynomial of a knot diagram is computed from the product of its
 crossings.\\
 
 \paperfig{Smoothings}{
+\begin{center}Smoothings for a Right-Handed Crossing\end{center}
 \svgsize{zero}{0.3\columnwidth}
 \hfill
 \svgsize{one}{0.3\columnwidth}\\
@@ -683,34 +767,42 @@ crossings.\\
 \noindent0-smoothing\hfill 1-smoothing}
 {The 0 and 1-smoothings of a right-handed crossing.
 The smoothings are comprised of two strands with no directionality.
-If every crossing in a knot diagram were replaced by a smoothing, the result
-will be an unlink as the knot diagram will be devoid of crossings.
-The 0-crossing is formed by connecting the two ends of the lower strand of the
-crossing to adjacent ends of the upper strand in the counterclockwise direction.
-For the 1-smoothing, the direction is clockwise.}
+If every crossing in a knot diagram is replaced by a smoothing, the result is an
+unlink as the knot diagram will be devoid of any crossings.
+The 0-crossing is formed by connecting each of the two ends of the lower strand
+of the crossing to the ends of the upper strand that are next to them in the
+counterclockwise direction.
+For the 1-smoothing, the direction is clockwise.
+The 0-smoothing for a right-handed crossing is identical to the 1-smoothing for
+a left-handed crossing and vice versa.}
 
 Every crossing can be \textit{smoothed} in two distinct ways (see
 \figSmoothings).
 By smoothing a crossing in a particular manner, the polynomial of that smoothing
 is multiplied by a coefficient of either $A$ or $B$ for the 0 and 1-smoothings,
 respectively.
-Since each smoothing is actually a coefficient ($A$ or $B$) multiplied by the
-two non-intersecting strands of the smoothing, a strand stitching operation can
-be applied to turn a product of $n$ smoothings into an unlink of several
+Since each smoothing is actually a coefficient multiplied by the two
+non-intersecting strands of the smoothing, a strand stitching operation is
+applied to turn a product of $n$ smoothings into an unlink of several
 components.
-This operation is such that the product of two strands that share an endpoint,
-such as the strand from $p$ to $q$, ($p$, $q$), and the strand ($q$, $r$), will
-be equal to one strand running between their non-common endpoints, ($p$, $r$) in
-this case.
+
+A strand stitching operation satisfies the property that the product of two
+strands that share an endpoint, such as the strand from $p$ to $q$, ($p$, $q$),
+and the strand ($q$, $r$), will be equal to one strand running between their
+non-common endpoints, ($p$, $r$) in this case.
+This is analogous to how the product of a $p\times q$ matrix by a $q\times r$
+matrix is a $p\times r$ matrix with the exception that the strand pairs in our
+case are unordered.
+
 The final result will always be the product of several strands that are closed
 loops of the form ($p$, $p$).
 Each of these components of the link is given a coefficient of $d$ and thus the
 result is a polynomial in $A$, $B$, and $d$.
 What we have defined so far is called the Kauffman bracket of a knot diagram
-$X$, and is denoted $\langle X\rangle$.
+$X$, and it is denoted $\langle X\rangle$.
 We note that $\langle\bigcirc\rangle=d$ and $\langle$\o$\rangle=1$, where
 $\bigcirc$ and \o~represent the unknot and the empty knot, respectively.
-Using this notation,a formula for the smoothings of a crossing can be written.
+Using this notation, a formula for the smoothings of a crossing can be written.
 
 \papereq{BracketPlus}{
 \left\langle\begin{matrix}\svgsize{positive}{2em}\end{matrix}\right\rangle
@@ -730,10 +822,13 @@ If it is connected to the end on its left, the resulting smoothing is a
 Thus, $\langle\svgl{right}\rangle$, the Kaufmann bracket of the right-handed
 trefoil can be evaluated.
 Note that this trefoil is right-handed so we will only need \eqBracketPlus.
-There are 8 ways to smooth the three crossings altogether and unless we apply
-three 0-smoothings or three 1-smoothings, there are going to be cases which are
-rotationally symmetric and have the same bracket value.
-Thus, the bracket of the trefoil can be expanded.
+There are 2 ways to smooth each crossing so there are 8 ways to smoooth the
+three crossings altogether.
+Two of these ways are applying three 0-smoothings and three 1-smoothings.
+The other 6 cases are not all distinct, since there are three identical ways of
+applying either 1 or 2 0-smoothings.
+Thus, each of the cases in these sets have the same bracket value, which is how
+the bracket of the trefoil can be expanded.
 
 \papereq{TrefoilOne}{\fontsize{9pt}{1em}\selectfont
 \langle\svgl{right}\rangle
@@ -742,24 +837,38 @@ Thus, the bracket of the trefoil can be expanded.
 +3AB^2\langle\svgl{single}\rangle
 +B^3\langle\svgl{nil}\rangle}{}
 
-Thus, by counting the number of components in each unlink, the remaining
+Unsurprisingly, \eqTrefoilOne looks a lot like an application of the binomial
+theorem.
+However, that is only because the trefoil is rotationally symmetric.
+In the general case, the bracket will not have as many like terms.
+
+By counting the number of components in each unlink, the remaining
 brackets can be evaluated with the corresponding power of $d$.
 
 \papereq{TrefoilTwo}{\fontsize{11pt}{1em}\selectfont
 \langle\svgl{right}\rangle
 =A^3d^2+3A^2Bd+3AB^2d^2+B^3d^3}{}
 
-To make the Kaufmann bracket invariant over the second and third Reidemeister
-moves (see \figMoves), we must set $d+A^2+B^2=0$ and $AB=1$.
-To make this invariant over the first Reidemeister move, the whole polynomial
-must be multiplied by a coefficient of $(\text-A)^{\text-3w}$ where $w$ is the
-writhe of the knot diagram, which is the difference between the number of
-right-handed and left-handed crossings in the knot diagram.
-Since the resulting polynomial will have a factor of $d$ in every component, the
-polynomial is normalized by dividing it by $d$.
-Lastly, the result will always be a polynomial in $A^4$ so the rule
-$A=q^{\text-1/4}$ (TODO CITE) is applied to result in a Laurent polynomial in
-$q$.
+To make the Kaufmann bracket invariant over the second Reidemeister move, we
+must set $d+A^2+B^2=0$ and $AB=1$.
+We find that these relations make the Kaufmann bracket invariant over the third
+move as well.
+This means that to show that this is actually an invariant, it suffices to show
+that the Kaufamnn bracket is invariant over the first Reidemeister move.
+We find that in its current form, this is not the case.
+
+To make the Kaufmann bracket invariant over tha addition and removal of kinks,
+the whole polynomial must be multiplied by a coefficient of
+$(\text-A)^{\text-3w}$ where $w$ is the writhe of the knot diagram, which is the
+difference between the number of right-handed and left-handed crossings in the
+knot diagram.
+
+The resulting polynomial will have a factor of $d$ in every component as every
+unlink that we can get by smoothing the knot diagram has at least one component.
+Thus, the polynomial is normalized by dividing it by $d$.
+Lastly, what we have obtained will always be a polynomial in $A^4$ so the rule
+$A=q^{\text-1/4}$ is applied to make the result in a Laurent polynomial in $q$.
+(TODO CITE)
 
 \pdfex{writhe}
 
@@ -790,18 +899,14 @@ the left-handed trefoil.
 
 \pdfex{jonespolynomial}
 
-\papersec{Knot Colourings}
+We find that the Jones polynomial shows that every knot diagram out of our 251
+that has 9 crossings or fewer is distinct.
+Among the knots with 10 crossings, we find two pairs of knot diagrams with the
+same Jones polynomial.
+As we have dramatically reduced the list of diagrams we are unsure about, we can
+now apply our more powerful invariant at little cost.
 
-The Jones Polynomial is a convenient invariant for our purposes as it filters
-out the list of candidate knot diagrams almost entirely.
-If we use a little additional information about each knot diagram, such as its
-crossing number and whether or not it is alternating then the Jones polynomial
-only fails to differentiate between two pairs of knots diagrams.
-All four of these knot diagrams have 10 crossings and are non-alternating.
-We must determine which two of them are the Perko pair, and then only retain one
-of them, as well as the two other knot diagrams, in our table.
-As all of our old invariants have failed to distinguish between these two pairs
-of knot diagrams, a new invariant is required to show this.
+\papersec{Knot Colourings}
 
 As we have very few knot diagrams to analyze, we can spend some additional time
 computing a more complicated determinant, in exchange for the guarantee that it
@@ -940,28 +1045,30 @@ or fewer.
 \papersec{Knot Graphs}
 
 During our calculation of the Rolfsen table, we have used three crossing
-number-preserving moves: the 2-pass, the third Reidemeister move, and the flype
+number-preserving moves: the 2--pass, the third Reidemeister move, and the flype
 (see \figMoves).
 We generated a graph of connections to determine whether a knot diagram was
 reducible and whether or not two knot diagrams were equivalent.
-By running our algorithms with a different set of knot diagrams, the graph of
-connections between all irreducible knot diagrams can be generated.
-To do this, we simply replace the set of alternating knots with the set of
-candidate knots, which satisfy the same conditions as those for alternating
-knots, except for the condition that they must be minimal over flypes.
+By running our algorithms with a different set of knot diagrams, we generated
+the graph of connections between all irreducible knot diagrams.
+To do this, we simply replaced the set of distinct prime alternating knot
+diagrams with the set of all prime alternating knot diagrams.
+The difference between the sets is that the latter has diagrams that are
+equivalent with respect to flyping.
 
-From these knot diagrams, all of their non-alternating knot diagrams can be
-generated, map each diagram to a vertex, connect these vertices with edges
-representing 2-passes, third Reidemeister moves, and flypes (see \figMoves), and
-remove all connected components that were found to be reducible.
+From these knot diagrams, all of their non-alternating knot diagrams were
+generated, each knot diagram was mapped to a vertex, these vertices were
+connected with edges representing 2--passes, third Reidemeister moves, and
+flypes (see \figMoves), and lastly all connected components that were found to
+be reducible were removed.
 
 \pdfex{creategraph}
 
-The result will be the full graph of irreducible knot diagrams and their
-connections.
-This can be used for testing knot invariants.
+The result is the full graph of irreducible knot diagrams and their connections.
+This graph can be used for testing knot invariants.
 Each invariant must produce the same result for each vertex in a connected
 component as an invariant must be the same for any two equivalent knot diagrams.
+(TODO INCLUDE URL FOR GRAPH AND ADD GRAPH)
 
 \papersec{Utility Functions}
 
