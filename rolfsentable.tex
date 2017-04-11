@@ -477,24 +477,12 @@ At this point, we have 1176 non-alternating knot diagrams to consider.
 
 \papersec{Finding Equivalent Diagrams}
 
-TODO REPLACE PARAGRAPH BELOW WITH THIS ONE AND FIX CODE
 Canonically, alternating knots precede non-alternating knots in the Rolfsen
 table.
 We maintain the same pattern, ordering the knots within each of the two sets
 lexicographically.
 
-Here it is necessary to extend the definition of lexicographic orderings to
-signed permutations.
-First, a positive permutation always comes before a non-positive permutation.
-In other words, alternating knots always come before non-alternating knots.
-A non-positive permutation is a permutation that contains at least one negative
-term.
-Between two non-positive permutations the one that comes first is the one whose
-absolute value is lexicographically smaller.
-If the absolute values of the permutations are equal, then the permutations are
-ordered lexicographically, meaning that the one that has its first negative
-value at an earlier first index comes first.
-This is the same ordering that was used in \cite{htw}.
+TODO MAKE CODE BELOW REFLECT TEXT ABOVE
 
 \pdfex{knotsort}
 
@@ -550,17 +538,6 @@ immediately reducible.
 If at least one is, the entire component is removed from the graph.
 After this, the graph no longer contains any reducible knot diagrams.
 
-TODO MOVE
-\paperfig{Perko}{\svgsize{perkoone}{0.4\columnwidth}\\
-
-\vspace{-4.5em}\hspace{19ex}{\fontsize{20pt}{1em}\selectfont$\equiv$}\\
-
-\vspace{-5em}\hfill\svgsize{perkotwo}{0.4\columnwidth}}
-{Two different knot diagrams of the same knot, $10_{161}$, that are commonly
-referred to as the Perko pair.
-These were initially thought to be different knots in Rolfsen's original
-tabulation until the error was pointed out by Kenneth Perko in 1973.}
-
 We now must generate our list of knots from our graph.
 To do this, we take the lexicographically smallest knot diagram from each
 connected component of the graph.
@@ -590,9 +567,6 @@ diagrams.
 However, though there are relatively few ways to apply the third Reidemeister
 move to a knot diagram, there are many ways of adding a kink to one.
 
-TODO MOVE
-\pdfex{reidemeisterone}
-
 Our next step will be to figure out which pairs of knot diagrams in our list
 might be equivalent.
 Since there are so many ways of adding kinks, checking which knot diagrams are
@@ -600,42 +574,6 @@ equivalent this way takes a long time.
 Thus, we would like some way to establish with certainty that some of our knot
 diagrams cannot be equivalent to any others.
 We will do this by using invariants.
-
-TODO MOVE
-As it turns out, we will find one pair that yields the same values for all of
-our invariants.
-To show that the two knot diagrams in the pair are equivalent, we try adding a
-positive kink into the knot diagram in each of the 10 possible ways.
-To add a kink, we insert a $k$ into the $k^\text{th}$ position in the MD code
-and add 1 to all of the other values in the MD code that are greater than or
-equal to $k$.
-Out of all of the new 11-crossing knot diagrams, two are found to be equivalent
-under repeated application of the third Reidemeister move (see \figMoves).
-
-\pdfex{reidemeisterthree}
-
-As our invariants will show, our list of 251 knot diagrams contains 250 distinct
-knots.
-These consist of 249 individual knot diagrams and one pair of potentially
-equivalent knot diagrams.
-After Having shown that the latter are indeed equivalent, we can reconstruct the
-Rolfsen table by choosing the lexicographically smaller knot diagram out of the
-equivalent pair and adding it to the distinct 249 knot diagrams that we
-separated out earlier.
-This produces the full list of the 250 prime knots with 10 crossings or fewer.
-
-All that is left is to define invariants so that they can actually show that 249
-knots out of our potential 251 are distinct.
-
-It is reasonable to ask is why this is necessary.
-Firstly, it takes some non-trivial computation time to look for connections amid
-all the possible 11-crossing knot diagrams that are created by adding a kink to
-10-crossing knot diagrams.
-Additionally, we wish to show that there are exactly 250 knots.
-We can find an upper bound on this number by generating a set of knot diagrams
-and showing that many of them are equivalent.
-To prove that there are exactly 250 we need to show that all 250 of our knot
-diagrams are distinct, which we do with invariants.
 
 \papersec{Invariants}
 
@@ -918,121 +856,176 @@ distinct.
 
 \papersec{Knot Colourings}
 
+We now need to determine if the knot diagrams in either pair are distinct.
 As we have very few knot diagrams to analyze, we can spend some additional time
-computing a more complicated determinant, in exchange for the guarantee that it
-will separate our knot diagrams.
+computing a more complicated invariant, in exchange for it separating our knot
+diagrams.
 This invariant is the number of \textit{colourings} of the knot diagram with
 elements of the permutation group $S_m$, for some $m$.
 Such a colouring is an assignment of permutations of $m$ elements to edges of
-the knot diagram such that these permutations are the same along any strand of
-the knot diagram and such that the product of the four permutations around a
-given crossing is equal to the identity permutation.
+the knot diagram such that these permutations satisfy a particular set of
+conditions.
+The number of such colourings is invariant over the three Reidemeister moves,
+making it invariant over all equivalent knot diagrams (TODO CITE).
 
-Two knot diagrams are the same if and only if the number of colourings using
-elements of $S_m$ is the same for all natural numbers $m$ (TODO CITE).
-Thus, to show that two knot diagrams are different, we need to find a value of
-$m$ such that the the invariant produces a different value for the two knot
-diagrams.
+If two knot diagrams are equivalent, the number of colourings using elements of
+$S_m$ will be the same for all natural numbers $m$.
+Thus, to show that two knot diagrams are different, it is sufficient to find a
+value of $m$ such that the the invariant produces a different value for the two
+knot diagrams.
 In other words, the number of ways to colour both of the knot diagrams using
 elements of $S_m$ must be different.
 
 It would be incorrect to simply count the number of ways that various values of
 $S_m$ can be assigned to all $2n$ edges of the knot diagram.
-The reason for that is that the values assigned to edges along a strand must be
+To be an actual invariant, the assignments must satisfy two conditions.
+The reason for that is that the values assigned to edges along an arc must be
 the same.
-Thus, if we label the values in $S_m$ that we assign to each edge as $i$, $j$,
-$k$, and $l$ starting from the incoming lower edge and proceeding
-counterclockwise (see \figX), two relations that those four values have to
-satisfy can be constructed.
+Thus, if we have a crossing $X_{i,j,k,l}$, we label the values in $S_m$ that we
+assign to each edge as $\sigma_i$, $\sigma_j$, $\sigma_k$, and $\sigma_l$
+starting from the incoming lower edge and proceeding counterclockwise.
+From this, the two relations that these four values have to satisfy are
+constructed.
 
-We know that the permutations must be the same along any strand.
+We know that the permutations must be the same along any arc.
 Thus, the two edges that form the top strand have the same permutations.
 
-\papereq{Upper}{j=l}{}
+\papereq{Upper}{\sigma_j=\sigma_l}{}
 
-We also know that the product of all four permutations around the crossing is
-the identity.
-However, as we go around the crossing, we have to invert the permutation if the
-edge is outgoing instead of incoming.
-This means that we can derive an expression for a positive crossing (see
-\figCrossings) and replace $j$ and $l$ with $j^{\text-1}$ and $l^{\text-1}$,
-respectively.
-So for a positive crossing, we get an expression for $i$.
+The second criterion that our permutations must satisfy is as follows.
+The signed product of the permutations assigned to the four edges around a
+crossing must be the identity permutation.
+To clarify, we start by picking an arbitrary sign convention, which in our case
+is that inward pointing edges are given a positive sign.
+Then, we move around a crossing in an arbitrary direction from an arbitrary
+starting point, which in our case are counterclockwise from the edge labeled
+$i$.
+Inverting the permutations for the negative, and thus outward pointing, edges,
+we construct an equation that positive crossings must satisfy.
+Note that in a positive crossing, edges $j$ and $k$ point outwards.
 
-\papereq{Lower}{i=l^{\text-1}kj}{}
+\papereq{Positive}{\sigma_i\sigma_j^{\text-1}\sigma_k^{-1}\sigma_l=e}{}
+\begin{paperwhere}
+\papervar{e}{the identity permutation with $m$ elements}{}
+\end{paperwhere}
 
-Put these together into an all-encompassing equation for each crossing.
+For a negative crossing, we switch the signs of $j$ and $l$.
 
-\papereq{Both}{i=j^{\text-1}kj}{}
+\papereq{Negative}{\sigma_i\sigma_j\sigma_k^{-1}\sigma_l^{\text-1}=e}{}
+
+By putting together \eqUpper and \eqPositive, we get an equation for each
+positive crossing.
+
+\papereq{Right}{\sigma_k=\sigma_j\sigma_i\sigma_j^{\text-1}}{}
+
+So we can find $\sigma_k$ by finding the permutation conjugation of $\sigma_i$
+and $\sigma_j$.
+We also get an equation for negative crossings.
+
+\papereq{Left}{\sigma_k=\sigma_j^{\text-1}\sigma_i\sigma_j}{}
+
+Thus, for negative crossings, $\sigma_k$ is the permutation conjugation of
+$\sigma_i$ and $\sigma_j^{\text-1}$.
 
 \pdfex{permutationconjugation}
 
-We note that since we are taking the permutation conjugation of $j$ with $k$,
-then $i$ and $k$ will have the same cycle lengths.
+We note that since we are taking the permutation conjugation of $\sigma_i$ with
+$\sigma_j$, then $\sigma_i$ and $\sigma_k$ will have the same cycle lengths.
 As any two edges across a crossing have the same cycle lengths, and since we can
 follow the path of the knot by going through each crossing, one by one, never
 changing cycle lengths, then all of the values for the edges must have the same
 cycle lengths.
-This simplifies the procedure and gives us a lot more information.
+This gives us a lot more information.
+
 Whereas before we would have had to map edges to $S_m$ and count the total
 number of colourings, now they can be mapped to a subset of $S_m$.
-If all elements of this subset have the same cycle lengths, then number of
+If all elements of this subset have the same cycle lengths, then the number of
 colourings for each such subset can be counted independently.
 Thus, instead of ending up with a single number as our invariant, we end up with
 $P(m)$ different values, where $P$ is the partition function.
-This is due to the fact that an element of $S_m$ can have $P(m)$ different
-possible cycle lengths.
+This is due to the fact that elements of $S_m$ have $P(m)$ different possible
+cycle lengths.
 Thus, to show that the knot diagrams are different, it suffices for any one of
 these $P(m)$ values to differ.
 
 As previously stated, we cannot simply find the number of ways to map edges to
 elements of $S_m$.
+For simplicity, we will assume that from now on we are dealing with a positive
+crossing.
+To do this procedure for a negative crossing, it suffices to invert $\sigma_j$
+before computing its permutation conjugation with $\sigma_i$.
+
 We need to find as many equations that relate the edges as possible using
-\eqUpper and \eqLower.
+\eqUpper and \eqPositive.
 For knot diagrams with $n$ crossings we have to find equations relating the $2n$
 edges.
 Finding $n$ such equations is easy with \eqUpper as every crossing has an upper
-strand whose two edges must have equal values in $S_m$.
-We are going to get another $n$ equations from \eqBoth and we have to combine
-the two sets of equations.
-We need to find a set of \textit{generators}, edges whose values can be chosen
-from $S_m$ independently, for our knot diagram and then find the values for the
-remaining edges using \eqUpper and \eqBoth.
+arc whose two edges must have equal values in $S_m$.
+Similarly, every crossing also gives us an equation from \eqRight, so we have a
+total of $2n$ equations.
 
-To find these generators we need to find the smallest subset of these $2n$ edges
-whose values, when plugged into \eqUpper and \eqLower will allow us to determine
-the values of all $2n$ edges.
-When $n=10$, the set usually contains between 3 and 5 edges.
+We know that we cannot choose the permutations for all $2n$ edges independently
+as there are equations relating them that will frequently not be satisfied if we
+were to do so.
+We also know choosing a permutation for just one edge will not be sufficient to
+generate the remaining $2n-1$ edges.
+Thus, there is some number of edges whose values can be used to generate the
+rest of the $2n$ edges using \eqUpper and \eqRight.
+We call such edges \textit{generators} and we need to find such a set of
+generators.
+Note that this set will not be unique, but we want to make it as small as
+possible while still guaranteeing that we can generate all of the permutations.
+
+For some perspective, when $n=10$, there are between 3 and 5 generators which
+can determine the rest of the knot.
 It is immediately clear that $n$ edges can be derived from the other $n$ by
 using \eqUpper.
-Thus, we are only interested in finding which of the other $n$ can be
-chosen independently.
-We create a graph with $2^n$ vertices, where each vertex represents a subset of
-our $n$ edges of interest.
-For each crossing, we know that by using \eqBoth, knowing $j$, as well as either
-$i$ or $k$, is sufficient to reestablish the missing value: $k$ or $i$,
-respectively.
-Thus, we draw a directed edge from every vertex whose subset $S$ contains $j$
-and either $i$ or $k$ to the vertex whose subset is $S\cup\{i,k\}$.
-This edge represents the fact that if we are given the values for the elements
-of the subset at the first vertex, all of the values for the elements of the
-subset of the second vertex can be derived by using \eqBoth.
-We then find our generators by taking the connected component containing the
-vertex that holds all $n$ values and finding the vertex in that component that
-contains the smallest subset.
-There will then be a path from the latter vertex, the one containing the
-generators, to the former vertex, the one containing all $n$ edges of interest,
-that consists of repeatedly applying \eqBoth by deriving one additional value at
-a time out of the $n$ we seek.
-Then, this will be the order in which the values of the $n$ edges are be
-determined.
+Thus, we are only interested in finding which of the other $n$ can generate all
+of the permutations.
+What we are effectively doing is writing out the indices from 1 to $2n$ and
+striking out all those indices which can be determined from those that remain.
+For each crossing, we examine the edges that make up the upper strand and remove
+the one with the larger index from our list.
+After we have done this, we have $n$ remaining indices.
+We will call the set of these indices $S$.
+
+We create a graph with vertices $V=P(S)$, where $P$ is the power set function.
+Note that $|V|=2^n$, which for $n=10$ is not too large.
+For each crossing, \eqRight tells us that knowing $\sigma_j$ as well as either
+$\sigma_i$ or $\sigma_k$, is sufficient to determine the other one, either
+$\sigma_k$ or $\sigma_i$, respectively.
+We represent this in the graph with a directed edge.
+From every vertex with set $T\subset S$ where $T$ contains both $i$ and $j$, we
+draw a directed edge to the vertex with set $T\cup\{k\}$.
+Similarly, we draw an edge from each vertex whose set $T\subset S$ contains both
+$j$ and $k$ to the vertex with set $T\cup\{i\}$.
+An edge from vertex $v_1$ to vertex $v_2$ represents the fact knowing the
+permutations for each edge whose index is in the set $v_1$, we can determine the
+permutations for each edge whose index is in the set $v_2$ by applying \eqRight
+once.
+
+We consider the vertices from which there is a path to $S$, the vertex
+containing all of the indices.
+If there is a path from a vertex $v$ to the vertex $S$, then we know that being
+given the permutations for the edges whose indices are in $v$ is sufficient to
+determine all of the permutations of the knot diagram.
+Thus, to find our set of generators, we choose a vertex $v$ from which there is
+a path to $S$ such that $|v|$ is as small as possible.
+To find the sequence of edges whose permutations can be determined, we simply
+examine any path from $v$ to $S$ and choose that as our order.
 
 \pdfex{edgesequence}
 
-Once we have found the generators, we assign to them every possible
-combination of values of our chosen subgroup of $S_m$.
-We set the generator values, generate the rest of the values for the edges,
-and then check that \eqBoth is satisfied for each crossing.
+Once we have found the generators, we need to start testing colourings.
+We first break up $S_m$ into disjoint subsets by cycle lengths.
+For each of these subsets $T$, we try assigning permutations in $T$ to each of
+the generators in $v$ in every possible way.
+There are $|T|^{|v|}$ ways of doing so.
+This exponential is the reason for why we put so much effort into minimizing our
+set of generators.
+
+Once, we set the generator permutations, we generate the permutations for the
+rest of the edges, and then check that \eqRight is satisfied for each crossing.
 If it is, then the colouring is valid, otherwise, it is not.
 
 \pdfex{validcolouring}
@@ -1040,15 +1033,41 @@ If it is, then the colouring is valid, otherwise, it is not.
 We count the total number of valid colourings and our invariant becomes a list
 of size $P(m)$ containing the number of valid colourings of the knot diagram
 using elements of $S_m$.
-Each element of the array corresponds to a different subset of $S_m$, where all
+Each element of the list corresponds to a different subset of $S_m$, where all
 of the elements in each subset have the same cycle lengths.
-Using this invariant, the two knot diagrams that have the same Jones polynomial
-can be distinguished from each other.
 
 \pdfex{colourings}
 
-Thus, we have constructed the table containing the 250 knots with 10 crossings
-or fewer.
+After we had applied the Jones polynomial, we found two pairs of knot diagrams
+that could be equivalent.
+After setting $m$ to 5 and calculating the number of colourings for each of the
+four knot diagrams in those two pairs, we found that the two knot diagrams in
+our of the pairs produced different values, showing that they represent distinct
+knots.
+The two knots in the other pair produced the same list for the number of ways in
+which they could be coloured using elements of $S_5$.
+Thus, we have at least 250 distinct knot diagrams and potentially as many as
+251.
+
+We now try to see if the knot diagrams which have produced the same result for
+each of our invariants are equivalent.
+To show that the two knot diagrams in the pair are equivalent, we try adding a
+positive kink into the knot diagrams in each of the 10 possible ways.
+To add a kink, we insert a $k$ into the $k^\text{th}$ position in the MD code
+and add 1 to all of the other values in the MD code that are greater than or
+equal to $k$.
+
+\pdfex{reidemeisterone}
+
+Our two new 11-crossing knot diagrams are found to be equivalent under repeated
+application of the third Reidemeister move (see \figMoves).
+
+\pdfex{reidemeisterthree}
+
+Thus, the two knot diagrams that were producing the same values for each of our
+invariants are equivalent.
+This proves conclusively that we there are no fewer and no more than 250 knots
+with up to 10 crossings.
 
 \pdfex{rolfsentable}
 
@@ -1117,6 +1136,8 @@ https://raw.githubusercontent.com/AndreyBorisKhesin/RolfsenTable/master/Table.nb
 
 \pdf{strand}
 
+\papersec{Acknowledgements}
+
 \papersec{References}
 
 \begin{thebibliography}{}
@@ -1125,8 +1146,6 @@ J.~Hoste, M.~Thistlethwaite, and J.~Weeks.
 \textit{The First 1,701,936 Knots.}
 The Mathematical Intelligencer 20 (1998), no.~4, 33--48
 \end{thebibliography}
-
-\papersec{Acknowledgements}
 
 \end{paper}
 \end{document}
