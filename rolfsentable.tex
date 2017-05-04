@@ -12,14 +12,14 @@ This paper presents a way to generate the Rolfsen table in a simple, clear, and
 reproducible manner.
 The methods we use are similar to those used by J.~Hoste, M.~Thistlethwaite, and
 J.~Weeks in \cite{htw}.
-The difference between our methods comes from the fact that \cite{htw} uses more
-complicated methods to be able to find all the knots with up to 17 crossings,
-while our approach demonstrates a simpler way to find the knots up to 10
-crossings.
-We do this by generating all planar diagrams with up to 10 crossings and
+The difference between our methods comes from the fact that \cite{htw} uses a
+more complicated algorithm to be able to find all the knots with up to 17
+crossings, while our approach demonstrates a simpler way to find the knots up to
+10 crossings.
+We do this by generating all planar knot diagrams with up to 10 crossings and
 applying several simplifications to group the knot diagrams into equivalence
 classes.
-From these diagrams, we generate the full list of candidate knots and reduce it
+From these classes, we generate the full list of candidate knots and reduce it
 with several sets of moves.
 Lastly, we use invariants to show that each of the 250 diagrams generated is
 distinct,  proving that there are exactly 250 knots with 10 crossings or fewer.
@@ -35,9 +35,9 @@ algorithm.
 This has been accomplished several times in the past.
 A notable example is \cite{htw}, where J.~Hoste, M.~Thistlethwaite, and J.~Weeks
 found all of the knots with up to 17 crossings.
-The methods we use are far less advanced, which allows us to effect a far less
-intensive computation, finding the knots with up to 10 crossings, but use much
-simpler methods to do accomplish this.
+The methods we use are far less advanced, which allows us to effect a less
+intensive computation, finding the knots with up to 10 crossings, but use a
+simpler algorithm to do accomplish this.
 
 Although it is possible to compute the Rolfsen table by hand, it is a rather
 tedious task.
@@ -51,8 +51,7 @@ diagrams could potentially be included in the table.
 There are only a finite number of ways to draw a knot diagram with a given
 number of crossings.
 Additionally, many of these knot diagrams are \textit{reducible}, which means
-that those knot diagrams are equivalent to other knot diagrams that have fewer
-crossings.
+that they are equivalent to other knot diagrams with fewer crossings.
 
 There are far more than 250 knot diagrams with up to 10 crossings, even after
 only irreducible knot diagrams are considered.
@@ -100,10 +99,10 @@ For example, the right-handed and left-handed trefoils are not equivalent as it
 is impossible to turn one into the other (see \figTrefoil).
 We only include one of the two in the Rolfsen table.
 The notation we use to represent a knot diagram does not encode the handedness
-of the knot so this is not an issue.
+of the knot so this is not an issue.\\
 
 \paperfig{Composite}
-{\begin{center}\svgsize{composite}{0.7\columnwidth}\end{center}}
+{\begin{center}\svgsize{composite}{0.7\columnwidth}\end{center}\vspace{-1em}}
 {An example of a composite knot diagram.
 This knot diagram can be cut along the dotted line into two knot factors, $T$
 and $T'$.
@@ -122,7 +121,8 @@ The commutative operation of joining $T$ and $T'$ to create $R$ is called
 \textit{knot composition}.
 Knots that cannot be decomposed into two knot factors other than themselves and
 the unknot are called \textit{prime}.
-If they can, they are called \textit{composite} (see \figComposite).
+If they can be decomposed this way, they are called \textit{composite}
+(see \figComposite).
 We only include prime knots in our tabulation.
 
 Lastly, we group knots into equivalence classes based on whether or not there
@@ -130,8 +130,8 @@ exists a series of moves that transform one knot diagram into another (see
 \figMoves).
 Out of each of these equivalence classes, we select one knot to include in our
 tabulation.
-Having done this, all that remains is proving that our list contains no extra
-knots.
+Having done this, all that remains is proving that our list contains no
+remaining equivalent knot diagrams.
 
 \papersec{MD Codes}
 
@@ -145,14 +145,13 @@ $n$ integers.
 This notation is called Dowker notation.
 Its density and simplicity make it convenient for our purposes.
 
-For an $n$-crossing knot diagram, its representation in this notation is
+For an $n$-crossing knot diagram, its representation in Dowker notation is
 constructed as follows.
 We start by picking an arbitrary point on one of the knot diagram's edges as
 well as an arbitrary direction along that edge.
 We then move along the knot diagram, moving along each edge, until we have
 traveled along all $2n$ edges and have returned to our starting point.
-For any $n$-crossing knot diagram, we will pass each crossing twice, once under
-and once over.
+Note that we will pass each crossing twice, once under and once over.
 Each time we pass a crossing, we consider the number of crossings that we
 have encountered so far and write that number down at the crossing that we are
 passing.
@@ -167,9 +166,9 @@ We would end up writing each number from 1 to $2n$ exactly once.
 Furthermore, these numbers would be grouped into $n$ pairs, as there would be
 two numbers written at each of the $n$ crossings.
 
-We note that due to the fact that any two closed curves intersect in an even
-number of places, it follows that the pair of numbers written at each crossing
-will contain one odd number and one even number.
+Note that since any two closed curves intersect in an even number of places, it
+follows that the pair of numbers written at each crossing will contain one odd
+number and one even number.
 If this were not the case then we would be able to leave a crossing, travel in a
 closed loop, and come back to that crossing having encountered an odd number of
 crossings along the way, which is not possible.
@@ -209,11 +208,11 @@ The $2\times n$ matrix of pairs is called an ED code (E is for extended).
 The ED code for the trefoil is $\begin{pmatrix}1&3&5\\4&6&2\end{pmatrix}$.
 
 We will later refer to examining permutations.
-Since a MD code is a permutation of the number from 1 to $n$, we can examine
+Since a MD code is a permutation of the numbers from 1 to $n$, we can examine
 each such permutation to see if it encodes a viable knot diagram.
-We need to distinguish between a permutation, one of the many ways of ordering
-the numbers from 1 to $n$, and an MD code, a permutation of the number from 1 to
-$n$ that encodes a particular knot diagram.\\
+Note the distinction between a permutation, one of the many ways of ordering the
+numbers from 1 to $n$, and an MD code, a permutation of the number from 1 to $n$
+that encodes a particular knot diagram.\\
 
 \paperfig{Crossings}
 {\begin{center}Crossings\end{center}\vspace{-1em}
@@ -236,7 +235,7 @@ What it does not tell us is the handedness of each crossing (see \figCrossings).
 In other words, the shape of the knot diagram can be reconstructed, but every
 crossing will effectively be blurred out, as it will not be clear which of the
 two strands in the crossing is the upper strand and which is the lower strand.
-To account for this, we declare that a crossing is \textit{positive} if, out of
+To account for this, we declare that a crossing is \textit{positive} if out of
 the two values that make up a crossing, the odd one corresponds to the upper
 strand of the crossing.
 If a crossing is not positive, it is \textit{negative} and we indicate this by
@@ -429,10 +428,9 @@ sequence of flypes (see \figMoves).
 From these, we keep only the lexicographically minimal knot diagram.
 A flype is represented in a permutation as a pair and two disjoint subsequences
 of 1 to $2n$.
-The pair is the crossing that gets moved to the other side of the body that gets
-flyped.
 The two subsequences are the strands that are the part of the knot that gets
-flipped.
+flipped and the pair is the crossing that gets moved to the other side of the
+knot during the flype.
 Note that these subsequences must satisfy several conditions.
 The first is that all of the numbers in these subsequences must be pairs of
 other elements of the subsequences.
@@ -486,8 +484,8 @@ This means that we will generate 62976 non-alternating knots.
 Although this may seem like a large number of knots, most of these can be
 examined and discarded immediately.
 
-The overwhelming majority of these knot diagrams are discarded as they can be
-reduced with the second Reidemeister move.
+Almost all of these knot diagrams are discarded as they can be reduced with the
+second Reidemeister move.
 Many of those that remain can be reduced with a (2, 1)--pass or a (3, 2)--pass
 (see \figMoves).
 We do not consider the (1, 0)--pass as it is the first Reidemeister move.
@@ -505,7 +503,7 @@ We will call knot diagrams that can be reduced with the second Reidemeister move
 or a pass move as \textit{immediately reducible}.
 Note that not all reducible knots are immediately reducible.
 At this point, we have 1176 non-alternating knot diagrams that are not
-immediately reducible to consider.
+immediately reducible left to consider.
 
 \pdfmsgex{validknots}
 
@@ -669,7 +667,7 @@ at least one of these $2^n$ crossing orientations will make the knot diagram
 planar.
 
 Since we are trying to compute polynomials of knot diagrams where $n\leq10$,
-$2^n\leq1024$, which is, computationally speaking, a small number.
+we have that $2^n\leq1024$, which is, computationally speaking, a small number.
 For this reason, we can exhaustively iterate through the $2^n$ crossing
 orientations until we find one that creates a planar knot diagram.
 
@@ -689,20 +687,19 @@ The new graph would stop being planar if this were to happen since the diamond
 in the centre would become a non-planar bowtie.
 Additionally, the graph should not be accepted as planar if the handedness of
 the crossing is changed.
-If this were to happen, the ribbons would twist and stop being planar.}
+If this happens, the ribbons would twist and stop being planar.}
 
-To test if the knot diagram with the given crossing orientations is planar, we
-apply the same replacement that we used to check knot diagram planarity
-(see \figRibbon) but we replace each outer edge with a ribbon, a pair of
-parallel edges to adjacent vertices, to only allow 1 of the 6 edge
-configurations.
+To test if the knot diagram with given crossing orientations is planar, we
+apply the knot diagram planarity replacement from before, but replace each outer
+edge with a ribbon, a pair of parallel edges, to only allow 1 of the 6 edge
+configurations (see \figRibbon).
 
-Earlier, the square replacement will have remained planar for either of the two
-ways of arranging the edges of the crossing so that the strands enter and exit
-the crossing through opposite edges (see \figGraph).
+Earlier, the square replacement remained planar for either of the two ways of
+arranging the edges of the crossing so that the strands enter and exit the
+crossing through opposite edges (see \figGraph).
 Now, we wish to exclude one of these two configurations.
-What we do is we arrange the strands into the configuration we desire and change
-the incoming edges into pairs of edges.
+We do this by arranging the strands into the configuration we desire and
+changing the incoming edges into pairs of edges.
 Now, whenever the strands do not exit and enter through opposite edges, the
 graph will not be planar, just as before and for the same reasons.
 More importantly, when the handedness of the crossing changes, a twist will be
@@ -995,25 +992,25 @@ To do this for a negative crossing, it suffices to invert $\sigma_j$ before
 computing its permutation conjugation with $\sigma_i$.
 
 We need to find as many equations that relate the edges as possible using
-\eqUpper and \eqPositive.
+\eqUpper, \eqPositive, and \eqNegative.
 For knot diagrams with $n$ crossings we have to find equations relating the $2n$
 edges.
 Finding $n$ such equations is easy with \eqUpper as every crossing has an upper
 arc whose two edges must have equal values in $S_m$.
-Similarly, every crossing also gives us an equation from \eqRight, so we have a
-total of $2n$ equations.
+Similarly, every crossing also gives us an equation from \eqRight or \eqLeft, so
+we have a total of $2n$ equations.
 
 We know that we cannot choose the permutations for all $2n$ edges independently
-as there are equations relating them that will frequently not be satisfied if we
-were to do so.
+as there are equations relating them that will may not be satisfied if we were
+to do so.
 We also know choosing a permutation for just one edge will not be sufficient to
 generate the remaining $2n-1$ edges.
 Thus, there is some number of edges whose values can be used to generate the
-rest of the $2n$ edges using \eqUpper and \eqRight.
+rest of the $2n$ edges using \eqUpper, \eqRight, and \eqLeft.
 We call such edges \textit{generators} and we need to find such a set of
-generators.
-Note that this set will not be unique, but we want to make it as small as
-possible while still guaranteeing that we can generate all of the permutations.
+edges.
+Note that this set will not be unique, but we want to minimize its size while
+still guaranteeing that we can generate all of the permutations.
 
 For some perspective, when $n=10$, there are between 3 and 5 generators which
 can determine the rest of the 20 permutations.
@@ -1040,9 +1037,9 @@ draw a directed edge to the vertex with set $T\cup\{k\}$.
 Similarly, we draw an edge from each vertex whose set $T\subset S$ contains both
 $j$ and $k$ to the vertex with set $T\cup\{i\}$.
 An edge from vertex $v_1$ to vertex $v_2$ represents the fact that by knowing
-the permutations for each edge whose index is in the set $v_1$, we can determine
-the permutations for each edge whose index is in the set $v_2$ by applying
-\eqRight once.
+the permutations for all of the edges with indices in the set $v_1$, we can
+determine the permutations for all of the edges with indices in the set $v_2$ by
+applying \eqRight or \eqLeft once.
 
 We consider the vertices from which there is a path to $S$, the vertex
 containing all of the indices.
@@ -1065,7 +1062,8 @@ This exponential is the reason for why we put so much effort into minimizing our
 set of generators.
 
 Once we set the generator permutations, we generate the permutations for the
-rest of the edges, and then check that \eqRight is satisfied for each crossing.
+rest of the edges, and then check that \eqRight or \eqLeft is satisfied for each
+crossing.
 If it is, then the colouring is valid, otherwise, it is not.
 
 \pdfmsgex{validcolouring}
@@ -1181,7 +1179,7 @@ All of this code is also available online at
 \end{paper}
 
 \fontsize{12pt}{12pt}\selectfont
-\papersec{The Result}\vspace{-0.5em}
+\papersec{The Result}
 
 \pdf{final}
 
